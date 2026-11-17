@@ -1,0 +1,40 @@
+---
+title: Fish
+description: Every fish in Stock Farmer with its rarity, weight range and sale price range, and what the five rarities mean.
+sidebar:
+  order: 2
+---
+import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
+
+Fish are caught with the Fishing Rod (see [Fishing](../fishing/)). Every kind of fish has one of five rarities, and the rarity sets how often it appears, how hard it is to keep, what it sells for and how much XP it earns.
+
+## Rarities
+
+<DataTable name="rarities" />
+
+- Fish of a rarity only appear from the level in "Bites from level". At the lowest levels only Common fish appear.
+- A new fish first gets a rarity, then one of that rarity's kinds with equal chance. Rarer fish become more likely as your level rises (see [Fishing](../fishing/#which-fish-appear)).
+- Rarity colors are shown the same way everywhere in the game, including the Catch Meter, Storage and [Progress](../../progress/).
+
+| Rarity | Color |
+| --- | --- |
+| Common | White |
+| Uncommon | Green |
+| Rare | Blue |
+| Epic | Purple |
+| Legendary | Orange |
+
+- Common fish are the small pond fish, Uncommon the bigger freshwater fish, Rare the small, exotic and sea fish, Epic the larger sea fish and Legendary the giants.
+- Butterflies use the same rarity colors (see [Butterflies and Fireflies](../butterflies-and-fireflies/)).
+
+## All fish
+
+<DataTable name="fish" />
+
+- Weight is the range in pounds a fish of that kind can have. Most are near the middle.
+- Sells for is what the lightest and the heaviest fish of that kind fetch. A fish sells for <Fact path="fish.lightestPricePercent" />% of its rarity's price at the lightest weight, up to <Fact path="fish.heaviestPricePercent" />% at the heaviest.
+- The same price applies when you sell it from [Storage](../../storage-and-selling/#fish-in-storage) later.
+- Weight also changes the XP a catch earns and how big the fish looks. See [Fishing](../fishing/#weight).
+- Every fish you catch is kept as its own fish with a number, a weight and, if you give it one, a name. See [Fishing](../fishing/#your-fish).
+- Every fish can also be fed to an animal (see [Feeding](../../animals/feeding/)).

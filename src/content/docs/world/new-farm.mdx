@@ -1,0 +1,56 @@
+---
+title: New Farm
+description: How to start a new farm, what it starts with, and the world seed.
+sidebar:
+  order: 5
+---
+import Fact from '../../../components/Fact.astro';
+
+A new farm is a <Fact path="world.mapSize" /> by <Fact path="world.mapSize" /> tile map with ponds, a forest, rocks and ore veins already on it, and a few tiles of farmland in the middle.
+
+## Starting a farm
+
+1. Open the Load Game menu and tap **New Farm**. With no farms yet, the New Game form opens on its own.
+2. Type a **Farm name**. A name must be different from every other farm's and up to 24 characters.
+3. Optionally open **Advanced Options** to see or type a World Seed.
+4. Tap **Create**.
+
+- The Load Game menu lists every farm, most recently played first.
+- Each farm's "..." menu ends with **Properties**, a read-only page with the farm's name and its seed (which you can copy).
+
+## What a new farm starts with
+
+| | Starts with |
+| --- | --- |
+| Time | 8 AM on day 1, in Summer |
+| Money | $0 |
+| Farmland | <Fact path="world.startingFarmland" /> tiles in the middle of the map |
+| Crops | Wheat, whose seeds are free |
+| Scythe and Bucket | Set to Sell. What you gather sells at once. |
+| Ponds | 2 or 3, which may start with ducks and fish. At least one fish is rare. |
+| Forest | Trees of every kind and size, thin near the middle and thick toward the edge of the map |
+| Rocks | Spread evenly over the map |
+| Ore veins | Copper first, then Copper and Silver, with enough copper and gems to build everything once |
+
+- Three ponds are a small, a medium and a large one anywhere on the map. Two ponds are a large one and a medium or a second large one, in opposite corners.
+- Ponds keep 5 tiles of grass between each other, stay out of the middle of the map and keep 3 tiles of grass from the map's edge.
+- No tree stands within 3 tiles of the starting farmland or on water.
+- The first two veins on every map are Copper.
+
+## World Seed
+
+A world seed describes a whole new map. The same seed always makes the same map on any device running the same version of the game.
+
+- A seed looks like `7K3M-Q9TX-B111`.
+- A random seed fills the field each time the form opens. Tap **Copy** to copy it and share it.
+- Type or paste a seed to use another map. Capitals, lower case, spaces and dashes all work. An O reads as a zero and an I or L as a one.
+- A seed that does not read shows a message under the field, and **Create** waits.
+
+## Tutorial
+
+A tutorial starts on its own the first time a new farm loads. Settings → Gameplay → Tutorial turns it off for a farm.
+
+## Related pages
+
+- [Wild Growth](../wild-growth/)
+- [Settings](../../settings/settings/)

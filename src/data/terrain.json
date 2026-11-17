@@ -1,0 +1,274 @@
+{
+  "farmlandCost" : 0,
+  "fenceCost" : 2,
+  "fertilizerCost" : 10,
+  "fertilizerSpeedUpPercent" : 10,
+  "paths" : [
+    {
+      "cost" : 2,
+      "name" : "Dark Dirt Path"
+    },
+    {
+      "cost" : 2,
+      "name" : "Dirt Path"
+    },
+    {
+      "cost" : 2,
+      "name" : "Light Dirt Path"
+    },
+    {
+      "cost" : 2,
+      "name" : "Cobblestone Path"
+    },
+    {
+      "cost" : 2,
+      "name" : "Wood Plank Path"
+    },
+    {
+      "cost" : 2,
+      "name" : "Brick Path"
+    },
+    {
+      "cost" : 2,
+      "name" : "Herringbone Brick Path"
+    }
+  ],
+  "refundPercent" : 80,
+  "trees" : [
+    {
+      "colors" : [
+        "Green",
+        "Dark Green",
+        "Blue",
+        "Blue Green"
+      ],
+      "cost" : 20,
+      "icon" : {
+        "height" : 58,
+        "src" : "sprites/trees/pine-small.png",
+        "width" : 43
+      },
+      "logsWhenWild" : 3,
+      "name" : "Small Pine",
+      "size" : "Small",
+      "species" : "Pine",
+      "swings" : 3,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Dark Green",
+        "Blue",
+        "Blue Green"
+      ],
+      "cost" : 40,
+      "icon" : {
+        "height" : 72,
+        "src" : "sprites/trees/pine-medium.png",
+        "width" : 50
+      },
+      "logsWhenWild" : 7,
+      "name" : "Medium Pine",
+      "size" : "Medium",
+      "species" : "Pine",
+      "swings" : 7,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Blue Green"
+      ],
+      "cost" : 60,
+      "icon" : {
+        "height" : 63,
+        "src" : "sprites/trees/oak-small.png",
+        "width" : 54
+      },
+      "logsWhenWild" : 3,
+      "name" : "Small Oak",
+      "size" : "Small",
+      "species" : "Oak",
+      "swings" : 3,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Dark Green",
+        "Blue",
+        "Blue Green"
+      ],
+      "cost" : 60,
+      "icon" : {
+        "height" : 85,
+        "src" : "sprites/trees/pine-big.png",
+        "width" : 57
+      },
+      "logsWhenWild" : 15,
+      "name" : "Big Pine",
+      "size" : "Big",
+      "species" : "Pine",
+      "swings" : 15,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Blue Green"
+      ],
+      "cost" : 120,
+      "icon" : {
+        "height" : 74,
+        "src" : "sprites/trees/oak-medium.png",
+        "width" : 61
+      },
+      "logsWhenWild" : 7,
+      "name" : "Medium Oak",
+      "size" : "Medium",
+      "species" : "Oak",
+      "swings" : 7,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Dark Green",
+        "Blue",
+        "Blue Green"
+      ],
+      "cost" : 80,
+      "icon" : {
+        "height" : 92,
+        "src" : "sprites/trees/pine-huge.png",
+        "width" : 64
+      },
+      "logsWhenWild" : 30,
+      "name" : "Huge Pine",
+      "size" : "Huge",
+      "species" : "Pine",
+      "swings" : 30,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Blue Green"
+      ],
+      "cost" : 180,
+      "icon" : {
+        "height" : 92,
+        "src" : "sprites/trees/oak-big.png",
+        "width" : 79
+      },
+      "logsWhenWild" : 15,
+      "name" : "Big Oak",
+      "size" : "Big",
+      "species" : "Oak",
+      "swings" : 15,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Blue Green"
+      ],
+      "cost" : 240,
+      "icon" : {
+        "height" : 114,
+        "src" : "sprites/trees/oak-huge.png",
+        "width" : 103
+      },
+      "logsWhenWild" : 30,
+      "name" : "Huge Oak",
+      "size" : "Huge",
+      "species" : "Oak",
+      "swings" : 30,
+      "wild" : true
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Yellow"
+      ],
+      "cost" : 40,
+      "icon" : {
+        "height" : 52,
+        "src" : "sprites/trees/birch-small.png",
+        "width" : 39
+      },
+      "logsWhenWild" : 3,
+      "name" : "Small Birch",
+      "size" : "Small",
+      "species" : "Birch",
+      "swings" : 3,
+      "wild" : false
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Yellow"
+      ],
+      "cost" : 80,
+      "icon" : {
+        "height" : 63,
+        "src" : "sprites/trees/birch-medium.png",
+        "width" : 43
+      },
+      "logsWhenWild" : 7,
+      "name" : "Medium Birch",
+      "size" : "Medium",
+      "species" : "Birch",
+      "swings" : 7,
+      "wild" : false
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Yellow"
+      ],
+      "cost" : 120,
+      "icon" : {
+        "height" : 80,
+        "src" : "sprites/trees/birch-big.png",
+        "width" : 47
+      },
+      "logsWhenWild" : 15,
+      "name" : "Big Birch",
+      "size" : "Big",
+      "species" : "Birch",
+      "swings" : 15,
+      "wild" : false
+    },
+    {
+      "colors" : [
+        "Green",
+        "Brown",
+        "Yellow"
+      ],
+      "cost" : 160,
+      "icon" : {
+        "height" : 125,
+        "src" : "sprites/trees/birch-huge.png",
+        "width" : 58
+      },
+      "logsWhenWild" : 30,
+      "name" : "Huge Birch",
+      "size" : "Huge",
+      "species" : "Birch",
+      "swings" : 30,
+      "wild" : false
+    }
+  ],
+  "waterCost" : 0,
+  "waterReach" : 1,
+  "waterSpeedUpPercent" : 5
+}

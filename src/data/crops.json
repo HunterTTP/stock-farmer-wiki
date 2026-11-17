@@ -1,0 +1,437 @@
+[
+  {
+    "growSeconds" : 10,
+    "icon" : {
+      "height" : 40,
+      "src" : "sprites/crops/wheat.png",
+      "width" : 32
+    },
+    "id" : "wheat",
+    "name" : "Wheat",
+    "plantingName" : "Wheat Seeds",
+    "seedPrice" : 0,
+    "sellValue" : 0.1,
+    "unlockLevel" : 1,
+    "xp" : 1
+  },
+  {
+    "growSeconds" : 30,
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/crops/carrot.png",
+      "width" : 22
+    },
+    "id" : "carrot",
+    "name" : "Carrot",
+    "plantingName" : "Carrot Seeds",
+    "seedPrice" : 0.14,
+    "sellValue" : 0.3,
+    "unlockLevel" : 2,
+    "xp" : 3
+  },
+  {
+    "growSeconds" : 60,
+    "icon" : {
+      "height" : 26,
+      "src" : "sprites/crops/potato.png",
+      "width" : 26
+    },
+    "id" : "potato",
+    "name" : "Potato",
+    "plantingName" : "Potato Tubers",
+    "seedPrice" : 0.33,
+    "sellValue" : 0.66,
+    "unlockLevel" : 3,
+    "xp" : 4
+  },
+  {
+    "growSeconds" : 106,
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/crops/beetroot.png",
+      "width" : 26
+    },
+    "id" : "beetroot",
+    "name" : "Beetroot",
+    "plantingName" : "Beetroot Seeds",
+    "seedPrice" : 0.61,
+    "sellValue" : 1.22,
+    "unlockLevel" : 5,
+    "xp" : 6
+  },
+  {
+    "growSeconds" : 140,
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/crops/lettuce.png",
+      "width" : 32
+    },
+    "id" : "lettuce",
+    "name" : "Lettuce",
+    "plantingName" : "Lettuce Seeds",
+    "seedPrice" : 0.85,
+    "sellValue" : 1.7,
+    "unlockLevel" : 6,
+    "xp" : 7
+  },
+  {
+    "growSeconds" : 186,
+    "icon" : {
+      "height" : 160,
+      "src" : "sprites/crops/cabbage.png",
+      "width" : 160
+    },
+    "id" : "cabbage",
+    "name" : "Cabbage",
+    "plantingName" : "Cabbage Seeds",
+    "seedPrice" : 1.18,
+    "sellValue" : 2.36,
+    "unlockLevel" : 7,
+    "xp" : 8
+  },
+  {
+    "growSeconds" : 246,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/crops/broccoli.png",
+      "width" : 32
+    },
+    "id" : "broccoli",
+    "name" : "Broccoli",
+    "plantingName" : "Broccoli Seeds",
+    "seedPrice" : 1.64,
+    "sellValue" : 3.28,
+    "unlockLevel" : 9,
+    "xp" : 10
+  },
+  {
+    "growSeconds" : 326,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/crops/cauliflower.png",
+      "width" : 32
+    },
+    "id" : "cauliflower",
+    "name" : "Cauliflower",
+    "plantingName" : "Cauliflower Seeds",
+    "seedPrice" : 2.29,
+    "sellValue" : 4.58,
+    "unlockLevel" : 10,
+    "xp" : 11
+  },
+  {
+    "growSeconds" : 431,
+    "icon" : {
+      "height" : 24,
+      "src" : "sprites/crops/garlic.png",
+      "width" : 16
+    },
+    "id" : "garlic",
+    "name" : "Garlic",
+    "plantingName" : "Garlic Cloves",
+    "seedPrice" : 3.18,
+    "sellValue" : 6.36,
+    "unlockLevel" : 11,
+    "xp" : 12
+  },
+  {
+    "growSeconds" : 571,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/crops/leek.png",
+      "width" : 24
+    },
+    "id" : "leek",
+    "name" : "Leek",
+    "plantingName" : "Leek Seeds",
+    "seedPrice" : 4.43,
+    "sellValue" : 8.86,
+    "unlockLevel" : 13,
+    "xp" : 14
+  },
+  {
+    "growSeconds" : 757,
+    "icon" : {
+      "height" : 26,
+      "src" : "sprites/crops/asparagus.png",
+      "width" : 8
+    },
+    "id" : "asparagus",
+    "name" : "Asparagus",
+    "plantingName" : "Asparagus Crowns",
+    "seedPrice" : 6.16,
+    "sellValue" : 12.32,
+    "unlockLevel" : 14,
+    "xp" : 15
+  },
+  {
+    "growSeconds" : 1003,
+    "icon" : {
+      "height" : 30,
+      "src" : "sprites/crops/zucchini.png",
+      "width" : 32
+    },
+    "id" : "zucchini",
+    "name" : "Zucchini",
+    "plantingName" : "Zucchini Seeds",
+    "seedPrice" : 8.58,
+    "sellValue" : 17.16,
+    "unlockLevel" : 15,
+    "xp" : 16
+  },
+  {
+    "growSeconds" : 1329,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/crops/tomato.png",
+      "width" : 26
+    },
+    "id" : "tomato",
+    "name" : "Tomato",
+    "plantingName" : "Tomato Seeds",
+    "seedPrice" : 11.65,
+    "sellValue" : 23.3,
+    "unlockLevel" : 17,
+    "xp" : 18
+  },
+  {
+    "growSeconds" : 1762,
+    "icon" : {
+      "height" : 30,
+      "src" : "sprites/crops/pepper.png",
+      "width" : 32
+    },
+    "id" : "pepper",
+    "name" : "Pepper",
+    "plantingName" : "Pepper Seeds",
+    "seedPrice" : 15.82,
+    "sellValue" : 31.64,
+    "unlockLevel" : 18,
+    "xp" : 19
+  },
+  {
+    "growSeconds" : 2335,
+    "icon" : {
+      "height" : 30,
+      "src" : "sprites/crops/eggplant.png",
+      "width" : 32
+    },
+    "id" : "eggplant",
+    "name" : "Eggplant",
+    "plantingName" : "Eggplant Seeds",
+    "seedPrice" : 21.49,
+    "sellValue" : 42.98,
+    "unlockLevel" : 19,
+    "xp" : 20
+  },
+  {
+    "growSeconds" : 3094,
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/crops/red_onion.png",
+      "width" : 20
+    },
+    "id" : "red_onion",
+    "name" : "Red Onion",
+    "plantingName" : "Red Onion Sets",
+    "seedPrice" : 29.2,
+    "sellValue" : 58.4,
+    "unlockLevel" : 21,
+    "xp" : 22
+  },
+  {
+    "growSeconds" : 4100,
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/crops/strawberry.png",
+      "width" : 28
+    },
+    "id" : "strawberry",
+    "name" : "Strawberry",
+    "plantingName" : "Strawberry Runners",
+    "seedPrice" : 39.66,
+    "sellValue" : 79.32,
+    "unlockLevel" : 22,
+    "xp" : 23
+  },
+  {
+    "growSeconds" : 5433,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/crops/raspberry.png",
+      "width" : 32
+    },
+    "id" : "raspberry",
+    "name" : "Raspberry",
+    "plantingName" : "Raspberry Canes",
+    "seedPrice" : 53.88,
+    "sellValue" : 107.76,
+    "unlockLevel" : 23,
+    "xp" : 24
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/crops/blackberry.png",
+      "width" : 32
+    },
+    "id" : "blackberry",
+    "name" : "Blackberry",
+    "plantingName" : "Blackberry Canes",
+    "seedPrice" : 73.19,
+    "sellValue" : 146.38,
+    "unlockLevel" : 24,
+    "xp" : 25
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/radish.png",
+      "width" : 54
+    },
+    "id" : "radish",
+    "name" : "Radish",
+    "plantingName" : "Radish Seeds",
+    "seedPrice" : 75.02,
+    "sellValue" : 150.04,
+    "unlockLevel" : 25,
+    "xp" : 26
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 50,
+      "src" : "sprites/crops/turnip.png",
+      "width" : 58
+    },
+    "id" : "turnip",
+    "name" : "Turnip",
+    "plantingName" : "Turnip Seeds",
+    "seedPrice" : 76.9,
+    "sellValue" : 153.8,
+    "unlockLevel" : 26,
+    "xp" : 27
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/corn.png",
+      "width" : 29
+    },
+    "id" : "corn",
+    "name" : "Corn",
+    "plantingName" : "Corn Seeds",
+    "seedPrice" : 78.82,
+    "sellValue" : 157.64,
+    "unlockLevel" : 27,
+    "xp" : 28
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/pumpkin.png",
+      "width" : 44
+    },
+    "id" : "pumpkin",
+    "name" : "Pumpkin",
+    "plantingName" : "Pumpkin Seeds",
+    "seedPrice" : 80.79,
+    "sellValue" : 161.58,
+    "unlockLevel" : 28,
+    "xp" : 29
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/watermelon.png",
+      "width" : 46
+    },
+    "id" : "watermelon",
+    "name" : "Watermelon",
+    "plantingName" : "Watermelon Seeds",
+    "seedPrice" : 82.81,
+    "sellValue" : 165.62,
+    "unlockLevel" : 29,
+    "xp" : 30
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/pineapple.png",
+      "width" : 31
+    },
+    "id" : "pineapple",
+    "name" : "Pineapple",
+    "plantingName" : "Pineapple Crowns",
+    "seedPrice" : 84.88,
+    "sellValue" : 169.76,
+    "unlockLevel" : 30,
+    "xp" : 31
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/cotton.png",
+      "width" : 54
+    },
+    "id" : "cotton",
+    "name" : "Cotton",
+    "plantingName" : "Cotton Seeds",
+    "seedPrice" : 87,
+    "sellValue" : 174,
+    "unlockLevel" : 31,
+    "xp" : 32
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/grapes.png",
+      "width" : 33
+    },
+    "id" : "grapes",
+    "name" : "Grapes",
+    "plantingName" : "Grape Cuttings",
+    "seedPrice" : 89.17,
+    "sellValue" : 178.34,
+    "unlockLevel" : 32,
+    "xp" : 33
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/prickly_pear.png",
+      "width" : 29
+    },
+    "id" : "prickly_pear",
+    "name" : "Prickly Pear",
+    "plantingName" : "Prickly Pear Pads",
+    "seedPrice" : 91.4,
+    "sellValue" : 182.8,
+    "unlockLevel" : 33,
+    "xp" : 34
+  },
+  {
+    "growSeconds" : 7201,
+    "icon" : {
+      "height" : 58,
+      "src" : "sprites/crops/coffee.png",
+      "width" : 46
+    },
+    "id" : "coffee",
+    "name" : "Coffee",
+    "plantingName" : "Coffee Seeds",
+    "seedPrice" : 93.69,
+    "sellValue" : 187.38,
+    "unlockLevel" : 34,
+    "xp" : 35
+  }
+]

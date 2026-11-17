@@ -1,0 +1,1070 @@
+[
+  {
+    "availableFromLevel" : 1,
+    "cost" : 30,
+    "height" : 1,
+    "icon" : {
+      "height" : 29,
+      "src" : "sprites/decorations/rock.png",
+      "width" : 21
+    },
+    "id" : "rock",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Rock",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 25,
+    "height" : 1,
+    "icon" : {
+      "height" : 16,
+      "src" : "sprites/decorations/lantern.png",
+      "width" : 12
+    },
+    "id" : "lantern",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 4,
+        "name" : "Logs"
+      },
+      {
+        "count" : 2,
+        "name" : "Copper Ore"
+      }
+    ],
+    "name" : "Lantern",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 60,
+    "height" : 1,
+    "icon" : {
+      "height" : 21,
+      "src" : "sprites/decorations/woodenTable.png",
+      "width" : 32
+    },
+    "id" : "woodenTable",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 6,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Wooden Table",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 150,
+    "effect" : "Crops within 3 tiles grow 5% faster",
+    "height" : 1,
+    "icon" : {
+      "height" : 39,
+      "src" : "sprites/decorations/scarecrow.png",
+      "width" : 42
+    },
+    "id" : "scarecrow",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 10,
+        "name" : "Wheat"
+      },
+      {
+        "count" : 4,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Scarecrow",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 300,
+    "height" : 1,
+    "icon" : {
+      "height" : 23,
+      "src" : "sprites/decorations/trunk.png",
+      "width" : 31
+    },
+    "id" : "trunk",
+    "limit" : 15,
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 10,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Trunk",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 100,
+    "effect" : "Waters farmland within 2 tiles",
+    "height" : 1,
+    "icon" : {
+      "height" : 16,
+      "src" : "sprites/decorations/sprinkler.png",
+      "width" : 16
+    },
+    "id" : "sprinkler",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 5,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Sprinkler",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 1200,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/decorations/well.png",
+      "width" : 28
+    },
+    "id" : "well",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 12,
+        "name" : "Stones"
+      },
+      {
+        "count" : 6,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Well",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 30,
+      "src" : "sprites/decorations/hayPile.png",
+      "width" : 23
+    },
+    "id" : "hayPile",
+    "looks" : 6,
+    "materials" : [
+      {
+        "count" : 20,
+        "name" : "Wheat"
+      }
+    ],
+    "name" : "Hay Pile",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 10,
+      "src" : "sprites/decorations/smallHayPile.png",
+      "width" : 16
+    },
+    "id" : "smallHayPile",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 8,
+        "name" : "Wheat"
+      }
+    ],
+    "name" : "Small Hay Pile",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 40,
+    "height" : 1,
+    "icon" : {
+      "height" : 14,
+      "src" : "sprites/decorations/hayBale.png",
+      "width" : 31
+    },
+    "id" : "hayBale",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 12,
+        "name" : "Wheat"
+      }
+    ],
+    "name" : "Hay Bale",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 10,
+      "src" : "sprites/decorations/dogBowl.png",
+      "width" : 10
+    },
+    "id" : "dogBowl",
+    "looks" : 8,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Stones"
+      },
+      {
+        "count" : 1,
+        "name" : "Bluegill"
+      }
+    ],
+    "name" : "Pet Bowl",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 11,
+      "src" : "sprites/decorations/stool.png",
+      "width" : 10
+    },
+    "id" : "stool",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Wooden Stool",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 14,
+      "src" : "sprites/decorations/emptyBasket.png",
+      "width" : 15
+    },
+    "id" : "emptyBasket",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Empty Basket",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/decorations/buckets.png",
+      "width" : 29
+    },
+    "id" : "buckets",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 6,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Buckets",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 20,
+      "src" : "sprites/decorations/emptyPot.png",
+      "width" : 19
+    },
+    "id" : "emptyPot",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 8,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Empty Pot",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/animalSign.png",
+      "width" : 16
+    },
+    "id" : "animalSign",
+    "looks" : 8,
+    "materials" : [
+      {
+        "count" : 4,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Animal Sign",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/cropSign.png",
+      "width" : 16
+    },
+    "id" : "cropSign",
+    "looks" : 19,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Crop Sign",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/dogSign.png",
+      "width" : 16
+    },
+    "id" : "dogSign",
+    "looks" : 9,
+    "materials" : [
+      {
+        "count" : 4,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Dog Sign",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/catSign.png",
+      "width" : 16
+    },
+    "id" : "catSign",
+    "looks" : 9,
+    "materials" : [
+      {
+        "count" : 4,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Cat Sign",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/plainSign.png",
+      "width" : 16
+    },
+    "id" : "plainSign",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Wooden Sign",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 9,
+      "src" : "sprites/decorations/woodPile.png",
+      "width" : 13
+    },
+    "id" : "woodPile",
+    "looks" : 8,
+    "materials" : [
+      {
+        "count" : 15,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Wood Pile",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 500,
+    "effect" : "Waters farmland within 3 tiles",
+    "height" : 1,
+    "icon" : {
+      "height" : 16,
+      "src" : "sprites/decorations/bigSprinkler.png",
+      "width" : 16
+    },
+    "id" : "bigSprinkler",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 8,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Big Sprinkler",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
+    "cost" : 80,
+    "height" : 1,
+    "icon" : {
+      "height" : 94,
+      "src" : "sprites/decorations/christmasTree.png",
+      "width" : 64
+    },
+    "id" : "christmasTree",
+    "looks" : 4,
+    "materials" : [
+      {
+        "count" : 8,
+        "name" : "Logs"
+      },
+      {
+        "count" : 1,
+        "name" : "Copper Ore"
+      }
+    ],
+    "name" : "Christmas Tree",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 4,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/fruitSign.png",
+      "width" : 16
+    },
+    "id" : "fruitSign",
+    "looks" : 5,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Logs"
+      },
+      {
+        "count" : 1,
+        "name" : "Apple Basket"
+      }
+    ],
+    "name" : "Fruit Sign",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 12,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 16,
+      "src" : "sprites/decorations/milkCans.png",
+      "width" : 12
+    },
+    "id" : "milkCans",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Goat Milk"
+      }
+    ],
+    "name" : "Milk Cans",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 12,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 14,
+      "src" : "sprites/decorations/milkBaskets.png",
+      "width" : 12
+    },
+    "id" : "milkBaskets",
+    "looks" : 4,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Goat Milk"
+      },
+      {
+        "count" : 3,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Milk Baskets",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 14,
+    "cost" : 40,
+    "height" : 2,
+    "icon" : {
+      "height" : 24,
+      "src" : "sprites/decorations/bakingSupplies.png",
+      "width" : 15
+    },
+    "id" : "bakingSupplies",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Bread"
+      },
+      {
+        "count" : 2,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Baking Supplies",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/decorations/feedTrough.png",
+      "width" : 16
+    },
+    "id" : "feedTrough",
+    "looks" : 5,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      },
+      {
+        "count" : 10,
+        "name" : "Carrot"
+      }
+    ],
+    "name" : "Feed Trough",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/decorations/hayManger.png",
+      "width" : 16
+    },
+    "id" : "hayManger",
+    "looks" : 8,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      },
+      {
+        "count" : 20,
+        "name" : "Wheat"
+      }
+    ],
+    "name" : "Hay Manger",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 15,
+      "src" : "sprites/decorations/hangingManger.png",
+      "width" : 31
+    },
+    "id" : "hangingManger",
+    "looks" : 4,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Planks"
+      },
+      {
+        "count" : 15,
+        "name" : "Wheat"
+      }
+    ],
+    "name" : "Hanging Manger",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 22,
+      "src" : "sprites/decorations/crate.png",
+      "width" : 31
+    },
+    "id" : "crate",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      }
+    ],
+    "name" : "Empty Crate",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 27,
+      "src" : "sprites/decorations/boxes.png",
+      "width" : 32
+    },
+    "id" : "boxes",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Planks"
+      }
+    ],
+    "name" : "Wooden Boxes",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 16,
+      "src" : "sprites/decorations/eggBoxes.png",
+      "width" : 20
+    },
+    "id" : "eggBoxes",
+    "looks" : 4,
+    "materials" : [
+      {
+        "count" : 6,
+        "name" : "Egg"
+      },
+      {
+        "count" : 1,
+        "name" : "Planks"
+      }
+    ],
+    "name" : "Egg Boxes",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 22,
+      "src" : "sprites/decorations/marketAccessories.png",
+      "width" : 13
+    },
+    "id" : "marketAccessories",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      },
+      {
+        "count" : 1,
+        "name" : "Salmon"
+      }
+    ],
+    "name" : "Market Accessories",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
+    "cost" : 240,
+    "height" : 3,
+    "icon" : {
+      "height" : 9,
+      "src" : "sprites/decorations/woodworkSupplies.png",
+      "width" : 14
+    },
+    "id" : "woodworkSupplies",
+    "looks" : 10,
+    "materials" : [
+      {
+        "count" : 3,
+        "name" : "Planks"
+      },
+      {
+        "count" : 10,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Woodworking Supplies",
+    "width" : 4
+  },
+  {
+    "availableFromLevel" : 18,
+    "cost" : 500,
+    "height" : 1,
+    "icon" : {
+      "height" : 61,
+      "src" : "sprites/decorations/weathercock.png",
+      "width" : 16
+    },
+    "id" : "weathercock",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Copper Bar"
+      }
+    ],
+    "name" : "Weathercock",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 18,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/decorations/waterTrough.png",
+      "width" : 16
+    },
+    "id" : "waterTrough",
+    "looks" : 10,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      },
+      {
+        "count" : 1,
+        "name" : "Copper Bar"
+      }
+    ],
+    "name" : "Water Trough",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 18,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 21,
+      "src" : "sprites/decorations/sacks.png",
+      "width" : 28
+    },
+    "id" : "sacks",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Cloth"
+      },
+      {
+        "count" : 2,
+        "name" : "Flour"
+      }
+    ],
+    "name" : "Jute Sacks",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 18,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 7,
+      "src" : "sprites/decorations/tailorDisplay.png",
+      "width" : 10
+    },
+    "id" : "tailorDisplay",
+    "looks" : 4,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Cloth"
+      },
+      {
+        "count" : 1,
+        "name" : "Planks"
+      }
+    ],
+    "name" : "Tailoring Supplies",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 18,
+    "cost" : 40,
+    "height" : 1,
+    "icon" : {
+      "height" : 25,
+      "src" : "sprites/decorations/dressmakerDisplay.png",
+      "width" : 12
+    },
+    "id" : "dressmakerDisplay",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Fine Cloth"
+      },
+      {
+        "count" : 2,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Dressmaker Display",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 19,
+    "cost" : 120,
+    "height" : 2,
+    "icon" : {
+      "height" : 46,
+      "src" : "sprites/decorations/pottedFruitTree.png",
+      "width" : 28
+    },
+    "id" : "pottedFruitTree",
+    "looks" : 5,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Bricks"
+      },
+      {
+        "count" : 2,
+        "name" : "Fertilizer"
+      }
+    ],
+    "name" : "Potted Fruit Tree",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 19,
+    "cost" : 120,
+    "height" : 3,
+    "icon" : {
+      "height" : 41,
+      "src" : "sprites/decorations/decorativeChest.png",
+      "width" : 31
+    },
+    "id" : "decorativeChest",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Furniture"
+      },
+      {
+        "count" : 1,
+        "name" : "Polished Ruby"
+      }
+    ],
+    "name" : "Decorative Chest",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 19,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 26,
+      "src" : "sprites/decorations/stoneWell.png",
+      "width" : 26
+    },
+    "id" : "stoneWell",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 20,
+        "name" : "Stones"
+      },
+      {
+        "count" : 2,
+        "name" : "Bricks"
+      }
+    ],
+    "name" : "Stone Well",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 19,
+    "cost" : 180,
+    "height" : 3,
+    "icon" : {
+      "height" : 8,
+      "src" : "sprites/decorations/craftingSupplies.png",
+      "width" : 9
+    },
+    "id" : "craftingSupplies",
+    "looks" : 9,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Furniture"
+      },
+      {
+        "count" : 1,
+        "name" : "Polished Sapphire"
+      }
+    ],
+    "name" : "Crafting Supplies",
+    "width" : 3
+  },
+  {
+    "availableFromLevel" : 20,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/decorations/cheeseShelf.png",
+      "width" : 32
+    },
+    "id" : "cheeseShelf",
+    "looks" : 5,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      },
+      {
+        "count" : 1,
+        "name" : "Goat Cheese"
+      }
+    ],
+    "name" : "Cheese Shelf",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 20,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 22,
+      "src" : "sprites/decorations/fruitCrates.png",
+      "width" : 31
+    },
+    "id" : "fruitCrates",
+    "looks" : 10,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Planks"
+      },
+      {
+        "count" : 2,
+        "name" : "Banana Basket"
+      }
+    ],
+    "name" : "Fruit Crates",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 28,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 18,
+      "src" : "sprites/decorations/pumpkin.png",
+      "width" : 16
+    },
+    "id" : "pumpkin",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Pumpkin"
+      }
+    ],
+    "name" : "Pumpkin",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 29,
+    "cost" : 20,
+    "height" : 1,
+    "icon" : {
+      "height" : 12,
+      "src" : "sprites/decorations/watermelonDecoration.png",
+      "width" : 14
+    },
+    "id" : "watermelonDecoration",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Watermelon"
+      }
+    ],
+    "name" : "Decorative Watermelon",
+    "width" : 1
+  }
+]

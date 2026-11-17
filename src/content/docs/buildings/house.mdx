@@ -1,0 +1,37 @@
+---
+title: House
+description: The House opens the Stock Market and can be upgraded to the Luxury House.
+sidebar:
+  order: 3
+---
+import Fact from '../../../components/Fact.astro';
+import Infobox from '../../../components/Infobox.astro';
+
+The House opens the [Stock Market](../../stock-market/). Tapping it, with any tool selected, opens the Stock Market menu instead of a building menu.
+
+<Infobox kind="building" id="house1" />
+
+- Only one House can be built, in either form.
+- The House holds no stocks. If it is destroyed, the stocks you own stay with the farm and are there again once a House is rebuilt.
+- A rebuilt House is the plain House again, with the lower stock limit. Buy the Luxury upgrade again to raise it.
+- The chimney always smokes, in both forms. At night the windows glow.
+
+## Luxury House
+
+The Luxury House raises the number of different stocks you can own.
+
+| | House | Luxury House |
+| --- | --- | --- |
+| Different stocks you can own | <Fact path="home-upgrades.house.stockSlotsBefore" /> | <Fact path="home-upgrades.house.stockSlotsAfter" /> |
+| Size (tiles) | <Fact path="buildings.house1.width" />×<Fact path="buildings.house1.height" /> | <Fact path="home-upgrades.house.width" />×<Fact path="home-upgrades.house.height" /> |
+
+- The Luxury House is not sold in the Build tool. The House is upgraded in place.
+- Unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
+- Costs <Fact path="home-upgrades.house.cost" as="money" />.
+- The Luxury House is taller than the House, so it needs free ground for its larger size. If there is no room, move the House first (see [Placing and moving](../placing-and-moving/)).
+
+To upgrade:
+
+1. Tap the House to open the Stock Market menu.
+2. Tap Upgrade, under Buy Stock. The button needs an internet connection, like the rest of the Stock Market.
+3. A page explains the upgrade and its cost. Tap Upgrade with the price. Before the unlock level it shows the level needed instead.

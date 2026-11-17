@@ -1,0 +1,47 @@
+---
+// A generated table by name, from src/lib/tables.js. Optional `where` and `is` keep only rows whose field matches,
+// and `columns` (comma-separated headings) shows only some columns. A table with pictures gets a first column with each row's
+// picture from the game, and some cells (such as an animal's baby) carry a small picture too; `pictures={false}` leaves them out.
+import { tables, rowsOf } from '../lib/tables.js';
+import Sprite from './Sprite.astro';
+
+interface Props {
+  name: string;
+  where?: string;
+  is?: string | number;
+  columns?: string;
+  pictures?: boolean;
+}
+const { name, where, is, columns, pictures = true } = Astro.props;
+const table = tables[name];
+if (!table) throw new Error(`DataTable: no table named ${name}`);
+const wanted = columns?.split(',').map((heading) => heading.trim());
+const shown = wanted ? table.columns.filter(([heading]) => wanted.includes(heading)) : table.columns;
+const rows = rowsOf(name, where, is);
+const icon = pictures ? table.icon : undefined;
+const cellIcons = pictures ? table.cellIcons ?? {} : {};
+---
+
+<div class="data-table">
+  <table>
+    <thead>
+      <tr>
+        {icon && <th scope="col" class="sprite-cell"><span class="sr-only">Picture</span></th>}
+        {shown.map(([heading]) => <th scope="col">{heading}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr>
+          {icon && <td class="sprite-cell"><Sprite icon={icon(row)} /></td>}
+          {shown.map(([heading, cell], index) => {
+            const small = cellIcons[heading]?.(row);
+            const text = cell(row);
+            const content = small && text ? <span class="with-sprite"><Sprite icon={small} box={32} />{text}</span> : text;
+            return index === 0 ? <th scope="row">{content}</th> : <td>{content}</td>;
+          })}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,122 @@
+[
+  {
+    "basketIcon" : {
+      "height" : 15,
+      "src" : "sprites/baskets/apple.png",
+      "width" : 15
+    },
+    "basketValue" : 1.56,
+    "cost" : 18.72,
+    "height" : 2,
+    "icon" : {
+      "height" : 68,
+      "src" : "sprites/fruit-trees/apple.png",
+      "width" : 68
+    },
+    "id" : "apple",
+    "limit" : 6,
+    "name" : "Apple Tree",
+    "preserves" : "Apple Preserves",
+    "produceName" : "Apple Basket",
+    "ripenSeconds" : 317,
+    "unlockLevel" : 4,
+    "width" : 2,
+    "xp" : 8
+  },
+  {
+    "basketIcon" : {
+      "height" : 17,
+      "src" : "sprites/baskets/orange.png",
+      "width" : 16
+    },
+    "basketValue" : 4.17,
+    "cost" : 50.04,
+    "height" : 2,
+    "icon" : {
+      "height" : 65,
+      "src" : "sprites/fruit-trees/orange.png",
+      "width" : 70
+    },
+    "id" : "orange",
+    "limit" : 6,
+    "name" : "Orange Tree",
+    "preserves" : "Orange Preserves",
+    "produceName" : "Orange Basket",
+    "ripenSeconds" : 736,
+    "unlockLevel" : 8,
+    "width" : 2,
+    "xp" : 14
+  },
+  {
+    "basketIcon" : {
+      "height" : 14,
+      "src" : "sprites/baskets/peach.png",
+      "width" : 15
+    },
+    "basketValue" : 11.25,
+    "cost" : 135,
+    "height" : 2,
+    "icon" : {
+      "height" : 55,
+      "src" : "sprites/fruit-trees/peach.png",
+      "width" : 64
+    },
+    "id" : "peach",
+    "limit" : 6,
+    "name" : "Peach Tree",
+    "preserves" : "Peach Preserves",
+    "produceName" : "Peach Basket",
+    "ripenSeconds" : 1713,
+    "unlockLevel" : 12,
+    "width" : 2,
+    "xp" : 20
+  },
+  {
+    "basketIcon" : {
+      "height" : 16,
+      "src" : "sprites/baskets/lemon.png",
+      "width" : 16
+    },
+    "basketValue" : 29.97,
+    "cost" : 359.64,
+    "height" : 2,
+    "icon" : {
+      "height" : 63,
+      "src" : "sprites/fruit-trees/lemon.png",
+      "width" : 56
+    },
+    "id" : "lemon",
+    "limit" : 6,
+    "name" : "Lemon Tree",
+    "preserves" : "Lemon Preserves",
+    "produceName" : "Lemon Basket",
+    "ripenSeconds" : 3987,
+    "unlockLevel" : 16,
+    "width" : 2,
+    "xp" : 26
+  },
+  {
+    "basketIcon" : {
+      "height" : 15,
+      "src" : "sprites/baskets/banana.png",
+      "width" : 15
+    },
+    "basketValue" : 75.15,
+    "cost" : 901.8,
+    "height" : 2,
+    "icon" : {
+      "height" : 71,
+      "src" : "sprites/fruit-trees/banana.png",
+      "width" : 68
+    },
+    "id" : "banana",
+    "limit" : 6,
+    "name" : "Banana Tree",
+    "preserves" : "Banana Preserves",
+    "produceName" : "Banana Basket",
+    "ripenSeconds" : 9280,
+    "unlockLevel" : 20,
+    "width" : 2,
+    "xp" : 32
+  }
+]

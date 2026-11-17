@@ -1,0 +1,62 @@
+---
+title: Growth
+description: How crops grow in real time, what speeds them up, and how pets and animals affect crops.
+sidebar:
+  order: 5
+---
+import Fact from '../../../components/Fact.astro';
+
+A crop starts growing when it is planted and takes its grow time from the [crops table](../crops/#all-crops). Growth runs on the real clock.
+
+## Real time
+
+- Crops keep growing while the app is closed. When you come back, everything that finished is ripe.
+- Grow time counts from the moment of planting. Seasons, weather and the time of day do not change it.
+- Each crop shows four small plants that ripen one after another (see [Crops](../crops/#four-plants-per-tile)).
+- Tapping a growing crop shows how much time is left.
+- [Fruit trees](../fruit-trees/) grow the same way, and start again each time they are picked.
+
+## Boosts
+
+Three things make a farmland tile grow crops faster.
+
+| Boost | Effect | Where |
+| --- | --- | --- |
+| Saturated soil | 5% faster | Within 1 tile of water, or in reach of a sprinkler (see [Farmland and Water](../farmland-and-water/)) |
+| Fertilizer | <Fact path="terrain.fertilizerSpeedUpPercent" />% faster | On the tile, until the crop is harvested (see [Fertilizer and Sprinklers](../fertilizer-and-sprinklers/)) |
+| Scarecrow | 5% faster | Within 3 tiles of a Scarecrow |
+
+- The boosts multiply: a tile with all three grows 1.05 × 1.1 × 1.05, about 1.21 times as fast.
+- A boost works on the crop as the farm is now. A sprinkler or Scarecrow placed later also speeds crops that are already growing.
+- Fruit trees stand on grass, so no boost applies to them.
+
+### Example
+
+Tomato has a base grow time of <Fact path="crops.tomato.growSeconds" as="duration" />. Planted on a tile with these boosts, it is ripe after:
+
+| Boosts on the tile | Ripe after |
+| --- | --- |
+| None | 22 min 9 s |
+| Saturated soil | 21 min 6 s |
+| Fertilizer | 20 min 9 s |
+| Saturated soil and fertilizer | 19 min 11 s |
+| Saturated soil, fertilizer and Scarecrow | 18 min 16 s |
+
+## Pets hurrying crops
+
+- A pet standing on a growing crop can make it ripen at once. The longer it stays, the likelier it is.
+- It works on crops only. It does not work on fruit trees or while the pet is in its house.
+- A pet that has been fed by hand ripens crops faster for its five minutes.
+- See [Pets](../../animals/pets/).
+
+## Animals eating crops
+
+Chickens and farm animals sometimes eat crops.
+
+- Only a fully grown chicken or farm animal out in the open eats a crop. It must be standing on the crop's tile, growing or ripe.
+- Each second on a crop gives it a small chance (about 1 in 30) of eating the whole tile.
+- Each animal eats at most one crop a day on the farm's clock (<Fact path="world.realSecondsPerFarmDay" as="duration" />).
+- The eaten crop gives no money or XP and counts toward no quest. The farmland stays, and the fertilizer on it is gone.
+- The animal is fed by the crop like a meal by hand: Well Fed for its five minutes (see [Feeding](../../animals/feeding/#eating-crops-in-the-field)). A Well Fed animal leaves crops alone.
+- Pets, ducks, chicks, babies and animals inside their home leave crops alone. Fruit trees are safe.
+- A fence around a field keeps animals out (see [Fences and Paths](../../decorations/fences-and-paths/)).

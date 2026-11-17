@@ -1,0 +1,111 @@
+---
+title: Tools
+description: How the tool circle and ring work, the six tools, the five Harvest implements and their upgrades, and how dragging and tapping work.
+---
+import DataTable from '../../components/DataTable.astro';
+
+You play by dragging a tool over the farm (see [Farm Screen](../farm-screen/) for the rest of the screen). The tool circle sits at the bottom left of the screen. Tap it to open the ring of tools, pick one, then drag the circle onto the farm.
+
+## The tool ring
+
+Tapping the tool circle fans out a ring of round buttons. The six tools sit on the outer arc. Storage, Settings and the clock sit on an inner arc.
+
+| Tool | Use it to | More |
+| --- | --- | --- |
+| Plant | Plant seeds and fruit trees on farmland | [Crops](../farming/crops/), [Fruit Trees](../farming/fruit-trees/) |
+| Harvest | Gather with one of five implements: the Scythe, Axe, Pickaxe, Bucket and Fishing Rod | [Below](#harvest-implements) |
+| Fertilize | Spread fertilizer and place sprinklers | [Fertilizer and Sprinklers](../farming/fertilizer-and-sprinklers/) |
+| Terrain | Lay farmland, water and paths, or clear them back to grass | [Farmland and Water](../farming/farmland-and-water/) |
+| Build | Place buildings | [Buildings](../buildings/) |
+| Decorate | Place fences, decorations and trees, and set down or feed stored items | [Decorations](../decorations/) |
+
+The inner arc has three buttons that open menus instead of picking up a tool.
+
+| Button | What it does | More |
+| --- | --- | --- |
+| Storage | Opens what you have gathered, to sell or use | [Storage and Selling](../storage-and-selling/) |
+| Settings | Sound, graphics, gameplay, saves and more | [Settings](../settings/settings/) |
+| Clock | Shows the time of day on the farm clock, with a sun or a moon | [Day and Night](../world/day-and-night/) |
+
+- Tapping a tool picks it up with whatever it last held and closes the ring.
+- Tapping the circle again, dragging it or touching the farm closes the ring. A drag or pinch still moves the camera.
+- While you are fishing, the ring has one button, Exit (see [Fishing](../gathering/fishing/)).
+
+## Choosing what a tool holds
+
+Each tool has dropdown buttons in a row beside the circle. The first one opens a list above the circle of everything the tool can hold.
+
+- Picking a row selects it and closes the list. The current choice has a green checkmark.
+- A row shows its price, or the level it unlocks at. Locked rows are dimmed and tapping one says what unlocks it.
+- The green **i** beside a row opens that item's page, with a **Select** button at the bottom.
+- Some tools have more dropdowns, such as tree size and color for trees, or Sell and Store for a Harvest implement.
+- Settings → Gameplay has **Open Tool Menu on Select**. With it on (the default), picking a tool opens its first list at once.
+
+## Dragging and tapping
+
+- Drag the tool circle onto the farm. It moves to sit under your finger, and the tool works on the tile a little up and to the right of the circle's center. **Tool Offset** in Settings → Gameplay sets how far, and 0 puts it right under the circle. See [Settings](../settings/settings/).
+- A drag has to move about one button width before most tools start. The Scythe and the Bucket start as soon as the drag begins.
+- You can also tap a tile with the tool held. A tap on a ripe crop harvests it only with the Scythe in hand.
+- Fishing works differently: tap a fish's shadow or drag the rod onto it (see [Fishing](../gathering/fishing/)).
+
+## Harvest implements
+
+The Harvest tool holds one implement at a time, picked from its first dropdown. Each gathers its own kind of thing and ignores the rest.
+
+<DataTable name="tools" />
+
+| Implement | Guide |
+| --- | --- |
+| Scythe | [Crops](../farming/crops/) |
+| Axe | [Trees, Logs and Stones](../gathering/trees-logs-and-stones/) |
+| Pickaxe | [Mining](../gathering/mining/) |
+| Bucket | [Chickens and Eggs](../animals/chickens-and-eggs/) (eggs lying on the ground), [Livestock](../animals/livestock/), [Butterflies and Fireflies](../gathering/butterflies-and-fireflies/) |
+| Fishing Rod | [Fishing](../gathering/fishing/) |
+
+- The Axe also takes decorations and fences back into storage in one pass.
+
+### Sell or Store
+
+The Scythe and the Bucket have a **Sell** or **Store** dropdown below their item dropdown.
+
+| Choice | What happens |
+| --- | --- |
+| Sell | Each thing sells the moment it is gathered. It still earns XP and needs no room in Storage |
+| Store | What you gather goes into [Storage](../storage-and-selling/) to be sold later |
+
+- Each implement remembers its own choice. A new farm starts both on Sell.
+- The Axe and Pickaxe always store. Logs and stones sell for nothing.
+- The Fishing Rod gives the choice on each catch. Butterflies and fireflies cannot be sold.
+
+## Upgrades
+
+Each implement can be upgraded to Level 2 and Level 3. An upgrade costs money only.
+
+<DataTable name="tool-upgrades" />
+
+1. Open the Harvest tool's first dropdown.
+2. Tap the purple **Upgrade** button on the implement's row, left of the green **i**.
+3. The upgrade page shows the cost and what changes. Buy it from there.
+
+- The button shows once the upgrade's level is unlocked, even if you cannot afford it yet. Before that, a greyed Upgrade button says "Upgrade for this tool unlocks at Level N and costs $X". A fully upgraded implement has no button.
+- Each row shows the implement's level beside its name: white at Level 1, grey at Level 2 and purple at Level 3. The metal of the picture changes the same way.
+- Any Axe fells any tree and any Pickaxe breaks any rock or vein. A better one only takes fewer passes.
+- A second item from the Scythe or the Bucket is only taken if it fits in Storage. It pays or stores like the first and earns no extra XP.
+- Extra logs and stones come only from wild trees and plain wild rocks. Planted trees and placed rocks give none.
+- The Fishing Rod's wider circle is described on [Fishing](../gathering/fishing/).
+
+## Banners
+
+Using the wrong implement for what you touch shows a banner saying which one to use, with that implement's picture in a green frame. Tap the banner to pick the implement up. It stays on screen longer than other messages.
+
+| Banner | Shows when you touch |
+| --- | --- |
+| Use the Scythe from the Harvest tool to harvest crops | A ripe crop |
+| Use the Scythe from the Harvest tool to shear sheep | A sheep with wool |
+| Use the Axe from the Harvest tool to remove a tree | A tree |
+| Use the Pickaxe from the Harvest tool to break a rock | A rock |
+| Use the Bucket from the Harvest tool to pick fruit | A fruit tree |
+| Use the Bucket from the Harvest tool to collect eggs | An egg, or its tile with a tool that would build, plant or lay something there |
+| Use the Fishing Rod from the Harvest tool to catch fish | A fish |
+
+The Bucket also has banners for collecting what an animal or a workshop has ready.

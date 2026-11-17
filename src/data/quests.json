@@ -1,0 +1,10 @@
+{
+  "marketStandLevel" : 6,
+  "marketStandQuests" : 4,
+  "mostCropsAsked" : 100,
+  "oreQuestsFromLevel" : 18,
+  "questsToUpgrade" : 10,
+  "stockQuestsFromLevel" : 12,
+  "upgradeCost" : 10000,
+  "upgradedQuests" : 6
+}

@@ -1,0 +1,1030 @@
+[
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Wheat"
+    ],
+    "farmland" : 4,
+    "farmlandAdded" : 0,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 1,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 12,
+    "xpToReach" : 0
+  },
+  {
+    "buildings" : [
+      "Pet House"
+    ],
+    "crops" : [
+      "Carrot"
+    ],
+    "farmland" : 8,
+    "farmlandAdded" : 4,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 2,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 72,
+    "xpToReach" : 12
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Potato"
+    ],
+    "farmland" : 14,
+    "farmlandAdded" : 6,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 3,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Axe level 2"
+    ],
+    "xpToNext" : 168,
+    "xpToReach" : 84
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+
+    ],
+    "farmland" : 22,
+    "farmlandAdded" : 8,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+      "Apple Tree"
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 4,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Scythe level 2"
+    ],
+    "xpToNext" : 330,
+    "xpToReach" : 252
+  },
+  {
+    "buildings" : [
+      "Chicken Coop"
+    ],
+    "crops" : [
+      "Beetroot"
+    ],
+    "farmland" : 32,
+    "farmlandAdded" : 10,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 5,
+    "rarerFish" : true,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Bucket level 2"
+    ],
+    "xpToNext" : 576,
+    "xpToReach" : 582
+  },
+  {
+    "buildings" : [
+      "Market Stand"
+    ],
+    "crops" : [
+      "Lettuce"
+    ],
+    "farmland" : 44,
+    "farmlandAdded" : 12,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 6,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Pickaxe level 2",
+      "Fishing Rod level 2"
+    ],
+    "xpToNext" : 924,
+    "xpToReach" : 1158
+  },
+  {
+    "buildings" : [
+      "Shed"
+    ],
+    "crops" : [
+      "Cabbage"
+    ],
+    "farmland" : 58,
+    "farmlandAdded" : 14,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Chicken Coop level 2"
+    ],
+    "level" : 7,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Axe level 3"
+    ],
+    "xpToNext" : 1392,
+    "xpToReach" : 2082
+  },
+  {
+    "buildings" : [
+      "Rabbit Hutch"
+    ],
+    "crops" : [
+
+    ],
+    "farmland" : 74,
+    "farmlandAdded" : 16,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+      "Orange Tree"
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 8,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Scythe level 3",
+      "Fishing Rod level 3"
+    ],
+    "xpToNext" : 1998,
+    "xpToReach" : 3474
+  },
+  {
+    "buildings" : [
+      "Grain Machine"
+    ],
+    "crops" : [
+      "Broccoli"
+    ],
+    "farmland" : 92,
+    "farmlandAdded" : 18,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Rabbit Hutch level 2"
+    ],
+    "level" : 9,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Bucket level 3"
+    ],
+    "xpToNext" : 2760,
+    "xpToReach" : 5472
+  },
+  {
+    "buildings" : [
+      "Sheep Barn"
+    ],
+    "crops" : [
+      "Cauliflower"
+    ],
+    "farmland" : 112,
+    "farmlandAdded" : 20,
+    "fishRarities" : [
+      "Uncommon",
+      "Rare"
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 10,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+      "Pickaxe level 3"
+    ],
+    "xpToNext" : 3696,
+    "xpToReach" : 8232
+  },
+  {
+    "buildings" : [
+      "Silo"
+    ],
+    "crops" : [
+      "Garlic"
+    ],
+    "farmland" : 134,
+    "farmlandAdded" : 22,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Sheep Barn level 2"
+    ],
+    "level" : 11,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 4824,
+    "xpToReach" : 11928
+  },
+  {
+    "buildings" : [
+      "House",
+      "Goat Barn"
+    ],
+    "crops" : [
+
+    ],
+    "farmland" : 158,
+    "farmlandAdded" : 24,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+      "Peach Tree"
+    ],
+    "homeUpgrades" : [
+      "Chicken Coop level 3"
+    ],
+    "level" : 12,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : true,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 6162,
+    "xpToReach" : 16752
+  },
+  {
+    "buildings" : [
+      "Tractor"
+    ],
+    "crops" : [
+      "Leek"
+    ],
+    "farmland" : 184,
+    "farmlandAdded" : 26,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Goat Barn level 2"
+    ],
+    "level" : 13,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 7728,
+    "xpToReach" : 22914
+  },
+  {
+    "buildings" : [
+      "Stone Oven",
+      "Pig Barn"
+    ],
+    "crops" : [
+      "Asparagus"
+    ],
+    "farmland" : 212,
+    "farmlandAdded" : 28,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Rabbit Hutch level 3"
+    ],
+    "level" : 14,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 9540,
+    "xpToReach" : 30642
+  },
+  {
+    "buildings" : [
+      "Stable"
+    ],
+    "crops" : [
+      "Zucchini"
+    ],
+    "farmland" : 242,
+    "farmlandAdded" : 30,
+    "fishRarities" : [
+      "Epic"
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Pig Barn level 2"
+    ],
+    "level" : 15,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 11616,
+    "xpToReach" : 40182
+  },
+  {
+    "buildings" : [
+      "Woodwork Bench"
+    ],
+    "crops" : [
+
+    ],
+    "farmland" : 274,
+    "farmlandAdded" : 32,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+      "Lemon Tree"
+    ],
+    "homeUpgrades" : [
+      "Sheep Barn level 3"
+    ],
+    "level" : 16,
+    "rarerFish" : false,
+    "recipes" : [
+      "Lemon Preserves"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 13974,
+    "xpToReach" : 51798
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Tomato"
+    ],
+    "farmland" : 308,
+    "farmlandAdded" : 34,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Stable level 2"
+    ],
+    "level" : 17,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 16632,
+    "xpToReach" : 65772
+  },
+  {
+    "buildings" : [
+      "Tailor Table"
+    ],
+    "crops" : [
+      "Pepper"
+    ],
+    "farmland" : 344,
+    "farmlandAdded" : 36,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Goat Barn level 3"
+    ],
+    "level" : 18,
+    "rarerFish" : false,
+    "recipes" : [
+      "Copper Bar",
+      "Silver Bar",
+      "Gold Bar"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 19608,
+    "xpToReach" : 82404
+  },
+  {
+    "buildings" : [
+      "DIY Crafting Table",
+      "Luxury Barn"
+    ],
+    "crops" : [
+      "Eggplant"
+    ],
+    "farmland" : 382,
+    "farmlandAdded" : 38,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 19,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 22920,
+    "xpToReach" : 102012
+  },
+  {
+    "buildings" : [
+      "Dairy"
+    ],
+    "crops" : [
+
+    ],
+    "farmland" : 402,
+    "farmlandAdded" : 20,
+    "fishRarities" : [
+      "Legendary"
+    ],
+    "fruitTrees" : [
+      "Banana Tree"
+    ],
+    "homeUpgrades" : [
+      "Pig Barn level 3"
+    ],
+    "level" : 20,
+    "rarerFish" : false,
+    "recipes" : [
+      "Banana Preserves"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 25326,
+    "xpToReach" : 124932
+  },
+  {
+    "buildings" : [
+      "Cheese Cellar"
+    ],
+    "crops" : [
+      "Red Onion"
+    ],
+    "farmland" : 423,
+    "farmlandAdded" : 21,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Luxury Barn level 2"
+    ],
+    "level" : 21,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 27918,
+    "xpToReach" : 150258
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Strawberry"
+    ],
+    "farmland" : 445,
+    "farmlandAdded" : 22,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Stable level 3"
+    ],
+    "level" : 22,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 30705,
+    "xpToReach" : 178176
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Raspberry"
+    ],
+    "farmland" : 468,
+    "farmlandAdded" : 23,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 23,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 33696,
+    "xpToReach" : 208881
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Blackberry"
+    ],
+    "farmland" : 492,
+    "farmlandAdded" : 24,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+      "Luxury Barn level 3",
+      "Luxury House"
+    ],
+    "level" : 24,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 36900,
+    "xpToReach" : 242577
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Radish"
+    ],
+    "farmland" : 517,
+    "farmlandAdded" : 25,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 25,
+    "rarerFish" : true,
+    "recipes" : [
+      "Radish Pickles"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 40326,
+    "xpToReach" : 279477
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Turnip"
+    ],
+    "farmland" : 543,
+    "farmlandAdded" : 26,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 26,
+    "rarerFish" : false,
+    "recipes" : [
+      "Turnip Soup"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 43983,
+    "xpToReach" : 319803
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Corn"
+    ],
+    "farmland" : 570,
+    "farmlandAdded" : 27,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 27,
+    "rarerFish" : false,
+    "recipes" : [
+
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 47880,
+    "xpToReach" : 363786
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Pumpkin"
+    ],
+    "farmland" : 598,
+    "farmlandAdded" : 28,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 28,
+    "rarerFish" : false,
+    "recipes" : [
+      "Pumpkin Pie"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 52026,
+    "xpToReach" : 411666
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Watermelon"
+    ],
+    "farmland" : 627,
+    "farmlandAdded" : 29,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 29,
+    "rarerFish" : false,
+    "recipes" : [
+      "Watermelon Juice"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 56430,
+    "xpToReach" : 463692
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Pineapple"
+    ],
+    "farmland" : 657,
+    "farmlandAdded" : 30,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 30,
+    "rarerFish" : true,
+    "recipes" : [
+      "Pineapple Preserves"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 61101,
+    "xpToReach" : 520122
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Cotton"
+    ],
+    "farmland" : 688,
+    "farmlandAdded" : 31,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 31,
+    "rarerFish" : false,
+    "recipes" : [
+      "Cloth"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 66048,
+    "xpToReach" : 581223
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Grapes"
+    ],
+    "farmland" : 720,
+    "farmlandAdded" : 32,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 32,
+    "rarerFish" : false,
+    "recipes" : [
+      "Grape Juice"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 71280,
+    "xpToReach" : 647271
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Prickly Pear"
+    ],
+    "farmland" : 753,
+    "farmlandAdded" : 33,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 33,
+    "rarerFish" : false,
+    "recipes" : [
+      "Prickly Pear Preserves"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToNext" : 76806,
+    "xpToReach" : 718551
+  },
+  {
+    "buildings" : [
+
+    ],
+    "crops" : [
+      "Coffee"
+    ],
+    "farmland" : 787,
+    "farmlandAdded" : 34,
+    "fishRarities" : [
+
+    ],
+    "fruitTrees" : [
+
+    ],
+    "homeUpgrades" : [
+
+    ],
+    "level" : 34,
+    "rarerFish" : false,
+    "recipes" : [
+      "Roasted Coffee"
+    ],
+    "stockQuests" : false,
+    "toolUpgrades" : [
+
+    ],
+    "xpToReach" : 795357
+  }
+]

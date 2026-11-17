@@ -1,0 +1,15 @@
+---
+// One number from the generated data inside a sentence: <Fact path="world.daysPerSeason" />, or with a format,
+// <Fact path="buildings.chickenCoop.cost" as="money" />.
+import { fact, formats } from '../lib/tables.js';
+
+interface Props {
+  path: string;
+  as?: 'money' | 'duration' | 'count' | 'list';
+}
+const { path, as } = Astro.props;
+const value = fact(path);
+const text = as ? formats[as](value) : Array.isArray(value) ? formats.list(value) : `${value}`;
+---
+
+{text}

@@ -1,0 +1,495 @@
+{
+  "chickens" : {
+    "chickIcon" : {
+      "height" : 11,
+      "src" : "sprites/chickens/chick.png",
+      "width" : 10
+    },
+    "eggIcon" : {
+      "height" : 16,
+      "src" : "sprites/goods/egg.png",
+      "width" : 14
+    },
+    "eggValue" : 5,
+    "eggsWaitingPerHen" : 1,
+    "growSeconds" : 600,
+    "grownSalePrice" : 50,
+    "hatchSeconds" : 300,
+    "henColors" : [
+      "Brown Hen",
+      "Dark Brown Hen",
+      "Black and Brown Hen",
+      "Golden Hen",
+      "Gray Hen",
+      "White Hen",
+      "Yellow Hen"
+    ],
+    "icon" : {
+      "height" : 14,
+      "src" : "sprites/chickens/hen-brown.png",
+      "width" : 12
+    },
+    "layEverySeconds" : 180,
+    "unlockLevel" : 5
+  },
+  "livestock" : [
+    {
+      "babyIcon" : {
+        "height" : 13,
+        "src" : "sprites/animals/rabbit-baby.png",
+        "width" : 13
+      },
+      "babyName" : "Kit",
+      "birthSeconds" : 240,
+      "colors" : [
+        "Brown Rabbit",
+        "Dark Eared Rabbit",
+        "Gray Rabbit",
+        "Gray and White Rabbit",
+        "Spotted Rabbit",
+        "White Rabbit"
+      ],
+      "giveSeconds" : 240,
+      "gives" : "Fertilizer",
+      "givesIcon" : {
+        "height" : 8,
+        "src" : "sprites/goods/fertilizer.png",
+        "width" : 11
+      },
+      "givesValue" : 5,
+      "growSeconds" : 480,
+      "home" : "Rabbit Hutch",
+      "icon" : {
+        "height" : 16,
+        "src" : "sprites/animals/rabbit.png",
+        "width" : 18
+      },
+      "id" : "rabbit",
+      "name" : "Rabbit",
+      "tool" : "Bucket",
+      "unlockLevel" : 8
+    },
+    {
+      "babyIcon" : {
+        "height" : 14,
+        "src" : "sprites/animals/duck-baby.png",
+        "width" : 13
+      },
+      "babyName" : "Duckling",
+      "colors" : [
+        "Brown Duck",
+        "Mallard",
+        "Red Eyed Duck",
+        "White Duck"
+      ],
+      "growSeconds" : 600,
+      "home" : "Pond",
+      "icon" : {
+        "height" : 18,
+        "src" : "sprites/animals/duck.png",
+        "width" : 19
+      },
+      "id" : "duck",
+      "name" : "Duck",
+      "salePrice" : 25,
+      "unlockLevel" : 1
+    },
+    {
+      "babyIcon" : {
+        "height" : 16,
+        "src" : "sprites/animals/sheep-baby.png",
+        "width" : 17
+      },
+      "babyName" : "Lamb",
+      "birthSeconds" : 480,
+      "colors" : [
+        "Black Sheep",
+        "Brown Sheep",
+        "Gray Sheep",
+        "White Sheep",
+        "Yellow Sheep",
+        "Woolly Black Sheep",
+        "Woolly Brown Sheep",
+        "Woolly Gray Sheep",
+        "Woolly White Sheep",
+        "Woolly Yellow Sheep",
+        "Woolly Pale Yellow Sheep"
+      ],
+      "giveSeconds" : 360,
+      "gives" : "Wool",
+      "givesIcon" : {
+        "height" : 23,
+        "src" : "sprites/goods/wool.png",
+        "width" : 24
+      },
+      "givesValue" : 30,
+      "growSeconds" : 900,
+      "home" : "Sheep Barn",
+      "icon" : {
+        "height" : 17,
+        "src" : "sprites/animals/sheep.png",
+        "width" : 26
+      },
+      "id" : "sheep",
+      "name" : "Sheep",
+      "tool" : "Scythe",
+      "unlockLevel" : 10
+    },
+    {
+      "babyIcon" : {
+        "height" : 19,
+        "src" : "sprites/animals/goat-baby.png",
+        "width" : 19
+      },
+      "babyName" : "Kid",
+      "birthSeconds" : 480,
+      "colors" : [
+        "Black Headed Goat",
+        "Ginger Goat",
+        "Tan Goat",
+        "White Goat"
+      ],
+      "giveSeconds" : 300,
+      "gives" : "Goat Milk",
+      "givesIcon" : {
+        "height" : 16,
+        "src" : "sprites/goods/milk.png",
+        "width" : 12
+      },
+      "givesValue" : 18,
+      "growSeconds" : 900,
+      "home" : "Goat Barn",
+      "icon" : {
+        "height" : 26,
+        "src" : "sprites/animals/goat.png",
+        "width" : 27
+      },
+      "id" : "goat",
+      "name" : "Goat",
+      "tool" : "Bucket",
+      "unlockLevel" : 12
+    },
+    {
+      "babyIcon" : {
+        "height" : 12,
+        "src" : "sprites/animals/pig-baby.png",
+        "width" : 19
+      },
+      "babyName" : "Piglet",
+      "birthSeconds" : 480,
+      "colors" : [
+        "Pink Pig",
+        "Light Pink Pig",
+        "Pink and Brown Pig",
+        "Gray Spotted Pig",
+        "Pink Spotted Pig"
+      ],
+      "giveSeconds" : 360,
+      "gives" : "Fertilizer",
+      "givesIcon" : {
+        "height" : 8,
+        "src" : "sprites/goods/fertilizer.png",
+        "width" : 11
+      },
+      "givesValue" : 5,
+      "growSeconds" : 1200,
+      "home" : "Pig Barn",
+      "icon" : {
+        "height" : 16,
+        "src" : "sprites/animals/pig.png",
+        "width" : 27
+      },
+      "id" : "pig",
+      "name" : "Pig",
+      "tool" : "Bucket",
+      "unlockLevel" : 14
+    },
+    {
+      "babyIcon" : {
+        "height" : 23,
+        "src" : "sprites/animals/donkey-baby.png",
+        "width" : 24
+      },
+      "babyName" : "Foal",
+      "birthSeconds" : 600,
+      "colors" : [
+        "Dark Donkey",
+        "Gray Donkey",
+        "Caramel Donkey",
+        "Light Brown Donkey"
+      ],
+      "giveSeconds" : 480,
+      "gives" : "Fertilizer",
+      "givesIcon" : {
+        "height" : 8,
+        "src" : "sprites/goods/fertilizer.png",
+        "width" : 11
+      },
+      "givesValue" : 5,
+      "growSeconds" : 1500,
+      "home" : "Stable",
+      "icon" : {
+        "height" : 25,
+        "src" : "sprites/animals/donkey.png",
+        "width" : 36
+      },
+      "id" : "donkey",
+      "name" : "Donkey",
+      "tool" : "Bucket",
+      "unlockLevel" : 15
+    },
+    {
+      "babyIcon" : {
+        "height" : 20,
+        "src" : "sprites/animals/cow-baby.png",
+        "width" : 26
+      },
+      "babyName" : "Calf",
+      "birthSeconds" : 600,
+      "colors" : [
+        "Black Spotted Cow",
+        "Caramel Spotted Cow",
+        "Big Black Cow",
+        "Big White Cow",
+        "Big Caramel Cow"
+      ],
+      "giveSeconds" : 360,
+      "gives" : "Milk",
+      "givesIcon" : {
+        "height" : 16,
+        "src" : "sprites/goods/milk.png",
+        "width" : 12
+      },
+      "givesValue" : 60,
+      "growSeconds" : 1800,
+      "home" : "Luxury Barn",
+      "icon" : {
+        "height" : 27,
+        "src" : "sprites/animals/cow.png",
+        "width" : 45
+      },
+      "id" : "cow",
+      "name" : "Cow",
+      "tool" : "Bucket",
+      "unlockLevel" : 19
+    }
+  ],
+  "meal" : {
+    "farmFavorite" : "Wheat",
+    "petFavorite" : "Salmon",
+    "seconds" : 300,
+    "speedUpPercent" : 25
+  },
+  "pets" : {
+    "cats" : [
+      "Grey Cat",
+      "Black Cat",
+      "White Cat",
+      "Orange Cat",
+      "Calico Cat",
+      "Colorpoint Cat",
+      "Tabby Cat",
+      "Tuxedo Cat",
+      "Tortoiseshell Cat"
+    ],
+    "dogBreeds" : [
+      "Labrador",
+      "German Shepherd",
+      "Basenji"
+    ],
+    "dogs" : [
+      "Brown Labrador",
+      "White Labrador",
+      "Dark Brown Labrador",
+      "Orange Basenji",
+      "Brown Basenji",
+      "Gray Basenji",
+      "Brown German Shepherd",
+      "Gray German Shepherd",
+      "Dark Brown German Shepherd"
+    ],
+    "gallery" : [
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/grey.png",
+          "width" : 17
+        },
+        "id" : "grey",
+        "kind" : "Cat",
+        "name" : "Grey Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/black.png",
+          "width" : 17
+        },
+        "id" : "black",
+        "kind" : "Cat",
+        "name" : "Black Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/white.png",
+          "width" : 17
+        },
+        "id" : "white",
+        "kind" : "Cat",
+        "name" : "White Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/orange.png",
+          "width" : 17
+        },
+        "id" : "orange",
+        "kind" : "Cat",
+        "name" : "Orange Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/calico.png",
+          "width" : 17
+        },
+        "id" : "calico",
+        "kind" : "Cat",
+        "name" : "Calico Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/colorpoint.png",
+          "width" : 17
+        },
+        "id" : "colorpoint",
+        "kind" : "Cat",
+        "name" : "Colorpoint Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/tabby.png",
+          "width" : 17
+        },
+        "id" : "tabby",
+        "kind" : "Cat",
+        "name" : "Tabby Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/tuxedo.png",
+          "width" : 17
+        },
+        "id" : "tuxedo",
+        "kind" : "Cat",
+        "name" : "Tuxedo Cat"
+      },
+      {
+        "icon" : {
+          "height" : 16,
+          "src" : "sprites/pets/tortoiseshell.png",
+          "width" : 17
+        },
+        "id" : "tortoiseshell",
+        "kind" : "Cat",
+        "name" : "Tortoiseshell Cat"
+      },
+      {
+        "icon" : {
+          "height" : 21,
+          "src" : "sprites/pets/labrador-brown.png",
+          "width" : 34
+        },
+        "id" : "labrador-brown",
+        "kind" : "Labrador",
+        "name" : "Brown Labrador"
+      },
+      {
+        "icon" : {
+          "height" : 21,
+          "src" : "sprites/pets/labrador-white.png",
+          "width" : 34
+        },
+        "id" : "labrador-white",
+        "kind" : "Labrador",
+        "name" : "White Labrador"
+      },
+      {
+        "icon" : {
+          "height" : 21,
+          "src" : "sprites/pets/labrador-darkBrown.png",
+          "width" : 34
+        },
+        "id" : "labrador-darkBrown",
+        "kind" : "Labrador",
+        "name" : "Dark Brown Labrador"
+      },
+      {
+        "icon" : {
+          "height" : 20,
+          "src" : "sprites/pets/basenji-orange.png",
+          "width" : 23
+        },
+        "id" : "basenji-orange",
+        "kind" : "Basenji",
+        "name" : "Orange Basenji"
+      },
+      {
+        "icon" : {
+          "height" : 20,
+          "src" : "sprites/pets/basenji-brown.png",
+          "width" : 23
+        },
+        "id" : "basenji-brown",
+        "kind" : "Basenji",
+        "name" : "Brown Basenji"
+      },
+      {
+        "icon" : {
+          "height" : 20,
+          "src" : "sprites/pets/basenji-gray.png",
+          "width" : 23
+        },
+        "id" : "basenji-gray",
+        "kind" : "Basenji",
+        "name" : "Gray Basenji"
+      },
+      {
+        "icon" : {
+          "height" : 22,
+          "src" : "sprites/pets/germanShepherd-brown.png",
+          "width" : 33
+        },
+        "id" : "germanShepherd-brown",
+        "kind" : "German Shepherd",
+        "name" : "Brown German Shepherd"
+      },
+      {
+        "icon" : {
+          "height" : 22,
+          "src" : "sprites/pets/germanShepherd-gray.png",
+          "width" : 33
+        },
+        "id" : "germanShepherd-gray",
+        "kind" : "German Shepherd",
+        "name" : "Gray German Shepherd"
+      },
+      {
+        "icon" : {
+          "height" : 22,
+          "src" : "sprites/pets/germanShepherd-darkBrown.png",
+          "width" : 33
+        },
+        "id" : "germanShepherd-darkBrown",
+        "kind" : "German Shepherd",
+        "name" : "Dark Brown German Shepherd"
+      }
+    ],
+    "pets" : 18
+  }
+}

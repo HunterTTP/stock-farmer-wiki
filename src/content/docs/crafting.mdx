@@ -1,0 +1,81 @@
+---
+title: Crafting
+description: Every workshop recipe in Stock Farmer, what goes in, how long it takes and what the goods sell for.
+sidebar:
+  order: 20
+---
+import DataTable from '../../components/DataTable.astro';
+import Fact from '../../components/Fact.astro';
+
+[Workshops](../buildings/workshops/) turn goods from storage into goods worth more. A recipe takes a number of one ingredient and gives one or more of its product after a set time.
+
+## All recipes
+
+<DataTable name="recipes" />
+
+- **From** is taken from storage when you tap Start.
+- **Each sells for** is the sale price of one item made.
+- **Unlock level** is the player level at which the recipe can be chosen. It is the level of the workshop, the crop or the ore, whichever is highest.
+- The first recipe of each workshop is available as soon as the workshop is built.
+- Collect finished goods with the Bucket. See [Workshops](../buildings/workshops/).
+
+## How artisan goods are priced
+
+Flour, Bread, Planks, Cloth, Bricks and Cheese have set prices. Every other good is an artisan good, and its price comes from what goes into it:
+
+- An artisan good sells for 1.5 times the sale price of everything that goes in, rounded to cents.
+- A bar or a polished gem sells for 2 times the sale price of the ore that goes in.
+
+Worked examples:
+
+| Good | Calculation |
+| --- | --- |
+| Pumpkin Pie | <Fact path="recipes.pumpkinPie.inputCount" /> Pumpkins at <Fact path="crops.pumpkin.sellValue" as="money" /> each, times 1.5, is <Fact path="recipes.pumpkinPie.outputValue" as="money" /> |
+| Copper Bar | <Fact path="recipes.copperBar.inputCount" /> Copper Ore at <Fact path="mining.ores.copper.value" as="money" /> each, times 2, is <Fact path="recipes.copperBar.outputValue" as="money" /> |
+
+## Grain Machine
+
+Mills wheat into flour and presses fruit into juice.
+
+<DataTable name="recipes" where="building" is="Grain Machine" />
+
+## Stone Oven
+
+Bakes bread, cooks fruit and vegetables, roasts coffee and smelts ore into bars.
+
+<DataTable name="recipes" where="building" is="Stone Oven" />
+
+- Preserves take baskets from fruit trees.
+- Bars take ore from [Mining](../gathering/mining/). Ore recipes unlock at the level at which ore can be smelted.
+
+## Woodwork Bench
+
+Saws logs into planks and planks into furniture.
+
+<DataTable name="recipes" where="building" is="Woodwork Bench" />
+
+## Tailor Table
+
+Spins wool and cotton into cloth and cloth into fine cloth.
+
+<DataTable name="recipes" where="building" is="Tailor Table" />
+
+- Wool comes from sheep. Cotton is a crop.
+
+## DIY Crafting Table
+
+Makes bricks from stones, polished gems from rough gems and pickles from radishes.
+
+<DataTable name="recipes" where="building" is="DIY Crafting Table" />
+
+## Dairy
+
+Turns milk and goat milk into cheese.
+
+<DataTable name="recipes" where="building" is="Dairy" />
+
+## Cheese Cellar
+
+Ages cheese into aged cheese.
+
+<DataTable name="recipes" where="building" is="Cheese Cellar" />

@@ -1,0 +1,141 @@
+---
+title: Levels
+description: How XP and levels work in Stock Farmer, what earns XP, the XP needed for every level, and what each level unlocks.
+---
+import DataTable from '../../components/DataTable.astro';
+import Fact from '../../components/Fact.astro';
+
+Your level decides what you can plant, build and craft, and how much farmland you can have. XP raises your level. The level and an XP bar sit at the top right of the farm, and your money at the top left.
+
+- You start at level 1 with 0 XP.
+- Selling crops, fish and goods earns money. Harvesting, taking produce from animals and finishing quests earn XP.
+- The top level is <Fact path="world.maxLevel" />, where Coffee unlocks. At the top the bar reads "Max level" and no more XP is earned.
+
+## What earns XP
+
+| Action | XP |
+| --- | --- |
+| Harvest a crop tile with the Scythe | The crop's XP (see [Crops](../farming/crops/)) |
+| Pick a fruit basket with the Bucket | The tree's XP (see [Fruit Trees](../farming/fruit-trees/)) |
+| Collect what an animal made | See below |
+| Land a fish | Depends on rarity and weight |
+| Catch a butterfly or a wild firefly with the Bucket | Depends on color |
+| Complete a Market Stand quest | A share of the level's XP |
+
+### Crops and fruit
+
+- A crop earns its unlock level plus one: Wheat 1, Carrot 3, Potato 4, and one more for each crop after that, whatever its grow time.
+- A fruit tree basket earns one and a half times what a crop of its level would, rounded.
+- The XP column of the crop and fruit tree tables lists each amount.
+- A second crop from a tool upgrade earns no XP.
+- The [Tractor](../buildings/tractor/) earns the XP when its load is stored or sold.
+
+### Animal produce
+
+Each item earns the unlock level of the building that makes it, plus one.
+
+| Item | XP |
+| --- | --- |
+| Egg | 6 |
+| Fertilizer | 9 |
+| Wool | 11 |
+| Goat Milk | 13 |
+| Milk | 20 |
+
+A second item from a tool upgrade earns no XP. See [Animals](../animals/).
+
+### Fish
+
+- A common fish earns about 1/300 of the XP needed to leave your level, the same share at every level.
+- Rarer fish earn more, by the multipliers below.
+- A heavier fish earns more than a lighter one of its kind (from half to one and a half times).
+
+| Rarity | Times a common fish |
+| --- | --- |
+| Common | 1 |
+| Uncommon | 2 |
+| Rare | 4 |
+| Epic | 7 |
+| Legendary | 10 |
+
+- Every fish earns at least 1 XP.
+- At level 10, which takes 3,696 XP to leave, an average common fish earns about 12 XP.
+- See [Fishing](../gathering/fishing/).
+
+### Butterflies and fireflies
+
+- A common butterfly earns half what a common fish does, about 1/600 of the XP needed to leave your level.
+- Rarer colors use the same multipliers as fish.
+- Butterflies that change color earn 15 times as much as a common one.
+- A wild firefly earns the XP of the butterfly color it glows in. An orange one counts as a common butterfly.
+- A butterfly or firefly you set free earns nothing when caught again.
+- Each catch earns at least 1 XP.
+- See [Butterflies and Fireflies](../gathering/butterflies-and-fireflies/).
+
+### Quests
+
+- Market Stand quests pay XP when they are complete, and are turned in automatically.
+- A bigger quest pays a bigger share of the XP needed to leave your level.
+- See [Quests](../quests/).
+
+## How level XP is worked out
+
+The XP needed to leave a level is three harvests of a full field of the newest crop:
+
+> XP to leave a level = 3 × farmland tiles at that level × XP of the crop that unlocks at that level
+
+- Level 1: 4 tiles × 3 harvests × 1 XP (Wheat) = 12 XP.
+- Level 2: 8 tiles × 3 × 3 XP (Carrot) = 72 XP.
+- Level 3: 14 tiles × 3 × 4 XP (Potato) = 168 XP.
+- At a level where a fruit tree unlocks, the tree's plain XP is used, without the extra half. Level 4 (Apple Tree) is 22 tiles × 3 × 5 XP = 330 XP.
+
+## The first level-up
+
+Level 2 is the first level-up. It unlocks more farmland, the Pet House and Carrots.
+
+<DataTable name="levels" where="level" is="2" columns="Level,Total XP,Farmland,Unlocks" />
+
+## Level table
+
+Total XP is what you need to be at that level. Farmland is the most tiles you can have at that level.
+
+<DataTable name="levels" />
+
+## Farmland per level
+
+- You start with <Fact path="world.startingFarmland" /> farmland tiles.
+- Levels 2 to 19 each add twice their number in tiles.
+- Level 20 and above each add as many tiles as their number.
+- See [Farmland and Water](../farming/farmland-and-water/).
+
+## Leveling up
+
+When you level up:
+
+1. The level-up sound plays and fireworks burst over the farm. They are skipped when Reduce Motion is on.
+2. A "LEVEL UP" headline shows with the new level number. A jump of several levels reads "Levels 5 to 9 reached", and the top level reads "Max level reached".
+3. About a second and a half later the Level-Up screen fades in over a dimmed farm, headed "NOW UNLOCKED".
+4. The screen has a card for each kind of thing you unlocked:
+   - Farmland (the tiles gained and your new total)
+   - Crops and fruit trees
+   - Buildings
+   - Recipes and tool and animal home upgrades
+   - New kinds of fish, and levels where rarer fish bite more often
+   - Stock Market quests at the Market Stand
+5. Each row shows its picture, name and stats. Tap a row to open its menu. Closing the menu returns to the screen.
+6. Tap Continue to close it. Only Continue closes it, and it comes back if you leave the app first.
+
+- A level with only farmland shows the heading "More farmland".
+- Items unlocked later show a red dot until you have seen them.
+- Decorations are never listed.
+- While the screen is open, the rest of the buttons on the farm slide out of the way.
+
+## First goals
+
+1. Plant new [crops](../farming/crops/) as levels unlock them, and grow the farm as levels add farmland. See [Farmland and Water](../farming/farmland-and-water/).
+2. Build a Pet House, then a Chicken Coop at level <Fact path="buildings.chickenCoop.unlockLevel" /> for eggs. See [Animals](../animals/).
+3. Build the Market Stand at level <Fact path="buildings.marketStand.unlockLevel" /> for optional quests. See [Quests](../quests/).
+4. Fish in the ponds. See [Fishing](../gathering/fishing/).
+5. Add a Shed and a Silo for more Storage. See [Storage and Selling](../storage-and-selling/).
+6. Build a House to open the [Stock Market](../stock-market/).
+7. Follow the [seasons](../world/seasons/) and add [Decorations](../decorations/).

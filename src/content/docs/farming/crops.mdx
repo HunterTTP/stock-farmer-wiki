@@ -1,0 +1,79 @@
+---
+title: Crops
+description: All crops in Stock Farmer with their unlock level, seed cost, sale price, grow time and XP, and how planting and harvesting work.
+sidebar:
+  order: 1
+---
+import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
+
+Crops grow on [farmland](../farmland-and-water/) from seeds you plant with the Plant tool and are cut with the Scythe. Each level unlocks one new crop, from Wheat at level 1 to Coffee at level <Fact path="world.maxLevel" />. [Fruit trees](../fruit-trees/) unlock at some of the levels in between.
+
+![A field of crops at different stages of growth beside a strip of water](../../../assets/farming/crops-field.webp)
+
+## All crops
+
+<DataTable name="crops" />
+
+- Seed cost is paid for each tile planted. Wheat seeds are free.
+- A harvest pays the "Sells for" price, per tile, when the Scythe is set to Sell.
+- XP is earned for each tile harvested (see [Levels](../../levels/)).
+- Grow time is the base time. [Water, fertilizer and scarecrows](../growth/) shorten it.
+
+## Planting
+
+1. Open the Plant tool and pick a crop from its list. Each row shows the cost, the sale price, the grow time and the XP.
+2. Tap an empty farmland tile, or drag across several. Each tile planted costs the seed price.
+3. The crop grows in real time (see [Growth](../growth/)).
+
+Only crops you have unlocked can be picked. Planting needs farmland with nothing standing on it, enough money for the seed and a tile not covered by a decoration or building. A tile already planted shows "Already planted".
+
+The Plant tool names the planting material for each crop. Most are Seeds (Wheat Seeds, Carrot Seeds). The others are:
+
+| Crop | Planting material |
+| --- | --- |
+| Potato | Potato Tubers |
+| Garlic | Garlic Cloves |
+| Asparagus | Asparagus Crowns |
+| Red Onion | Red Onion Sets |
+| Strawberry | Strawberry Runners |
+| Raspberry | Raspberry Canes |
+| Blackberry | Blackberry Canes |
+| Pineapple | Pineapple Crowns |
+| Grapes | Grape Cuttings |
+| Prickly Pear | Prickly Pear Pads |
+
+## Four plants per tile
+
+- Each farmland tile shows four small plants.
+- Each plant changes from sprout to growing to full size at its own moment. The last one finishes when the crop is done.
+- Every planting looks a little different.
+- The tile is one crop. It is harvested as a whole, for one item and one set of XP.
+
+## Harvesting
+
+1. Hold the Scythe from the Harvest tool.
+2. Tap a ripe tile, or drag across several.
+3. Each tile gives one crop and its XP, and the tile is empty again.
+
+- Tapping a crop that is still growing shows how long is left.
+- Tapping a crop with another tool in hand says to use the Scythe.
+- With the Scythe on Sell, the crop sells at once for its price. With Store, it goes into storage to sell later (see [Storage and Selling](../../storage-and-selling/)). Storing needs free room.
+- Scythe upgrades give a chance of a second crop from a tile (see [Tools](../../tools/)). The second crop earns no XP.
+- The [Tractor](../../buildings/tractor/) can harvest ripe crops for you.
+
+## When crops are ready
+
+- When one kind of crop is fully grown on the whole farm, a banner says "Carrot is ready to harvest!" with a chime. Several kinds that finish together are listed in one banner.
+- When every farmland tile is planted and every crop is ripe, a banner says "All crops ready to harvest!" with a chime.
+- Nothing is announced for crops that were already ripe when the farm opened.
+- If you leave the app while a fully planted field is still growing, a notification arrives when the last crop is ripe: "All your crops are ready to harvest!". The game asks for permission to send notifications when it first opens.
+
+## Destroying crops
+
+Hold a finger on a crop to destroy it. A question shows how many crops go and how much grow time is left, and says "No money will be earned." Confirm with Destroy. The seed cost is not refunded. Fertilizer on the tile stays for the next crop.
+
+## Animals and pets
+
+- Chickens and farm animals that are fully grown and out in the open sometimes eat a whole crop on the tile they stand on (see [Growth](../growth/#animals-eating-crops)).
+- A pet standing on a growing crop can make it ripen at once (see [Growth](../growth/#pets-hurrying-crops)).

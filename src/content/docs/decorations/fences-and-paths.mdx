@@ -1,0 +1,48 @@
+---
+title: Fences and paths
+description: How fences and paths are placed and removed, what they cost, and how grass clears them.
+sidebar:
+  order: 1
+---
+import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
+
+Fences are set down with the Decorate tool. Paths and grass are set with the Terrain tool.
+
+## Fences
+
+A Wood Fence costs <Fact path="terrain.fenceCost" as="money" /> per tile and needs no materials. Fence pieces join to the fences next to them, so a run of tiles reads as one fence.
+
+- Pick Fence in the Decorate list, then tap or drag over bare grass.
+- A fence stands on grass only. It cannot go on water, farmland, a crop, a building, a rock, a tree or an animal, or in front of an animal home's entrance.
+- Animals cannot pass through a fence.
+- Farmland and water cannot be placed on a tile with a fence on it. Paths and grass can.
+
+| To do this | Do this |
+| --- | --- |
+| Sell a fence | With the Decorate tool holding fences, tap the fence and confirm. It returns the full price. |
+| Take a fence into Storage | Tap or drag over it with the Axe. It goes into Storage as a Wood Fence, and needs a free slot. |
+| Set a stored fence | Open Storage and tap Select on the Wood Fence row. Each fence set down uses one from Storage and costs no money. |
+
+Tapping a fence with any other tool gives a message to use the Axe. A building more than one tile tall can stand over fences on its top row, and the fences run behind it.
+
+## Paths
+
+Paths are laid with the Terrain tool, one tile at a time. Every path is available from the start.
+
+<DataTable name="paths" />
+
+- Paths are walkable and change no speeds.
+- A path replaces farmland or water on its tile.
+- Paths go under things. A path can be laid under a fence, a building or a decoration, and stays when the thing is removed.
+- Tapping a path tile with a path of another kind changes it.
+
+## Grass
+
+Grass is the Grass choice at the end of the Terrain list. It is free. It clears a path, farmland or water from a tile back to plain grass, and it can clear a path under a fence, building or decoration. The Terrain tool does not change a tile with a crop on it.
+
+## Related pages
+
+- [Decorations](../)
+- [Farmland and water](../../farming/farmland-and-water/)
+- [Tools](../../tools/)

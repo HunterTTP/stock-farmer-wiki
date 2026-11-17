@@ -1,0 +1,27 @@
+{
+  "backpackSlots" : 100,
+  "daysPerSeason" : 7,
+  "firefliesPerNight" : 10,
+  "mapSize" : 50,
+  "maxLevel" : 34,
+  "nightEndsHour" : 5,
+  "nightStartsHour" : 21,
+  "rainRealMinutes" : 3,
+  "rainStartsHour" : 14,
+  "realSecondsPerFarmDay" : 1440,
+  "seasonTurnsAtHour" : 6,
+  "seasons" : [
+    "Spring",
+    "Summer",
+    "Fall",
+    "Winter"
+  ],
+  "shedSlots" : 50,
+  "siloSlots" : 150,
+  "sprinklerSprayEverySeconds" : 60,
+  "startingFarmland" : 4,
+  "stockRefreshMinutes" : 5,
+  "stockSlots" : 5,
+  "stockSlotsUpgraded" : 10,
+  "storageBuildingLimit" : 4
+}

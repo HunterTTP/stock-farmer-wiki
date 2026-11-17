@@ -1,0 +1,87 @@
+---
+title: Saves and iCloud
+description: Farm save slots, Load Game and New Farm, iCloud sync, the banners that appear and the update prompt.
+sidebar:
+  order: 2
+---
+There is no account. Each farm is a save on the device, and on iOS 26 and later the farms also sync through your own iCloud.
+
+## Farms and save slots
+
+The game keeps up to 10 farms, one per save slot. Each farm saves by itself as you play, and again when the game goes to the background.
+
+- **Load Game** is in Settings. It saves the farm, closes it and opens the list of farms.
+- The list shows the farms most recently played first. Each shows its name, Level, money, play time and when it was last played.
+- Tap a farm to open it.
+- **New Farm** is at the bottom of the list. It asks for a name, then starts a farm in the first free slot. A first launch with no farms opens New Game, which asks for a name. See [New farm](../../world/new-farm/).
+- At 10 farms New Farm is replaced by a note to delete a farm before starting another.
+- Two farms cannot share a name, whatever the capitals or spaces.
+
+### Farm options
+
+Each farm in the list has an options button with these choices.
+
+| Choice | What it does |
+| --- | --- |
+| Rename | Changes the farm's name. |
+| Restore Backup | Brings back an earlier copy of the farm. Each farm keeps up to three backups: the save before the latest, one from at least ten minutes earlier, and the last save of the day before. A copy that lost out when syncing is kept here too. |
+| Delete | Removes the farm after a confirmation. This cannot be undone. |
+| Properties | Shows the farm's seed and the game version that last saved it. |
+
+## iCloud sync
+
+On iOS 26 and later the farms sync through your own iCloud, and a farm started on one device carries on on another. The game always plays from the copy on the device, and iCloud never holds up play.
+
+- It syncs when the game opens, when it comes back from the background, from the cloud button on the Load Game list, and regularly while you play.
+- Without a connection, the farm saves on the device as usual and syncs once the connection is back.
+- The cloud button on the Load Game list shows the state, and tapping it syncs now and explains any problem.
+- Before iOS 26, or with iCloud Drive off for the game, farms stay on the device.
+
+### Banners over the open farm
+
+The farm you are playing never changes by itself. When iCloud has another copy of it, a banner appears.
+
+| Banner | Choice | What happens |
+| --- | --- | --- |
+| Newer save from a device or from iCloud, with how long ago | Load | Opens the newer save. The copy it replaces goes to Restore Backup. |
+| This farm was also played on another device | Choose | Closes the farm and opens Choose a Version in the farm list. |
+
+The close button hides a banner for that copy until a different one arrives. Only one banner shows at a time.
+
+### Choose a Version
+
+When a farm was played on two devices and each copy has progress the other lacks, the game asks which to keep.
+
+- The screen shows both copies side by side with Level, money, play time, day and device.
+- It marks the copy with more progress.
+- Keep one copy with its button. The copy not kept is saved in Restore Backup.
+- Decide Later returns to the farm list.
+
+### When iCloud cannot be reached
+
+- Two failed syncs in a row show a message that iCloud could not be reached and that the farm is saved on the device. The game tries again later.
+- States that need you, such as being signed out of iCloud, are explained when you tap the cloud button.
+- Playing is never interrupted.
+
+### A farm from a newer version
+
+A farm saved by a newer version of the game is left as it is and is not opened. The cloud button explains that the game needs an update. Update the game to play it.
+
+If a farm arrives from iCloud and all 10 slots are full, it is kept safe and waits until a slot is free.
+
+## Update prompt
+
+A newer version of the game on TestFlight or the App Store is announced once.
+
+1. When the farm is free of menus, a prompt says an update is available and gives the new and installed version numbers.
+2. Update opens TestFlight or the App Store.
+3. Ignore closes the prompt for that version. A newer version prompts again.
+4. After an Ignore, a yellow "!" sits between the money and the Level for as long as the update is available. Tapping it opens the prompt again.
+
+The game checks for an update when it opens and when you come back to it after at least 6 hours.
+
+## Related pages
+
+- [Settings](../settings/)
+- [New farm](../../world/new-farm/)
+- [Progress](../../progress/)

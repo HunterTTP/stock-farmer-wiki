@@ -1,0 +1,196 @@
+[
+  {
+    "gathers" : "Ripe crops, and wool from sheep",
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/tools/scythe-1.png",
+      "width" : 32
+    },
+    "id" : "scythe",
+    "name" : "Scythe",
+    "upgrades" : [
+      {
+        "cost" : 200,
+        "effects" : [
+          "10% chance of a second item"
+        ],
+        "icon" : {
+          "height" : 28,
+          "src" : "sprites/tools/scythe-2.png",
+          "width" : 32
+        },
+        "level" : 2,
+        "unlockLevel" : 4
+      },
+      {
+        "cost" : 1200,
+        "effects" : [
+          "25% chance of a second item"
+        ],
+        "icon" : {
+          "height" : 28,
+          "src" : "sprites/tools/scythe-3.png",
+          "width" : 32
+        },
+        "level" : 3,
+        "unlockLevel" : 8
+      }
+    ]
+  },
+  {
+    "gathers" : "Trees (for logs), and decorations back into storage",
+    "icon" : {
+      "height" : 31,
+      "src" : "sprites/tools/axe-1.png",
+      "width" : 23
+    },
+    "id" : "axe",
+    "name" : "Axe",
+    "upgrades" : [
+      {
+        "cost" : 100,
+        "effects" : [
+          "Fells trees in half the swings",
+          "1 more log from each wild tree"
+        ],
+        "icon" : {
+          "height" : 31,
+          "src" : "sprites/tools/axe-2.png",
+          "width" : 23
+        },
+        "level" : 2,
+        "unlockLevel" : 3
+      },
+      {
+        "cost" : 900,
+        "effects" : [
+          "Fells trees in one swing",
+          "2 more logs from each wild tree"
+        ],
+        "icon" : {
+          "height" : 31,
+          "src" : "sprites/tools/axe-3.png",
+          "width" : 23
+        },
+        "level" : 3,
+        "unlockLevel" : 7
+      }
+    ]
+  },
+  {
+    "gathers" : "Rocks (for stones) and ore veins (for ore)",
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/tools/pickaxe-1.png",
+      "width" : 28
+    },
+    "id" : "pickaxe",
+    "name" : "Pickaxe",
+    "upgrades" : [
+      {
+        "cost" : 500,
+        "effects" : [
+          "Breaks rocks in half the swings",
+          "1 more stone from each wild rock"
+        ],
+        "icon" : {
+          "height" : 28,
+          "src" : "sprites/tools/pickaxe-2.png",
+          "width" : 28
+        },
+        "level" : 2,
+        "unlockLevel" : 6
+      },
+      {
+        "cost" : 2000,
+        "effects" : [
+          "Breaks rocks in one swing",
+          "2 more stones from each wild rock"
+        ],
+        "icon" : {
+          "height" : 28,
+          "src" : "sprites/tools/pickaxe-3.png",
+          "width" : 28
+        },
+        "level" : 3,
+        "unlockLevel" : 10
+      }
+    ]
+  },
+  {
+    "gathers" : "Fruit, eggs, milk, goat milk, fertilizer, butterflies and fireflies",
+    "icon" : {
+      "height" : 27,
+      "src" : "sprites/tools/bucket-1.png",
+      "width" : 22
+    },
+    "id" : "bucket",
+    "name" : "Bucket",
+    "upgrades" : [
+      {
+        "cost" : 300,
+        "effects" : [
+          "15% chance of a second item"
+        ],
+        "icon" : {
+          "height" : 27,
+          "src" : "sprites/tools/bucket-2.png",
+          "width" : 22
+        },
+        "level" : 2,
+        "unlockLevel" : 5
+      },
+      {
+        "cost" : 1500,
+        "effects" : [
+          "35% chance of a second item"
+        ],
+        "icon" : {
+          "height" : 27,
+          "src" : "sprites/tools/bucket-3.png",
+          "width" : 22
+        },
+        "level" : 3,
+        "unlockLevel" : 9
+      }
+    ]
+  },
+  {
+    "gathers" : "Fish from ponds",
+    "icon" : {
+      "height" : 28,
+      "src" : "sprites/tools/rod-1.png",
+      "width" : 27
+    },
+    "id" : "rod",
+    "name" : "Fishing Rod",
+    "upgrades" : [
+      {
+        "cost" : 250,
+        "effects" : [
+          "Catch circle 1.5× as wide"
+        ],
+        "icon" : {
+          "height" : 28,
+          "src" : "sprites/tools/rod-2.png",
+          "width" : 27
+        },
+        "level" : 2,
+        "unlockLevel" : 6
+      },
+      {
+        "cost" : 600,
+        "effects" : [
+          "Catch circle 2.25× as wide"
+        ],
+        "icon" : {
+          "height" : 28,
+          "src" : "sprites/tools/rod-3.png",
+          "width" : 27
+        },
+        "level" : 3,
+        "unlockLevel" : 8
+      }
+    ]
+  }
+]

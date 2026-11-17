@@ -1,0 +1,215 @@
+{
+  "ores" : [
+    {
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/ores/copper.png",
+        "width" : 26
+      },
+      "id" : "copper",
+      "madeAt" : "Stone Oven",
+      "minutes" : 6,
+      "name" : "Copper Ore",
+      "piecesPerProduct" : 5,
+      "piecesPerVein" : 12,
+      "product" : "Copper Bar",
+      "productIcon" : {
+        "height" : 15,
+        "src" : "sprites/goods/copperBar.png",
+        "width" : 29
+      },
+      "productValue" : 60,
+      "value" : 6,
+      "vein" : "Copper Vein"
+    },
+    {
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/ores/silver.png",
+        "width" : 26
+      },
+      "id" : "silver",
+      "madeAt" : "Stone Oven",
+      "minutes" : 8,
+      "name" : "Silver Ore",
+      "piecesPerProduct" : 5,
+      "piecesPerVein" : 10,
+      "product" : "Silver Bar",
+      "productIcon" : {
+        "height" : 15,
+        "src" : "sprites/goods/silverBar.png",
+        "width" : 29
+      },
+      "productValue" : 100,
+      "value" : 10,
+      "vein" : "Silver Vein"
+    },
+    {
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/ores/gold.png",
+        "width" : 26
+      },
+      "id" : "gold",
+      "madeAt" : "Stone Oven",
+      "minutes" : 10,
+      "name" : "Gold Ore",
+      "piecesPerProduct" : 4,
+      "piecesPerVein" : 8,
+      "product" : "Gold Bar",
+      "productIcon" : {
+        "height" : 15,
+        "src" : "sprites/goods/goldBar.png",
+        "width" : 29
+      },
+      "productValue" : 144,
+      "value" : 18,
+      "vein" : "Gold Vein"
+    },
+    {
+      "icon" : {
+        "height" : 27,
+        "src" : "sprites/ores/ruby.png",
+        "width" : 27
+      },
+      "id" : "ruby",
+      "madeAt" : "DIY Crafting Table",
+      "minutes" : 5,
+      "name" : "Rough Ruby",
+      "piecesPerProduct" : 1,
+      "piecesPerVein" : 6,
+      "product" : "Polished Ruby",
+      "productIcon" : {
+        "height" : 23,
+        "src" : "sprites/goods/polishedRuby.png",
+        "width" : 27
+      },
+      "productValue" : 80,
+      "value" : 40,
+      "vein" : "Ruby Vein"
+    },
+    {
+      "icon" : {
+        "height" : 27,
+        "src" : "sprites/ores/sapphire.png",
+        "width" : 27
+      },
+      "id" : "sapphire",
+      "madeAt" : "DIY Crafting Table",
+      "minutes" : 5,
+      "name" : "Rough Sapphire",
+      "piecesPerProduct" : 1,
+      "piecesPerVein" : 6,
+      "product" : "Polished Sapphire",
+      "productIcon" : {
+        "height" : 23,
+        "src" : "sprites/goods/polishedSapphire.png",
+        "width" : 27
+      },
+      "productValue" : 100,
+      "value" : 50,
+      "vein" : "Sapphire Vein"
+    }
+  ],
+  "processingLevel" : 18,
+  "rocks" : [
+    {
+      "gives" : 5,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/rocks/small.png",
+        "width" : 20
+      },
+      "name" : "Small",
+      "what" : "Stone"
+    },
+    {
+      "gives" : 10,
+      "icon" : {
+        "height" : 25,
+        "src" : "sprites/rocks/medium.png",
+        "width" : 21
+      },
+      "name" : "Medium",
+      "what" : "Stone"
+    },
+    {
+      "gives" : 15,
+      "icon" : {
+        "height" : 29,
+        "src" : "sprites/rocks/big.png",
+        "width" : 21
+      },
+      "name" : "Big",
+      "what" : "Stone"
+    },
+    {
+      "gives" : 12,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/rocks/copper.png",
+        "width" : 20
+      },
+      "name" : "Copper Vein",
+      "what" : "Copper Ore"
+    },
+    {
+      "gives" : 5,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/rocks/smallSilver.png",
+        "width" : 20
+      },
+      "name" : "Small Silver Vein",
+      "what" : "Silver Ore"
+    },
+    {
+      "gives" : 10,
+      "icon" : {
+        "height" : 25,
+        "src" : "sprites/rocks/silver.png",
+        "width" : 21
+      },
+      "name" : "Silver Vein",
+      "what" : "Silver Ore"
+    },
+    {
+      "gives" : 8,
+      "icon" : {
+        "height" : 25,
+        "src" : "sprites/rocks/gold.png",
+        "width" : 21
+      },
+      "name" : "Gold Vein",
+      "what" : "Gold Ore"
+    },
+    {
+      "gives" : 6,
+      "icon" : {
+        "height" : 29,
+        "src" : "sprites/rocks/ruby.png",
+        "width" : 22
+      },
+      "name" : "Ruby Vein",
+      "what" : "Rough Ruby"
+    },
+    {
+      "gives" : 6,
+      "icon" : {
+        "height" : 29,
+        "src" : "sprites/rocks/sapphire.png",
+        "width" : 22
+      },
+      "name" : "Sapphire Vein",
+      "what" : "Rough Sapphire"
+    }
+  ],
+  "rocksOnANewMap" : {
+    "max" : 50,
+    "min" : 40
+  },
+  "veinsOnANewMap" : {
+    "max" : 12,
+    "min" : 11
+  }
+}

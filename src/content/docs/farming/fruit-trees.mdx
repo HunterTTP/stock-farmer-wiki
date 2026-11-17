@@ -1,0 +1,56 @@
+---
+title: Fruit Trees
+description: The five fruit trees, their cost, level, ripening time and basket value, and how to plant and pick them.
+sidebar:
+  order: 2
+---
+import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
+
+Fruit trees are planted once and give a basket of fruit again and again. They unlock by level, alongside the [crops](../crops/).
+
+![Apple, Orange and Peach Trees with ripe fruit next to a field of Wheat](../../../assets/farming/fruit-trees.webp)
+
+## All fruit trees
+
+<DataTable name="fruit-trees" />
+
+- Cost is paid once, when the tree is placed. There is no seed to buy again.
+- A tree takes a 2×2 tile square.
+- At most <Fact path="fruit-trees.apple.limit" /> trees of each kind can stand on the farm.
+- Each basket earns XP when picked (see [Levels](../../levels/)).
+
+## Planting
+
+1. Open the Plant tool and pick a fruit tree. The row shows the cost, the basket price, the ripening time, the XP and the limit.
+2. Tap a tile, or drag the tool circle over the map. A preview shows green where the tree fits and red where it does not.
+3. Adjust its position, then tap Place to pay for it. Cancel puts it away.
+
+- A tree stands on bare grass. It cannot go on farmland, water, a fence, an animal or anything else, and not in front of a Pet House or a coop.
+- A tree is one 2×2 picture, with its trunk on the two bottom tiles. Those two tiles are what it takes up.
+- Hold a finger on a placed tree to pick it up and move it. It keeps its growth.
+- Destroying a tree removes the whole tree. The Axe does not cut it.
+
+## Picking fruit
+
+1. The tree is bare while it grows and shows ripe fruit when it is ready.
+2. Hold the Bucket from the Harvest tool and tap any of its four tiles.
+3. The tree gives one basket (for example an Apple Basket), earns XP, and starts growing again straight away.
+
+- The Scythe cannot pick fruit: it says to use the Bucket.
+- With the Bucket on Sell, the basket sells at once. With Store, it goes into storage (see [Storage and Selling](../../storage-and-selling/)).
+- Bucket upgrades give a chance of a second basket, with no extra XP (see [Tools](../../tools/)).
+- Tapping an unripe tree shows how long is left.
+- Water, fertilizer and scarecrows do not speed a tree, because it stands on grass. Pets and animals leave trees alone.
+
+## Preserves
+
+Each kind of basket has a preserves recipe in the Stone Oven: <Fact path="recipes.applePreserves.inputCount" /> baskets make one jar, which sells for more than the baskets would. See [Crafting](../../crafting/) for times and levels.
+
+| Tree | Preserves |
+| --- | --- |
+| Apple Tree | Apple Preserves |
+| Orange Tree | Orange Preserves |
+| Peach Tree | Peach Preserves |
+| Lemon Tree | Lemon Preserves |
+| Banana Tree | Banana Preserves |

@@ -1,0 +1,722 @@
+[
+  {
+    "animals" : "Cat or dog",
+    "cost" : 0,
+    "height" : 1,
+    "holds" : 1,
+    "icon" : {
+      "height" : 43,
+      "src" : "sprites/buildings/petHouse.png",
+      "width" : 32
+    },
+    "id" : "petHouse",
+    "limit" : 18,
+    "logs" : 6,
+    "materials" : [
+      {
+        "count" : 6,
+        "name" : "Logs"
+      },
+      {
+        "count" : 2,
+        "name" : "Stones"
+      },
+      {
+        "count" : 1,
+        "name" : "Copper Ore"
+      }
+    ],
+    "name" : "Pet House",
+    "purpose" : "A home for your furry friend",
+    "recipes" : [
+
+    ],
+    "stones" : 2,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 2,
+    "width" : 1
+  },
+  {
+    "animals" : "Chickens",
+    "cost" : 250,
+    "height" : 2,
+    "holds" : 2,
+    "holdsFullyUpgraded" : 6,
+    "icon" : {
+      "height" : 48,
+      "src" : "sprites/buildings/chickenCoop.png",
+      "width" : 32
+    },
+    "id" : "chickenCoop",
+    "limit" : 4,
+    "logs" : 30,
+    "materials" : [
+      {
+        "count" : 30,
+        "name" : "Logs"
+      },
+      {
+        "count" : 3,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Chicken Coop",
+    "purpose" : "Spawns chickens that lay eggs to sell",
+    "recipes" : [
+
+    ],
+    "stones" : 3,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 5,
+    "width" : 1
+  },
+  {
+    "cost" : 1000,
+    "height" : 2,
+    "icon" : {
+      "height" : 64,
+      "src" : "sprites/buildings/marketStand.png",
+      "width" : 48
+    },
+    "id" : "marketStand",
+    "limit" : 1,
+    "logs" : 35,
+    "materials" : [
+      {
+        "count" : 35,
+        "name" : "Logs"
+      },
+      {
+        "count" : 4,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Market Stand",
+    "purpose" : "Offers optional quests for extra XP",
+    "quests" : 4,
+    "recipes" : [
+
+    ],
+    "stones" : 4,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 6,
+    "width" : 2
+  },
+  {
+    "cost" : 500,
+    "height" : 2,
+    "icon" : {
+      "height" : 78,
+      "src" : "sprites/buildings/shed.png",
+      "width" : 64
+    },
+    "id" : "shed",
+    "limit" : 4,
+    "logs" : 38,
+    "materials" : [
+      {
+        "count" : 38,
+        "name" : "Logs"
+      },
+      {
+        "count" : 5,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Shed",
+    "purpose" : "Adds 50 slots to storage",
+    "recipes" : [
+
+    ],
+    "stones" : 5,
+    "storageAdded" : 50,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 7,
+    "width" : 2
+  },
+  {
+    "animals" : "Rabbits",
+    "cost" : 4000,
+    "height" : 2,
+    "holds" : 4,
+    "holdsFullyUpgraded" : 10,
+    "icon" : {
+      "height" : 48,
+      "src" : "sprites/buildings/rabbitHutch.png",
+      "width" : 64
+    },
+    "id" : "rabbitHutch",
+    "limit" : 1,
+    "logs" : 43,
+    "materials" : [
+      {
+        "count" : 43,
+        "name" : "Logs"
+      },
+      {
+        "count" : 6,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Rabbit Hutch",
+    "purpose" : "Spawns rabbits that provide fertilizer for crops",
+    "recipes" : [
+
+    ],
+    "stones" : 6,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 8,
+    "width" : 3
+  },
+  {
+    "cost" : 5000,
+    "height" : 2,
+    "icon" : {
+      "height" : 37,
+      "src" : "sprites/buildings/grainMachine.png",
+      "width" : 54
+    },
+    "id" : "grainMachine",
+    "limit" : 1,
+    "logs" : 47,
+    "materials" : [
+      {
+        "count" : 47,
+        "name" : "Logs"
+      },
+      {
+        "count" : 6,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Grain Machine",
+    "purpose" : "Mills wheat into flour and presses juice",
+    "recipes" : [
+      "Flour",
+      "Watermelon Juice",
+      "Grape Juice"
+    ],
+    "stones" : 6,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 9,
+    "width" : 2
+  },
+  {
+    "animals" : "Sheep",
+    "cost" : 6000,
+    "height" : 5,
+    "holds" : 4,
+    "holdsFullyUpgraded" : 10,
+    "icon" : {
+      "height" : 160,
+      "src" : "sprites/buildings/barn1.png",
+      "width" : 120
+    },
+    "id" : "barn1",
+    "limit" : 1,
+    "logs" : 51,
+    "materials" : [
+      {
+        "count" : 51,
+        "name" : "Logs"
+      },
+      {
+        "count" : 7,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Sheep Barn",
+    "purpose" : "Spawns sheep that provide wool for cloth",
+    "recipes" : [
+
+    ],
+    "stones" : 7,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 10,
+    "width" : 4
+  },
+  {
+    "cost" : 1500,
+    "height" : 5,
+    "icon" : {
+      "height" : 224,
+      "src" : "sprites/buildings/silo.png",
+      "width" : 71
+    },
+    "id" : "silo",
+    "limit" : 4,
+    "logs" : 54,
+    "materials" : [
+      {
+        "count" : 54,
+        "name" : "Logs"
+      },
+      {
+        "count" : 7,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Silo",
+    "purpose" : "Adds 150 slots to storage",
+    "recipes" : [
+
+    ],
+    "stones" : 7,
+    "storageAdded" : 150,
+    "styles" : [
+      "Tower",
+      "Tower and Shed"
+    ],
+    "unlockLevel" : 11,
+    "width" : 2
+  },
+  {
+    "cost" : 8500,
+    "height" : 4,
+    "icon" : {
+      "height" : 135,
+      "src" : "sprites/buildings/house1.png",
+      "width" : 158
+    },
+    "id" : "house1",
+    "limit" : 1,
+    "logs" : 57,
+    "materials" : [
+      {
+        "count" : 57,
+        "name" : "Logs"
+      },
+      {
+        "count" : 8,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "House",
+    "purpose" : "Allows access to the Stock Market",
+    "recipes" : [
+
+    ],
+    "stockSlots" : 5,
+    "stones" : 8,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 12,
+    "width" : 4
+  },
+  {
+    "animals" : "Goats",
+    "cost" : 9500,
+    "height" : 5,
+    "holds" : 4,
+    "holdsFullyUpgraded" : 10,
+    "icon" : {
+      "height" : 160,
+      "src" : "sprites/buildings/goatBarn.png",
+      "width" : 120
+    },
+    "id" : "goatBarn",
+    "limit" : 1,
+    "logs" : 58,
+    "materials" : [
+      {
+        "count" : 58,
+        "name" : "Logs"
+      },
+      {
+        "count" : 8,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Goat Barn",
+    "purpose" : "Spawns goats that provide milk for goat cheese",
+    "recipes" : [
+
+    ],
+    "stones" : 8,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 12,
+    "width" : 4
+  },
+  {
+    "cost" : 11000,
+    "height" : 1,
+    "icon" : {
+      "height" : 57,
+      "src" : "sprites/buildings/tractor1.png",
+      "width" : 80
+    },
+    "id" : "tractor1",
+    "limit" : 1,
+    "logs" : 60,
+    "materials" : [
+      {
+        "count" : 60,
+        "name" : "Logs"
+      },
+      {
+        "count" : 8,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Tractor",
+    "purpose" : "Harvests ripe crops and brings them home",
+    "recipes" : [
+
+    ],
+    "stones" : 8,
+    "styles" : [
+      "Right",
+      "Left",
+      "Front",
+      "Back"
+    ],
+    "unlockLevel" : 13,
+    "width" : 2
+  },
+  {
+    "cost" : 12500,
+    "height" : 2,
+    "icon" : {
+      "height" : 51,
+      "src" : "sprites/buildings/stoneOven.png",
+      "width" : 80
+    },
+    "id" : "stoneOven",
+    "limit" : 1,
+    "logs" : 63,
+    "materials" : [
+      {
+        "count" : 63,
+        "name" : "Logs"
+      },
+      {
+        "count" : 9,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Stone Oven",
+    "purpose" : "Bakes bread, smelts ore and cooks preserves",
+    "recipes" : [
+      "Bread",
+      "Apple Preserves",
+      "Orange Preserves",
+      "Peach Preserves",
+      "Lemon Preserves",
+      "Copper Bar",
+      "Silver Bar",
+      "Gold Bar",
+      "Banana Preserves",
+      "Turnip Soup",
+      "Pumpkin Pie",
+      "Pineapple Preserves",
+      "Prickly Pear Preserves",
+      "Roasted Coffee"
+    ],
+    "stones" : 9,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 14,
+    "width" : 3
+  },
+  {
+    "animals" : "Pigs",
+    "cost" : 13000,
+    "height" : 5,
+    "holds" : 4,
+    "holdsFullyUpgraded" : 10,
+    "icon" : {
+      "height" : 160,
+      "src" : "sprites/buildings/pigBarn.png",
+      "width" : 120
+    },
+    "id" : "pigBarn",
+    "limit" : 1,
+    "logs" : 64,
+    "materials" : [
+      {
+        "count" : 64,
+        "name" : "Logs"
+      },
+      {
+        "count" : 9,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Pig Barn",
+    "purpose" : "Spawns pigs that provide fertilizer for crops",
+    "recipes" : [
+
+    ],
+    "stones" : 9,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 14,
+    "width" : 4
+  },
+  {
+    "animals" : "Donkeys",
+    "cost" : 14000,
+    "height" : 4,
+    "holds" : 4,
+    "holdsFullyUpgraded" : 10,
+    "icon" : {
+      "height" : 128,
+      "src" : "sprites/buildings/stable1.png",
+      "width" : 160
+    },
+    "id" : "stable1",
+    "limit" : 1,
+    "logs" : 66,
+    "materials" : [
+      {
+        "count" : 66,
+        "name" : "Logs"
+      },
+      {
+        "count" : 9,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Stable",
+    "purpose" : "Spawns donkeys that provide fertilizer for crops",
+    "recipes" : [
+
+    ],
+    "stones" : 9,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 15,
+    "width" : 6
+  },
+  {
+    "cost" : 15000,
+    "height" : 2,
+    "icon" : {
+      "height" : 57,
+      "src" : "sprites/buildings/woodworkBench.png",
+      "width" : 69
+    },
+    "id" : "woodworkBench",
+    "limit" : 1,
+    "logs" : 68,
+    "materials" : [
+      {
+        "count" : 68,
+        "name" : "Logs"
+      },
+      {
+        "count" : 10,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Woodwork Bench",
+    "purpose" : "Saws logs into planks and furniture",
+    "recipes" : [
+      "Planks",
+      "Furniture"
+    ],
+    "stones" : 10,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 16,
+    "width" : 3
+  },
+  {
+    "cost" : 20000,
+    "height" : 2,
+    "icon" : {
+      "height" : 41,
+      "src" : "sprites/buildings/tailorTable.png",
+      "width" : 48
+    },
+    "id" : "tailorTable",
+    "limit" : 1,
+    "logs" : 74,
+    "materials" : [
+      {
+        "count" : 74,
+        "name" : "Logs"
+      },
+      {
+        "count" : 11,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Tailor Table",
+    "purpose" : "Spins wool and cotton into cloth",
+    "recipes" : [
+      "Cloth",
+      "Fine Cloth",
+      "Cloth"
+    ],
+    "stones" : 11,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 18,
+    "width" : 2
+  },
+  {
+    "cost" : 22000,
+    "height" : 2,
+    "icon" : {
+      "height" : 37,
+      "src" : "sprites/buildings/diyTable.png",
+      "width" : 48
+    },
+    "id" : "diyTable",
+    "limit" : 1,
+    "logs" : 76,
+    "materials" : [
+      {
+        "count" : 76,
+        "name" : "Logs"
+      },
+      {
+        "count" : 12,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "DIY Crafting Table",
+    "purpose" : "Makes bricks, polished gems and pickles",
+    "recipes" : [
+      "Bricks",
+      "Polished Ruby",
+      "Polished Sapphire",
+      "Radish Pickles"
+    ],
+    "stones" : 12,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 19,
+    "width" : 2
+  },
+  {
+    "animals" : "Cows",
+    "cost" : 24000,
+    "height" : 5,
+    "holds" : 4,
+    "holdsFullyUpgraded" : 10,
+    "icon" : {
+      "height" : 112,
+      "src" : "sprites/buildings/barn2.png",
+      "width" : 240
+    },
+    "id" : "barn2",
+    "limit" : 1,
+    "logs" : 78,
+    "materials" : [
+      {
+        "count" : 78,
+        "name" : "Logs"
+      },
+      {
+        "count" : 12,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Luxury Barn",
+    "purpose" : "Spawns cows that provide milk for recipes",
+    "recipes" : [
+
+    ],
+    "stones" : 12,
+    "styles" : [
+      "Red",
+      "Blue",
+      "Grey",
+      "Yellow"
+    ],
+    "unlockLevel" : 19,
+    "width" : 10
+  },
+  {
+    "cost" : 26000,
+    "height" : 2,
+    "icon" : {
+      "height" : 37,
+      "src" : "sprites/buildings/dairy.png",
+      "width" : 86
+    },
+    "id" : "dairy",
+    "limit" : 1,
+    "logs" : 80,
+    "materials" : [
+      {
+        "count" : 80,
+        "name" : "Logs"
+      },
+      {
+        "count" : 13,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Dairy",
+    "purpose" : "Turns milk and goat milk into cheese",
+    "recipes" : [
+      "Cheese",
+      "Goat Cheese"
+    ],
+    "stones" : 13,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 20,
+    "width" : 3
+  },
+  {
+    "cost" : 28000,
+    "height" : 2,
+    "icon" : {
+      "height" : 32,
+      "src" : "sprites/buildings/cheeseCellar.png",
+      "width" : 32
+    },
+    "id" : "cheeseCellar",
+    "limit" : 1,
+    "logs" : 82,
+    "materials" : [
+      {
+        "count" : 82,
+        "name" : "Logs"
+      },
+      {
+        "count" : 14,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Cheese Cellar",
+    "purpose" : "Ages cheese into pricier aged cheese",
+    "recipes" : [
+      "Aged Cheese"
+    ],
+    "stones" : 14,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 21,
+    "width" : 2
+  }
+]

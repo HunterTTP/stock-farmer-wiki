@@ -1,0 +1,159 @@
+/* Wiki additions on top of Starlight's theme: farm greens, tables that scroll on phones, the infobox and the version line. */
+:root {
+  --sl-color-accent-low: #12261a;
+  --sl-color-accent: #2c6a39;
+  --sl-color-accent-high: #a9d6a3;
+}
+:root[data-theme='light'] {
+  --sl-color-accent-low: #cfe5cb;
+  --sl-color-accent: #1e4d28;
+  --sl-color-accent-high: #0f2914;
+}
+
+.data-table {
+  overflow-x: auto;
+  margin-block: 1rem;
+}
+.data-table table {
+  display: table;
+  width: 100%;
+  font-size: var(--sl-text-sm);
+}
+.data-table th[scope='row'] {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.infobox {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-block: 1rem;
+  max-width: 24rem;
+  background: var(--sl-color-gray-7, var(--sl-color-black));
+}
+.infobox-title {
+  font-weight: 700;
+  font-size: var(--sl-text-lg);
+  margin: 0 0 0.5rem;
+}
+.infobox dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0.5rem 0 0;
+  font-size: var(--sl-text-sm);
+}
+.infobox dt {
+  color: var(--sl-color-gray-3);
+}
+.infobox dd {
+  margin: 0;
+}
+.infobox img,
+.sl-markdown-content img {
+  border-radius: 0.375rem;
+}
+
+.changelog-beta {
+  color: var(--sl-color-gray-3);
+  font-size: var(--sl-text-sm);
+}
+
+.wiki-version {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: var(--sl-text-xs);
+  color: var(--sl-color-gray-3);
+}
+
+.sl-markdown-content img {
+  max-height: 36rem;
+  width: auto;
+}
+
+/* The carrot logo beside the site title is pixel art: keep its pixels sharp. */
+.site-title img {
+  image-rendering: pixelated;
+  height: 1.75rem;
+  width: auto;
+}
+
+/* The site title is white in both themes. In light mode the header is dark green so the white title, search and theme menu read on it. */
+.site-title {
+  color: #ffffff;
+}
+:root[data-theme='light'] .header {
+  --sl-color-bg-nav: #1e4d28;
+  --sl-color-hairline-shade: #0f2914;
+}
+:root[data-theme='light'] .header button[data-open-modal] {
+  color: #ffffff;
+}
+@media (min-width: 50rem) {
+  :root[data-theme='light'] .header button[data-open-modal] {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e6f2e4;
+  }
+  :root[data-theme='light'] .header button[data-open-modal]:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+}
+:root[data-theme='light'] .header button[data-open-modal] > kbd {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+:root[data-theme='light'] .header starlight-theme-select label,
+:root[data-theme='light'] .header .social-icons a {
+  color: #e6f2e4;
+}
+:root[data-theme='light'] .header starlight-theme-select label:hover,
+:root[data-theme='light'] .header .social-icons a:hover {
+  color: #ffffff;
+}
+:root[data-theme='light'] .header option {
+  color: #ffffff;
+}
+
+/* There is no "On this page" column, so the page text may use more of a wide screen. */
+@media (min-width: 72rem) {
+  :root {
+    --sl-content-width: 56rem;
+  }
+}
+
+/* The game's own pictures: pixel art at whole-number scales (see src/lib/sprites.js), never smoothed. */
+img.sprite,
+.sl-markdown-content img.sprite {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: none;
+  max-height: none;
+  border-radius: 0;
+  margin: 0;
+}
+.data-table .sprite-cell {
+  width: 1%;
+  padding-inline: 0.375rem;
+  text-align: center;
+  vertical-align: middle;
+}
+.data-table td,
+.data-table th {
+  vertical-align: middle;
+}
+.with-sprite {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.infobox-sprites {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin: 0.25rem 0 0.5rem;
+}

@@ -1,0 +1,63 @@
+---
+// The stat box at the top of an item page, built from the generated data: <Infobox kind="building" id="chickenCoop" />.
+// It shows the game's own picture of the thing (a grown animal with its baby). A picture can be passed in the default slot.
+import { data } from '../lib/tables.js';
+import { money, duration, count, size, materials, list } from '../lib/format.js';
+import Sprite from './Sprite.astro';
+
+interface Props {
+  kind: 'building' | 'livestock';
+  id: string;
+}
+const { kind, id } = Astro.props;
+let title = '';
+let rows: [string, string][] = [];
+let pictures: { icon: any; alt: string }[] = [];
+if (kind === 'building') {
+  const b = data.buildings.find((row) => row.id === id);
+  if (!b) throw new Error(`Infobox: no building ${id}`);
+  title = b.name;
+  pictures = [{ icon: b.icon, alt: b.name }];
+  rows = [
+    ['Unlock level', `${b.unlockLevel}`],
+    ['Cost', money(b.cost)],
+    ['Materials', materials(b.materials)],
+    ['Size', `${size(b.width, b.height)} tiles`],
+    ['Most you can build', count(b.limit)],
+    ['Holds', b.holds == null ? '' : b.holdsFullyUpgraded ? `${b.holds} (${b.holdsFullyUpgraded} fully upgraded)` : `${b.holds}`],
+    ['Adds storage', b.storageAdded ? `${b.storageAdded} slots` : ''],
+    ['Recipes', list(b.recipes)],
+    ['Quests at once', b.quests ? `${b.quests}` : ''],
+    ['Stock slots', b.stockSlots ? `${b.stockSlots}` : ''],
+    ['Looks', list(b.styles)],
+  ];
+} else {
+  const a = data.animals.livestock.find((row) => row.id === id);
+  if (!a) throw new Error(`Infobox: no animal ${id}`);
+  title = a.name;
+  pictures = [{ icon: a.icon, alt: a.name }, { icon: a.babyIcon, alt: a.babyName }];
+  rows = [
+    ['Lives in', a.home],
+    ['Unlock level', `${a.unlockLevel}`],
+    ['Baby', a.babyName],
+    ['Grows up in', duration(a.growSeconds)],
+    ['Gives', a.gives ? `${a.gives} (${money(a.givesValue)})` : 'Nothing'],
+    ['Ready every', duration(a.giveSeconds)],
+    ['Collect with', a.tool ?? ''],
+    ['Sells for', a.salePrice ? money(a.salePrice) : ''],
+    ['Colors', count(a.colors.length)],
+  ];
+}
+rows = rows.filter(([, value]) => value);
+---
+
+<aside class="infobox" aria-label={`${title} facts`}>
+  <p class="infobox-title">{title}</p>
+  {pictures.some((p) => p.icon) && (
+    <p class="infobox-sprites">{pictures.filter((p) => p.icon).map((p) => <Sprite icon={p.icon} alt={p.alt} box={96} />)}</p>
+  )}
+  <slot />
+  <dl>
+    {rows.map(([label, value]) => <><dt>{label}</dt><dd>{value}</dd></>)}
+  </dl>
+</aside>

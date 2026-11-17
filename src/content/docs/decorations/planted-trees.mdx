@@ -1,0 +1,37 @@
+---
+title: Planted trees
+description: Planting Pine, Oak and Birch trees with the Decorate tool, their sizes, colors and costs.
+sidebar:
+  order: 2
+---
+import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
+
+Trees are planted with the Decorate tool. They are at the end of its list, after the fence and the decorations. Wild trees that grow on their own are covered on [Trees, logs and stones](../../gathering/trees-logs-and-stones/).
+
+## Planting
+
+1. Pick up the Decorate tool and open its list.
+2. Pick Pine, Oak or Birch.
+3. Pick a size and a color from the two dropdowns beside the tool circle.
+4. Tap or drag to a tile of bare ground. The tree stands on the tapped tile, and its picture rises over the tiles behind it.
+
+A tree stands on one tile at every size. It cannot be planted on water, farmland, a fence, a crop, a building, a decoration or another tree, or in front of an animal home's entrance. Animals walk past it and are drawn behind its picture.
+
+<DataTable name="trees" />
+
+Cost to plant is for one tree of that size, charged each time. Every tree is available from the start, and planting needs no materials. Birch cannot grow wild, so it only comes from planting.
+
+## What planted trees do
+
+- They keep the size they were planted at. They do not grow.
+- They give no logs when chopped.
+- Any Axe fells a planted tree. A tree can be chopped on any tile its picture covers.
+- Holding a finger on a planted tree picks it up to move it. Place sets it down and Cancel puts it back. Wild trees cannot be moved.
+- Destroying a planted tree from the move menu returns <Fact path="terrain.refundPercent" />% of what its size cost to plant. A wild tree returns nothing.
+
+## Related pages
+
+- [Decorations](../)
+- [Lanterns and lights](../lanterns-and-lights/) (the Christmas Tree)
+- [Tools](../../tools/)

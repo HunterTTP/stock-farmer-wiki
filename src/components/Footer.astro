@@ -1,0 +1,12 @@
+---
+// Starlight's footer with the line saying which beta of the game the wiki describes.
+import Default from '@astrojs/starlight/components/Footer.astro';
+import version from '../data/version.json';
+
+const line = version.tag
+  ? `Reflects ${version.tag.replace(/^beta-/, 'beta ')} of Stock Farmer${version.date ? `, published ${version.date}` : ''}.`
+  : 'Preview copy. Not yet published with a beta.';
+---
+
+<Default />
+<p class="wiki-version">{line}</p>
