@@ -1,13 +1,13 @@
 ---
 title: Crops
-description: All crops in Stock Farmer with their unlock level, seed cost, sale price, grow time and XP, and how planting and harvesting work.
+description: All crops with their unlock level, seed cost, sale price, grow time and XP, how their prices are set, and the rules for planting and harvesting.
 sidebar:
   order: 1
 ---
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-Crops grow on [farmland](../farmland-and-water/) from seeds you plant with the Plant tool and are cut with the Scythe. Each level unlocks one new crop, from Wheat at level 1 to Coffee at level <Fact path="world.maxLevel" />. [Fruit trees](../fruit-trees/) unlock at some of the levels in between.
+Crops grow on [farmland](../farmland-and-water/) from seeds and are cut once with the Scythe. Each level unlocks one crop or [fruit tree](../fruit-trees/), from Wheat at level 1 to Coffee at level <Fact path="world.maxLevel" />.
 
 ![A field of crops at different stages of growth beside a strip of water](../../../assets/farming/crops-field.webp)
 
@@ -16,19 +16,34 @@ Crops grow on [farmland](../farmland-and-water/) from seeds you plant with the P
 <DataTable name="crops" />
 
 - Seed cost is paid for each tile planted. Wheat seeds are free.
-- A harvest pays the "Sells for" price, per tile, when the Scythe is set to Sell.
+- "Sells for" is paid per tile harvested, when it is sold.
 - XP is earned for each tile harvested (see [Levels](../../levels/)).
-- Grow time is the base time. [Water, fertilizer and scarecrows](../growth/) shorten it.
+- Grow time is the base time. [Water, fertilizer and a Scarecrow](../growth/) shorten it.
+
+## How prices and times are set
+
+Every crop's numbers follow from its place in the unlock order.
+
+| Rule | Value |
+| --- | --- |
+| Wheat | Free seed, sells for $0.10, grows in 10 s |
+| Carrot | Set by hand: grows in 30 s, the one crop that does not sell for twice its seed |
+| Seed price (Potato on) | Half the sale price, so a harvest pays back twice the seed |
+| Grow time (Potato to Blackberry) | Potato takes 1 min. Each crop after it takes about 1.33 times as long as the one before, up to 2 h for Blackberry |
+| Grow time (Blackberry on) | 2 h for every crop |
+| Money per minute of growing | 5% more than the crop before, up to Zucchini. 2.5% more for each crop after Zucchini |
+| XP | Unlock level plus one (Wheat 1, Carrot 3, Potato 4), whatever the grow time |
+
+Prices are rounded to cents, so the earliest crops sit a little off the 5% step.
 
 ## Planting
 
-1. Open the Plant tool and pick a crop from its list. Each row shows the cost, the sale price, the grow time and the XP.
-2. Tap an empty farmland tile, or drag across several. Each tile planted costs the seed price.
-3. The crop grows in real time (see [Growth](../growth/)).
+- A crop is planted on farmland with nothing on it: no crop, fertilizer is fine, no decoration, building or egg.
+- Only unlocked crops can be planted, and each tile costs the seed price.
+- Each tile is one crop, harvested as a whole for one item and one set of XP.
+- Each tile shows four small plants that change from sprout to growing to full size at their own moments. The last one finishes exactly when the crop is ripe.
 
-Only crops you have unlocked can be picked. Planting needs farmland with nothing standing on it, enough money for the seed and a tile not covered by a decoration or building. A tile already planted shows "Already planted".
-
-The Plant tool names the planting material for each crop. Most are Seeds (Wheat Seeds, Carrot Seeds). The others are:
+Most planting materials are Seeds (Wheat Seeds, Carrot Seeds). The others are:
 
 | Crop | Planting material |
 | --- | --- |
@@ -43,37 +58,15 @@ The Plant tool names the planting material for each crop. Most are Seeds (Wheat 
 | Grapes | Grape Cuttings |
 | Prickly Pear | Prickly Pear Pads |
 
-## Four plants per tile
-
-- Each farmland tile shows four small plants.
-- Each plant changes from sprout to growing to full size at its own moment. The last one finishes when the crop is done.
-- Every planting looks a little different.
-- The tile is one crop. It is harvested as a whole, for one item and one set of XP.
-
 ## Harvesting
 
-1. Hold the Scythe from the Harvest tool.
-2. Tap a ripe tile, or drag across several.
-3. Each tile gives one crop and its XP, and the tile is empty again.
-
-- Tapping a crop that is still growing shows how long is left.
-- Tapping a crop with another tool in hand says to use the Scythe.
-- With the Scythe on Sell, the crop sells at once for its price. With Store, it goes into storage to sell later (see [Storage and Selling](../../storage-and-selling/)). Storing needs free room.
-- Scythe upgrades give a chance of a second crop from a tile (see [Tools](../../tools/)). The second crop earns no XP.
+- Only the Scythe harvests a ripe crop. The tile is empty again afterwards, and its fertilizer is used up.
+- With the Scythe on Sell the crop sells at once and needs no storage room. On Store it goes to [Storage](../../storage-and-selling/), which needs one free slot.
+- A Scythe upgrade gives a chance of a second crop from the tile (see [Tools](../../tools/)). The second crop earns no XP and is only taken if it fits in Storage.
 - The [Tractor](../../buildings/tractor/) can harvest ripe crops for you.
-
-## When crops are ready
-
-- When one kind of crop is fully grown on the whole farm, a banner says "Carrot is ready to harvest!" with a chime. Several kinds that finish together are listed in one banner.
-- When every farmland tile is planted and every crop is ripe, a banner says "All crops ready to harvest!" with a chime.
-- Nothing is announced for crops that were already ripe when the farm opened.
-- If you leave the app while a fully planted field is still growing, a notification arrives when the last crop is ripe: "All your crops are ready to harvest!". The game asks for permission to send notifications when it first opens.
-
-## Destroying crops
-
-Hold a finger on a crop to destroy it. A question shows how many crops go and how much grow time is left, and says "No money will be earned." Confirm with Destroy. The seed cost is not refunded. Fertilizer on the tile stays for the next crop.
+- Destroying a crop removes it for no money or XP. The seed cost is not refunded, and fertilizer on the tile stays for the next crop.
 
 ## Animals and pets
 
-- Chickens and farm animals that are fully grown and out in the open sometimes eat a whole crop on the tile they stand on (see [Growth](../growth/#animals-eating-crops)).
-- A pet standing on a growing crop can make it ripen at once (see [Growth](../growth/#pets-hurrying-crops)).
+- Grown chickens and farm animals out in the open sometimes eat the crop they stand on (see [Growth](../growth/#animals-eating-crops)).
+- A pet standing on a growing crop can make it ripen at once (see [Growth](../growth/#pets-ripening-crops)).

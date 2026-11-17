@@ -1,6 +1,6 @@
 ---
 title: Livestock
-description: Rabbits, sheep, goats, pigs, donkeys and cows, their homes, babies, products and how to collect them.
+description: Rabbits, sheep, goats, pigs, donkeys and cows, their homes, birth and growth times, what they give and how often, and how to collect it.
 sidebar:
   order: 4
 ---
@@ -8,20 +8,13 @@ import DataTable from '../../../components/DataTable.astro';
 import Infobox from '../../../components/Infobox.astro';
 import Fact from '../../../components/Fact.astro';
 
-Livestock are the farm animals that live in barns and similar buildings: rabbits, sheep, goats, pigs, donkeys and cows. Each building holds one kind. Ducks are on [Ducks](../ducks/) and chickens on [Chickens and Eggs](../chickens-and-eggs/).
+Livestock are the farm animals that live in barns and similar homes: rabbits, sheep, goats, pigs, donkeys and cows. Each home holds one kind. Ducks are on [Ducks](../ducks/) and chickens on [Chickens and Eggs](../chickens-and-eggs/).
 
 <DataTable name="livestock" />
 
 ![Sheep grazing beside the Sheep Barn](../../../assets/animals/sheep-barn.webp)
 
-## Homes and babies
-
-- Each home holds one kind of animal. Building them and upgrading them is on [Animal Homes](../../buildings/animal-homes/).
-- A new home has its first baby at once. More follow at the home's own pace until it is full.
-- A full home stops having babies and starts its timer again when an animal is released.
-- Time away is caught up, up to three days. Animals grow and make things while the game is closed.
-- Every animal home needs plain ground in front of it (grass, farmland or a crop), where its animals appear.
-- A baby appears on the tile in front of the home and walks out from there. When you move the home, its animals follow.
+## Births
 
 | Home | A new baby every |
 | --- | --- |
@@ -32,22 +25,40 @@ Livestock are the farm animals that live in barns and similar buildings: rabbits
 | Stable | <Fact path="animals.livestock.donkey.birthSeconds" as="duration" /> |
 | Luxury Barn | <Fact path="animals.livestock.cow.birthSeconds" as="duration" /> |
 
-Babies have their own pictures: Kit, Lamb, Kid, Piglet, Foal and Calf. A fed baby grows up <Fact path="animals.meal.speedUpPercent" />% faster.
+- A new home has its first baby at once, then one more at its own pace until it is full.
+- A full home has no more babies. Its timer starts again when an animal leaves.
+- A baby appears on the tile in front of the home, or the nearest free tile, and walks out from there.
+- Each baby gets a random color, each equally likely (see the table below).
+- How many each home holds, and its upgrades, are on [Animal Homes](../../buildings/animal-homes/).
 
-## What they give
+## Growing up and giving
 
-- A grown animal gives one item every so often (see the table above for the time and the item).
-- It holds one item at a time. Once its item is ready the animal waits, and the next countdown starts when you collect.
-- The **Bucket** takes milk, goat milk and fertilizer. The **Scythe** shears wool from sheep.
-- Drag the right tool over the animal, or tap the animal while that tool is in hand. Any other tool tells you which one to use.
-- Eggs, milk, goat milk, wool and fertilizer go to storage and sell like crops, or sell at once when the tool is set to Sell. See [Storage and Selling](../../storage-and-selling/).
-- A woolly sheep is drawn without its wool after shearing until it grows back.
-- Fertilizer can be equipped so the Fertilize tool uses it from storage. See [Fertilizer and Sprinklers](../../farming/fertilizer-and-sprinklers/).
-- Animals that are indoors at night or in rain cannot be milked or shorn.
+1. A baby grows up in its "Grows up in" time, <Fact path="animals.meal.speedUpPercent" />% faster while Well Fed.
+2. Its first item is ready one "Every" time after it grows up.
+3. It holds one item at a time. A ready item waits as long as it takes you to collect it.
+4. The next countdown starts the moment you collect.
+
+- A meal speeds the countdown only until the item is ready. Time Well Fed with an item waiting is not saved toward the next one.
+- Births, growth and items carry on while the game is closed, caught up for at most three days.
+
+## Collecting
+
+| Item | From | Collect with | XP |
+| --- | --- | --- | --- |
+| Fertilizer | Rabbit, Pig, Donkey | Bucket | 9 |
+| Wool | Sheep | Scythe | 11 |
+| Goat Milk | Goat | Bucket | 13 |
+| Milk | Cow | Bucket | 20 |
+
+- Each item earns the unlock level of the home that makes it plus one, in XP (none at the top level).
+- Use the right tool on the animal. Any other tool is told which one to use.
+- The item goes to Storage, or sells at once when the tool is set to Sell. A full Storage leaves it on the animal.
+- A Scythe or Bucket upgrade gives a chance of a second item, with no extra XP (see [Tools](../../tools/)).
+- Animals inside at night or in heavy rain cannot be milked or shorn.
+- A sheared sheep has no wool until its next fleece is ready.
+- Fertilizer can be spread from Storage (see [Fertilizer and Sprinklers](../../farming/fertilizer-and-sprinklers/)).
 
 ## Colors
-
-Each baby gets a random color when it is born.
 
 <DataTable name="animal-colors" />
 
@@ -79,11 +90,10 @@ Each baby gets a random color when it is born.
 
 ## Releasing
 
-Livestock cannot be sold (only ducks can). **Release** in the [animal menu](../animal-menu/) sends one away for no money or XP, and its home grows a replacement in its own time.
+Livestock cannot be sold. A released animal leaves for good, for no money or XP, and its home has a replacement baby in its own time.
 
 ## Related pages
 
 - [Animals](../)
 - [Animal Homes](../../buildings/animal-homes/)
 - [Feeding](../feeding/)
-- [Tools](../../tools/)

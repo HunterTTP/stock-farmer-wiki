@@ -273,7 +273,8 @@
   },
   {
     "buildings" : [
-      "Sheep Barn"
+      "Sheep Barn",
+      "House"
     ],
     "crops" : [
       "Cauliflower"
@@ -295,7 +296,7 @@
     "recipes" : [
 
     ],
-    "stockQuests" : false,
+    "stockQuests" : true,
     "toolUpgrades" : [
       "Pickaxe level 3"
     ],
@@ -334,7 +335,6 @@
   },
   {
     "buildings" : [
-      "House",
       "Goat Barn"
     ],
     "crops" : [
@@ -356,7 +356,7 @@
     "recipes" : [
 
     ],
-    "stockQuests" : true,
+    "stockQuests" : false,
     "toolUpgrades" : [
 
     ],

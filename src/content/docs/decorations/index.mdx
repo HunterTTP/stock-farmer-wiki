@@ -1,68 +1,54 @@
 ---
 title: Decorations
-description: The Decorate tool, what each decoration costs and does, and how to take decorations down and set them again from Storage.
+description: Every decoration with its cost, materials and size, the few with an effect, and the rules for setting, storing and destroying them.
 sidebar:
   order: 0
 ---
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-Decorations are objects that stand on the farm. Most are for show. A few have an effect on crops. They are set down with the Decorate tool, which also places [fences](fences-and-paths/) and [planted trees](planted-trees/).
+Decorations are objects that stand on the farm. Most are for show, and a few have an effect on crops. They are set down with the Decorate tool, which also places [fences](fences-and-paths/) and [planted trees](planted-trees/).
 
 ![The House with a wooden table, a well, lanterns, a pumpkin and a dirt path in front of it](../../../assets/decorations/house-and-decorations.webp)
-
-## Materials, not levels
-
-No level unlocks a decoration. Each one costs money plus materials taken from Storage, such as Logs, Stones, Wheat, Planks or a fish. The Decorate list is ordered by the level at which its materials can first be had. A row that is short of money or materials shows the missing part in red.
-
-- Tapping a row picks the decoration. Tapping or dragging to a tile sets it down with that tile as its bottom left corner.
-- Setting one down charges its money and takes its materials from Storage.
-- A decoration stands on bare grass. It cannot go on water, farmland, a crop, a fence, a building, a tree or an animal, or in front of the entrance of an animal home.
-- Decorations take up their tiles. Animals walk around them.
 
 ## All decorations
 
 <DataTable name="decorations" />
 
-Sprinklers are in the Fertilize tool and not in the Decorate list. See [Fertilizer and sprinklers](../farming/fertilizer-and-sprinklers/).
-
-## Looks
-
-Many decorations come in more than one look. After picking one with several looks, a second dropdown beside the tool circle lists them. The chosen look is used for each new one set down. The Looks column of the table shows how many each has.
+- No level unlocks a decoration. Each costs money plus materials from Storage, such as Logs, Stones, Wheat, Planks or a fish.
+- Sprinklers are placed with the Fertilize tool (see [Fertilizer and Sprinklers](../farming/fertilizer-and-sprinklers/)).
+- Looks change only the picture.
 
 ## Effects
 
 | Decoration | Effect |
 | --- | --- |
-| Scarecrow | Crops within 3 tiles grow 5% faster |
-| Sprinkler | Waters farmland within 2 tiles |
-| Big Sprinkler | Waters farmland within 3 tiles |
+| Scarecrow | <Fact path="decorations.scarecrow.effect" /> |
+| Sprinkler | <Fact path="decorations.sprinkler.effect" /> |
+| Big Sprinkler | <Fact path="decorations.bigSprinkler.effect" /> |
 
-The Scarecrow bonus adds to the speed-up from water and from fertilizer. See [Growth](../farming/growth/).
+Every other decoration, the Lantern and the Christmas Tree included, changes only how the farm looks. See [Growth](../farming/growth/) for how the boosts combine.
 
-## Limits and special cases
+## Rules
 
+- A decoration stands on bare grass. It cannot go on water, farmland, a crop, a fence, a building, a tree, an egg or an animal, or in front of an animal home.
+- Its tiles block animals.
 - At most <Fact path="decorations.trunk.limit" /> Trunks can stand on a farm.
-- A Rock is set down as a real rock. It is broken with the Pickaxe, which gives no stones from a rock you placed. See [Mining](../gathering/mining/).
-- A Lantern opens a menu when tapped. See [Lanterns and lights](lanterns-and-lights/).
-- A Christmas Tree stands on one tile at every size. See [Lanterns and lights](lanterns-and-lights/).
+- A Rock is set down as a real rock. The Pickaxe breaks it for no stones, and it never grows (see [Mining](../gathering/mining/)).
+- The Christmas Tree stands on one tile at every size.
+- A Lantern keeps its light settings when it is taken down into Storage and set out again.
 
-## Moving, destroying and storing
+## Storing and destroying
 
-| To do this | Do this |
+| To do this | What happens |
 | --- | --- |
-| Move a decoration | Hold a finger on it, drag it to a free spot and tap Place. Cancel puts it back. Nudge moves its picture within the tile. |
-| Destroy a decoration | Tap it with any tool except the Axe, then confirm. It returns <Fact path="terrain.refundPercent" />% of its price and of each material. |
-| Take it down into Storage | Tap it with the Axe. One tap takes it down and puts it in Storage, with its look. Storage needs a free slot. |
-| Set a stored decoration | Open Storage and tap Select on its row. The Decorate tool then holds it, and each one set down uses one from Storage and costs no money. |
-| Sell a stored decoration | Sell it from Storage for <Fact path="terrain.refundPercent" />% of its price. |
-
-A Lantern keeps its light settings when it goes into Storage and comes back with them. A Rock is broken with the Pickaxe and does not go into Storage.
+| Take it down with the Axe | One pass puts it in Storage with its look. Storage needs a free slot. |
+| Set a stored one | Uses one from Storage and costs no money. |
+| Sell a stored one | Pays <Fact path="terrain.refundPercent" />% of its price. |
+| Destroy it | Returns <Fact path="terrain.refundPercent" />% of its price and of each material. |
 
 ## Related pages
 
-- [Fences and paths](fences-and-paths/)
-- [Planted trees](planted-trees/)
-- [Lanterns and lights](lanterns-and-lights/)
-- [Storage and selling](../storage-and-selling/)
-- [Tools](../tools/)
+- [Fences and Paths](fences-and-paths/)
+- [Planted Trees](planted-trees/)
+- [Storage and Selling](../storage-and-selling/)

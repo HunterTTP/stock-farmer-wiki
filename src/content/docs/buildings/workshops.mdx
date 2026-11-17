@@ -1,15 +1,14 @@
 ---
 title: Workshops
-description: The buildings that turn what is in storage into goods worth more, one batch at a time.
+description: The buildings that turn goods from Storage into goods worth more, one batch at a time, and the rules for batches and collecting.
 sidebar:
   order: 2
 ---
 import Fact from '../../../components/Fact.astro';
 
-A workshop takes goods from storage, works for a while and gives back something worth more. Every recipe is listed on [Crafting](../../crafting/).
+A workshop takes goods from Storage, works for a set time and gives back something worth more. Every recipe is listed on [Crafting](../../crafting/).
 
 ![The Stone Oven and Grain Machine on the farm near the Market Stand and Silo](../../../assets/buildings/workshops.webp)
-![The Stone Oven's menu: what it makes, how long a batch takes, Choose Recipe and the flour to bread recipe](../../../assets/buildings/stone-oven-menu.webp)
 
 ## Workshops
 
@@ -25,31 +24,21 @@ A workshop takes goods from storage, works for a while and gives back something 
 
 Costs and sizes are in the [Buildings](../) table.
 
-## Making a batch
+## Batches
 
-1. Tap the workshop to open its menu.
-2. If the workshop has more than one recipe, tap Choose Recipe and pick one. A recipe that is still locked shows the level it unlocks at.
-3. The menu shows what goes in, what comes out and how many of the ingredient are in storage.
-4. Tap Start. The ingredients are taken from storage and the workshop starts working.
-
-- A workshop makes one batch at a time.
-- The menu reads "Idle", "Working" with the time left, or "Finished".
-- Work continues while the game is closed.
-- Start is greyed out until storage holds enough of the ingredient. Tapping it says how many are needed.
-- A recipe cannot be changed while the workshop is working or has a finished batch waiting.
-- The first recipe of a workshop is available as soon as the workshop is. The other recipes unlock at their own level.
+- A workshop makes one batch at a time, of one chosen recipe.
+- Starting a batch takes all its ingredients from Storage at once. It cannot start without enough.
+- Work carries on in real time while the game is closed.
+- A finished batch waits in the workshop until it is collected. No new batch starts until then.
+- The recipe cannot be changed while a batch is working or waiting.
+- A workshop's first recipe is open as soon as the workshop is. Each other recipe opens at its own level.
 
 ## Collecting
 
-A finished workshop changes to a picture that shows it full. Collect with the Bucket from the Harvest tool: drag it over the workshop or tap the workshop with the Bucket in hand.
-
-- The goods go into storage, or are sold at once when the Bucket is set to Sell. See [Storage and selling](../../storage-and-selling/).
-- If storage has no room, the goods stay in the workshop and the game says storage is full.
-- Any other tool says to use the Bucket.
-- A workshop cannot start a new batch until the finished goods are collected.
+- Only the Bucket collects a finished batch.
+- The goods go to Storage, or sell at once when the Bucket is set to Sell. With no room in Storage they stay in the workshop.
+- Collecting earns no XP. A collected batch counts toward workshop quests (see [Quests](../../quests/)).
 
 ## Moving and destroying
 
-Moving a workshop keeps its work and its chosen recipe. Destroying a workshop ends any batch in progress. See [Placing and moving](../placing-and-moving/).
-
-The Stone Oven's chimney smokes while it is baking or smelting. The oven's mouth glows at night.
+Moving a workshop keeps its work and its chosen recipe. Destroying it ends any batch in progress, and the ingredients are lost.

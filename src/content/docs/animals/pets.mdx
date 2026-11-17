@@ -1,6 +1,6 @@
 ---
 title: Pets
-description: Cats and dogs, how to adopt one in a Pet House, what pets do and how to release one.
+description: Cats and dogs, the Pet House, every breed, the odds of a pet ripening a crop, and releasing a pet.
 sidebar:
   order: 6
 ---
@@ -8,29 +8,18 @@ import Infobox from '../../../components/Infobox.astro';
 import Fact from '../../../components/Fact.astro';
 import DataTable from '../../../components/DataTable.astro';
 
-Pets are cats and dogs. Each lives in its own Pet House. They give nothing to collect, but a pet standing on a growing crop may ripen it.
+Pets are cats and dogs. Each lives in its own Pet House. They give nothing to collect, but a pet standing on a growing crop may ripen it at once.
 
 <Infobox kind="building" id="petHouse" />
 
-![A pet cat's menu with Pet, Nudge and Release, and its Pet House on the farm behind](../../../assets/animals/pet-menu.webp)
-
 ## Pet House
 
-- A Pet House holds one pet and is free to build apart from its materials.
-- You can place up to <Fact path="buildings.petHouse.limit" /> Pet Houses, one for each pet below.
-- It needs plain ground in front of it (grass, farmland or a crop). No building, water or fence can be there.
-- A pet appears on the tile in front of its house and follows the house when you move it. Demolishing the house removes the pet.
-- Tap a house with a pet to see who lives there. A dog is shown asleep in a doghouse. **Summon** brings the pet back to the front of its house.
-
-## Choosing a pet
-
-An empty Pet House asks "Who will live in this house?". Fill in the form, then tap **OK**:
-
-1. **Pet**: Cat or Dog.
-2. **Breed**: for a cat, its color. For a dog, its breed, then a **Color** for that breed.
-3. **Name**: type a name. Left blank, the pet gets its breed's name.
-
-Every cat and dog is available from the start.
+- A Pet House holds one pet. It costs no money, only its materials.
+- Up to <Fact path="buildings.petHouse.limit" /> Pet Houses can stand on a farm, one for each pet below.
+- A new house is empty until you choose its pet: a cat or a dog, its breed (and a color for a dog) and a name. A blank name gives the breed's name.
+- Every cat and dog is available from the start.
+- The pet appears on the tile in front of its house, which must stay plain ground (grass, farmland or a crop).
+- A pet follows its house when the house is moved. Destroying the house removes the pet.
 
 <DataTable name="pets" />
 
@@ -38,20 +27,18 @@ Dog breeds are <Fact path="animals.pets.dogBreeds" />, each in three colors.
 
 ## What pets do
 
-- Pets wander on grass and farmland with no limit on how far from their house they go. Fences, water and buildings hold them in. See [Animals](../#moving-around).
-- A pet standing on a growing crop (never a fruit tree) may rarely ripen it. The longer it stays on the crop, the likelier it is. A fed pet is <Fact path="animals.meal.speedUpPercent" />% more likely to do it. Pets indoors at night or in rain do not.
-- Tap a pet to open its [menu](../animal-menu/): **Pet** floats three hearts over it and plays its sound (a cat trills and a dog barks), **Nudge** sends it somewhere else, and you can name it.
-- Pets can be fed any food by dragging it onto them. Their favorite is <Fact path="animals.meal.petFavorite" />. See [Feeding](../feeding/).
-- Pets leave crops alone. They do not eat them.
+- Pets wander on grass and farmland with no limit on how far from their house they go.
+- A pet on a growing crop may ripen it. The chance rises the longer it stays on crops, from 0.2% a second up to 3% a second after 15 s. See [Growth](../../farming/growth/#pets-ripening-crops) for the full odds.
+- A Well Fed pet is <Fact path="animals.meal.speedUpPercent" />% more likely to ripen a crop. Its favorite food is <Fact path="animals.meal.petFavorite" />. See [Feeding](../feeding/).
+- Pets never ripen fruit trees and never eat crops.
+- Pets go inside at night and in heavy rain like other animals, and ripen nothing while inside.
 
 ## Releasing a pet
 
-- **Release** in a pet's menu asks first ("Release Name?" and "Name will leave the farm for good."). The pet leaves for no money or refund.
-- Its Pet House stays empty. Open it and choose a new pet the same way as the first.
+A released pet leaves the farm for good, for no money or refund. Its Pet House stays empty until you choose a new pet.
 
 ## Related pages
 
 - [Animals](../)
-- [Animal Menu](../animal-menu/)
 - [Feeding](../feeding/)
 - [Buildings](../../buildings/)

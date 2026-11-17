@@ -1,55 +1,53 @@
 ---
 title: Farmland and Water
-description: How to place farmland and water with the Terrain tool, how many farmland tiles each level allows, and how water near crops speeds them up.
+description: What farmland, water and grass cost, how many farmland tiles each level allows, and how water near crops speeds them up.
 sidebar:
   order: 3
 ---
 import Fact from '../../../components/Fact.astro';
 
-Crops grow only on farmland. Farmland, water and grass are placed with the Terrain tool.
+Crops grow only on farmland. Farmland, water and grass are laid with the Terrain tool.
 
-## The Terrain tool
-
-The Terrain tool holds several kinds of terrain and remembers the one you last used. Tap a tile or drag across several to apply it.
+## Terrain
 
 | Terrain | Cost | What it does |
 | --- | --- | --- |
 | Farmland | <Fact path="terrain.farmlandCost" as="money" /> | Soil for crops. Limited by level. |
-| Water | Free | Water tiles. Unlimited. Comes in Deep, Medium and Shallow. |
-| Grass | Free | Erases farmland, water and paths back to grass. |
+| Water | <Fact path="terrain.waterCost" as="money" /> | Unlimited. Deep, Medium and Shallow are looks only. Big enough water holds fish and ducks. |
+| Grass | Free | Clears farmland, water and paths back to grass. |
 
-Paths and trees are also in this tool (see [Fences and Paths](../../decorations/fences-and-paths/) and [Planted Trees](../../decorations/planted-trees/)).
-
-- Any terrain can be placed over another and replaces it at once. Farmland over water removes the water, and water over farmland removes the farmland.
-- Water, paths and grass placed over farmland also remove its fertilizer.
-- Terrain is refused on a tile with a crop on it, ripe or growing. Harvest or destroy the crop first.
-- Terrain is refused where a rock, a tree, a fence, a building or a decoration stands. Paths and grass are the exception: they can go under or out from under a fence, building or decoration. A sprinkler stands on any terrain.
-- Water cannot go in front of an animal home.
-- Placing water in a new color changes the tiles already there.
-- Big ponds hold fish (see [Fishing](../../gathering/fishing/)).
+- Any terrain replaces another at once. Farmland over water removes the water, and water over farmland removes the farmland.
+- Water, paths and grass laid over farmland also remove its fertilizer.
+- Terrain is refused on a tile with a crop, ripe or growing, or an egg.
+- Terrain is refused under a rock, a tree, a fence, a building or a decoration. Paths and grass are the exception: they can go under or out from under a fence, building or decoration.
+- Water cannot go on the tile in front of an animal home.
+- Laying water in a new look changes every water tile already there.
+- Water holds fish and ducks when it has a tile with water on all eight sides (see [Fishing](../../gathering/fishing/#where-fish-live) and [Ducks](../../animals/ducks/)).
 
 ## Farmland limit
 
-The number of farmland tiles you can have at once rises with your level. You start with <Fact path="world.startingFarmland" /> tiles. Each level adds more:
+The number of farmland tiles you can have at once rises with your level. You start with <Fact path="world.startingFarmland" />.
 
-- Levels 2 to 19 add twice the level number in tiles (level 8 adds 16).
-- Level 20 and above add as many tiles as the level number (level 25 adds 25).
+| Level reached | Tiles added |
+| --- | --- |
+| 2 to 19 | Twice the level (level 8 adds 16) |
+| 20 to <Fact path="world.maxLevel" /> | The level (level 25 adds 25) |
 
-The full list is in the [level table](../../levels/#level-table). At the limit, placing farmland says "Farmland limit reached". Erasing farmland or covering it with water frees room.
+The total for every level is in the [level table](../../levels/#level-table). At the limit, more farmland is refused. Erasing farmland or covering it with water frees room.
 
 ## Water and growth
 
-Farmland next to water is saturated. Saturated soil grows crops 5% faster.
+Farmland near water is saturated, and saturated soil grows crops <Fact path="terrain.waterSpeedUpPercent" />% faster.
 
-- A water tile saturates the farmland within 1 tile of it, diagonals included.
-- A [Sprinkler](../fertilizer-and-sprinklers/) saturates farmland within its reach, whether or not it is spraying.
-- Land near several sources is saturated once, not more.
-- The boost stacks with fertilizer and scarecrows (see [Growth](../growth/)).
+- A water tile saturates the farmland within <Fact path="terrain.waterReach" /> tile of it, diagonals included.
+- A [Sprinkler](../fertilizer-and-sprinklers/) saturates the farmland in its reach, whether or not it is spraying.
+- Land near several sources is saturated once. The boost does not add up.
+- The boost multiplies with fertilizer and a Scarecrow (see [Growth](../growth/)).
 
 ### Soaking
 
 - Farmland soaks up water one tile at a time, in a random order, about half a second apart.
-- It happens when water, a sprinkler or farmland is placed, moved or removed.
-- A crowded area soaks a little faster, so it is done within 12 seconds.
-- Land that loses its last water source dries out the same way.
-- Only a tile that has soaked up water gets the boost. The farmland picture changes to show it.
+- It starts when water, a sprinkler or farmland is laid, moved or removed.
+- A large area soaks a little faster, so it is always done within 12 s.
+- Land that loses its last water source dries out the same way, tile by tile, and keeps the boost until its tile has dried.
+- Only a tile that has soaked up water gets the boost.

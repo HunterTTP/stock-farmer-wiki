@@ -1,30 +1,32 @@
 ---
 title: Fertilizer and Sprinklers
-description: The Fertilize tool's fertilizer, Sprinkler and Big Sprinkler, and the Scarecrow, with their costs, reach and growth boosts.
+description: Fertilizer, the Sprinkler and Big Sprinkler, and the Scarecrow, with their costs, reach, growth boosts and spray schedule.
 sidebar:
   order: 4
 ---
 import Fact from '../../../components/Fact.astro';
 
-Three things speed up crops: fertilizer, water from a sprinkler and a Scarecrow. The Fertilize tool holds fertilizer, the Sprinkler and the Big Sprinkler, and remembers which one you last used.
+Three things speed up crops: fertilizer, water from a sprinkler and a Scarecrow. How they combine is on [Growth](../growth/).
 
 ## Fertilizer
 
-Fertilizer makes the crop planted on a tile grow <Fact path="terrain.fertilizerSpeedUpPercent" />% faster.
+Fertilizer makes the crop on its tile grow <Fact path="terrain.fertilizerSpeedUpPercent" />% faster.
 
-1. Open the Fertilize tool and pick Fertilizer.
-2. Tap an empty farmland tile, or drag across several. Each tile costs <Fact path="terrain.fertilizerCost" as="money" />.
-3. Plant a crop on the tile.
+| | Fertilizer |
+| --- | --- |
+| Cost | <Fact path="terrain.fertilizerCost" as="money" /> per tile, or one Fertilizer from Storage |
+| Goes on | Farmland with no crop on it, and not already fertilized |
+| Lasts | One crop: it is used up when that crop is harvested |
 
-- Fertilizer goes on farmland with no crop on it. A tile that already has fertilizer says "Already fertilized".
-- It is used up when the crop on the tile is harvested, so its boost lasts for one crop. Destroying a crop leaves the fertilizer on the tile.
-- It is also lost when water, a path or grass is placed over the tile, or when an animal eats the crop (see [Growth](../growth/#animals-eating-crops)).
-- To throw fertilizer away, hold a finger on a fertilized tile that has no crop and confirm. No money is returned.
-- Fertilizer collected from animals (see [Livestock](../../animals/livestock/)) can be placed from Storage. Pick it in the Storage menu, then tap or drag over farmland. It uses up one fertilizer per tile and costs no money.
+- Fertilize a tile before planting it. A planted tile cannot be fertilized.
+- Destroying a crop leaves the fertilizer on the tile for the next one.
+- Fertilizer is lost when water, a path or grass is laid over the tile, or when an animal eats the crop (see [Growth](../growth/#animals-eating-crops)).
+- Fertilizer on a tile with no crop can be thrown away for no money back.
+- Rabbits, pigs and donkeys give Fertilizer (see [Livestock](../../animals/livestock/)). Each one spread from Storage fertilizes one tile and costs no money.
 
 ## Sprinklers
 
-A sprinkler waters the farmland around it. Watered farmland is saturated, the same as farmland next to water (see [Farmland and Water](../farmland-and-water/)), and crops on it grow 5% faster.
+A sprinkler saturates the farmland around it, the same as farmland next to water (see [Farmland and Water](../farmland-and-water/)), so crops there grow <Fact path="terrain.waterSpeedUpPercent" />% faster.
 
 | | Sprinkler | Big Sprinkler |
 | --- | --- | --- |
@@ -32,26 +34,25 @@ A sprinkler waters the farmland around it. Watered farmland is saturated, the sa
 | Materials | <Fact path="decorations.sprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.sprinkler.materials.Stones.count" /> Stones | <Fact path="decorations.bigSprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.bigSprinkler.materials.Stones.count" /> Stones |
 | Does | <Fact path="decorations.sprinkler.effect" /> | <Fact path="decorations.bigSprinkler.effect" /> |
 
-- No level is needed. The materials come from Storage (see [Mining](../../gathering/mining/) and [Trees, Logs and Stones](../../gathering/trees-logs-and-stones/)). Without them the game says how many Copper Ore you need.
-- Reach is counted in a square around the sprinkler, diagonals included.
-- Place it like a building: pick it in the Fertilize tool, tap a tile, adjust it, then Place. It stands on any terrain.
-- Destroying a sprinkler returns <Fact path="terrain.refundPercent" />% of its money and materials. The land it watered dries out tile by tile.
-- A moved sprinkler waters its new land.
-- Land near several sprinklers or ponds is saturated once. The boost does not add up.
+- No level is needed, only money and materials from Storage.
+- Reach is a square around the sprinkler, diagonals included.
+- A sprinkler stands on one tile of any terrain.
+- The boost lasts as long as the sprinkler stands, whether or not it is spraying. Land near several sprinklers or ponds is saturated once.
+- A moved sprinkler waters its new land, and its old land dries out tile by tile.
+- Destroying a sprinkler returns <Fact path="terrain.refundPercent" />% of its money and materials.
 
-### Spray
+### Spray schedule
 
-The boost does not depend on the spray. It is there while the sprinkler stands.
+The spray is a picture: it never changes the boost.
 
-- A sprinkler sprays as soon as it is placed. After that, every sprinkler sprays together once every <Fact path="world.sprinklerSprayEverySeconds" as="duration" />, an hour of the farm's clock.
-- A spray lasts 12 seconds and falls on every tile in reach.
+- A sprinkler sprays as soon as it is placed, and the land in reach soaks up the water during that first spray.
+- After that every sprinkler sprays together once every <Fact path="world.sprinklerSprayEverySeconds" as="duration" /> (an hour of the farm's clock), for 12 s each time.
 - Sprinklers do not spray while it rains.
-- Land in reach soaks up the water tile by tile during the first spray.
-- Always On is a switch on each sprinkler's page and in the menu when you tap a placed sprinkler. With it on, every sprinkler sprays all the time like a fountain, rain or not. It changes only how the farm looks.
+- A sprinkler set to Always On sprays all the time, rain or not.
 
 ## Scarecrow
 
-A Scarecrow makes crops near it grow 5% faster. It is a decoration, placed with the Decorate tool.
+A Scarecrow is a decoration that makes crops near it grow 5% faster.
 
 | | Scarecrow |
 | --- | --- |
@@ -61,7 +62,3 @@ A Scarecrow makes crops near it grow 5% faster. It is a decoration, placed with 
 
 - Reach is a square around it, diagonals included.
 - Several scarecrows covering the same tile give the boost once.
-
-## How boosts combine
-
-Each boost that applies to a tile multiplies the growth speed. A tile with all three grows 1.05 × 1.1 × 1.05 = about 1.21 times as fast, so a crop takes about 17.5% less time. See [Growth](../growth/) for an example.

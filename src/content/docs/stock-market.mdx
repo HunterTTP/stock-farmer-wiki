@@ -1,62 +1,44 @@
 ---
 title: Stock Market
-description: A pretend stock market that uses real market prices and farm money.
+description: A pretend stock market that uses real market prices and farm money, with its trading rules, limits, price updates and stock quests.
 ---
 import Fact from '../../components/Fact.astro';
 
-The Stock Market is a pretend market inside the game. You buy and sell shares with farm money at real market prices, but no real stocks or real money are involved.
+The Stock Market is a pretend market inside the game. You buy and sell shares with farm money at real market prices. No real stocks or real money are involved.
 
-The House opens it. The House unlocks at level <Fact path="buildings.house1.unlockLevel" />. See [House](../buildings/house/).
+The [House](../buildings/house/) opens it. The House unlocks at level <Fact path="buildings.house1.unlockLevel" />. The market needs an internet connection; offline, the rest of the farm keeps working.
 
-![The Stock Market menu with the portfolio summary, Buy Stock and Upgrade](../../assets/stock-market/stock-market.webp)
+## Trading rules
 
-## Opening the market
-
-- Tap the House to open the Stock Market.
-- It needs an internet connection. Offline, it shows "No internet connection" and the rest of the farm keeps working.
-- The top card shows **Stocks Owned** (slots used out of slots available), **Portfolio Value**, **Performance %** and **Performance $** against what the shares cost.
-- Each stock you own is a row with its ticker, price, today's change against yesterday's close (a green up or red down arrow), how many shares you own, what they are worth and your average cost.
-
-## Buying and selling
-
-1. Tap **Buy Stock** and type a ticker, such as AAPL. Tap **Search**.
-2. Tap **Buy** on its row.
-3. Choose how many whole shares. The screen shows the price each and the total.
-4. Tap **Buy**. The total comes out of your money.
-
-To sell, tap **Sell** on a stock you own, choose a number of shares, and tap **Sell**. The total goes into your money.
-
-- You can buy as many shares as your money covers.
-- Buying more of a stock you own changes your average cost.
-- A sale shows its **Profit / loss**: what the shares sold for above or below their average cost. Buying shows no profit or loss.
-- A trade is made at the price on screen.
-
-## Slots
-
-Each different stock you own takes one slot. More shares of the same stock take no more.
-
-| House | Stocks you can own |
+| Rule | Value |
 | --- | --- |
-| House | <Fact path="world.stockSlots" /> |
-| Luxury House | <Fact path="world.stockSlotsUpgraded" /> |
+| Shares | Whole shares only, as many as your money covers |
+| Fees | None |
+| Price of a trade | The price on screen when you trade |
+| Tickers | Any listed ticker the price source knows, looked up by its symbol |
+| Different stocks you can own | <Fact path="world.stockSlots" /> with the House, <Fact path="world.stockSlotsUpgraded" /> with the Luxury House |
 
-Selling every share of a stock frees its slot. The **Upgrade** button in the Stock Market turns the House into the Luxury House for <Fact path="home-upgrades.house.cost" as="money" />. It unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
+- Each different stock takes one slot, however many shares of it you own. Selling every share frees its slot.
+- Buying more of a stock you own sets your average cost to the average of everything you paid for it.
+- A sale's profit or loss is the sale price minus your average cost, times the shares sold.
+- Stocks stay with the farm if the House is destroyed (see [House](../buildings/house/)).
+- The Luxury House upgrade costs <Fact path="home-upgrades.house.cost" as="money" /> and unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
 
 ## Prices
 
 - Prices come from a real market source and can be delayed.
-- While the Stock Market is open, the prices of the stocks you own update every <Fact path="world.stockRefreshMinutes" /> minutes. A search looks up its price when you tap Search.
-- Prices do not update while the menu is closed. A trade screen shows when its price was fetched ("As of ...").
-- Between updates, the price moves by a small amount.
+- While the Stock Market is open, the prices of stocks you own update every <Fact path="world.stockRefreshMinutes" /> minutes. A search looks up its price at once.
+- Prices do not update while the market is closed, and never move with the farm's clock.
+- Between updates, the price on screen wobbles slightly above the last real price, by at most 0.05%.
+- The day's change is against the stock's previous close.
 
-## Profit and quests
+## Profit, progress and quests
 
-- Each sale is recorded with the farm. Winning sales add to **Money Earned** in [Progress](../progress/). **Stock Profit** there counts wins and losses together and shows your best day.
-- From level <Fact path="quests.stockQuestsFromLevel" />, every Market Stand carries a stock quest that reads "Earn $N profit in the Stock Market". Each whole dollar of profit counts. Losses take nothing back. See [Quests](../quests/).
+- Each winning sale adds its profit to Money Earned in [Progress](../progress/). Stock Profit there counts wins and losses together.
+- From level <Fact path="quests.stockQuestsFromLevel" />, every Market Stand carries one stock quest, "Earn $N profit in the Stock Market". Each whole dollar of profit from a sale counts. Losses take nothing back. See [Quests](../quests/#stock-quests).
 
 ## Related pages
 
 - [House](../buildings/house/)
 - [Quests](../quests/)
 - [Progress](../progress/)
-- [Storage and Selling](../storage-and-selling/)

@@ -1,6 +1,6 @@
 ---
 title: Mining
-description: How to break rocks and mine ore veins with the Pickaxe, what each gives, and how ore becomes bars and cut gems.
+description: Rocks and ore veins, what each gives, how many passes the Pickaxe needs, the odds of each ore by level, and smelting ore into bars and cut gems.
 sidebar:
   order: 3
 ---
@@ -13,56 +13,71 @@ The Pickaxe, one of the [Harvest implements](../../tools/), breaks rocks into st
 
 ## Rocks and veins
 
-Rocks stand on one tile each. They come in three sizes, and veins come in one size per ore (silver also has a small vein). A rock or vein blocks buildings, fences, trees and animals.
+Every rock and vein stands on one tile and blocks buildings, fences, trees and animals.
 
 <DataTable name="rocks" />
 
-- Stones sell for nothing and are used for building (see [Buildings](../../buildings/)). Ore sells and is made into bars and cut gems.
-- Rocks you place with the Decorate tool give nothing when broken.
+- Stones sell for nothing and are used for building (see [Buildings](../../buildings/)). Ore sells, and is made into bars and cut gems.
+- A Small Silver Vein gives half a Silver Vein's ore, rounded up. Half of all new Silver Veins are small.
+- Rocks you place with the Decorate tool give nothing when broken and never grow.
 
 ## Breaking a rock
 
-1. Pick the Pickaxe from the Harvest tool's first dropdown.
-2. Drag the tool circle over a rock or vein. One pass is one go across it. Leave the tile and come back, or lift your finger, for the next pass.
-3. A count and a bar above your finger show how close it is to breaking.
-4. On the last pass the rock breaks and everything goes into Storage.
-
-The first Pickaxe takes one pass for every stone or piece of ore the rock gives, so the "Gives" column above is also its number of passes.
+One pass is one stroke across a rock or vein. Lift your finger, or leave the tile and come back, for the next pass.
 
 | Pickaxe level | Passes for each rock or vein | Extra stones |
 | --- | --- | --- |
-| 1 | One for each stone or piece it gives | None |
+| 1 | One for each stone or piece of ore it gives | None |
 | 2 | Half as many, rounded up | 1 more from each wild plain rock |
 | 3 | One | 2 more from each wild plain rock |
 
 - Extra stones come only from wild plain rocks. A vein always gives its usual ore.
-- If Storage cannot hold everything the rock gives, it stays and says "Storage is full".
-- Holding another implement over a rock says "Use the Pickaxe from the Harvest tool to break a rock". Tapping the banner picks the Pickaxe up (see [Tools](../../tools/)).
-- Upgrade prices and unlock levels are in [Tools](../../tools/).
+- A rock breaks only if Storage can hold everything it gives. Otherwise it stays.
+- Starting on another rock drops the passes counted on the first.
+- Upgrade prices and levels are in [Tools](../../tools/).
 
 ## Ore
 
 <DataTable name="ores" columns="Ore,Vein,Pieces per vein,Each sells for" />
 
-- Copper is the most common vein and Sapphire the rarest.
-- A Small Silver Vein gives half a Silver Vein's ore.
+### Odds of each ore
+
+New veins come with the [midnight wave](../../world/wild-growth/). Each one's ore is drawn by these shares, which shift toward the rarer ores as you near the level where they can be processed:
+
+| Your level | Copper | Silver | Gold | Ruby | Sapphire |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 91% | 3.8% | 2.7% | 1.5% | 1.1% |
+| 6 | 76% | 10% | 7.2% | 3.9% | 2.7% |
+| 12 | 58.5% | 17.5% | 12.6% | 6.7% | 4.7% |
+| 18 | 41% | 25% | 18% | 9.5% | 6.7% |
+| 19 and up | 40% | 25% | 18% | 10% | 7% |
+
+> Share of a rarer ore = its full share × (0.15 + 0.85 × progress), where progress runs evenly from 0 at level 1 to 1 at the level it can be processed. Copper takes the rest.
+
+These are the base shares. The night then favors an ore the farm has few veins of, and Copper when Storage is short of a vein's worth of Copper Ore (see [Wild Growth](../../world/wild-growth/#what-the-farm-is-short-of)).
 
 ### Bars and cut gems
 
-From level <Fact path="mining.processingLevel" /> you can turn ore into bars in a Stone Oven and cut rough gems at a DIY Crafting Table. These recipes and the Market Stand's ore quests open at that level. See [Crafting](../../crafting/) and [Workshops](../../buildings/workshops/).
+Bars are smelted in a Stone Oven from level <Fact path="mining.processingLevel" />. Rough gems are cut at a DIY Crafting Table, which unlocks at level <Fact path="buildings.diyTable.unlockLevel" />. The Market Stand's ore quests open at level <Fact path="mining.processingLevel" /> too. See [Crafting](../../crafting/).
 
 <DataTable name="ores" columns="Ore,Made into,Where,Recipe,Sells for" />
 
-## Veins on a new farm
+A bar or cut gem sells for twice the ore that goes into it.
 
-- A new farm has <Fact path="mining.veinsOnANewMap.min" /> to <Fact path="mining.veinsOnANewMap.max" /> veins among its rocks.
-- The first veins are enough copper and gems to build everything once. The rest are Copper or Silver.
-- Its rocks and veins together hold enough stones and ore to build every building and decoration once.
+## A new farm's rocks and veins
+
+| | Value |
+| --- | --- |
+| Rocks scattered | <Fact path="mining.rocksOnANewMap.min" /> to <Fact path="mining.rocksOnANewMap.max" />, thinly over the whole map, away from the starting farmland |
+| Rock sizes | Small 50%, Medium 35%, Big 15% |
+| Veins | <Fact path="mining.veinsOnANewMap.min" /> to <Fact path="mining.veinsOnANewMap.max" />, made from some of those rocks |
+| Sure veins | 7 Copper, 1 Ruby and 2 Sapphire, at random spots |
+| Other veins | Copper or Silver, half and half |
+| Stones | At least 340 in the plain rocks: rocks grow a size at random until there are |
+
+Between them, a new farm's rocks and veins hold enough stones, copper and gems to build every building and decoration once, with a fifth to spare. Gold only comes later, with the midnight wave.
 
 ## Overnight
 
-The midnight wave brings new rocks and veins, and lets some wild rocks grow. See [Wild Growth](../../world/wild-growth/).
-
-- Wild rocks grow from Small to Medium to Big, and a Small Silver Vein grows into a Silver Vein. Other veins stay as they are.
-- New veins can be any ore, including Gold. A farm short of stones or copper gets more of them. Silver, Gold, Ruby and Sapphire turn up more often as you near the level where you can process them.
-- Rocks you placed never grow.
+- Each night every wild Small or Medium rock and every Small Silver Vein has a 1 in 5 chance to grow one size. Other veins stay as they are.
+- New rocks and veins appear up to the farm's limits: 40 wild plain rocks and 12 wild veins. See [Wild Growth](../../world/wild-growth/).

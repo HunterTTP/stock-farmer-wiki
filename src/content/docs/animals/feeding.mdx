@@ -1,46 +1,46 @@
 ---
 title: Feeding
-description: How to hand-feed animals, what counts as food, favorites, the Well Fed boost and crops animals eat on their own.
+description: What counts as food, the Well Fed boost and how it is worked out, favorite foods, and crops animals eat on their own.
 sidebar:
   order: 2
 ---
 import Fact from '../../../components/Fact.astro';
 
-Animals have no hunger. They give eggs, milk, wool and fertilizer at their usual pace whether or not they have eaten, and nothing shows over their heads. Feeding by hand is optional and gives a short boost.
+Animals have no hunger. They give eggs, milk, wool and fertilizer at their usual pace whether or not they have eaten. Feeding by hand is optional and gives a short boost called Well Fed.
 
-## How to feed
+## Feeding by hand
 
-- Tap an animal, tap **Feed** and pick a food from the list. The list shows every food in storage with how many you have, and the animal's favorite comes first with a heart.
-- Or pick a food in Storage or the Decorate tool's list and drag it onto an animal. This works for every animal, including pets and grown ducks.
-- Each feeding uses one of the food.
-- An animal that is already Well Fed cannot be fed again until its meal ends.
-- A fish fed to an animal is the one the Decorate tool holds, or the lightest of its kind.
+- Any animal can be fed any food from Storage, including pets and grown ducks. Each feeding uses one of the food.
+- A fish fed to an animal is the one you hold, or else the lightest of its kind.
+- An animal that is Well Fed cannot be fed again until its meal ends. Meals never stack.
 
 ## What counts as food
 
 | Food | Examples |
 | --- | --- |
-| Crops | Every crop and every fruit tree basket, rare ones too |
+| Crops | Every crop and every fruit basket |
 | Fish | Every fish |
 | Animal products | Eggs, Milk, Goat Milk |
-| Made from food | Flour, Bread, Cheese, and anything made from food such as juice, preserves, pie, soup and pickles |
+| Made from food | Flour, Bread, Cheese, and goods made from food, such as juice, preserves, pie, soup, pickles and aged cheese |
 
-Animals do not eat wool, fertilizer, logs, stones, ore or what is made from them (cloth, planks, bricks, bars, cut gems, furniture), live chickens, butterflies, fireflies, decorations or fences.
+Wool, fertilizer, logs, stones, ore and what is made from them (cloth, planks, furniture, bricks, bars, polished gems) are not food, and neither are butterflies, fireflies, decorations or fences.
 
 ## Well Fed
 
-Every meal gives the same boost for <Fact path="animals.meal.seconds" as="duration" />, whatever the food. A meal fed by hand and a crop an animal eats on its own (see below) give the same boost. A meal cannot be stacked: the next one starts only after it ends.
+Every meal gives the same boost for <Fact path="animals.meal.seconds" as="duration" />, whatever the food.
 
 | Animal | While Well Fed |
 | --- | --- |
-| Hen | Lays eggs <Fact path="animals.meal.speedUpPercent" />% more often |
-| Grown farm animal | Makes milk, goat milk, wool or fertilizer <Fact path="animals.meal.speedUpPercent" />% faster |
+| Hen | Lays <Fact path="animals.meal.speedUpPercent" />% more often |
+| Grown farm animal | Makes its milk, goat milk, wool or fertilizer <Fact path="animals.meal.speedUpPercent" />% faster |
 | Baby, duckling or chick | Grows up <Fact path="animals.meal.speedUpPercent" />% faster |
 | Cat or dog | Is <Fact path="animals.meal.speedUpPercent" />% more likely to ripen the crop it stands on |
 | Rooster, grown duck | Nothing changes |
 
-- An animal holds one item at a time. A meal speeds it up only until its item is ready. Once ready, the item waits to be collected, fed or not, and the next one starts after you collect it.
-- The animal menu shows the meal's time left and turns the status bar purple. See [Animal Menu](../animal-menu/).
+How it works: each second of the meal counts as 1.25 seconds of waiting. A wait spent wholly Well Fed takes 0.8 of its usual time, so one meal saves at most 1 min 15 s.
+
+- A meal speeds an item only until it is ready. Once ready it waits to be collected, and no time is saved toward the next one.
+- A baby that grows up during its meal gets the boost only for the part of the meal before it grew up, then for its first item.
 
 ## Favorites
 
@@ -50,19 +50,18 @@ Every meal gives the same boost for <Fact path="animals.meal.seconds" as="durati
 | Cats and dogs | <Fact path="animals.meal.petFavorite" /> |
 
 - A favorite gives the same boost as any other food.
-- Feeding quests ask you to hand-feed favorite foods to animals from a building, and only an animal's favorite food counts. Other foods fed by hand count for nothing. See [Quests](../../quests/).
+- Feeding quests count only favorite foods fed by hand to animals from the home the quest names. See [Quests](../../quests/).
 
 ## Eating crops in the field
 
-Grown chickens and farm animals sometimes eat a crop they walk onto. The crop feeds the animal like a meal by hand.
+Grown chickens and farm animals sometimes eat a crop they stand on (odds on [Growth](../../farming/growth/#animals-eating-crops)). The crop feeds the animal like a meal by hand.
 
-- The animal is Well Fed for <Fact path="animals.meal.seconds" as="duration" />, with the Feed countdown and the boosted bar in its menu.
-- An animal that is already Well Fed is full and leaves crops alone.
-- The crop earns no money or XP, and an eaten crop counts toward no feeding quest.
-- The rules for which animals eat and how often are on [Animals](../#pests) and [Growth](../../farming/growth/#animals-eating-crops).
+- The animal is Well Fed for <Fact path="animals.meal.seconds" as="duration" />.
+- An animal that is already Well Fed leaves crops alone.
+- The crop earns no money or XP and counts toward no quest.
 
 ## Related pages
 
-- [Animal Menu](../animal-menu/)
+- [Animals](../)
 - [Quests](../../quests/)
 - [Storage and Selling](../../storage-and-selling/)

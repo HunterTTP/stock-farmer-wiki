@@ -24,7 +24,6 @@ export default defineConfig({
       },
       sidebar: [
         { label: 'Home', link: '/' },
-        { label: 'Farm Screen', link: '/farm-screen/' },
         group('Farming', 'farming'),
         group('Animals', 'animals'),
         group('Fishing and gathering', 'gathering'),
@@ -38,7 +37,7 @@ export default defineConfig({
         group('Decorations and terrain', 'decorations'),
         { label: 'Tools and upgrades', link: '/tools/' },
         { label: 'Progress', link: '/progress/' },
-        group('Settings and saves', 'settings'),
+        { label: 'Settings', link: '/settings/' },
         { label: 'Platforms', link: '/platforms/' },
         { label: 'Changelog', link: '/changelog/' },
       ],

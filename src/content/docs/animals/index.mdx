@@ -1,13 +1,13 @@
 ---
 title: Animals
-description: Every animal on the farm, where it lives, what it gives and how animals move, shelter and are cared for.
+description: Every animal on the farm, where it lives, what it gives, and the rules for moving, sheltering, releasing, selling and eating crops.
 sidebar:
   order: 0
 ---
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-The farm has pets, chickens, six kinds of farm animal and ducks. Each lives in a home you build, except ducks, which come to ponds on their own. Animals walk around the farm, give things you collect and grow from babies into adults.
+The farm has pets, chickens, six kinds of farm animal and ducks. Each lives in a home you build, except ducks, which come to ponds on their own. Every animal starts as a baby (a chick, kit, duckling, lamb, kid, piglet, foal or calf) and grows up by itself.
 
 ## Kinds of animal
 
@@ -29,38 +29,47 @@ The farm has pets, chickens, six kinds of farm animal and ducks. Each lives in a
 
 Homes, their size and their upgrades are on [Animal Homes](../buildings/animal-homes/).
 
-## Caring for animals
+## Time
 
-- Tap an animal to open its [menu](animal-menu/): name, status, Feed, Pet, Nudge and Release or Sell.
-- [Feed](feeding/) any animal any food by hand for a short boost. Animals never go hungry and give their items without eating.
-- Collect eggs, milk, goat milk, wool and fertilizer on the farm with the Harvest tool. The Bucket takes eggs, milk, goat milk and fertilizer, and the Scythe takes wool (see [Tools](../tools/)).
-- Every animal starts as a baby (a chick, kit, duckling, lamb, kid, piglet, foal or calf) and grows up on its own. Animals keep growing and making things while the game is closed.
+- Animals never go hungry. They give their items at the same pace whether or not they have eaten. A meal only gives a short boost (see [Feeding](feeding/)).
+- Babies grow up, homes have babies and grown animals make their items on the real clock, also while the game is closed. Time away is caught up for at most three days.
+- Hens lay eggs, pets ripen crops and animals eat crops only while the game is open.
 
 ## Moving around
 
-- Animals wander on grass and farmland. They never walk onto water, buildings, decorations or fences.
+- Animals wander on grass and farmland. They never walk onto water, buildings, decorations, rocks, trees or fences.
 - There is no limit on how far from its home an animal walks. Fences, water and buildings are what hold animals in.
-- Animals share tiles with each other. Chickens prefer tiles with no other chicken on them.
+- Animals can share a tile. Chickens prefer tiles with no other chicken on them.
 - Farm animals and chickens keep away from a driving Tractor. Pets do not.
 - Ducks stay on water and swim anywhere the water joins up.
-- Reopening the game puts every animal back on the tile it was last standing on.
+- Reopening the game puts every animal back on the tile it was last on.
 
 ## Night and rain
 
-- At night and in heavy rain, animals with a home walk back to the tile in front of it, step in through the door and disappear from view.
-- When the night or the rain is over they come back out and wander off.
-- Pond ducks have no home and stay out.
-- An animal indoors cannot be tapped and does nothing for the farm: hens lay no eggs, nothing can be milked or shorn, and pets do not ripen crops.
+- Animals with a home go in once it is half dark (from 8:30 PM) or once the rain is half built up (10 farm minutes after it starts at 2 PM). They come out when the night or the rain is over.
+- They walk back to the tile in front of their home, then disappear inside.
+- An animal indoors cannot be tapped and does nothing for the farm: hens lay no eggs, nothing can be milked or shorn, pets ripen nothing and nothing eats crops.
+- Ducks have no home and stay out.
+- In Winter, snow falls all day, but animals only shelter for the night and the rain hours. See [Weather](../world/weather/).
 
 ## Pests
 
-- Grown chickens, roosters and grown farm animals out on the land sometimes eat a crop they stand on, growing or ripe.
-- Each animal eats at most one crop a day (<Fact path="world.realSecondsPerFarmDay" as="duration" />, one farm day).
-- The tile is cleared and earns no money or XP. The animal gets a meal from it, just as if you had fed it by hand (see [Feeding](feeding/#eating-crops-in-the-field)).
-- An animal that is already Well Fed leaves crops alone.
-- Fruit trees are safe.
-- Pets, ducks, babies and chicks leave crops alone.
-- An animal eats only the tile it stands on. A fence around a field keeps animals out.
+Grown chickens and farm animals out on the land sometimes eat the crop they stand on, at most once every <Fact path="world.realSecondsPerFarmDay" as="duration" /> each. The odds are on [Growth](../farming/growth/#animals-eating-crops).
+
+## Names
+
+- Any animal or fish can be given a name of up to 20 characters. A blank name gives back its kind's plain name.
+- A name changes nothing about how the animal behaves.
+
+## Releasing and selling
+
+| Animal | What you can do | What happens |
+| --- | --- | --- |
+| Duck or duckling | Sell for <Fact path="animals.livestock.duck.salePrice" as="money" /> at any age | The money counts as a sale in the day's earnings. The pond grows a new duckling in its own time. |
+| Chicken or farm animal | Release | It leaves for good, for no money or XP. Its home has a replacement baby in its own time. |
+| Cat or dog | Release | It leaves for good, for no money or refund. Its Pet House stays empty until you choose a new pet. |
+
+Ducks are the only animals that can be sold.
 
 ## Related pages
 

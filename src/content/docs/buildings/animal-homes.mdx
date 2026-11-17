@@ -1,15 +1,13 @@
 ---
 title: Animal Homes
-description: The buildings that house chickens, rabbits, sheep, goats, pigs, donkeys and cows, how many each holds and how to upgrade them.
+description: The buildings that house chickens, rabbits, sheep, goats, pigs, donkeys and cows, how many each holds and what each upgrade costs.
 sidebar:
   order: 1
 ---
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-An animal home holds a group of farm animals. New babies are born in the home until it is full. The animals themselves are covered on the [Animals](../../animals/) pages.
-
-![The Luxury Barn's menu: how many cows it holds, the next calf, and the Upgrade button](../../../assets/buildings/luxury-barn-menu.webp)
+An animal home holds one kind of animal. It has babies until it is full. The animals themselves are on the [Animals](../../animals/) pages.
 
 ## Homes
 
@@ -23,12 +21,10 @@ An animal home holds a group of farm animals. New babies are born in the home un
 | Stable | Donkeys | <Fact path="buildings.stable1.unlockLevel" /> | <Fact path="buildings.stable1.width" />×<Fact path="buildings.stable1.height" /> | <Fact path="buildings.stable1.holds" /> | <Fact path="buildings.stable1.holdsFullyUpgraded" /> |
 | Luxury Barn | Cows | <Fact path="buildings.barn2.unlockLevel" /> | <Fact path="buildings.barn2.width" />×<Fact path="buildings.barn2.height" /> | <Fact path="buildings.barn2.holds" /> | <Fact path="buildings.barn2.holdsFullyUpgraded" /> |
 
-- Each home holds one kind of animal. There is one of each, except the Chicken Coop, which allows <Fact path="buildings.chickenCoop.limit" />.
-- The Pet House holds one cat or dog. See [Pets](../../animals/pets/).
+- One of each home can be built, except the Chicken Coop, which allows <Fact path="buildings.chickenCoop.limit" />.
+- The Pet House holds one cat or dog (see [Pets](../../animals/pets/)).
 - Costs and materials are in the [Buildings](../) table.
-- The Luxury Barn comes in four colors, picked before it is built.
-- A home sends its animals out onto the tile in front of it. That tile must stay free (see [Placing and moving](../placing-and-moving/)).
-- At night the windows of the barns and the Rabbit Hutch glow, and so do the Stable's stalls and the doorways of the Chicken Coop and Pet House.
+- A home's animals appear on the tile in front of it, which must stay plain ground (see [Buildings](../#placing)).
 
 ## Upgrades
 
@@ -36,11 +32,5 @@ A home starts at Level 1 and can be upgraded to Level 2 and then Level 3. Each u
 
 <DataTable name="home-upgrades" />
 
-To upgrade:
-
-1. Tap the home to open its menu.
-2. The menu shows its level and how many animals it holds, for example "Level 1 of 3".
-3. Tap the purple Upgrade button. A page shows what the next level gives and costs.
-4. Tap Upgrade with the price to buy it.
-
-Until the unlock level is reached, the menu shows the level needed in place of the button. A home at Level 3 reads "Fully upgraded". A home keeps its level when it is moved.
+- After an upgrade, a home that was full has its next baby one birth interval later, then carries on at its usual pace.
+- A home keeps its level when it is moved, and loses it when it is destroyed.

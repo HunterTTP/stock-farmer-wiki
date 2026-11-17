@@ -1,44 +1,64 @@
 ---
 title: Ducks
-description: How ducks arrive on ponds, how many a pond holds and how to sell them.
+description: How ducks arrive on ponds, how many each pond and the farm hold, where new ducklings may appear, and selling ducks.
 sidebar:
   order: 5
 ---
 import Infobox from '../../../components/Infobox.astro';
 import Fact from '../../../components/Fact.astro';
 
-Ducks live on water. They have no building. A big enough pond gets ducklings on its own, and each duck can be sold.
+Ducks live on water and have no building. A big enough pond gets ducklings on its own, and each duck can be sold.
 
 <Infobox kind="livestock" id="duck" />
 
-## How ducks arrive
+## Arrival
 
-- A pond needs at least one tile with water on all eight sides around it. A pond that is too narrow gets no ducks.
-- A pond with room gets its first duckling 10 minutes after the water first appears, then another every 30 minutes while there is room.
-- A new farm's ponds each start with no ducks, or with some grown ducks.
-- A duckling grows up in <Fact path="animals.livestock.duck.growSeconds" as="duration" />, or <Fact path="animals.meal.speedUpPercent" />% faster when fed.
+| | Value |
+| --- | --- |
+| A pond qualifies | It has at least one tile with water on all eight sides (an interior tile) |
+| First duckling | 10 min after the pond first qualifies |
+| Next duckling | Every 30 min while the pond and the farm have room |
+| No room | It tries again 30 min later |
+| Duckling grows up in | <Fact path="animals.livestock.duck.growSeconds" as="duration" /> (<Fact path="animals.meal.speedUpPercent" />% faster while Well Fed) |
+| Color | One of four, each equally likely |
+
 - A duck gives nothing. Its only use is selling.
+- Ducklings arrive while the game is closed too, caught up for at most three days.
 
-## How many fit
+## Room
 
-Each pond has room for one duck per 20 open water tiles in its middle, rounded up. The whole farm holds one duck per 24 water tiles, at least 2 and at most 15.
+| Limit | Rule |
+| --- | --- |
+| Per pond | One duck per 20 interior tiles, rounded up |
+| Whole farm | One duck per 24 water tiles, at least 2 and at most 15 |
 
-- New ducks appear only in the middle of a pond (water on all sides), with no other duck within two tiles.
-- No 5×5 square of tiles ever holds more than two new ducks. The same limits apply to fish.
-- When a pond has no room, it tries again after 30 minutes.
-- Ducks already swimming are never moved or removed for crowding.
-- Filling in water until no middle is left stops new ducklings.
+Fish use the same two limits, counted apart from the ducks (see [Fishing](../../gathering/fishing/#where-fish-live)).
+
+### Where a duckling appears
+
+A new duckling picks a random tile that meets all of these:
+
+- an interior tile of its pond, with no decoration on it;
+- no other duck within 2 tiles, in any direction;
+- no fish on the tile or next to it;
+- no 5×5 square around it would then hold more than two ducks.
+
+With no such tile, it waits 30 min. Ducks already swimming are never moved or removed for crowding.
 
 ## Swimming
 
-- Ducks stay on water and never step onto land. They swim anywhere joined water goes, with no distance limit.
+- Ducks stay on water and never step onto land. They swim anywhere joined water goes.
 - A duck whose water is filled in or built over moves to the nearest water.
-- Ducks stay out in the night and the rain.
+- Ducks stay out at night and in the rain, and never eat crops.
+- Filling in water until a pond has no interior tile stops its ducklings.
+
+## A new farm's ducks
+
+Each pond on a new farm starts with a random number of grown ducks, from none up to as many as it has room for, within the farm's limit.
 
 ## Selling
 
-- Tap a duck or duckling and tap **Sell** to sell it for <Fact path="animals.livestock.duck.salePrice" as="money" /> at any age. The sale counts in the day's earnings and frees room for the pond's next duckling.
-- Ducks and ducklings are the only animals that can be sold. See [Animal Menu](../animal-menu/).
+A duck or duckling sells for <Fact path="animals.livestock.duck.salePrice" as="money" /> at any age. The sale counts in the day's earnings and frees room for the pond's next duckling. Ducks are the only animals that can be sold.
 
 ## Related pages
 

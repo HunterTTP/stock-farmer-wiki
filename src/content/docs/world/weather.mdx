@@ -1,83 +1,71 @@
 ---
 title: Weather
-description: Afternoon rain, Winter snow, thunder, wind, clouds and how animals shelter.
+description: The daily rain and Winter snow, how hard it falls through the afternoon, when animals shelter, thunder and lightning odds, wind and clouds.
 sidebar:
   order: 2
 ---
 import Fact from '../../../components/Fact.astro';
 
-Weather changes how the farm looks and sounds and where animals stay. It never changes how crops grow or what anything sells for.
+The weather follows the farm's clock and is the same every day: there are no random rain days. It changes where animals stay and whether butterflies fly, never how crops grow or what anything sells for.
 
 ![Rain falling over the farm in the afternoon, with grey clouds](../../../assets/world/rain.webp)
 
-## Rain and snow
+## Rain
 
-It rains every day from 2 PM to 5 PM on the farm's clock. That is 3 hours of the farm's clock, or <Fact path="world.rainRealMinutes" /> real minutes.
+It rains every day from 2 PM to 5 PM on the farm's clock: 3 farm hours, or <Fact path="world.rainRealMinutes" /> real minutes.
 
-- The rain builds up over the first 20 minutes of the farm's clock and dies away over the last 20.
-- The farm is tinted a little darker and cooler while it rains. Blue streaks fall at a slant that follows the wind. The same rain falls over the fishing water.
-- A steady rain sound plays and swells and fades with the picture. It follows the Ambience volume in Settings → Sound.
-- Windows light up in the rain, and butterflies stay away.
-- In Winter snow falls instead of rain, and it never stops. It falls lightly day and night, and builds to a full storm in the rain hours. Snow is silent.
+| Farm time | Rain |
+| --- | --- |
+| 2:00 PM to 2:20 PM | Builds up |
+| 2:10 PM | Half built up: animals go inside |
+| 2:20 PM to 4:40 PM | Full strength |
+| 4:40 PM to 5:00 PM | Dies away |
+| 5:00 PM | Stops: animals come out |
 
-| | Spring, Summer, Fall | Winter |
-| --- | --- | --- |
-| Falls | Rain, 2 PM to 5 PM | Snow, all day and night |
-| Full strength | Most of the shower | The rain hours |
-| Sound | Rain loop | None |
-| Thunder | Yes | No |
+What rain changes:
 
-Seeing rain and snow for the first time counts in [Progress](../../progress/).
+- Animals with a home shelter from 2:10 PM to 5 PM. Inside, hens lay nothing, nothing can be milked or shorn, pets ripen nothing and nothing eats crops.
+- No new butterflies come while it rains, and set-free butterflies rest.
+- Sprinklers stop spraying. Their growth boost stays.
+- Ducks stay out on the water.
 
-## Thunder
+## Winter snow
 
-Thunder rolls now and then through every rain shower in Spring, Summer and Fall.
+In Winter snow falls in place of rain, all day and night. It falls at half strength outside the rain hours and builds to a full storm from 2 PM to 5 PM.
 
-- A roll comes about every minute while it rains hard enough, in four different recordings from near to far. It is never the same one twice in a row.
-- Every roll is loud enough to hear clearly over the rain.
-- Lightning is rare. Only an occasional shower brings a few soft flashes across the farm, each just before a roll.
-- Flashes do not show with Reduce Motion on or Weather effects off. The thunder still plays.
-- Thunder follows the Ambience volume. It fades out when the rain stops.
+- For the rules, Winter's storm is the same as rain: animals shelter from 2:10 PM to 5 PM and at night. The lighter snow the rest of the day does not send them in.
+- Snow brings no thunder.
+- No butterflies fly in Winter at all.
 
-## Animals sheltering
+## Thunder and lightning
 
-Animals that live in a building go home when it is night or raining hard. See [Day and Night](../day-and-night/) for the night hours.
+Every rain spell in Spring, Summer and Fall rolls with thunder.
 
-- They go in once it is half dark, or once the rain is half built up (10 minutes in), and come out when the night or rain is over.
-- Ducks on ponds have no building and stay out.
-- An animal inside is hidden and cannot be tapped. It does nothing for the farm meanwhile: a hen lays no eggs, and a cow, sheep or goat cannot be milked or shorn.
+| | Value |
+| --- | --- |
+| When | While the rain is at least a quarter built up |
+| Rolls | One every 30 to 80 s, at random |
+| Spells that can flash | 1 in 10, decided as the spell begins |
+| In such a spell | 1 roll in 4 comes with a flash, 1 to 3 s before it, at least 2 min apart |
+| Other spells | Thunder only |
+
+- No roll starts within 5 s of the midnight chime.
+- Thunder and lightning change nothing in the game.
 
 ## Wind
 
-The wind blows one way for a spell, then may change direction. Its direction is settled every 5 real minutes.
+- The wind blows left or right across the map, each way equally likely. Its direction is settled afresh every 5 real minutes (5 farm hours), so it may change or stay.
+- A gust comes every 30 s. Rain, snow, clouds, leaves and petals drift with the wind.
+- Wind changes nothing in the game.
 
-- A gust comes every 30 seconds. It leans the trees and chimney smoke and turns weathercocks. A few curls of wind drift across the screen.
-- Rain, snow and clouds lean or drift the way the wind blows.
-- In Fall, now and then a gust carries tumbling leaves across the screen, and in Spring flower petals. They are left out in the rain.
+## Clouds
 
-## Floating clouds
-
-Six soft, slightly see-through pixel-art clouds drift smoothly over the farm with the wind, each casting a soft shadow on the ground a couple of tiles away.
-
-- The clouds belong to the map. They move with the ground as you drag and zoom, and only the wind moves them over it.
-- They are already there when the farm opens, and there are always six on the map. As one starts to fade out over the far side, a new one starts to fade in at the edge the wind blows from. If the wind turns before the swap is done, the old one drifts back and the new one fades away.
-- They show only over the map and fade in and out at its edge.
-- In the rain they turn grey, hurry along and cast no shadows. In Winter they are a cool blue-grey under white tops, so they stand out over the snow. At night they sit under the night tint with a pale moonlit rim.
-- They hide when you zoom in closer than the zoom the farm opens at. They fade out in a moment, keep drifting and fade back in when you zoom out to that zoom or further.
-- They never take a tap. They hold still with Reduce Motion on.
-
-## Graphics switches
-
-Settings → Graphics has two switches for weather. Both are on to start with, and Reset to Defaults turns them back on.
-
-| Switch | Off |
-| --- | --- |
-| Weather effects | No rain or snow, no rain tint, no falling leaves or petals, no curls of wind. Anything in the air goes at once. The weather still happens: animals still shelter, the rain still sounds and windows still light up. |
-| Clouds | Every cloud and shadow goes at once. Works on its own, apart from Weather effects. |
+- Six clouds drift over the map with the wind at all times. When one fades out over the far edge, a new one fades in at the edge the wind blows from.
+- In the rain they turn grey and drift faster.
+- Clouds and their shadows are looks only. They never take a tap and change nothing in the game.
 
 ## Related pages
 
 - [Seasons](../seasons/)
 - [Day and Night](../day-and-night/)
-- [Music and Sound](../../settings/music-and-sound/)
-- [Settings](../../settings/settings/)
+- [Animals](../../animals/#night-and-rain)

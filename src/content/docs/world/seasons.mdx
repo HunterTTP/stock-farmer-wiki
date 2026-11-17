@@ -1,70 +1,41 @@
 ---
 title: Seasons
-description: The four seasons, how long each lasts, when they turn and what changes on the farm.
+description: The four seasons, how long each lasts, when they turn, and what each one changes on the farm.
 sidebar:
   order: 1
 ---
 import Fact from '../../../components/Fact.astro';
 
-The year runs Spring, Summer, Fall and Winter, then starts again. Each season lasts <Fact path="world.daysPerSeason" /> days of the farm. A new farm starts in Summer on day 1.
-
-A season changes how the farm looks and sounds, and butterflies and crickets stop in Winter. Crops, animals, prices and rules stay the same in every season.
+The year runs Spring, Summer, Fall and Winter, then starts again. Each season lasts <Fact path="world.daysPerSeason" /> farm days. A new farm starts in Summer on day 1.
 
 ![The farm in Winter, covered in snow](../../../assets/world/winter.webp)
 ![The farm in Fall, with golden grass](../../../assets/world/fall.webp)
 
-## When a season turns
+## What a season changes
 
-- The next season comes on the day after the current one's last, at <Fact path="world.seasonTurnsAtHour" /> AM on the farm's clock (not at midnight).
-- A season waits while a level-up, the day summary, a menu, an animal menu, a naming or confirmation screen, fishing or a timelapse is open. It plays once they are closed. Until then the farm keeps the old season's look.
-- The farm's clock stands still while the game is closed (see [Day and Night](../day-and-night/)). A season that came due but could not play, such as when the game closed first, plays when you open the farm and close what is on screen.
-- Each season counts as seen in [Progress](../../progress/) the first time it plays.
-
-## What changes
+Crops, animals, prices, fish and every other rule are the same in every season. A season changes only these:
 
 | | Spring | Summer | Fall | Winter |
 | --- | --- | --- | --- | --- |
-| Ground | Its own grass with small wildflowers | The original grass | Its own grass | Grass under snow |
-| Trees and buildings | Spring trees | The original look | Foliage turns yellow, orange and red | Frosted trees, snow on roofs, branches, fences, rocks and ore veins |
-| Weather | Rain in the afternoon | Rain in the afternoon | Rain in the afternoon | Snow all day and night |
-| Carried by the wind | Flower petals | Nothing | Leaves | Nothing |
+| Weather | Rain 2 PM to 5 PM | Rain 2 PM to 5 PM | Rain 2 PM to 5 PM | Snow all day, heavier 2 PM to 5 PM |
+| Thunder | Yes | Yes | Yes | No |
 | Butterflies | Yes | Yes | Yes | None |
 | Night crickets | Yes | Yes | Yes | None |
-| Midnight wave | Green with yellow | Green | Orange with red | Cyan and blues |
+| Looks | Spring grass, wildflowers, petals on the wind | The original look | Autumn foliage, leaves on the wind | Snow on the ground, trees, roofs, fences and rocks |
 | Music | Its own songs | Its own songs | Its own songs | Its own songs |
 
-Each season plays its own songs. See [Music and Sound](../../settings/music-and-sound/).
+Animals shelter at the same times in Winter as in other seasons: at night and in the 2 PM to 5 PM storm. See [Weather](../weather/).
 
-## The season sweep
+## When a season turns
 
-When a season turns, the new season sweeps across the farm in a gust from the top left to the bottom right while you keep playing.
-
-- The new season shows behind the gust edge, with its own weather already running: Winter's snow is falling, or Fall's leaves or Spring's petals are in the air.
-- On the side the gust has not reached yet, the old season keeps moving. Animals, water, smoke, lights and trees never freeze.
-- The edge glitters in the new season's midnight-wave colors. Petals, sun motes, leaves or snowflakes trail behind it.
-- The season's name rises into focus once the gust has passed the middle of the screen, then sinks away.
-- The music fades into the new season's songs, with a soft whoosh and a chime.
-- With Reduce Motion on, the old season fades into the new one, and the name fades in and out.
-
-## Picking a season
-
-The Time sheet has a button for each season. Tap one to change the farm to it at once, with the same sweep. A season picked this way lasts its full <Fact path="world.daysPerSeason" /> days from that day before the year moves on. Open the Time sheet from the clock button. See [Day and Night](../day-and-night/).
-
-## Christmas lights
-
-In Winter, string lights hang along the roof edges of most buildings. The Tractor, the workshops, the Dairy and the Cheese Cellar have none. The bulbs glow at night and in the rain.
-
-Settings → Graphics → Christmas Lights has three choices:
-
-| Choice | Options | What it does |
-| --- | --- | --- |
-| Power | Always On (starts here), Always Off, Auto | Auto lights the bulbs at night and in the rain. Always On also lights them softly by day. Always Off keeps the strands dark. |
-| Pattern | Twinkling (starts here), Solid | Twinkling lets a few bulbs at a time glow softly. With Reduce Motion on, bulbs stay solid. |
-| All Year | No (starts here), Yes | No hangs the lights in Winter only. Yes hangs them in every season. |
+- The next season comes on the morning after the current one's last day, at <Fact path="world.seasonTurnsAtHour" /> AM on the farm's clock.
+- The farm's clock stands still while the game is closed (see [Day and Night](../day-and-night/)), so seasons only pass while you play.
+- A season that comes due while a menu, a level-up, the day summary or fishing is on screen turns once that is closed.
+- A season can also be picked by hand from the clock. It changes at once and lasts its full <Fact path="world.daysPerSeason" /> days from that day.
+- Each season counts as seen in [Progress](../../progress/) the first time it plays.
 
 ## Related pages
 
 - [Weather](../weather/)
 - [Day and Night](../day-and-night/)
 - [Butterflies and Fireflies](../../gathering/butterflies-and-fireflies/)
-- [Lanterns and Lights](../../decorations/lanterns-and-lights/)

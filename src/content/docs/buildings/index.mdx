@@ -1,41 +1,26 @@
 ---
 title: Buildings
-description: Every building in Stock Farmer, what it costs, when it unlocks and how many you can build.
+description: Every building with its cost, materials, size, unlock level and limit, plus the rules for placing, moving and destroying buildings.
 sidebar:
   order: 0
 ---
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-Buildings are made with the Build tool. Each one costs money, logs and stones from storage, and unlocks at a player level.
+Buildings cost money plus logs and stones from Storage, and each unlocks at a player level.
 
 ## All buildings
 
 <DataTable name="buildings" />
 
-- **Cost** is paid in money when you confirm the spot.
-- **Materials** are taken from storage. The Pet House costs no money and takes one Copper Ore besides logs and stones.
-- **Size** is width × height in tiles. Only the bottom row of a building is ground it stands on (see [Placing and moving](placing-and-moving/)).
-- **Most you can build** is the limit for that building. Most buildings allow one. The Chicken Coop, Shed and Silo allow <Fact path="buildings.chickenCoop.limit" /> each, and the Pet House allows one for every kind of pet in the game.
+- **Materials** come from Storage. The Pet House costs no money and takes one Copper Ore besides its logs and stones.
+- **Size** is width × height in tiles. Only the bottom row is ground the building stands on.
+- **Most you can build:** one of most buildings. The Chicken Coop, Shed and Silo allow <Fact path="buildings.chickenCoop.limit" /> each, and the Pet House one for every kind of pet.
 - Level unlocks are listed on the [Levels](../levels/) page.
-
-## Build tool
-
-1. Tap the circle in the bottom-left corner and pick Build.
-2. Open the building dropdown beside the circle and pick a building.
-3. Tap the farm. A preview appears. Move it, then confirm with the Build button, which shows the price.
-
-In the dropdown:
-
-- Each row shows its money price and its logs and stones. A number is green when storage has enough and red when it does not.
-- A locked building reads "Unlocks at Lv" and its level.
-- A building with a limit shows how many are placed out of how many are allowed, such as Shed (2/4). A row at its limit is greyed out.
-
-Placing, moving and removing are covered on [Placing and moving](placing-and-moving/).
 
 ## Looks
 
-Some buildings come in several looks. A look is picked from a second dropdown beside the Build tool's circle before the building is placed. The choice is remembered for each building.
+Some buildings come in several looks, picked before the building is placed. A look changes only the picture, except where its size changes.
 
 | Building | Looks |
 | --- | --- |
@@ -43,28 +28,45 @@ Some buildings come in several looks. A look is picked from a second dropdown be
 | Tractor | <Fact path="buildings.tractor1.styles" /> |
 | Luxury Barn | <Fact path="buildings.barn2.styles" /> |
 
-- A look is kept when the building is moved.
-- The look of a placed building cannot be changed. Destroy it and build it again in another look.
 - The Silo's Tower and Shed look is 3×6 tiles. The Tractor facing Front or Back is 1×2 tiles.
+- A placed building keeps its look. To change it, destroy it and build it again.
 
-## Tap a building
+## Placing
 
-- Tapping a building opens its menu, whatever tool is selected.
-- The menu shows what the building does and any controls that belong to it.
-- Building menus have no Move or Destroy buttons. Hold a finger on a building to move or destroy it.
+A building's ground is its bottom row of tiles. The rest of its picture rises over the tiles behind it.
 
-Two taps do something else:
+- The ground cannot be water, a rock, a fence, an egg, a planted crop or fruit tree, or the ground of a tree, decoration or another building.
+- Bare farmland under a building becomes ground for it. Animals standing there are moved to a free tile.
+- The upper rows of a building may overlap trees, fences and decorations behind it, and may rise past the back edge of the map. The Tractor stays fully inside the map.
+- The Pet House and every animal home need the tile in front of them to stay plain ground (grass, farmland or a crop). Nothing placed later may cover it, and no water may be laid there.
+- Building charges its money, logs and stones when it is placed.
 
-- With the Bucket in hand, a tap on a workshop that has finished takes what it made.
-- With the Scythe in hand, a tap on a Tractor that has a load unloads it.
+## Moving
 
-The House opens the [Stock Market](../stock-market/) instead of a menu.
+Buildings, fruit trees, decorations, sprinklers and trees you planted can be picked up and moved. Wild trees cannot.
+
+- Moving is free and keeps everything: the look, the animals, the level, the work in progress, a tree's growth.
+- Animals follow their home to its new spot.
+- A Tractor cannot be moved while it is driving.
+
+## Destroying
+
+| Thing | Gives back |
+| --- | --- |
+| Building | <Fact path="terrain.refundPercent" />% of its price and of each material, rounded to whole items |
+| Decoration | <Fact path="terrain.refundPercent" />% of its price and of each material |
+| Tree you planted | <Fact path="terrain.refundPercent" />% of what it cost to plant |
+| Fruit tree | Nothing |
+
+- A Shed or Silo can only be destroyed while the rest of Storage still holds everything stored.
+- A destroyed workshop loses any batch in progress. A destroyed animal home loses its level and its animals.
+- A Tractor cannot be destroyed while it is driving or carrying a load.
 
 ## Pages
 
-- [Animal homes](animal-homes/): Chicken Coop, Rabbit Hutch, the barns and the Stable.
-- [Workshops](workshops/) and [Crafting](../crafting/): what each workshop makes.
+- [Animal Homes](animal-homes/): the Chicken Coop, Rabbit Hutch, barns and Stable
+- [Workshops](workshops/) and [Crafting](../crafting/)
 - [House](house/)
-- [Market Stand](market-stand/)
 - [Tractor](tractor/)
-- [Storage and selling](../storage-and-selling/): the Shed and the Silo.
+- [Quests and the Market Stand](../quests/)
+- [Storage and Selling](../storage-and-selling/): the Shed and the Silo

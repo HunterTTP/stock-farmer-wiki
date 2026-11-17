@@ -1,56 +1,65 @@
 ---
 title: Wild Growth
-description: How trees, rocks and ore veins appear and grow overnight with the midnight wave.
+description: How the midnight wave grows wild trees, rocks and ore veins, how many new ones a night brings, the limits, and the weights that favor what the farm lacks.
 sidebar:
   order: 4
 ---
 import Fact from '../../../components/Fact.astro';
 
-Trees, rocks and ore veins appear and grow only while the midnight wave rolls out over the map. See [Day and Night](../day-and-night/) for the wave. Each night does two things: wild things grow a size, and new things appear.
+Wild trees, rocks and ore veins grow and appear only during the midnight wave (see [Day and Night](../day-and-night/#midnight)). Each night does two things: wild things may grow a size, and new things appear.
 
 ## Growing
 
-Each wild tree, rock and vein has a 1 in 5 chance each night to grow one size, if it has room.
+Each wild tree, rock and vein that can grow has a 1 in 5 chance each night to grow one size.
 
 | Thing | Grows into |
 | --- | --- |
 | Small, Medium or Big tree | The next size of the same tree, up to Huge |
 | Small or Medium rock | The next size up, up to Big |
 | Small Silver Vein | Silver Vein |
-| Huge tree, Big rock, other veins | Nothing. They stay as they are. |
+| Huge tree, Big rock, every other vein | Nothing |
 
-- A tree grows only if the bigger tree has bare grass to spread over. It keeps its trunk on the same tile.
+- A tree grows only if the bigger tree's picture has bare grass to spread over. It keeps its trunk on the same tile.
 - A rock stands on one tile at every size, so it always has room.
-- Trees you plant and rocks you place never grow. Wild means the ones the map was made with or a night left.
+- Trees you planted and rocks you placed never grow.
 
 ## New things
 
-Each night draws up to 7 to 10 new things from three kinds: trees, plain rocks and ore veins. A night leaves at most 8 trees, 4 rocks and 2 veins.
+Each night has 7 to 10 draws (4 to 6 for trees, 2 or 3 for rocks and 1 for a vein, added together). Each draw picks a tree, a plain rock or a vein of one ore at once, by the weights below.
 
-- Each appears on a random empty tile anywhere on the map: bare grass, away from the starting farmland and from building entrances.
-- A kind stops coming once the map holds its limit of wild ones. Things you plant or place do not count toward a limit.
-- A kind that is already common on the map comes less often, but never stops until its limit.
+| Limit | Trees | Plain rocks | Ore veins |
+| --- | --- | --- | --- |
+| Most new in one night | 8 | 4 | 2 |
+| Most wild on the map | 390 | 40 | 12 |
 
-| Limit on wild things | Default |
-| --- | --- |
-| Trees | 390 |
-| Rocks | 40 |
-| Ore veins | 12 |
+- A draw of a kind that has reached its limit for the night or the map leaves nothing, so a plentiful kind comes less often without handing its draws to the others.
+- A new thing appears on a random empty tile of bare grass, away from the starting farmland and from the front of animal homes.
+- A new tree is a Pine or an Oak of a random size and color. A new rock is Small 50%, Medium 35% or Big 15% of the time. Half of new Silver Veins are small.
+- Things you planted or placed never count toward a limit.
 
 ## What the farm is short of
 
-Each night's draws favor what your farm lacks for your level.
+Each draw's weight is worked out from the map, your Storage and your level:
 
-- Trees and rocks come more often when the map has few of them.
-- A kind comes more often when your Storage is short of what you build with: the Logs and Stones for the dearest building you can build within two levels, and Copper Ore.
-- Copper Veins are the common ore at low levels.
-- Silver, Gold, Ruby and Sapphire Veins come less often at low levels. They rise the closer you get to the level you can process them. Smelting and cutting open at level <Fact path="quests.oreQuestsFromLevel" />.
-- Once you can process every ore, the ores come in their usual mix.
+> Weight = usual share × scarcity × (1 + shortage)
+
+| Part | Trees | Plain rocks | A vein of one ore |
+| --- | --- | --- | --- |
+| Usual share | 5 | 2.5 | 1 × the ore's share at your level (see [Mining](../../gathering/mining/#odds-of-each-ore)) |
+| Scarcity | 1 − wild trees ÷ 390 | 1 − wild plain rocks ÷ 40 | 1 − veins of that ore ÷ (12 × its share) |
+| Shortage | Share of the logs you lack for the building that needs the most logs, among those unlocked up to 2 levels above yours | The same for stones | Copper only: share of 12 Copper Ore you lack |
+
+- Scarcity never drops below 0.1, so a kind the map has plenty of still comes now and then until its limit.
+- Shortage runs from 0 with enough in Storage to 1 with none, so a kind you are short of comes up to twice as often.
+- When everything is equally scarce and nothing is short, a night leaves about 5 trees, 2.5 rocks and 1 vein.
+
+### Example
+
+A farm with 195 wild trees (half the limit), 40 plain rocks (at the limit) and plenty of logs gives trees a weight of 5 × 0.5 = 2.5 and rocks none, since the map is full of them.
 
 ## When it happens
 
-- A new thing or a growth appears when the wave's front reaches its tile. It fades in over about 1.5 seconds with a soft glow in the wave's color.
-- With Reduce Motion on, the wave is not drawn and things simply appear.
+- A new thing or a growth appears when the wave reaches its tile.
 - Leaving the game while the wave rolls grows the rest of that night at once.
 - Nothing grows for time away. A night happens only when the game is open at midnight.
 

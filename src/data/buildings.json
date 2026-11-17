@@ -250,6 +250,40 @@
     "width" : 4
   },
   {
+    "cost" : 8500,
+    "height" : 4,
+    "icon" : {
+      "height" : 135,
+      "src" : "sprites/buildings/house1.png",
+      "width" : 158
+    },
+    "id" : "house1",
+    "limit" : 1,
+    "logs" : 54,
+    "materials" : [
+      {
+        "count" : 54,
+        "name" : "Logs"
+      },
+      {
+        "count" : 8,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "House",
+    "purpose" : "Allows access to the Stock Market",
+    "recipes" : [
+
+    ],
+    "stockSlots" : 5,
+    "stones" : 8,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 10,
+    "width" : 4
+  },
+  {
     "cost" : 1500,
     "height" : 5,
     "icon" : {
@@ -259,10 +293,10 @@
     },
     "id" : "silo",
     "limit" : 4,
-    "logs" : 54,
+    "logs" : 57,
     "materials" : [
       {
-        "count" : 54,
+        "count" : 57,
         "name" : "Logs"
       },
       {
@@ -283,40 +317,6 @@
     ],
     "unlockLevel" : 11,
     "width" : 2
-  },
-  {
-    "cost" : 8500,
-    "height" : 4,
-    "icon" : {
-      "height" : 135,
-      "src" : "sprites/buildings/house1.png",
-      "width" : 158
-    },
-    "id" : "house1",
-    "limit" : 1,
-    "logs" : 57,
-    "materials" : [
-      {
-        "count" : 57,
-        "name" : "Logs"
-      },
-      {
-        "count" : 8,
-        "name" : "Stones"
-      }
-    ],
-    "name" : "House",
-    "purpose" : "Allows access to the Stock Market",
-    "recipes" : [
-
-    ],
-    "stockSlots" : 5,
-    "stones" : 8,
-    "styles" : [
-
-    ],
-    "unlockLevel" : 12,
-    "width" : 4
   },
   {
     "animals" : "Goats",

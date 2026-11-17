@@ -1,48 +1,45 @@
 ---
-title: Fences and paths
-description: How fences and paths are placed and removed, what they cost, and how grass clears them.
+title: Fences and Paths
+description: What fences and paths cost, where they can go, how fences hold animals in, and how grass clears them.
 sidebar:
   order: 1
 ---
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-Fences are set down with the Decorate tool. Paths and grass are set with the Terrain tool.
+Fences are set down with the Decorate tool. Paths and grass are laid with the Terrain tool.
 
 ## Fences
 
-A Wood Fence costs <Fact path="terrain.fenceCost" as="money" /> per tile and needs no materials. Fence pieces join to the fences next to them, so a run of tiles reads as one fence.
+A Wood Fence costs <Fact path="terrain.fenceCost" as="money" /> per tile and needs no materials. Fence pieces join to the fences next to them.
 
-- Pick Fence in the Decorate list, then tap or drag over bare grass.
-- A fence stands on grass only. It cannot go on water, farmland, a crop, a building, a rock, a tree or an animal, or in front of an animal home's entrance.
-- Animals cannot pass through a fence.
-- Farmland and water cannot be placed on a tile with a fence on it. Paths and grass can.
+- A fence stands on bare grass only: not on water, farmland, a crop, a building, a rock, a tree or an animal, and not in front of an animal home.
+- No animal can pass a fence. As animals eat only the crop they stand on, a fenced field is safe from them.
+- Farmland and water cannot be laid on a fence's tile. Paths and grass can.
+- A building more than one tile tall can stand over fences with its upper rows.
 
-| To do this | Do this |
+| To do this | What happens |
 | --- | --- |
-| Sell a fence | With the Decorate tool holding fences, tap the fence and confirm. It returns the full price. |
-| Take a fence into Storage | Tap or drag over it with the Axe. It goes into Storage as a Wood Fence, and needs a free slot. |
-| Set a stored fence | Open Storage and tap Select on the Wood Fence row. Each fence set down uses one from Storage and costs no money. |
-
-Tapping a fence with any other tool gives a message to use the Axe. A building more than one tile tall can stand over fences on its top row, and the fences run behind it.
+| Sell a placed fence with the Decorate tool | It returns its full price |
+| Take it down with the Axe | One pass puts it in Storage as a Wood Fence. Storage needs a free slot. |
+| Set a stored fence | Uses one from Storage and costs no money |
 
 ## Paths
 
-Paths are laid with the Terrain tool, one tile at a time. Every path is available from the start.
+Every path is available from the start.
 
 <DataTable name="paths" />
 
-- Paths are walkable and change no speeds.
-- A path replaces farmland or water on its tile.
-- Paths go under things. A path can be laid under a fence, a building or a decoration, and stays when the thing is removed.
-- Tapping a path tile with a path of another kind changes it.
+- Paths are looks only: they change no speeds and animals walk on them like grass.
+- A path replaces farmland or water on its tile, and removes the farmland's fertilizer.
+- A path can be laid under a fence, a building or a decoration, and stays when the thing is removed.
+- Laying a path of another kind over a path changes it.
 
 ## Grass
 
-Grass is the Grass choice at the end of the Terrain list. It is free. It clears a path, farmland or water from a tile back to plain grass, and it can clear a path under a fence, building or decoration. The Terrain tool does not change a tile with a crop on it.
+Grass is free. It clears a path, farmland or water from a tile back to plain grass, including a path under a fence, building or decoration. No terrain can be laid on a tile with a crop.
 
 ## Related pages
 
 - [Decorations](../)
-- [Farmland and water](../../farming/farmland-and-water/)
-- [Tools](../../tools/)
+- [Farmland and Water](../../farming/farmland-and-water/)

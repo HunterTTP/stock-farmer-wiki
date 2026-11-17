@@ -1,67 +1,80 @@
 ---
 title: Butterflies and Fireflies
-description: When butterflies and fireflies appear, how rarity colors work, how to catch them with the Bucket, the XP they earn and how to let them go.
+description: When butterflies and fireflies appear, the odds of each wing color and glow, the XP they earn and the rules for letting them go.
 sidebar:
   order: 5
 ---
 import Fact from '../../../components/Fact.astro';
 
-Butterflies fly by day and fireflies come out at night. Both are caught with the Bucket, one of the [Harvest implements](../../tools/), and kept in [Storage](../../storage-and-selling/). They cannot be sold. A caught one can be let go on the farm again.
+Butterflies fly by day and fireflies come out at night. Both are caught with the Bucket and kept in [Storage](../../storage-and-selling/). They cannot be sold. A caught one can be set free on the farm again.
 
 ## Butterflies
 
-- Butterflies fly in from the edge of the map in dry daylight, in every season except Winter.
-- Each visits a couple of crops, rocks or decorations, rests on them for a few seconds and leaves again. With nothing to visit, it crosses the farm.
-- Its wings are one of the five rarity colors, each equally likely: Common (white), Uncommon (green), Rare (blue), Epic (purple) or Legendary (orange). Very rarely, the wings are Shifting, a color that slowly goes round all the hues.
-- Wild butterflies and ones you released together never number more than 10 on the farm. With 10 released, no wild ones come out.
+| | Value |
+| --- | --- |
+| When | Full daylight, no rain, every season except Winter |
+| Chance | 10% each second that one flies in from the edge of the map, while there are fewer than 10 |
+| Most on the farm | 10, counting ones you set free |
+| Shifting wings | 1% |
+| Each of Common, Uncommon, Rare, Epic, Legendary | 19.8% |
 
-### Catching a butterfly
-
-1. Pick the Bucket from the Harvest tool's first dropdown.
-2. Tap a butterfly, or drag the tool circle over the tile it is flying over. The tile shows green. Other implements pass through butterflies.
-3. It goes into Storage as a Butterfly of its wing color, such as "Rare Butterfly". Storage must have room, or the game says "Storage is full".
-
-Each wing color is one entry in [Progress](../../progress/). A butterfly counts when you catch it, not when you see it.
+- A butterfly visits a couple of crops, rocks or decorations, rests on each for a few seconds and leaves again. With nothing to visit, it crosses the farm.
+- Shifting wings slowly go round all the hues.
+- With 10 set free on the farm, no wild ones come out.
 
 ## Fireflies
 
-- Each night has exactly <Fact path="world.firefliesPerNight" /> fireflies. They come out of the forest one at a time between 9 pm and 4 am and drift in toward the middle of the farm.
-- Three of each night's fireflies are colored and the rest are the usual warm orange. Every night is the same however often you open the farm.
-- A colored firefly glows Uncommon, Rare, Epic, Legendary or Shifting. Uncommon is the most likely and Shifting the rarest. There are no white Common fireflies. A Legendary one glows a deep orange.
-- A firefly whose moment passes while the farm is closed is missed. Never more than 10 fireflies are on the farm at once, counting ones you set free, so one that comes out when the farm is full waits for room and is missed if none opens before the night ends.
+Each night has exactly <Fact path="world.firefliesPerNight" /> fireflies.
+
+- The night from 9 PM to 4 AM is cut into ten equal parts, and one firefly comes out of the forest at a random moment in each part.
+- Three of the ten, picked at random, glow in a color. The rest are the usual warm orange.
+- Every night is the same however often you open the farm.
+
+| Glow of a colored firefly | Chance | Chance a night has at least one |
+| --- | --- | --- |
+| Uncommon | 44.4% | 83% |
+| Rare | 27.8% | 62% |
+| Epic | 15.6% | 40% |
+| Legendary (deep orange) | 8.9% | 24% |
+| Shifting | 3.3% | 10% |
+
+- There are no white Common fireflies.
+- A firefly whose moment passes while the game is closed is missed.
+- At most 10 fireflies are on the farm at once, counting ones you set free. One that comes out when the farm is full waits for room, and is missed if none opens before the night ends.
 - Fireflies fade out as day comes and are gone by morning.
 
-### Catching a firefly
+## Catching
 
-Catch a firefly with the Bucket the same way as a butterfly: tap it or drag over it while it shows. It goes into Storage as a "Firefly" (orange) or a colored one such as "Epic Firefly". Each glow has its own entry in [Progress](../../progress/).
+- Only the Bucket catches them. A catch goes into Storage as a Butterfly of its wing color (such as "Rare Butterfly"), a "Firefly" (orange) or a colored firefly (such as "Epic Firefly").
+- Storage must have a free slot.
+- Each wing color and each glow is one entry in [Progress](../../progress/), counted when you catch it.
 
 ## XP
 
-- A butterfly or firefly earns XP once, when you catch a wild one.
-- The amount follows the XP to leave your level, the same share at every level.
-- No XP is earned at the top level.
+> XP = XP to leave your level ÷ 600 × multiplier, rounded, at least 1
 
-| Wings or glow | XP compared with a Common butterfly |
+| Wings or glow | Multiplier |
 | --- | --- |
-| Common, and an ordinary orange firefly | 1× |
-| Uncommon | 2× |
-| Rare | 4× |
-| Epic | 7× |
-| Legendary | 10× |
-| Shifting | 15× |
+| Common butterfly, orange firefly | 1 |
+| Uncommon | 2 |
+| Rare | 4 |
+| Epic | 7 |
+| Legendary | 10 |
+| Shifting | 15 |
 
-A Common butterfly earns half the XP of an average Common fish at the same level (see [Fishing](../fishing/)). Catching one you let go earns nothing and is not counted in Progress.
+- XP is earned only for a wild one. Catching one you set free earns nothing and is not counted in Progress.
+- No XP is earned at the top level.
+- A Common butterfly earns half what an average Common fish does (see [Fishing](../fishing/#xp-for-fish)).
 
-## Letting them go
+## Setting them free
 
-- In Storage, **Release** on a butterfly or firefly throws it away for nothing.
-- To set one free on the farm, tap **Select** on it in Storage. The Decorate tool now holds it. Tap a tile to let it go there.
-- A set-free butterfly or firefly flutters within 1 tile of where you let it go, in every direction including diagonals, until you catch it again.
-- At most 10 butterflies can be released at once ("At most 10 butterflies can be released on the farm"), and at most 10 fireflies can be set free.
-- Fireflies can only be set free at night ("Fireflies can only be set free at night"). Set-free fireflies fade out by day and are back the next night.
-- A released butterfly rests on a nearby spot while it is dark, raining or snowing, and flutters again when it is fine.
+- A butterfly or firefly set free from Storage flutters within 1 tile of where you let it go, diagonals included, until you catch it again.
+- At most 10 butterflies and 10 fireflies can be set free at once.
+- Fireflies can only be set free at night. Set-free fireflies fade out by day and come back the next night.
+- A set-free butterfly rests nearby while it is dark, raining or snowing, and flutters again when it is fine.
+- Releasing one from Storage instead throws it away for nothing.
 
-## Related
+## Related pages
 
 - [Weather](../../world/weather/)
 - [Day and Night](../../world/day-and-night/)

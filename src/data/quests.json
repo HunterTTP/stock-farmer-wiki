@@ -4,7 +4,7 @@
   "mostCropsAsked" : 100,
   "oreQuestsFromLevel" : 18,
   "questsToUpgrade" : 10,
-  "stockQuestsFromLevel" : 12,
+  "stockQuestsFromLevel" : 10,
   "upgradeCost" : 10000,
   "upgradedQuests" : 6
 }

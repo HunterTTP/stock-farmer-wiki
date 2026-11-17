@@ -1,56 +1,99 @@
 ---
-title: Quests
-description: Optional Market Stand quests that pay XP, what they ask for and how to get more at once.
+title: Quests and the Market Stand
+description: The Market Stand and its upgrade, how quests are picked and sized, the XP formula for rewards, and stock quests.
 ---
 import Fact from '../../components/Fact.astro';
+import Infobox from '../../components/Infobox.astro';
 
-The Market Stand offers optional quests that pay XP. The stand unlocks at level <Fact path="quests.marketStandLevel" />. See [Market Stand](../buildings/market-stand/).
+The Market Stand offers optional quests that pay XP. It unlocks at level <Fact path="quests.marketStandLevel" />.
 
-Tap the Market Stand to see its quests. Each quest card shows its XP reward, what it asks for and a progress bar for each part.
-
-![The Market Stand's farm quests, each with its XP reward and progress](../../assets/buildings/market-stand-quests.webp)
+<Infobox kind="building" id="marketStand" />
 
 ## How quests work
 
-- The stand shows <Fact path="quests.marketStandQuests" /> quests at once.
-- Progress counts on its own as you play. A finished quest pays its XP on its own, and a new quest takes its place.
-- **Replace quest** swaps a quest for a new one. It is free and quests have no deadline, but the quest's progress is lost.
-- Quests are sized to your level. Harvest quests ask for more as your farmland grows, up to <Fact path="quests.mostCropsAsked" /> of a crop.
-- At the maximum level quests show "Maximum level" in place of an XP reward and pay no more XP.
+- The stand shows <Fact path="quests.marketStandQuests" /> quests at once, <Fact path="quests.upgradedQuests" /> once upgraded.
+- Progress counts by itself as you play, from the moment the quest appears. Nothing done before counts.
+- A finished quest pays its XP at once and a new quest takes its place.
+- Quests have no deadline. Replacing a quest is free, but its progress is lost.
+- At the top level quests pay no XP.
 
 ## Kinds of quest
 
-| Kind | Asks you to | Unlocks |
+| Kind | Asks you to | Offered |
 | --- | --- | --- |
-| Harvest | Harvest an amount of a crop you unlocked at least a few levels ago | From the start |
-| Workshop | Collect batches from a workshop you have unlocked | With the workshop |
-| Feed favorites | Hand-feed favorite foods (Wheat) to animals from a chicken or livestock home you have unlocked | With the home |
-| Collect | Collect eggs, milk, goat milk, wool or fertilizer from your animals | Eggs from level 5, others with their animal |
+| Harvest | Harvest a crop you unlocked at least 3 levels ago (Wheat at first). The Tractor's harvests count. | From the start |
+| Workshop | Collect batches from a workshop | Once the workshop unlocks |
+| Feed favorites | Hand-feed favorite foods to animals from one chicken or livestock home | Once that home unlocks |
+| Collect | Collect eggs, milk, goat milk, wool or fertilizer | Eggs from level 5, others with their animal |
 | Plant trees | Plant trees or fruit trees | From the start |
+| Ore | Collect an ore, or a bar or cut gem made from it | Level <Fact path="quests.oreQuestsFromLevel" /> |
 | Stock profit | Earn profit in the [Stock Market](../stock-market/) | Level <Fact path="quests.stockQuestsFromLevel" /> |
-| Ore | Collect ore, bars or cut gems | Level <Fact path="quests.oreQuestsFromLevel" /> |
 
-- From level <Fact path="quests.stockQuestsFromLevel" />, the stand always has one stock quest. Replacing it brings another stock quest.
-- Ore quests ask for the ore itself, or for a bar or cut gem made from it. See [Mining](../gathering/mining/).
+### How a board is filled
+
+- The first quest is always a harvest quest, and the second a workshop quest once any workshop is unlocked. The rest come from the other kinds in a random order.
+- From level <Fact path="quests.stockQuestsFromLevel" /> the last quest is always a stock quest, and the board always keeps exactly one.
+- A replacement comes from a kind of goal not already on the board where it can. A replaced stock quest brings another stock quest.
+
+## How much a quest asks
+
+| Kind | Market Stand | Upgraded stand |
+| --- | --- | --- |
+| Harvest | A random amount from the base to 1.5 times the base | 3 times as much |
+| Workshop | 1 or 2 batches | 3 to 5 batches |
+| Feed favorites | 8 to 15 | 25 to 40 |
+| Collect produce | 3 to 6 | 10 to 16 |
+| Collect ore | 3 to 5 pieces | 6 to 9 pieces |
+| Collect bars or cut gems | 1 or 2 | 2 or 3 |
+| Plant trees | 2 to 4 | 6 to 9 |
+
+- The harvest base is a fifth of your farmland limit, and at least 8. A harvest quest never asks for more than <Fact path="quests.mostCropsAsked" />.
+- On the upgraded stand, every quest except a stock quest has a second part, drawn from a different kind.
 
 ## XP rewards
 
-A quest pays XP in proportion to your level and the work it takes. The same quest pays more at a higher level, and a bigger quest pays more.
+> Reward = XP to leave your level × share, where share = 2% × effort, kept between 1% and 7% (8% and 20% on the upgraded stand)
+
+Effort adds up over the quest's parts:
+
+| Part | Effort |
+| --- | --- |
+| Harvest | Amount ÷ harvest base × (1 + the crop's grow minutes ÷ 10) |
+| Workshop | Batches × (1 + the first recipe's minutes ÷ 5) |
+| Feed favorites | Feedings ÷ 10 |
+| Collect | Eggs × 0.25, other produce × 0.375, ore pieces × 1, bars or cut gems × 4 |
+| Plant trees | Trees ÷ 4 |
+| Stock profit | 2.5 |
+
+- The reward is set for the level you were at when the quest appeared, and does not change if you level up before finishing it.
+- Two quests on the board never pay exactly the same XP.
+
+### Example
+
+At level 10 (3,696 XP to leave) a Market Stand quest to collect 4 eggs has effort 1, so a share of 2%: 74 XP.
+
+## Stock quests
+
+- A stock quest reads "Earn $N profit in the Stock Market". Each whole dollar of profit from a sale counts, and losses take nothing back.
+- N is 0.2% of the price of the dearest building unlocked at your level (0.6% on the upgraded stand), rounded to two significant figures.
+- Its effort is 2.5, so it pays 5% of a level on the Market Stand and 8% on the upgraded one.
 
 ## The upgraded Market Stand
 
-An **Upgrade** row appears in the stand once you have completed <Fact path="quests.questsToUpgrade" /> quests. The upgrade costs <Fact path="quests.upgradeCost" as="money" />.
-
-| | Market Stand | Upgraded Market Stand |
+| | Market Stand | Upgraded stand |
 | --- | --- | --- |
-| Quests at once | <Fact path="quests.marketStandQuests" /> | <Fact path="quests.upgradedQuests" /> |
-| Quest size | One part | Harder, most with two parts, for more XP |
+| Size (tiles) | <Fact path="buildings.marketStand.width" />×<Fact path="buildings.marketStand.height" /> | <Fact path="home-upgrades.marketStand.width" />×<Fact path="home-upgrades.marketStand.height" /> |
+| Quests at once | <Fact path="home-upgrades.marketStand.questsBefore" /> | <Fact path="home-upgrades.marketStand.questsAfter" /> |
+| Parts per quest | One | Two (stock quests one) |
+| Reward share | 1% to 7% of a level | 8% to 20% of a level |
 
-Until you reach the number, the stand shows "Quests completed: n/<Fact path="quests.questsToUpgrade" />". Quests you already had stay on the board when you upgrade.
+- The upgrade needs <Fact path="home-upgrades.marketStand.questsNeeded" /> completed quests and costs <Fact path="home-upgrades.marketStand.cost" as="money" />. It needs no logs, stones or level.
+- The larger stand needs free ground for its size.
+- Quests already on the board stay, with their progress.
+- Only one Market Stand can be built, in either form.
 
 ## Related pages
 
-- [Market Stand](../buildings/market-stand/)
 - [Stock Market](../stock-market/)
 - [Levels](../levels/)
 - [Progress](../progress/)

@@ -1,63 +1,44 @@
 ---
 title: Tractor
-description: The Tractor harvests ripe crops and brings them home to be sold or stored.
+description: The Tractor harvests every ripe tile of one crop per trip and carries the load home to be stored or sold.
 sidebar:
   order: 5
 ---
 import Fact from '../../../components/Fact.astro';
 import Infobox from '../../../components/Infobox.astro';
 
-The Tractor drives out, harvests ripe crops and brings them home.
+The Tractor drives out, harvests the ripe tiles of one crop and brings them home.
 
 <Infobox kind="building" id="tractor1" />
 
-![The Tractor's card listing planted crops, when each is ready and a Harvest button](../../../assets/buildings/tractor-card.webp)
-
 ## Looks
 
-The Tractor faces one of four ways: <Fact path="buildings.tractor1.styles" />. The look is picked before it is built.
-
-- Facing Right or Left, it covers 2×1 tiles. Facing Front or Back, it covers 1×2 tiles.
-- It drives out from the front. A parked Tractor reserves both of its tiles.
-- Animals standing in its way are moved aside.
-
-## Crop overview
-
-Tapping the Tractor, with any tool, opens its crop overview.
-
-- The top row shows farmland tiles used out of the limit unlocked so far.
-- Below it is a list of every crop and fruit tree currently planted, and every crop the Tractor carries.
-- The crop that pays the most for each plant comes first.
-- Each row shows how many are planted and either "Ready to harvest" or the time until the slowest one is ready.
+The Tractor faces one of four ways: <Fact path="buildings.tractor1.styles" />. Facing Right or Left it covers 2×1 tiles, facing Front or Back 1×2 tiles. It drives out from the front, and a parked Tractor reserves both of its tiles.
 
 ## Harvesting
 
-1. Tap the Tractor.
-2. Tap Harvest on a crop that has plants fully grown.
-3. The menu closes and the Tractor drives to each ripe plant of that crop, one after another.
-4. When it has taken them all it drives home.
+1. Pick one crop to harvest.
+2. The Tractor drives to each fully grown tile of that crop, one after another, and takes it.
+3. When it has taken them all, it drives home.
 
-- It takes only the plants that are fully grown and leaves the rest.
-- One crop is harvested per trip.
+- It takes only ripe tiles and leaves the rest. One crop is harvested per trip.
 - It cannot harvest fruit trees.
-- The Tractor drives only while the game is open.
-- Tap the Tractor while it is harvesting and tap Cancel to send it home with what it has.
-- If it cannot reach the remaining crops, it goes home. If it cannot reach home, it stops where it is and that spot becomes its home.
+- It drives only while the game is open.
+- A trip can be cancelled. The Tractor then drives home with what it has.
+- If it cannot reach the crops left, it goes home. If it cannot reach home, it stops where it is and that spot becomes its home.
+- Farm animals and chickens keep out of its way.
 
 ## Unloading
 
-Gathered crops are carried in the Tractor, not in storage. Each row in the overview shows how many are gathered, with Store and Sell buttons.
+Gathered crops ride in the Tractor until it is unloaded.
 
-- Store moves as many as fit into storage and leaves the rest aboard.
-- Sell sells the whole load at the usual price.
-- The Scythe unloads the Tractor too. It stores the load, or sells it when the Scythe is set to Sell.
-- Unloading works at any time, even while the Tractor is driving.
+- Store moves as many as fit into Storage and leaves the rest aboard. Sell sells the whole load at the usual price.
+- The Scythe unloads the Tractor too: it stores the load, or sells it when the Scythe is set to Sell.
 - The XP for the crops is earned when they are stored or sold.
+- Unloading works at any time, even while the Tractor is driving.
 - A new trip cannot start until the load is fully unloaded.
+- The Tractor never gives a second crop from a tile, whatever the Scythe's level.
 
 ## Moving and destroying
 
-- A Tractor cannot be moved or destroyed while it is driving.
-- A Tractor with a load cannot be destroyed until it is unloaded.
-
-See [Placing and moving](../placing-and-moving/).
+A Tractor cannot be moved or destroyed while it is driving, and cannot be destroyed while it carries a load.

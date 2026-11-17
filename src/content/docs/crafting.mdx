@@ -13,18 +13,20 @@ import Fact from '../../components/Fact.astro';
 
 <DataTable name="recipes" />
 
-- **From** is taken from storage when you tap Start.
+- **From** is taken from Storage when the batch starts.
 - **Each sells for** is the sale price of one item made.
-- **Unlock level** is the player level at which the recipe can be chosen. It is the level of the workshop, the crop or the ore, whichever is highest.
-- The first recipe of each workshop is available as soon as the workshop is built.
-- Collect finished goods with the Bucket. See [Workshops](../buildings/workshops/).
+- **Unlock level** is the level of the workshop or of the crop that goes in, whichever is higher. Bars open at level <Fact path="mining.processingLevel" />.
+- Collect finished goods with the Bucket. Batch rules are on [Workshops](../buildings/workshops/).
 
 ## How artisan goods are priced
 
 Flour, Bread, Planks, Cloth, Bricks and Cheese have set prices. Every other good is an artisan good, and its price comes from what goes into it:
 
-- An artisan good sells for 1.5 times the sale price of everything that goes in, rounded to cents.
-- A bar or a polished gem sells for 2 times the sale price of the ore that goes in.
+> Artisan good price = sale price of one ingredient × number that go in × 1.5, rounded to cents
+
+- A bar or a polished gem uses 2 in place of 1.5, since ore is scarce.
+- Recipes that make two items (Bread, Bricks, Cloth from Cotton) have set prices.
+- A workshop recipe earns no XP. Its profit is the gap between the good's price and its ingredients'.
 
 Worked examples:
 
@@ -46,7 +48,7 @@ Bakes bread, cooks fruit and vegetables, roasts coffee and smelts ore into bars.
 <DataTable name="recipes" where="building" is="Stone Oven" />
 
 - Preserves take baskets from fruit trees.
-- Bars take ore from [Mining](../gathering/mining/). Ore recipes unlock at the level at which ore can be smelted.
+- Bars take ore from [Mining](../gathering/mining/).
 
 ## Woodwork Bench
 

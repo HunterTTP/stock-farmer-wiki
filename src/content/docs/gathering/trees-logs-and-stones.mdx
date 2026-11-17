@@ -1,12 +1,13 @@
 ---
 title: Trees, Logs and Stones
-description: How wild trees are felled with the Axe, how many logs each gives, what logs and stones are for, and how trees and rocks regrow overnight.
+description: How many logs each wild tree gives, how many Axe passes it takes, what logs and stones are for, and how wild trees grow and spread overnight.
 sidebar:
   order: 4
 ---
 import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
 
-Wild trees are felled with the Axe for logs. Rocks are broken with the Pickaxe for stones (see [Mining](../mining/)). Logs and stones sell for nothing. Buildings and many decorations ask for them in [Storage](../../storage-and-selling/) as well as money.
+Wild trees are felled with the Axe for logs, and rocks are broken with the Pickaxe for stones (see [Mining](../mining/)). Logs and stones sell for nothing. Buildings and many decorations need them from [Storage](../../storage-and-selling/) as well as money.
 
 ## Wild trees
 
@@ -14,45 +15,32 @@ Wild trees are Pines and Oaks in four sizes: Small, Medium, Big and Huge. Each s
 
 <DataTable name="trees" where="wild" is="true" columns="Tree,Logs from a wild one" />
 
-- A first Axe takes one pass for every log the tree gives, so a Huge tree takes more passes than a Small one.
-- Any Axe fells any tree. A better Axe takes fewer passes and gives extra logs from wild trees.
-
 | Axe level | Passes for each tree | Extra logs |
 | --- | --- | --- |
 | 1 | One for each log it gives | None |
 | 2 | Half as many, rounded up | 1 more from each wild tree |
 | 3 | One | 2 more from each wild tree |
 
-Upgrade prices and unlock levels are in [Tools](../../tools/).
-
-## Felling a tree
-
-1. Pick the Axe from the Harvest tool's first dropdown.
-2. Drag the tool circle over the tree, or tap or swipe anywhere on its picture, leaves included. One pass is one go across the tree. Lift your finger or leave the tree and come back for the next pass.
-3. A count and a bar above your finger show how close it is to falling.
-4. On the last pass the tree falls and its logs go into Storage.
-
-- If Storage cannot hold all the logs, the tree stays and says "Storage is full".
-- Holding another implement over a tree says "Use the Axe from the Harvest tool to remove a tree". Tapping the banner picks the Axe up (see [Tools](../../tools/)).
-- The Axe also takes down a fence or a decoration in one pass and stores it.
+- One pass is one stroke across any part of the tree's picture, leaves included. Lift your finger or leave the tree and come back for the next pass.
+- A tree falls only if Storage can hold all its logs. Otherwise it stays.
+- Any Axe fells any tree. Upgrade prices and levels are in [Tools](../../tools/).
+- The Axe also takes a fence or a decoration down into Storage in one pass.
 
 ## Planted trees
 
-Trees you plant from the Decorate tool give no logs when felled, whatever their size. They keep the size they were planted at and never grow. See [Planted Trees](../../decorations/planted-trees/).
+Trees you plant from the Decorate tool give no logs when felled, whatever their size, and never grow. See [Planted Trees](../../decorations/planted-trees/).
 
 ## Logs and stones
 
-- Logs and stones sell for nothing, so they have no Sell button in Storage.
-- To get rid of them, tap **Trash** on them in Storage. Trash pays nothing.
-- Buildings and decorations take logs and stones when you place them. Destroying one returns most of them (see [Placing and Moving](../../buildings/placing-and-moving/)).
-- If you have too few, the game says "Need N logs in storage" or "Need N stones in storage" with the number missing.
+- Logs and stones sell for nothing. They can be trashed from Storage for nothing.
+- Buildings and decorations take them when placed, and destroying one returns <Fact path="terrain.refundPercent" />% of them (see [Buildings](../../buildings/#destroying)).
+- The tutorial's Pet House step adds small pines, small rocks or a Copper Vein near you if the farm has none of the first-level kind to gather.
 
 ## Overnight
 
-The midnight wave grows wild trees and rocks and brings new ones. See [Wild Growth](../../world/wild-growth/).
+The midnight wave grows wild trees and brings new ones. See [Wild Growth](../../world/wild-growth/).
 
-- A wild tree smaller than Huge may grow one size if the ground around it is clear.
-- Wild rocks may grow a size too, from Small to Medium to Big.
-- New wild trees and rocks appear on empty ground anywhere outside the clearing around your first field.
-- A farm short of trees or rocks gets more of them.
-- Trees you planted and rocks you placed never grow.
+- Each wild tree smaller than Huge has a 1 in 5 chance each night to grow one size, if the bigger tree's picture has bare grass to spread over.
+- New wild trees appear on empty grass anywhere outside the clearing around the starting farmland, until the farm has 390 wild trees.
+- A farm short of trees, or with too few logs in Storage for its next buildings, gets more of them.
+- Trees you planted never grow and do not count toward the limit.
