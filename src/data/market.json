@@ -1,0 +1,742 @@
+{
+  "animatedSkins" : 19,
+  "basicColours" : 16,
+  "goldLeafPrice" : 500000,
+  "materialDailyLimit" : 50,
+  "oreDailyLimit" : 10,
+  "shop" : [
+    {
+      "dailyLimit" : 10,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/ores/copper.png",
+        "width" : 26
+      },
+      "id" : "ore-copper",
+      "name" : "Copper Ore",
+      "price" : 100,
+      "sellsFor" : 6
+    },
+    {
+      "dailyLimit" : 10,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/ores/silver.png",
+        "width" : 26
+      },
+      "id" : "ore-silver",
+      "name" : "Silver Ore",
+      "price" : 250,
+      "sellsFor" : 10
+    },
+    {
+      "dailyLimit" : 10,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/ores/gold.png",
+        "width" : 26
+      },
+      "id" : "ore-gold",
+      "name" : "Gold Ore",
+      "price" : 450,
+      "sellsFor" : 18
+    },
+    {
+      "dailyLimit" : 10,
+      "icon" : {
+        "height" : 27,
+        "src" : "sprites/ores/ruby.png",
+        "width" : 27
+      },
+      "id" : "ore-ruby",
+      "name" : "Rough Ruby",
+      "price" : 700,
+      "sellsFor" : 40
+    },
+    {
+      "dailyLimit" : 10,
+      "icon" : {
+        "height" : 27,
+        "src" : "sprites/ores/sapphire.png",
+        "width" : 27
+      },
+      "id" : "ore-sapphire",
+      "name" : "Rough Sapphire",
+      "price" : 1000,
+      "sellsFor" : 50
+    },
+    {
+      "dailyLimit" : 50,
+      "icon" : {
+        "height" : 11,
+        "src" : "sprites/goods/log.png",
+        "width" : 17
+      },
+      "id" : "log",
+      "name" : "Log",
+      "price" : 100,
+      "sellsFor" : 0
+    },
+    {
+      "dailyLimit" : 50,
+      "icon" : {
+        "height" : 22,
+        "src" : "sprites/rocks/small.png",
+        "width" : 20
+      },
+      "id" : "stone",
+      "name" : "Stone",
+      "price" : 100,
+      "sellsFor" : 0
+    }
+  ],
+  "skinPrices" : [
+    {
+      "basic" : 1250,
+      "building" : "petHouse",
+      "buildingName" : "Pet House",
+      "epic" : 5000,
+      "icon" : {
+        "height" : 43,
+        "src" : "sprites/buildings/petHouse.png",
+        "width" : 32
+      },
+      "legendary" : 7500,
+      "rare" : 2500
+    },
+    {
+      "basic" : 1250,
+      "building" : "chickenCoop",
+      "buildingName" : "Chicken Coop",
+      "epic" : 6000,
+      "icon" : {
+        "height" : 48,
+        "src" : "sprites/buildings/chickenCoop.png",
+        "width" : 32
+      },
+      "legendary" : 12000,
+      "rare" : 3000
+    },
+    {
+      "basic" : 2500,
+      "building" : "shed",
+      "buildingName" : "Shed",
+      "epic" : 12000,
+      "icon" : {
+        "height" : 78,
+        "src" : "sprites/buildings/shed.png",
+        "width" : 64
+      },
+      "legendary" : 25000,
+      "rare" : 6000
+    },
+    {
+      "basic" : 5000,
+      "building" : "marketStand",
+      "buildingName" : "Market Stand",
+      "epic" : 25000,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/marketStand.png",
+        "width" : 48
+      },
+      "legendary" : 50000,
+      "rare" : 12000
+    },
+    {
+      "basic" : 20000,
+      "building" : "rabbitHutch",
+      "buildingName" : "Rabbit Hutch",
+      "epic" : 100000,
+      "icon" : {
+        "height" : 48,
+        "src" : "sprites/buildings/rabbitHutch.png",
+        "width" : 64
+      },
+      "legendary" : 200000,
+      "rare" : 50000
+    },
+    {
+      "basic" : 25000,
+      "building" : "grainMachine",
+      "buildingName" : "Grain Machine",
+      "epic" : 125000,
+      "icon" : {
+        "height" : 37,
+        "src" : "sprites/buildings/grainMachine.png",
+        "width" : 54
+      },
+      "legendary" : 250000,
+      "rare" : 62000
+    },
+    {
+      "basic" : 30000,
+      "building" : "barn1",
+      "buildingName" : "Sheep Barn",
+      "epic" : 150000,
+      "icon" : {
+        "height" : 160,
+        "src" : "sprites/buildings/barn1.png",
+        "width" : 120
+      },
+      "legendary" : 300000,
+      "rare" : 75000
+    },
+    {
+      "basic" : 42000,
+      "building" : "house1",
+      "buildingName" : "House",
+      "epic" : 210000,
+      "icon" : {
+        "height" : 135,
+        "src" : "sprites/buildings/house1.png",
+        "width" : 158
+      },
+      "legendary" : 425000,
+      "rare" : 105000
+    },
+    {
+      "basic" : 7500,
+      "building" : "silo",
+      "buildingName" : "Silo",
+      "epic" : 38000,
+      "icon" : {
+        "height" : 224,
+        "src" : "sprites/buildings/silo.png",
+        "width" : 71
+      },
+      "legendary" : 75000,
+      "rare" : 19000
+    },
+    {
+      "basic" : 48000,
+      "building" : "goatBarn",
+      "buildingName" : "Goat Barn",
+      "epic" : 240000,
+      "icon" : {
+        "height" : 160,
+        "src" : "sprites/buildings/goatBarn.png",
+        "width" : 120
+      },
+      "legendary" : 475000,
+      "rare" : 120000
+    },
+    {
+      "basic" : 55000,
+      "building" : "tractor1",
+      "buildingName" : "Tractor",
+      "epic" : 275000,
+      "icon" : {
+        "height" : 57,
+        "src" : "sprites/buildings/tractor1.png",
+        "width" : 80
+      },
+      "legendary" : 550000,
+      "rare" : 140000
+    },
+    {
+      "basic" : 62000,
+      "building" : "stoneOven",
+      "buildingName" : "Stone Oven",
+      "epic" : 310000,
+      "icon" : {
+        "height" : 51,
+        "src" : "sprites/buildings/stoneOven.png",
+        "width" : 80
+      },
+      "legendary" : 625000,
+      "rare" : 155000
+    },
+    {
+      "basic" : 65000,
+      "building" : "pigBarn",
+      "buildingName" : "Pig Barn",
+      "epic" : 325000,
+      "icon" : {
+        "height" : 160,
+        "src" : "sprites/buildings/pigBarn.png",
+        "width" : 120
+      },
+      "legendary" : 650000,
+      "rare" : 160000
+    },
+    {
+      "basic" : 70000,
+      "building" : "stable1",
+      "buildingName" : "Stable",
+      "epic" : 350000,
+      "icon" : {
+        "height" : 128,
+        "src" : "sprites/buildings/stable1.png",
+        "width" : 160
+      },
+      "legendary" : 700000,
+      "rare" : 175000
+    },
+    {
+      "basic" : 75000,
+      "building" : "woodworkBench",
+      "buildingName" : "Woodwork Bench",
+      "epic" : 375000,
+      "icon" : {
+        "height" : 57,
+        "src" : "sprites/buildings/woodworkBench.png",
+        "width" : 69
+      },
+      "legendary" : 750000,
+      "rare" : 190000
+    },
+    {
+      "basic" : 100000,
+      "building" : "tailorTable",
+      "buildingName" : "Tailor Table",
+      "epic" : 500000,
+      "icon" : {
+        "height" : 41,
+        "src" : "sprites/buildings/tailorTable.png",
+        "width" : 48
+      },
+      "legendary" : 1000000,
+      "rare" : 250000
+    },
+    {
+      "basic" : 110000,
+      "building" : "diyTable",
+      "buildingName" : "DIY Crafting Table",
+      "epic" : 550000,
+      "icon" : {
+        "height" : 37,
+        "src" : "sprites/buildings/diyTable.png",
+        "width" : 48
+      },
+      "legendary" : 1100000,
+      "rare" : 275000
+    },
+    {
+      "basic" : 120000,
+      "building" : "barn2",
+      "buildingName" : "Luxury Barn",
+      "epic" : 600000,
+      "icon" : {
+        "height" : 112,
+        "src" : "sprites/buildings/barn2.png",
+        "width" : 240
+      },
+      "legendary" : 1200000,
+      "rare" : 300000
+    },
+    {
+      "basic" : 130000,
+      "building" : "dairy",
+      "buildingName" : "Dairy",
+      "epic" : 650000,
+      "icon" : {
+        "height" : 37,
+        "src" : "sprites/buildings/dairy.png",
+        "width" : 86
+      },
+      "legendary" : 1300000,
+      "rare" : 325000
+    },
+    {
+      "basic" : 140000,
+      "building" : "cheeseCellar",
+      "buildingName" : "Cheese Cellar",
+      "epic" : 700000,
+      "icon" : {
+        "height" : 32,
+        "src" : "sprites/buildings/cheeseCellar.png",
+        "width" : 32
+      },
+      "legendary" : 1400000,
+      "rare" : 350000
+    },
+    {
+      "basic" : 55000,
+      "building" : "marketStandLarge",
+      "buildingName" : "Market Stand (upgraded)",
+      "epic" : 275000,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/marketStandLarge.png",
+        "width" : 78
+      },
+      "legendary" : 550000,
+      "rare" : 140000
+    },
+    {
+      "basic" : 290000,
+      "building" : "house2",
+      "buildingName" : "House (upgraded)",
+      "epic" : 1460000,
+      "icon" : {
+        "height" : 148,
+        "src" : "sprites/buildings/house2.png",
+        "width" : 124
+      },
+      "legendary" : 2925000,
+      "rare" : 730000
+    }
+  ],
+  "skinTiers" : [
+    {
+      "floor" : 1250,
+      "multiplier" : 5,
+      "tier" : "Common"
+    },
+    {
+      "floor" : 2500,
+      "multiplier" : 12.5,
+      "tier" : "Rare"
+    },
+    {
+      "floor" : 5000,
+      "multiplier" : 25,
+      "tier" : "Epic"
+    },
+    {
+      "floor" : 7500,
+      "multiplier" : 50,
+      "tier" : "Legendary"
+    }
+  ],
+  "skins" : [
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-classic-yellow.png",
+        "width" : 48
+      },
+      "id" : "classic-yellow",
+      "name" : "Classic Yellow",
+      "onlyMarketStands" : true,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-gunmetal.png",
+        "width" : 48
+      },
+      "id" : "gunmetal",
+      "name" : "Gunmetal",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-spring.png",
+        "width" : 48
+      },
+      "id" : "spring",
+      "name" : "Spring",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-fall.png",
+        "width" : 48
+      },
+      "id" : "fall",
+      "name" : "Fall",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-winter.png",
+        "width" : 48
+      },
+      "id" : "winter",
+      "name" : "Winter",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-chalk.png",
+        "width" : 48
+      },
+      "id" : "chalk",
+      "name" : "Chalk White",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-buttercup.png",
+        "width" : 48
+      },
+      "id" : "buttercup",
+      "name" : "Buttercup",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-rose.png",
+        "width" : 48
+      },
+      "id" : "rose",
+      "name" : "Dusty Rose",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-heather.png",
+        "width" : 48
+      },
+      "id" : "heather",
+      "name" : "Heather",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-damson.png",
+        "width" : 48
+      },
+      "id" : "damson",
+      "name" : "Damson Plum",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-oxblood.png",
+        "width" : 48
+      },
+      "id" : "oxblood",
+      "name" : "Oxblood",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-tar.png",
+        "width" : 48
+      },
+      "id" : "tar",
+      "name" : "Tar Black",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-navy.png",
+        "width" : 48
+      },
+      "id" : "navy",
+      "name" : "Harbour Navy",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-teal.png",
+        "width" : 48
+      },
+      "id" : "teal",
+      "name" : "Deep Teal",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-verdigris.png",
+        "width" : 48
+      },
+      "id" : "verdigris",
+      "name" : "Verdigris",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-pine.png",
+        "width" : 48
+      },
+      "id" : "pine",
+      "name" : "Pine Green",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : false,
+      "icon" : {
+        "height" : 64,
+        "src" : "sprites/buildings/skins/marketStand-sage.png",
+        "width" : 48
+      },
+      "id" : "sage",
+      "name" : "Sage Grey",
+      "onlyMarketStands" : false,
+      "tier" : "Common"
+    },
+    {
+      "animated" : true,
+      "id" : "paw-prints",
+      "name" : "Paw Prints",
+      "onlyMarketStands" : false,
+      "tier" : "Rare"
+    },
+    {
+      "animated" : true,
+      "id" : "starry-night",
+      "name" : "Starry Night",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "firefly-lantern",
+      "name" : "Firefly Lantern",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "blossom",
+      "name" : "Cherry Blossom",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "haunted",
+      "name" : "Haunted",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "honeybee",
+      "name" : "Honeybee",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "geode",
+      "name" : "Crystal Geode",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "neon",
+      "name" : "Neon Sign",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "lily-frog",
+      "name" : "Lily Frog",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "ghost-flame",
+      "name" : "Ghost Flame",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "meteor-shower",
+      "name" : "Meteor Shower",
+      "onlyMarketStands" : false,
+      "tier" : "Epic"
+    },
+    {
+      "animated" : true,
+      "id" : "gold-leaf",
+      "name" : "Gold Leaf",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "ember",
+      "name" : "Ember",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "hoarfrost",
+      "name" : "Hoarfrost",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "galaxy",
+      "name" : "Galaxy Swirl",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "prismatic",
+      "name" : "Prismatic",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "pixie-dust",
+      "name" : "Pixie Dust",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "duck-parade",
+      "name" : "Duck Parade",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    },
+    {
+      "animated" : true,
+      "id" : "molten-chrome",
+      "name" : "Molten Chrome",
+      "onlyMarketStands" : false,
+      "tier" : "Legendary"
+    }
+  ]
+}

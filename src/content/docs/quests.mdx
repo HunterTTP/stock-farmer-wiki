@@ -1,13 +1,30 @@
 ---
 title: Quests and the Market Stand
-description: The Market Stand and its upgrade, how quests are picked and sized, the XP formula for rewards, and stock quests.
+description: The Market Stand with its quests, daily supplies and skins, how quests are picked and sized, the XP formula for rewards, and stock quests.
 ---
+import DataTable from '../../components/DataTable.astro';
 import Fact from '../../components/Fact.astro';
 import Infobox from '../../components/Infobox.astro';
 
-The Market Stand offers optional quests that pay XP. It unlocks at level <Fact path="quests.marketStandLevel" />.
+The Market Stand has three tabs:
+
+| Tab | What it holds |
+| --- | --- |
+| Quests | Optional quests that pay XP |
+| Supplies | Ore, Logs and Stone for sale at fixed prices |
+| Skins | The stand's own skins (see [Skins](../buildings/skins/)) |
+
+It unlocks at level <Fact path="quests.marketStandLevel" />.
 
 <Infobox kind="building" id="marketStand" />
+
+## Supplies
+
+<DataTable name="market-supplies" />
+
+- Prices are fixed. At most <Fact path="market.oreDailyLimit" /> of each ore and <Fact path="market.materialDailyLimit" /> Logs and <Fact path="market.materialDailyLimit" /> Stone can be bought a day. The limits reset each new day.
+- A purchase is limited by what is left today, your money and the free room in Storage.
+- Buying supplies never counts toward a quest.
 
 ## How quests work
 

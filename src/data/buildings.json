@@ -75,40 +75,6 @@
     "width" : 1
   },
   {
-    "cost" : 1000,
-    "height" : 2,
-    "icon" : {
-      "height" : 64,
-      "src" : "sprites/buildings/marketStand.png",
-      "width" : 48
-    },
-    "id" : "marketStand",
-    "limit" : 1,
-    "logs" : 35,
-    "materials" : [
-      {
-        "count" : 35,
-        "name" : "Logs"
-      },
-      {
-        "count" : 4,
-        "name" : "Stones"
-      }
-    ],
-    "name" : "Market Stand",
-    "purpose" : "Offers optional quests for extra XP",
-    "quests" : 4,
-    "recipes" : [
-
-    ],
-    "stones" : 4,
-    "styles" : [
-
-    ],
-    "unlockLevel" : 6,
-    "width" : 2
-  },
-  {
     "cost" : 500,
     "height" : 2,
     "icon" : {
@@ -118,10 +84,10 @@
     },
     "id" : "shed",
     "limit" : 4,
-    "logs" : 38,
+    "logs" : 35,
     "materials" : [
       {
-        "count" : 38,
+        "count" : 35,
         "name" : "Logs"
       },
       {
@@ -136,6 +102,40 @@
     ],
     "stones" : 5,
     "storageAdded" : 50,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 6,
+    "width" : 2
+  },
+  {
+    "cost" : 1000,
+    "height" : 2,
+    "icon" : {
+      "height" : 64,
+      "src" : "sprites/buildings/marketStand.png",
+      "width" : 48
+    },
+    "id" : "marketStand",
+    "limit" : 1,
+    "logs" : 38,
+    "materials" : [
+      {
+        "count" : 38,
+        "name" : "Logs"
+      },
+      {
+        "count" : 4,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Market Stand",
+    "purpose" : "Offers quests and daily supplies",
+    "quests" : 4,
+    "recipes" : [
+
+    ],
+    "stones" : 4,
     "styles" : [
 
     ],
@@ -644,10 +644,7 @@
     ],
     "stones" : 12,
     "styles" : [
-      "Red",
-      "Blue",
-      "Grey",
-      "Yellow"
+
     ],
     "unlockLevel" : 19,
     "width" : 10

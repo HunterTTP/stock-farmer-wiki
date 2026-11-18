@@ -90,7 +90,7 @@
   },
   {
     "availableFromLevel" : 1,
-    "cost" : 300,
+    "cost" : 100,
     "height" : 1,
     "icon" : {
       "height" : 23,
@@ -98,7 +98,7 @@
       "width" : 31
     },
     "id" : "trunk",
-    "limit" : 15,
+    "limit" : 4,
     "looks" : 1,
     "materials" : [
       {

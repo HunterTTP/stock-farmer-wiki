@@ -152,6 +152,27 @@ export const tables = {
       ['Does', (r) => r.effect ?? ''],
     ],
   },
+  'market-supplies': {
+    rows: () => data.market.shop,
+    icon: (r) => r.icon,
+    columns: [
+      ['Item', (r) => r.name],
+      ['Price', (r) => money(r.price)],
+      ['Most per day', (r) => count(r.dailyLimit)],
+      ['Sells for', (r) => money(r.sellsFor)],
+    ],
+  },
+  'skin-prices': {
+    rows: () => data.market.skinPrices,
+    icon: (r) => r.icon,
+    columns: [
+      ['Building', (r) => r.buildingName],
+      ['Common', (r) => money(r.basic)],
+      ['Rare', (r) => money(r.rare)],
+      ['Epic', (r) => money(r.epic)],
+      ['Legendary', (r) => money(r.legendary)],
+    ],
+  },
   paths: {
     rows: () => data.terrain.paths,
     columns: [
