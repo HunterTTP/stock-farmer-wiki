@@ -171,7 +171,7 @@
     "building" : "Tailor Table",
     "icon" : {
       "height" : 19,
-      "src" : "sprites/goods/cloth.png",
+      "src" : "sprites/goods/woolCloth.png",
       "width" : 24
     },
     "id" : "tailorTable",
@@ -182,9 +182,9 @@
       "src" : "sprites/goods/wool.png",
       "width" : 24
     },
-    "output" : "Cloth",
+    "output" : "Wool Cloth",
     "outputCount" : 1,
-    "outputValue" : 150,
+    "outputValue" : 135,
     "seconds" : 480,
     "unlockLevel" : 18
   },
@@ -268,7 +268,7 @@
     },
     "output" : "Fine Cloth",
     "outputCount" : 1,
-    "outputValue" : 450,
+    "outputValue" : 1176,
     "seconds" : 600,
     "unlockLevel" : 18
   },
@@ -541,7 +541,7 @@
     },
     "output" : "Cloth",
     "outputCount" : 2,
-    "outputValue" : 150,
+    "outputValue" : 392,
     "seconds" : 720,
     "unlockLevel" : 31
   },

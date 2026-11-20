@@ -1,7 +1,45 @@
 [
   {
+    "date": "2026-11-20",
+    "lines": [
+      "The tool bar now scrolls freely under your finger and, when you let go, coasts on like any scrolling list, as far as your flick sends it, slowing to stop exactly on an item, which it then picks up; touching it while it coasts stops it there."
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "lines": [
+      "Fall's grass is a deeper tan-green.",
+      "Item pages and the Properties card now show how many are placed or planted (and farmland's unlocked tiles) as rows in the stats list, after the other numbers, instead of in boxes of their own.",
+      "New tool bar: picking a tool from the tool button now opens a bar of its items beside the button, three at a time in roomy cells whose names shrink slightly rather than cut off (crops go by the crop alone: Wheat, Carrot, Potato), the third fading out as it runs in behind the button at the bar's end, which stays open while you farm. The item in the green outline at the bar's left end is the one you hold; swipe the bar (it glides and settles on an item) or tap an item to bring it there, and the bar loops round endlessly. Items you haven't unlocked yet stay on the bar, greyed out with a padlock in the corner: you can look at them, but using one on the farm just says the level it unlocks at. The first time you open a tool on a farm it starts on the middle item it has unlocked, and after that on your last choice, which each farm keeps for itself. The green \"i\" button at the bar's right end opens a card about the item in the outline with everything its page said (what it is for, the level it unlocks at, what it takes, its numbers, how many are placed) and its settings (Sell or Store, a tree's size and color, water depth, a path's look and the like), which replace the dropdowns that sat beside the button, so the Open Tool Menu on Select setting is gone. Tapping the tool button again brings back the tools.",
+      "In Fall, small fallen leaves now lie on the grass: orange, red and gold ones over most of it, and a few more round each oak and birch in its own colours (gold under birches, browns and reds under brown oaks); pines drop none. A tree planted in Fall lets its leaves go from low in its crown, two or three at a time, and each drifts gently down, behind or in front of the tree, to where it lies; they fade away one by one over half a minute when it goes. Once all its leaves are down, each tree rests a few minutes, then its old leaves slowly fade away one by one as new ones drift down from its crown to fresh spots, every tree at its own pace, so a few are always dropping leaves wherever you look.",
+      "Tapping Play on the farm list now plays a button click, and the season whoosh and chime is now heard as the farm is revealed (it was being held silent until just after).",
+      "The music no longer switches songs partway through opening the game: with \"Open my last farm automatically\" on, it waits until it knows your farm, then fades in that farm's music, and the farm list's music fades in and then cross-fades once into the farm you open.",
+      "The Clouds switch in Settings › Graphics is now a \"Hide Clouds Beyond\" slider just under the grid lines one: clouds fade out as you zoom out past the chosen zoom, all the way left hides them always (what off was) and all the way right never hides them (what on was, and the default).",
+      "Dirt Path is now free, and Dirt Path and Brick Path are each one choice in the Terrain tool, with its look picked in its Properties card: Dark, Medium or Light for Dirt Path (Dark to start), Straight or Herringbone for Brick Path. Each remembers the look you last picked, and paths you already laid keep theirs. Brick, Cobblestone and Wood Plank Path stay $2 a tile.",
+      "Quests about planting trees now say they can be trees from Decorations or Crops.",
+      "The season's name, as a season changes and as a farm opens, now has a soft shadow and edge in a deep shade of the season's color, set a little out from the letters, so it stands out over snow and bright grass, with a slightly wider glow; its icon gets its own crisp shadow and outline too, and the line under it sits on a small pill tinted with the season's color and just says the day, such as \"Day 29\", without \"a new season\".",
+      "The launch screen is tidier: the carrot and name settle in the top third, your farms scroll below them, and \"Open my last farm automatically\", a New Game button and the iCloud button sit in their own strip at the bottom. Opening a farm plays the season whoosh and chime, and shows its season and day (turn it off with Show season on load in Settings › Graphics).",
+      "The Name your farm form sits lower under the logo, with its heading left-aligned like the options below it.",
+      "Each farm on the launch screen now has a Play button beside its three dots, so it is clear how to open it (tapping the card still works).",
+      "Chimney smoke is new: every 1.2 seconds a puff leaves the middle of the chimney's opening as a loose bunch of little puffs that merge into one soft, lumpy grey puff as it rises, drifts with the wind and fades. Every puff is a little different, the opening fills with a wisp of smoke as each one leaves, and the old plume and curls are gone. It is still darker in Winter, thinner in the rain, warm at the chimney at night and still with Reduce Motion.",
+      "The game now opens on a new launch screen: the carrot and \"Stock Farmer\" over a soft glow, then your farms slide in below as the main menu, each card showing its level, money and when you last played (play time and device are in Properties). Tap a farm and the season's sweep dissolves the screen away into your farm (a new farm also shows its season's title), or tick \"Open my last farm automatically\" (also in Settings › Gameplay) to go straight into your last farm as before.",
+      "Summer's grass now has little grass tufts scattered over it, the way Spring has its wildflowers: a mix of young shoots and taller clumps. They grow only on bare grass, so farmland, paths, water and anything you place hide them, and they come back when it goes.",
+      "Sell now comes first and Store second wherever you choose what the Scythe and Bucket do with what they gather (tool bar and item screens).",
+      "Market Stand quests now name the exact item: Cow Milk, Goat Milk, Chicken Egg and Sheep Wool. In Perfection, Snow is done as soon as you have seen Winter, since snow now falls all day; saves that already saw Winter count it done.",
+      "Tapping an entry in Progress now also says how often it turns up, with real odds for every fish at your level, chicks, baby animals, rocks, ore veins, wild trees, butterflies, fireflies, rain, snow, seasons and the tool levels that sometimes gather two.",
+      "New farms now start in Spring unless you pick another Starting Season.",
+      "A new farm's ponds now always start with an Uncommon fish as well as the Rare one; the rest are still Common.",
+      "A new farm now opens with its season sweeping in and its title rising, and the tutorial starts once the title has gone.",
+      "On Spring, Summer and Fall nights a coqui frog now calls its soft two-note \"co-quí\" among the crickets every so often, from 20 seconds to 3 minutes apart, following the Ambience volume.",
+      "Fixed the music sometimes starting a song twice when you start a new farm or switch farms: the farm's season theme now starts once, as the farm opens, and only one song ever plays at a time.",
+      "The change of season, and a farm opening from the menu, now sound only the soft whoosh of wind, without the little rising chime."
+    ]
+  },
+  {
     "date": "2026-11-18",
     "lines": [
+      "Cloth from Cotton now sells for $392 instead of $150, so turning Cotton into Cloth at the Tailor Table finally earns more than selling the Cotton. Wool now makes its own Wool Cloth, a cream-coloured good worth $135, which pays 1.5 times the Wool.",
+      "Each time a season begins, the music opens with that season's theme song, the first song in its song list (or the first one that is on), and then plays on as usual.",
       "New Night Brightness slider in Settings → Graphics lightens the night if it looks too dark on your screen. It starts at the usual night, and all the way right makes the night half as dark, keeping its colour and the glow of the lights.",
       "The Firefly Lantern and Cherry Blossom skins now take a small part of the memory they did, so a farm full of them runs lighter. They look the same, with their petals and fireflies moving a little faster.",
       "Twelve new animated skins for every building and the Trunk, in every season. Epic: Haunted, Honeybee, Crystal Geode, Neon Sign, Lily Frog, Ghost Flame and Meteor Shower. Legendary: Galaxy Swirl, Prismatic, Pixie Dust, Duck Parade and Molten Chrome. Haunted, Crystal Geode, Neon Sign, Ghost Flame, Meteor Shower, Galaxy Swirl and Pixie Dust also glow at night.",
@@ -12,7 +50,7 @@
       "Light colour skins such as Chalk White no longer leave stray black dots and dashes on the House and upgraded House roofs or on the Luxury Barn's walls.",
       "With an animal's or fish's menu open, tapping another animal or fish now switches the menu to it at the same small size, instead of the menu filling the screen.",
       "The skin unlock celebration now uses the same big rounded lettering as the season-change title.",
-      "Tapping a Trunk now opens its lid and then a menu like the buildings', with an Info tab (how full storage is, Sell and its facts) and a Skins tab. The Trunk has skins like the buildings: the 16 colours, plus Paw Prints, Starry Night, Firefly Lantern, Cherry Blossom, Gold Leaf, Ember and Hoarfrost, bought once for every Trunk and equipped on each one, and its lid opens in the skin's colours, stays open while its menu is up and closes again when the menu does.",
+      "Tapping a Trunk now opens its lid and then a menu like the buildings', with an Info tab (how full storage is, Sell and its facts) and a Skins tab. The Trunk has skins like the buildings: the 16 colours, plus Paw Prints, Starry Night, Firefly Lantern, Cherry Blossom, Gold Leaf, Ember and Hoarfrost, bought once for every Trunk and equipped on each one, and its lid opens in the skin's colours, in Winter too with the snow on the lid, stays open while its menu is up and closes again when the menu does.",
       "The skin unlock celebration now shows the skin you bought from the start, instead of the original look changing into it.",
       "The Shed now unlocks at level 6, costs 35 logs and is listed above the Market Stand, which unlocks at level 7 and costs 38 logs.",
       "An animal home's Info tab now says what it spawns and makes in one line, such as \"Spawns a Rabbit every 4 min which produces fertilizer\", instead of separate lines for the new baby and what it gives.",

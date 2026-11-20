@@ -178,6 +178,7 @@ export const tables = {
     columns: [
       ['Path', (r) => r.name],
       ['Cost per tile', (r) => money(r.cost)],
+      ['Looks', (r) => list(r.looks)],
     ],
   },
   trees: {

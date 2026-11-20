@@ -5,32 +5,35 @@
   "fertilizerSpeedUpPercent" : 10,
   "paths" : [
     {
-      "cost" : 2,
-      "name" : "Dark Dirt Path"
-    },
-    {
-      "cost" : 2,
+      "cost" : 0,
+      "looks" : [
+        "Dark",
+        "Medium",
+        "Light"
+      ],
       "name" : "Dirt Path"
     },
     {
       "cost" : 2,
-      "name" : "Light Dirt Path"
-    },
-    {
-      "cost" : 2,
+      "looks" : [
+
+      ],
       "name" : "Cobblestone Path"
     },
     {
       "cost" : 2,
+      "looks" : [
+
+      ],
       "name" : "Wood Plank Path"
     },
     {
       "cost" : 2,
+      "looks" : [
+        "Straight",
+        "Herringbone"
+      ],
       "name" : "Brick Path"
-    },
-    {
-      "cost" : 2,
-      "name" : "Herringbone Brick Path"
     }
   ],
   "refundPercent" : 80,

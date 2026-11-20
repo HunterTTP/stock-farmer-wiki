@@ -813,54 +813,6 @@
   },
   {
     "availableFromLevel" : 18,
-    "cost" : 80,
-    "height" : 2,
-    "icon" : {
-      "height" : 21,
-      "src" : "sprites/decorations/sacks.png",
-      "width" : 28
-    },
-    "id" : "sacks",
-    "looks" : 2,
-    "materials" : [
-      {
-        "count" : 1,
-        "name" : "Cloth"
-      },
-      {
-        "count" : 2,
-        "name" : "Flour"
-      }
-    ],
-    "name" : "Jute Sacks",
-    "width" : 2
-  },
-  {
-    "availableFromLevel" : 18,
-    "cost" : 80,
-    "height" : 2,
-    "icon" : {
-      "height" : 7,
-      "src" : "sprites/decorations/tailorDisplay.png",
-      "width" : 10
-    },
-    "id" : "tailorDisplay",
-    "looks" : 4,
-    "materials" : [
-      {
-        "count" : 2,
-        "name" : "Cloth"
-      },
-      {
-        "count" : 1,
-        "name" : "Planks"
-      }
-    ],
-    "name" : "Tailoring Supplies",
-    "width" : 2
-  },
-  {
-    "availableFromLevel" : 18,
     "cost" : 40,
     "height" : 1,
     "icon" : {
@@ -1066,5 +1018,53 @@
     ],
     "name" : "Decorative Watermelon",
     "width" : 1
+  },
+  {
+    "availableFromLevel" : 31,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 21,
+      "src" : "sprites/decorations/sacks.png",
+      "width" : 28
+    },
+    "id" : "sacks",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Cloth"
+      },
+      {
+        "count" : 2,
+        "name" : "Flour"
+      }
+    ],
+    "name" : "Jute Sacks",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 31,
+    "cost" : 80,
+    "height" : 2,
+    "icon" : {
+      "height" : 7,
+      "src" : "sprites/decorations/tailorDisplay.png",
+      "width" : 10
+    },
+    "id" : "tailorDisplay",
+    "looks" : 4,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Cloth"
+      },
+      {
+        "count" : 1,
+        "name" : "Planks"
+      }
+    ],
+    "name" : "Tailoring Supplies",
+    "width" : 2
   }
 ]

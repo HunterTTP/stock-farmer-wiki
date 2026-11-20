@@ -566,7 +566,7 @@
     "name" : "Tailor Table",
     "purpose" : "Spins wool and cotton into cloth",
     "recipes" : [
-      "Cloth",
+      "Wool Cloth",
       "Fine Cloth",
       "Cloth"
     ],

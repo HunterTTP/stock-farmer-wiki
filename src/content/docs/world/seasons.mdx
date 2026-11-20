@@ -6,7 +6,7 @@ sidebar:
 ---
 import Fact from '../../../components/Fact.astro';
 
-The year runs Spring, Summer, Fall and Winter, then starts again. Each season lasts <Fact path="world.daysPerSeason" /> farm days. A new farm starts in Summer on day 1.
+The year runs Spring, Summer, Fall and Winter, then starts again. Each season lasts <Fact path="world.daysPerSeason" /> farm days. A new farm starts on day 1 of the Starting Season you pick when you make it, Spring unless you change it.
 
 ![The farm in Winter, covered in snow](../../../assets/world/winter.webp)
 ![The farm in Fall, with golden grass](../../../assets/world/fall.webp)
@@ -21,7 +21,7 @@ Crops, animals, prices, fish and every other rule are the same in every season. 
 | Thunder | Yes | Yes | Yes | No |
 | Butterflies | Yes | Yes | Yes | None |
 | Night crickets | Yes | Yes | Yes | None |
-| Looks | Spring grass, wildflowers, petals on the wind | The original look | Autumn foliage, leaves on the wind | Snow on the ground, trees, roofs, fences and rocks |
+| Looks | Spring grass, wildflowers, petals on the wind | The original look, little grass tufts | Autumn foliage, leaves on the wind, fallen leaves on the grass, thickest under oaks and birches | Snow on the ground, trees, roofs, fences and rocks |
 | Music | Its own songs | Its own songs | Its own songs | Its own songs |
 
 Animals shelter at the same times in Winter as in other seasons: at night and in the 2 PM to 5 PM storm. See [Weather](../weather/).
@@ -32,6 +32,7 @@ Animals shelter at the same times in Winter as in other seasons: at night and in
 - The farm's clock stands still while the game is closed (see [Day and Night](../day-and-night/)), so seasons only pass while you play.
 - A season that comes due while a menu, a level-up, the day summary or fishing is on screen turns once that is closed.
 - A season can also be picked by hand from the clock. It changes at once and lasts its full <Fact path="world.daysPerSeason" /> days from that day.
+- A new farm opens with its first season sweeping in over it, and the tutorial starts once the season's title has gone.
 - Each season counts as seen in [Progress](../../progress/) the first time it plays.
 
 ## Related pages
