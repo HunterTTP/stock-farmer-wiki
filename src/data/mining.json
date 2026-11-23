@@ -109,6 +109,23 @@
       "productValue" : 100,
       "value" : 50,
       "vein" : "Sapphire Vein"
+    },
+    {
+      "icon" : {
+        "height" : 27,
+        "src" : "sprites/ores/diamond.png",
+        "width" : 27
+      },
+      "id" : "diamond",
+      "madeAt" : "",
+      "minutes" : 0,
+      "name" : "Rough Diamond",
+      "piecesPerProduct" : 0,
+      "piecesPerVein" : 0,
+      "product" : "",
+      "productValue" : 0,
+      "value" : 1000,
+      "vein" : "Diamond Vein"
     }
   ],
   "processingLevel" : 18,

@@ -1,10 +1,10 @@
 ---
 title: Stock Market
-description: A pretend stock market that uses real market prices and farm money, with its trading rules, limits, price updates and stock quests.
+description: A pretend stock market that uses real market prices and farm gold, with its trading rules, limits, price updates and stock quests.
 ---
 import Fact from '../../components/Fact.astro';
 
-The Stock Market is a pretend market inside the game. You buy and sell shares with farm money at real market prices. No real stocks or real money are involved.
+The Stock Market is a pretend market inside the game. You buy and sell shares with farm gold at real market prices. No real stocks or real money are involved.
 
 The [House](../buildings/house/) opens it. The House unlocks at level <Fact path="buildings.house1.unlockLevel" />. The market needs an internet connection; offline, the rest of the farm keeps working.
 
@@ -12,7 +12,7 @@ The [House](../buildings/house/) opens it. The House unlocks at level <Fact path
 
 | Rule | Value |
 | --- | --- |
-| Shares | Whole shares only, as many as your money covers |
+| Shares | Whole shares only, as many as your gold covers |
 | Fees | None |
 | Price of a trade | The price on screen when you trade |
 | Tickers | Any listed ticker the price source knows, looked up by its symbol |
@@ -34,8 +34,8 @@ The [House](../buildings/house/) opens it. The House unlocks at level <Fact path
 
 ## Profit, progress and quests
 
-- Each winning sale adds its profit to Money Earned in [Progress](../progress/). Stock Profit there counts wins and losses together.
-- From level <Fact path="quests.stockQuestsFromLevel" />, every Market Stand carries one stock quest, "Earn $N profit in the Stock Market". Each whole dollar of profit from a sale counts. Losses take nothing back. See [Quests](../quests/#stock-quests).
+- Each winning sale adds its profit to Gold Earned in [Progress](../progress/). Stock Profit there counts wins and losses together.
+- From level <Fact path="quests.stockQuestsFromLevel" />, every Market Stand carries one stock quest, "Earn Ng profit in the Stock Market". Profit from a sale counts in whole steps of 1g. Losses take nothing back. See [Quests](../quests/#stock-quests).
 
 ## Related pages
 

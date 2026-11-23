@@ -1,15 +1,10 @@
 // Formatting shared by every generated table, so numbers read the same on every page (see README, style guide).
 
-/** Money as the game writes it on item pages: $0.10, $1.50, $1,000, $26,000. Zero is "Free". */
+/** Money as the game writes it: whole gold with the cents dropped: 10g, 1g, 100,000g. Zero is "Free". */
 export function money(amount, { zero = 'Free' } = {}) {
   if (amount == null) return '';
   if (amount === 0) return zero;
-  const cents = Math.round(amount * 100);
-  const whole = cents % 100 === 0;
-  return '$' + (cents / 100).toLocaleString('en-US', {
-    minimumFractionDigits: whole ? 0 : 2,
-    maximumFractionDigits: 2,
-  });
+  return Math.trunc(Math.round(amount * 100) / 100).toLocaleString('en-US') + 'g';
 }
 
 /** A time in whole seconds, at most two units: 10 s, 1 min 20 s, 2 h 5 min, 1 d 3 h. */

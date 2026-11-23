@@ -282,8 +282,7 @@
     "farmland" : 112,
     "farmlandAdded" : 20,
     "fishRarities" : [
-      "Uncommon",
-      "Rare"
+
     ],
     "fruitTrees" : [
 
@@ -292,7 +291,7 @@
 
     ],
     "level" : 10,
-    "rarerFish" : false,
+    "rarerFish" : true,
     "recipes" : [
 
     ],
@@ -434,7 +433,7 @@
     "farmland" : 242,
     "farmlandAdded" : 30,
     "fishRarities" : [
-      "Epic"
+
     ],
     "fruitTrees" : [
 
@@ -443,7 +442,7 @@
       "Pig Barn level 2"
     ],
     "level" : 15,
-    "rarerFish" : false,
+    "rarerFish" : true,
     "recipes" : [
 
     ],
@@ -587,7 +586,7 @@
     "farmland" : 402,
     "farmlandAdded" : 20,
     "fishRarities" : [
-      "Legendary"
+
     ],
     "fruitTrees" : [
       "Banana Tree"
@@ -596,7 +595,7 @@
       "Pig Barn level 3"
     ],
     "level" : 20,
-    "rarerFish" : false,
+    "rarerFish" : true,
     "recipes" : [
       "Banana Preserves"
     ],

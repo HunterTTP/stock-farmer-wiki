@@ -23,7 +23,7 @@ It unlocks at level <Fact path="quests.marketStandLevel" />.
 <DataTable name="market-supplies" />
 
 - Prices are fixed. At most <Fact path="market.oreDailyLimit" /> of each ore and <Fact path="market.materialDailyLimit" /> Logs and <Fact path="market.materialDailyLimit" /> Stone can be bought a day. The limits reset each new day.
-- A purchase is limited by what is left today, your money and the free room in Storage.
+- A purchase is limited by what is left today, your gold and the free room in Storage.
 - Buying supplies never counts toward a quest.
 
 ## How quests work
@@ -91,7 +91,7 @@ At level 10 (3,696 XP to leave) a Market Stand quest to collect 4 eggs has effor
 
 ## Stock quests
 
-- A stock quest reads "Earn $N profit in the Stock Market". Each whole dollar of profit from a sale counts, and losses take nothing back.
+- A stock quest reads "Earn Ng profit in the Stock Market". Profit from a sale counts in whole steps of 1g, and losses take nothing back.
 - N is 0.2% of the price of the dearest building unlocked at your level (0.6% on the upgraded stand), rounded to two significant figures.
 - Its effort is 2.5, so it pays 5% of a level on the Market Stand and 8% on the upgraded one.
 

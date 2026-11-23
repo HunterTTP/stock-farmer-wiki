@@ -643,28 +643,28 @@
     },
     {
       "color" : "#66FF80",
-      "fishFromLevel" : 10,
+      "fishFromLevel" : 1,
       "fishValue" : 36,
       "name" : "Uncommon",
       "species" : 7
     },
     {
       "color" : "#3380FF",
-      "fishFromLevel" : 10,
+      "fishFromLevel" : 1,
       "fishValue" : 110,
       "name" : "Rare",
       "species" : 15
     },
     {
       "color" : "#BF73FF",
-      "fishFromLevel" : 15,
+      "fishFromLevel" : 1,
       "fishValue" : 330,
       "name" : "Epic",
       "species" : 8
     },
     {
       "color" : "#FF7300",
-      "fishFromLevel" : 20,
+      "fishFromLevel" : 1,
       "fishValue" : 1000,
       "name" : "Legendary",
       "species" : 6

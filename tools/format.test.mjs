@@ -4,11 +4,12 @@ import { money, duration } from '../src/lib/format.js';
 
 test('money', () => {
   assert.equal(money(0), 'Free');
-  assert.equal(money(0.1), '$0.10');
-  assert.equal(money(1.5), '$1.50');
-  assert.equal(money(1000), '$1,000');
-  assert.equal(money(26000), '$26,000');
-  assert.equal(money(12.345), '$12.35');
+  assert.equal(money(0.1), '0g');
+  assert.equal(money(1.5), '1g');
+  assert.equal(money(1000), '1,000g');
+  assert.equal(money(26000), '26,000g');
+  assert.equal(money(4.36), '4g');
+  assert.equal(money(2570.8), '2,570g');
 });
 
 test('duration', () => {

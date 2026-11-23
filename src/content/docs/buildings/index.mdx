@@ -7,13 +7,13 @@ sidebar:
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-Buildings cost money plus logs and stones from Storage, and each unlocks at a player level.
+Buildings cost gold plus logs and stones from Storage, and each unlocks at a player level.
 
 ## All buildings
 
 <DataTable name="buildings" />
 
-- **Materials** come from Storage. The Pet House costs no money and takes one Copper Ore besides its logs and stones.
+- **Materials** come from Storage. The Pet House costs no gold and takes one Copper Ore besides its logs and stones.
 - **Size** is width × height in tiles. Only the bottom row is ground the building stands on.
 - **Most you can build:** one of most buildings. The Chicken Coop, Shed and Silo allow <Fact path="buildings.chickenCoop.limit" /> each, and the Pet House one for every kind of pet.
 - Level unlocks are listed on the [Levels](../levels/) page.
@@ -41,7 +41,7 @@ A building's ground is its bottom row of tiles. The rest of its picture rises ov
 - Bare farmland under a building becomes ground for it. Animals standing there are moved to a free tile.
 - The upper rows of a building may overlap trees, fences and decorations behind it, and may rise past the back edge of the map. The Tractor stays fully inside the map.
 - The Pet House and every animal home need the tile in front of them to stay plain ground (grass, farmland or a crop). Nothing placed later may cover it, and no water may be laid there.
-- Building charges its money, logs and stones when it is placed.
+- Building charges its gold, logs and stones when it is placed.
 
 ## Moving
 
