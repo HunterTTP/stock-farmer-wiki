@@ -1,0 +1,52 @@
+{
+  "strongMultiplier" : 2,
+  "tools" : [
+    {
+      "icon" : {
+        "height" : 28,
+        "src" : "sprites/tools/pickaxe-1.png",
+        "width" : 28
+      },
+      "id" : "pickaxe",
+      "name" : "Pickaxe",
+      "strongAgainst" : [
+        "Rock Golem",
+        "Rock Crab",
+        "Shell Beetle",
+        "Pill Bug"
+      ]
+    },
+    {
+      "icon" : {
+        "height" : 31,
+        "src" : "sprites/tools/axe-1.png",
+        "width" : 23
+      },
+      "id" : "axe",
+      "name" : "Axe",
+      "strongAgainst" : [
+        "Dust Mite",
+        "Glow Skitter",
+        "Hopping Mole",
+        "Zip Newt"
+      ]
+    },
+    {
+      "icon" : {
+        "height" : 28,
+        "src" : "sprites/tools/scythe-1.png",
+        "width" : 32
+      },
+      "id" : "scythe",
+      "name" : "Scythe",
+      "strongAgainst" : [
+        "Jelly Slime",
+        "Mini Slime",
+        "King Slime",
+        "Cave Bat",
+        "Lantern Moth",
+        "Cave Darter"
+      ]
+    }
+  ]
+}

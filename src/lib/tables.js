@@ -211,6 +211,14 @@ export const tables = {
       ['Gathers', (r) => r.gathers],
     ],
   },
+  caveTools: {
+    rows: () => data.cave.tools,
+    icon: (r) => r.icon,
+    columns: [
+      ['Tool', (r) => r.name],
+      ['Strong against', (r) => list(r.strongAgainst)],
+    ],
+  },
   pets: {
     rows: () => data.animals.pets.gallery,
     icon: (r) => r.icon,

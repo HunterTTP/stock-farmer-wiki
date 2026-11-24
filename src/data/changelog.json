@@ -2,7 +2,10 @@
   {
     "date": "2026-11-23",
     "lines": [
-      "Cave swipes now knock critters back by chance (25% to start, a Knockback upgrade raises it by 15 points each, up to every hit), and the Knockback card shows the chance.",
+      "Swipe upgrade picks now come every 5 levels: the first clear of Levels 5, 10, 15 and so on gives a pick, and existing farms pick their cards again, free, once.",
+      "Nights are a little less blue (Darkest blue now 62%), and the ponds mirror a little less of the night sky (58%).",
+      "Cave waves no longer wait for the last one to be beaten: a new wave starts 10 seconds after the one before has fully arrived, whether or not its baddies are beaten yet, and a level is won when every wave has come and every baddie is beaten.",
+      "Cave swipes now knock critters back by chance (5% to start, each Knockback pick adds 5 points, up to every hit), and the Knockback card shows the chance.",
       "The Cave's top buttons sit in one tidy row: Exit on the left and the level (tap for the level list) on the right.",
       "Money is now Gold: prices show as gold coins and read like 4g, as whole gold with the cents dropped.",
       "Removed a doubled label on the upgrade pick: the extra line under the chosen card is gone, the card already shows the number.",
@@ -26,7 +29,7 @@
       "Tapping a Shroom Crew skin in a crew's Skins menu now opens a preview like a building's, with its animation and a Buy or Equip button; swipe to see the other skins.",
       "Menu pictures now match the season: buildings, crops, trees, decorations, fences and rocks look as they do on the farm, snowy in Winter and with their Christmas lights.",
       "The forest border and the cave entrance now change season with the rest of the farm: their trees, grass and rocks turn as the season change sweeps across them, instead of switching all at once.",
-      "Cave levels come in waves: a new wave starts 10 seconds after the one before has fully arrived, whether or not its baddies are beaten yet, and a level is won when every wave has come and every baddie is beaten. Levels 1 and 2 have 3 waves, Levels 3 to 27 have 4, one more every 25 levels up to 7, and a boss level 3, the boss in the last. Within a wave baddies come in a few at a time.",
+      "Cave levels come in waves: the next wave comes in the moment the last baddie of the one before is beaten, so a quick player finishes sooner, and a level is won when its last wave is beaten. Levels 1 and 2 have 3 waves, Levels 3 to 27 have 4, one more every 25 levels up to 7, and a boss level 3, the boss in the last. Within a wave baddies come in a few at a time.",
       "Fixed a flicker over the Cave: the purple swirl round crew cards no longer makes the screen flash, and the red screen edges show only during their glow. They now flash whenever the Crystal Heart loses light, when a baddie reaches it.",
       "Cave crew no longer need recruiting: each crew member you place on the floor costs its price every run, replays too, and dragging one back to the bar before Start gives the money back. Level 2's crew stay free. You can place one of each kind, up to 3 crew in all, and that limit grows by one every 10 levels (4 from Level 10, 5 from Level 20, and so on); each crew card shows 0/1 or 1/1 in its corner. Crew cards show the price under the name, and the purple swirl plays round every card you can still place and afford until you have placed as many as the level allows. While you drag a crew member, its reach shows as a ring round the spot it would land on, red where it can't stand.",
       "In the Cave, when a win's victory tune finishes, the music from before Start now comes back by itself and keeps looping, instead of silence; tapping Collect, Replay or Next Level before the tune ends brings it back right away, and Replay or Next Level still switch to the fight music when you press Start. After a loss the fight music fades away and the music from before Start comes back too, instead of leaving only the quiet hum.",

@@ -1,28 +1,46 @@
 ---
 title: Stock Market
-description: A pretend stock market that uses real market prices and farm gold, with its trading rules, limits, price updates and stock quests.
+description: A pretend stock market with its own cash wallet, real market prices, trading rules, limits, price updates and stock quests.
 ---
 import Fact from '../../components/Fact.astro';
 
-The Stock Market is a pretend market inside the game. You buy and sell shares with farm gold at real market prices. No real stocks or real money are involved.
+The Stock Market is a pretend market inside the game. It runs on its own cash wallet, in dollars and cents. Your farm keeps its gold. No real stocks or real money are involved.
 
 The [House](../buildings/house/) opens it. The House unlocks at level <Fact path="buildings.house1.unlockLevel" />. The market needs an internet connection; offline, the rest of the farm keeps working.
+
+## Cash wallet
+
+| | |
+| --- | --- |
+| Rate | 1 gold = $1 |
+| Fee | None |
+| Add cash | Sells whole gold into the wallet, up to all your whole gold |
+| Cash out | Turns whole dollars back into gold, up to all the whole dollars in the wallet; leftover cents stay as cash |
+
+- The wallet card shows your Cash, what your stocks are worth (In stocks) and the two together. Your gold is not counted in Together.
+- At the top of the Stock Market you see your cash, with your gold small beside it.
+- Moving money between gold and cash is not earning or spending. It counts towards no quest or Progress total.
+- A farm that owned shares before the wallet keeps them and starts with $0.00 cash.
 
 ## Trading rules
 
 | Rule | Value |
 | --- | --- |
-| Shares | Whole shares only, as many as your gold covers |
+| Shares | Whole shares only, as many as your cash covers |
+| Paid from | Cash only, never gold |
 | Fees | None |
 | Price of a trade | The price on screen when you trade |
 | Tickers | Any listed ticker the price source knows, looked up by its symbol |
 | Different stocks you can own | <Fact path="world.stockSlots" /> with the House, <Fact path="world.stockSlotsUpgraded" /> with the Luxury House |
 
+- If a buy costs more than your cash, the buy screen says how much to add. Its Add cash button opens Add cash with that amount filled in, rounded up to whole gold.
+- Selling pays cash into the wallet, even when the wallet is empty.
+- Each stock shows its price, today's change, what your shares are worth, what you paid for each, and whether you're up or down.
+- Buying more of a stock you own sets what you paid for each to the average of everything you paid for it.
+- A sale's profit or loss is the sale price minus what you paid for each, times the shares sold. The sale screen and its message show it.
 - Each different stock takes one slot, however many shares of it you own. Selling every share frees its slot.
-- Buying more of a stock you own sets your average cost to the average of everything you paid for it.
-- A sale's profit or loss is the sale price minus your average cost, times the shares sold.
 - Stocks stay with the farm if the House is destroyed (see [House](../buildings/house/)).
-- The Luxury House upgrade costs <Fact path="home-upgrades.house.cost" as="money" /> and unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
+- The Luxury House upgrade costs <Fact path="home-upgrades.house.cost" as="money" /> in gold and unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
 
 ## Prices
 
@@ -34,8 +52,8 @@ The [House](../buildings/house/) opens it. The House unlocks at level <Fact path
 
 ## Profit, progress and quests
 
-- Each winning sale adds its profit to Gold Earned in [Progress](../progress/). Stock Profit there counts wins and losses together.
-- From level <Fact path="quests.stockQuestsFromLevel" />, every Market Stand carries one stock quest, "Earn Ng profit in the Stock Market". Profit from a sale counts in whole steps of 1g. Losses take nothing back. See [Quests](../quests/#stock-quests).
+- Each winning sale adds its profit to Gold Earned in [Progress](../progress/). Stock Profit there counts wins and losses together, in dollars.
+- From level <Fact path="quests.stockQuestsFromLevel" />, every Market Stand carries one stock quest, "Make $N profit selling stocks", with progress shown like $4 / $17. Profit from a sale counts in whole dollars. Losses take nothing back. See [Quests](../quests/#stock-quests).
 
 ## Related pages
 

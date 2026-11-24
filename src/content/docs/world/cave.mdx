@@ -1,0 +1,79 @@
+---
+title: Cave
+description: Which tool hits which Cave baddies harder, and how the ore of a first clear is mined with the Pickaxe.
+sidebar:
+  order: 6
+---
+import DataTable from '../../../components/DataTable.astro';
+import Fact from '../../../components/Fact.astro';
+
+The Cave is a room of baddies that walk to the Crystal Heart. You swipe them away with whatever your toolbar holds, and the first clear of a level leaves ore veins to mine.
+
+Pinch to zoom in on the room and back out to see all of it. The room stays put: dragging never moves it.
+
+## Waves
+
+Baddies come in waves. The wave bar at the top shows the level, the wave you are on and the time to the next one.
+
+- A new wave starts 4 seconds after the last baddie of the one before has come out, whether or not its baddies are beaten.
+- While the next wave waits, its small baddies trickle in one at a time: the first after 1 second, then one every 2.5 seconds.
+- Golems never trickle in. They come with their own wave.
+- Every fifth level, from Level 5 to Level 100, is a boss level. It has 3 waves, and the boss opens the last one with a few small baddies beside it. No more than 5 baddies are out at once.
+- The boss gets tougher every boss level. Level 5's boss is the gentlest.
+- A boss gives warning before it steps out: the paths turn red from its door, the room shakes harder and a low rumble ends in a thud. The paths stay red until the boss is beaten, then fade back to violet.
+- Each step the boss takes lands with a soft thud, a puff of dust and a tiny shake of the room (no shake with Reduce Motion).
+- The level is won once every wave has come and every baddie is beaten.
+- A second row in the bar shows the Crystal Heart's light, such as 7/10. Bright Heart raises the most it can hold. At 30% or less it turns red and pulses.
+- The red Exit door on the bar's left pauses a fight. In setup or after a win it leaves the Cave at once.
+
+## Upgrade cards
+
+The first clear of every fifth level gives an upgrade card pick. Once the boss is beaten and the ore veins are mined, you choose one of two cards, then the clear card shows.
+
+## New levels
+
+New levels open five at a time. Levels 1 to 5 are open from the start. When you clear the fifth level of a batch, the next five open at the farm's next midnight.
+
+- Trying to play the next level before then, with Next Level or the level list, shows when they open, with a countdown.
+- Unlock now buys all five levels early for gold. I'll wait goes back to the farm.
+- Replays and Levels 1 and 2 never wait.
+
+## Tools against baddies
+
+Your whole farm toolbar works in the Cave, plus a Sword that is there only in the Cave.
+
+- Every item hits every baddie for normal damage, the Sword and the Bucket included.
+- The Pickaxe, Axe and Scythe each hit their own baddies <Fact path="cave.strongMultiplier" /> times as hard.
+- No item hits any baddie for less than normal damage.
+- Your crew's hits are the same whatever you hold.
+
+<DataTable name="caveTools" />
+
+## Mining the ore
+
+A level's first clear pays ore, which stands in the room as ore veins. The veins hold one or two ore each, spread round the room and kept clear of the paths, the doors and the Heart. Deeper levels have more veins. Crew can't be placed on a vein.
+
+1. Beat the last baddie. The veins stay standing, and the bar turns to "Mine the ore" with a block for each vein.
+2. Your Shroom Crew jump for joy, then take out Pickaxes and split up across the veins, walking round the Heart to them.
+3. Each crew member swings at its vein once a second. The swings so far show above the vein.
+4. When a vein breaks, its crew walk to the nearest vein still standing and help there.
+5. The last swing on a vein breaks it and puts its ore straight into [Storage](../../storage-and-selling/).
+6. The level is cleared once every vein is mined. The bar turns green, the crew walk straight out of the cave, and the clear card lists the rewards: each ore the level paid and how many, the skin crate's skin or gold on a boss level, and on Levels 5, 10, 15 and so on the swipe card you picked.
+
+You can help with the Pickaxe as you mine a rock on the farm: tap a vein, or drag the tool button across it. Each pass adds one swing, and the swings so far show above your finger.
+
+- Your swings and the crew's count together on each vein. A vein keeps its count when you move to another.
+- A vein takes as many swings as that rock does for your Pickaxe level (see [Mining](../../gathering/mining/)).
+- Any other item says to use the Pickaxe.
+- A vein breaks only if Storage has room for all its ore. Otherwise the crew keep swinging, but it stays until you make room.
+- The first clear of a boss level gives a free skin crate. A replay gives none.
+  - Once the boss falls and your crew jump for joy, the crate drops into the room and opens. A reel of skin cards spins and stops on the one you get.
+  - Each crate is Common 50%, Rare 30%, Epic 15% or Legendary 5%.
+  - After 4 crates in a row without Epic or better, the 5th is Epic (75%) or Legendary (25%) for sure. Any Epic or Legendary starts the count again.
+  - The crate only gives skins you don't own yet, from every Shroom Crew and building skin sold, the Trunk's included. Gold Leaf is never in it. If a tier has nothing left for you, the crate moves up a tier.
+  - Once you own every skin it could give, the crate gives that tier's lowest skin price in gold instead.
+  - Tap the ? on the reel to see the odds and how close the next sure Epic is. Skip goes straight to the reveal.
+  - The skin is yours at once. It plays the same reveal and sound as buying a skin, then the crew mine the ore.
+- If some ore is still waiting for room in Storage, the Rewards list says how much.
+- Ore left unmined when you leave the Cave goes into Storage if it fits.
+- A replay pays nothing and has no veins.
