@@ -14,21 +14,12 @@
       "hitShare" : "80%",
       "id" : "moleChief",
       "levels" : [
+        10,
         25
       ],
       "name" : "Mole Chief",
       "secondsToChest" : 22.5,
       "trick" : "Leaps under Shields and can't be hit underground. In a Lantern's light it walks."
-    },
-    {
-      "hitShare" : "50%",
-      "id" : "giantNewt",
-      "levels" : [
-        10
-      ],
-      "name" : "Giant Newt",
-      "secondsToChest" : 12.9,
-      "trick" : "Fast. Frost freezes it in place and a Shield holds it. It never puts a Shield to sleep or dodges."
     },
     {
       "hitShare" : "80%",
@@ -378,14 +369,6 @@
       "speed" : 1.5
     },
     {
-      "firstLevel" : 6,
-      "id" : "newt",
-      "moves" : "Weaves",
-      "name" : "Newt",
-      "note" : "Fast and slippery. Puts Shields to sleep for a moment.",
-      "speed" : 1.6
-    },
-    {
       "firstLevel" : 11,
       "id" : "slime",
       "moves" : "Walks",
@@ -428,7 +411,7 @@
     {
       "firstLevel" : 41,
       "id" : "glitchNewt",
-      "moves" : "Weaves",
+      "moves" : "Walks",
       "name" : "Glitch Newt",
       "note" : "It blinks ahead, grabs 3 hearts and runs. Beat it to get them back.",
       "speed" : 1.6
@@ -565,8 +548,8 @@
     },
     {
       "boss" : true,
-      "bossHits" : 4,
-      "bossName" : "Giant Newt",
+      "bossHits" : 6.4,
+      "bossName" : "Mole Chief",
       "largeGolems" : 0,
       "level" : 10,
       "mediumGolems" : 0,
@@ -1058,11 +1041,6 @@
     }
   ],
   "levels" : 50,
-  "newt" : {
-    "dodge" : "60%",
-    "sleepSeconds" : 1.5,
-    "wakeGraceSeconds" : 2
-  },
   "room" : {
     "fewestJoins" : 2,
     "largestRoom" : 15,
@@ -1232,13 +1210,12 @@
       "roomSize" : 11
     },
     {
-      "boss" : "Giant Newt",
+      "boss" : "Mole Chief",
       "doors" : 2,
       "first" : 6,
       "last" : 10,
       "layout" : "A fall, then a river across the room",
       "lean" : [
-        "Newt",
         "Mole"
       ],
       "liquid" : "Water",
@@ -1254,7 +1231,7 @@
       "layout" : "A fall, then a river down the room",
       "lean" : [
         "Slime",
-        "Newt"
+        "Mole"
       ],
       "liquid" : "Slime",
       "name" : "Green Slime",
@@ -1300,7 +1277,7 @@
       "layout" : "A fall, then a river that splits round the chest",
       "lean" : [
         "Glow Bug",
-        "Newt"
+        "Mole"
       ],
       "liquid" : "Sludge",
       "name" : "Radioactive",

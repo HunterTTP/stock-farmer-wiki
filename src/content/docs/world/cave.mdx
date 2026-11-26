@@ -71,7 +71,7 @@ The first zone is Earth. It teaches one enemy at a time.
 | 4 | All three together | Use all three crew at once. |
 | 5 | Two waves of all three, then the Stone Boss | The first boss. |
 
-The River zone leads with Newts, with Pebbles and Moles beside them.
+The River zone sends Moles with Pebbles beside them, ending with the Mole Chief.
 
 ### Small enemies
 
@@ -85,8 +85,6 @@ Speed is in tiles a second on the easiest levels.
 - A Glare Slime flashes every few seconds. Crew right beside it are dazzled and stop for a few seconds. A Mender's ring keeps them clear, and a frozen Glare Slime doesn't flash.
 - A Glitch Newt blinks a few tiles ahead every few seconds and steals 3 hearts instead of 1. A Shield stops it. See [Thieves](#thieves).
 - Ember Bats are Bats that come in big flocks.
-- A Newt is never held by a Shield. When it reaches one, the Shield falls asleep for <Fact path="cave.newt.sleepSeconds" /> seconds, and every enemy walks past it until it wakes. The Newt then turns at once and runs back out of its door, stealing nothing. With no Shield in its way, it steals from the chest and runs off like any small enemy. A Shield that just woke can't be put back to sleep for <Fact path="cave.newt.wakeGraceSeconds" /> seconds.
-- A Newt dodges <Fact path="cave.newt.dodge" /> of the crew's hits, on top of the crew's own misses: the Sword's, the Bow's, the Sniper's and a Bomber's blast alike. Each Newt in a blast dodges on its own. A dodge shows as a miss. A freeze is not a hit, so Frost still stops a Newt.
 - A split puts the two Mini Slimes on the spot, as many as the room has places for.
 - Small enemies move faster on deeper levels, as a multiple of the speeds above: 1 on Levels 1 and 2, 1.3 on Level 5, 1.45 on Level 10, 1.6 on Level 25 and 1.75 on Level 50, rising evenly between. Golems and bosses keep their own pace.
 
@@ -98,7 +96,7 @@ Speed is in tiles a second on the easiest levels.
 
 ### Lean levels and their doors
 
-Most levels lean to one of their zone's kinds of small enemy, which comes in bigger numbers. The level list labels a level by its lean: Swarm (Slimes), Rush (Newts), Wing (Bats), Burrow (Moles) or Stone (golems and Glow Bugs). A zone's tough level and its boss level are Mixed.
+Most levels lean to one of their zone's kinds of small enemy, which comes in bigger numbers. The level list labels a level by its lean: Swarm (Slimes), Rush (Glitch Newts), Wing (Bats), Burrow (Moles) or Stone (golems and Glow Bugs). A zone's tough level and its boss level are Mixed.
 
 - On a lean level the lean kind comes out of one door only, two from Level <Fact path="cave.room.twoLeanDoorsFrom" /> in a room with 3 or more doors.
 - A level that sends just a few Bats sends them out of one door.
@@ -146,7 +144,6 @@ Every fifth level is a boss level. The boss comes in the last wave with a few sm
 <DataTable name="caveBosses" columns="Boss,Levels,Health,Seconds to the chest" />
 
 - Stone Boss: no trick, just the toughest.
-- Giant Newt: fast. A freeze stops it for a moment and does not scare it off. It never puts a Shield to sleep or dodges.
 - King Slime: beaten, it bursts into 4 Slimes, and each splits as usual.
 - Ice Boss: a giant Ice Golem. Beaten, it shatters into 2 Ice Golems that keep walking to the chest.
 - Mole Chief: leaps under Shields and can't be hit underground. In a Lantern's light it walks.
@@ -194,7 +191,7 @@ Your crew are Shrooms set down on the floor before Start. They are the only way 
 - Lantern: Moles in its light can't dig, so they walk, and a Geode in its light can be aimed at.
 - Alchemist: splashes acid on a shelled enemy. It doesn't speed up other crew.
 - Puffball: puffs spores that hit every flyer near it.
-- Mender: crew in its ring can't be dazzled, and their Shields can't be put to sleep. It doesn't heal the chest.
+- Mender: crew in its ring can't be dazzled. It doesn't heal the chest.
 - Trapper: sets snares on the path that hold walkers.
 - Torch: sets an enemy alight, and a burning enemy can't heal.
 
@@ -202,11 +199,11 @@ Each crew type is for one job. The sections below say how its power works.
 
 ### Crew powers
 
-- **Frost** freezes enemies for a moment. Golems and bosses stay frozen half as long. A frozen enemy stands still, and it can't chew a Shield, pound the chest or steal. Frost freezes flyers and Moles above ground, and a Mole underground is out of its reach. A Newt that is frozen turns back and runs out without stealing. The Giant Newt only stops. Cards add freeze time and reach.
+- **Frost** freezes enemies for a moment. Golems and bosses stay frozen half as long. A frozen enemy stands still, and it can't chew a Shield, pound the chest or steal. Frost freezes flyers and Moles above ground, and a Mole underground is out of its reach. Cards add freeze time and reach.
 - **Puffball** puffs spores every few seconds. They hit every flyer near it and leave ground enemies alone. Cards widen the cloud and speed up the spores.
 - **Trapper** sets snares on the path near it, and never more than 2 out at once. A snare holds the first walker that steps on it, coming in or running off with a theft, and then goes. Golems and bosses are held half as long. Flyers and Moles that are digging pass over. Cards hold snares longer and set them sooner.
 - **Torch** sets the enemy nearest the chest alight every few seconds. A burning enemy keeps losing health for a few seconds and can't heal. Cards burn longer and reach further.
-- **Mender** has a green ring on the floor. Crew inside it are never dazzled, and their Shields are never put to sleep, so a Newt can't pass them.
+- **Mender** has a green ring on the floor. Crew inside it are never dazzled.
 
 ### Shells and acid
 
@@ -228,14 +225,13 @@ The Sword, the Bow and the Bomber sometimes miss. The table's Hits row is the sh
 
 - A miss still uses up the swing, shot or blast. A tiny "miss" shows beside the enemy.
 - A Bomber's miss is a dud: the bomb lands and fizzles, and does nothing.
-- The Sniper never misses, though a Newt can dodge its shot. The Alchemist, Puffball and Torch always land. The Shield, Frost, Lantern, Mender and Trapper don't hit, so they never miss.
+- The Sniper never misses. The Alchemist, Puffball and Torch always land. The Shield, Frost, Lantern, Mender and Trapper don't hit, so they never miss.
 - Accuracy cards raise the Hits share (see [Crew cards](#crew-cards)).
 
 ### The Shield
 
 - A walker on the Shield's path stops at the edge of the Shield's tile and chews its health each second: any small enemy 1, and a golem by its size (see [Golems](#golems)). A boss chews hardest.
 - Flyers go straight over a Shield, and Moles leap past under it unless a Lantern lights them.
-- A Newt puts a Shield to sleep for a moment, and a sleeping Shield holds nobody (see [Small enemies](#small-enemies)). A Shield in a Mender's ring is never put to sleep.
 - A broken Shield lets walkers by and grows back with full health after <Fact path="cave.shield.regrowSeconds" /> seconds.
 - A Sword's push moves golems less than small enemies (see [Golems](#golems)).
 
@@ -253,7 +249,7 @@ Every level's chest holds one crew card beside its other prizes (see [Level ches
 
 - The first time you beat a boss level (every fifth level), you also get the next crew kind still locked as a bonus, on top of the chest's prize: Frost, Bomber, Sniper, Lantern, Alchemist, Puffball, Mender, Trapper, then Torch.
 - A bonus card shows it after the chest's prize, and the clear card lists the new kind.
-- So beating Level 5 unlocks Frost, just before the Newts come on Level 6. Each zone's boss unlocks the crew type that suits the zone after it.
+- So beating Level 5 unlocks Frost before the River zone from Level 6. Each zone's boss unlocks the crew type that suits the zone after it.
 - Replays give no bonus, and once every kind is unlocked there is none.
 - Crew kinds unlock only this way. The Sword, the Shield and the Bow are unlocked from the start.
 - A farm from before the crew cards keeps the kinds and ranks it had. Upgrade picks it was still owed come as upgrade cards the next time you open the Cave.
