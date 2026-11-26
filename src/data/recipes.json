@@ -213,18 +213,18 @@
     "building" : "Stone Oven",
     "icon" : {
       "height" : 15,
-      "src" : "sprites/goods/silverBar.png",
+      "src" : "sprites/goods/ironBar.png",
       "width" : 29
     },
-    "id" : "silverBar",
-    "input" : "Silver Ore",
+    "id" : "ironBar",
+    "input" : "Iron Ore",
     "inputCount" : 5,
     "inputIcon" : {
       "height" : 22,
-      "src" : "sprites/ores/silver.png",
+      "src" : "sprites/ores/iron.png",
       "width" : 26
     },
-    "output" : "Silver Bar",
+    "output" : "Iron Bar",
     "outputCount" : 1,
     "outputValue" : 100,
     "seconds" : 480,
@@ -248,27 +248,6 @@
     "output" : "Gold Bar",
     "outputCount" : 1,
     "outputValue" : 144,
-    "seconds" : 600,
-    "unlockLevel" : 18
-  },
-  {
-    "building" : "Tailor Table",
-    "icon" : {
-      "height" : 24,
-      "src" : "sprites/goods/fineCloth.png",
-      "width" : 22
-    },
-    "id" : "fineCloth",
-    "input" : "Cloth",
-    "inputCount" : 2,
-    "inputIcon" : {
-      "height" : 19,
-      "src" : "sprites/goods/cloth.png",
-      "width" : 24
-    },
-    "output" : "Fine Cloth",
-    "outputCount" : 1,
-    "outputValue" : 1176,
     "seconds" : 600,
     "unlockLevel" : 18
   },
@@ -543,6 +522,27 @@
     "outputCount" : 2,
     "outputValue" : 392,
     "seconds" : 720,
+    "unlockLevel" : 31
+  },
+  {
+    "building" : "Tailor Table",
+    "icon" : {
+      "height" : 24,
+      "src" : "sprites/goods/fineCloth.png",
+      "width" : 22
+    },
+    "id" : "fineCloth",
+    "input" : "Cloth",
+    "inputCount" : 2,
+    "inputIcon" : {
+      "height" : 19,
+      "src" : "sprites/goods/cloth.png",
+      "width" : 24
+    },
+    "output" : "Fine Cloth",
+    "outputCount" : 1,
+    "outputValue" : 1176,
+    "seconds" : 600,
     "unlockLevel" : 31
   },
   {

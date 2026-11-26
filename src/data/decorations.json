@@ -812,30 +812,6 @@
     "width" : 2
   },
   {
-    "availableFromLevel" : 18,
-    "cost" : 40,
-    "height" : 1,
-    "icon" : {
-      "height" : 25,
-      "src" : "sprites/decorations/dressmakerDisplay.png",
-      "width" : 12
-    },
-    "id" : "dressmakerDisplay",
-    "looks" : 2,
-    "materials" : [
-      {
-        "count" : 1,
-        "name" : "Fine Cloth"
-      },
-      {
-        "count" : 2,
-        "name" : "Logs"
-      }
-    ],
-    "name" : "Dressmaker Display",
-    "width" : 1
-  },
-  {
     "availableFromLevel" : 19,
     "cost" : 120,
     "height" : 2,
@@ -1066,5 +1042,29 @@
     ],
     "name" : "Tailoring Supplies",
     "width" : 2
+  },
+  {
+    "availableFromLevel" : 31,
+    "cost" : 40,
+    "height" : 1,
+    "icon" : {
+      "height" : 25,
+      "src" : "sprites/decorations/dressmakerDisplay.png",
+      "width" : 12
+    },
+    "id" : "dressmakerDisplay",
+    "looks" : 2,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Fine Cloth"
+      },
+      {
+        "count" : 2,
+        "name" : "Logs"
+      }
+    ],
+    "name" : "Dressmaker Display",
+    "width" : 1
   }
 ]

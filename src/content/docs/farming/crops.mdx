@@ -26,7 +26,7 @@ Every crop's numbers follow from its place in the unlock order.
 
 | Rule | Value |
 | --- | --- |
-| Wheat | Free seed, sells for less than 1g (shown as 0g), grows in 10 s |
+| Wheat | Free seed, sells for <Fact path="crops.wheat.sellValue" as="money" />, grows in 10 s |
 | Carrot | Set by hand: grows in 30 s, the one crop that does not sell for twice its seed |
 | Seed price (Potato on) | Half the sale price, so a harvest pays back twice the seed |
 | Grow time (Potato to Blackberry) | Potato takes 1 min. Each crop after it takes about 1.33 times as long as the one before, up to 2 h for Blackberry |
@@ -34,7 +34,7 @@ Every crop's numbers follow from its place in the unlock order.
 | Gold per minute of growing | 5% more than the crop before, up to Zucchini. 2.5% more for each crop after Zucchini |
 | XP | Unlock level plus one (Wheat 1, Carrot 3, Potato 4), whatever the grow time |
 
-Prices are rounded to cents, so the earliest crops sit a little off the 5% step.
+Prices are rounded to whole silver, so the earliest crops sit a little off the 5% step.
 
 ## Planting
 

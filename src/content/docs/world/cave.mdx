@@ -1,79 +1,337 @@
 ---
 title: Cave
-description: Which tool hits which Cave baddies harder, and how the ore of a first clear is mined with the Pickaxe.
+description: The Cave's zones, rooms and doors, its enemies and bosses, waves and walls, the Shroom Crew and their crew cards, and the level chests.
 sidebar:
   order: 6
 ---
+
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-The Cave is a room of baddies that walk to the Crystal Heart. You swipe them away with whatever your toolbar holds, and the first clear of a level leaves ore veins to mine.
+The Cave is tower defence in a room of rock. Enemies come out of the doors and follow the paths to a chest in the middle. You set down your Shroom Crew before Start, and they fight on their own. There are <Fact path="cave.levels" /> levels, and each level has its own chest of <Fact path="cave.chest.prizes" /> rewards.
 
 Pinch to zoom in on the room and back out to see all of it. The room stays put: dragging never moves it.
 
+## Controls
+
+- The Cave has no tool bar. You pick crew from the crew list down the left, which reads "Recruited" with how many crew you have set down out of the level's crew slots.
+- The crew list shows up to five and a half crew. With more, swipe it up or down to see the rest.
+- Drag a crew sideways off the list to set it down. It leaves the list at once. If it can't stand where you let go, it goes back to its place.
+- Drag a placed crew back onto the list to take it off.
+- Start sits at the bottom centre.
+- The wave bar at the top has the red Exit door at its left end and the purple Levels button at its right end.
+- In setup, Levels opens the level list, and a tap on the wave bar between Exit and Levels opens the card for the level you are on: its chest rewards, its enemies and Play (or Replay on a beaten level). Tapping Play, Replay or the x closes it with your crew as they were.
+- In a fight or after a win, Levels is greyed out and the bar between Exit and Levels takes no taps.
+- In a fight, Exit pauses it (Resume, Restart or Exit to Farm). In setup or after a win, Exit leaves the Cave at once.
+
+## Zones
+
+Every <Fact path="cave.room.zoneLevels" /> levels the Cave changes to a new zone, with its own look, liquid, enemies and boss. Each zone ends on its boss level.
+
+<DataTable name="caveZones" />
+
+- A zone's liquid pours from a fall in the back wall and runs as a river to another wall. Some rivers widen into one big pool, and a few rooms have big pools instead.
+- Paths cross the liquid on small bridges, never more than <Fact path="cave.room.longestBridge" /> tiles long.
+- No crew stand on liquid or on a bridge.
+- Crystal and standing rock fill some floor tiles in the Ice Crystal, Amethyst, Radioactive, Lava and Prism zones. No crew stand on them. Prism's crystals come in ruby, sapphire and diamond.
+- Prism has rainbow water, glitter and rainbow glints. Circuit has a data stream, circuit traces on the floor under a pulsing grid, and data bits that rise. Starfall has void, a starry nebula floor with twinkling stars, spirals, shooting stars, and rocks that float over their shadows.
+- The lanterns in the corners match the zone. Prism's are cool white, Circuit's cyan and Starfall's star blue.
+- Small bats, ants, inchworms, spiders and other cave life wander the room. They are only scenery: they never go on the paths and can't be hit.
+
+## The room and its doors
+
+Every level has its own room and paths. The layout of each level is fixed and the same in every game.
+
+- The room grows with the zones, from 11×11 tiles up to <Fact path="cave.room.largestRoom" />×<Fact path="cave.room.largestRoom" />. A ring of rock closes it in, and the chest stands in the middle.
+- A door is a dark mouth in the wall. Every enemy comes out of a door and follows its path to the chest. The zones table gives each zone's doors.
+- Every path is in plain view from its door to the chest.
+- Paths never cross. Paths that meet share the rest of the way to the chest.
+- From Level <Fact path="cave.room.threePathsFrom" /> every room has at least 3 doors, and the paths meet in at least <Fact path="cave.room.fewestJoins" /> places before the chest, so one crew member can guard two paths where they join.
+- From Level <Fact path="cave.room.threePathsFrom" /> each door's path runs on its own for its first tiles (the zones' rooms keep 2 or 3) before it joins another, so two doors never look like one path.
+- Deeper levels have longer, windier paths.
+- Every room keeps enough open floor beside the paths for the level's crew.
+
+## Enemies
+
+The Cave's animals are its enemies. Every small enemy falls to one hit. Golems and bosses take many.
+
+- Every enemy stays on its door's path. Walkers walk it, flyers fly along it and Moles leap along it.
+- Each zone leads with a new enemy. A level sends two to four kinds of small enemy: the zone's new one and a few earlier ones that suit it.
+- Golems come only in the Ice, Lava and Starfall zones, and as bosses. No more than 3 golems are out at once.
+
+### Earth
+
+The first zone is Earth. It teaches one enemy at a time.
+
+| Level | What comes | What it teaches |
+| --- | --- | --- |
+| 1 | Pebbles only | Set down the crew. The Sword hits and the Shield holds a path. |
+| 2 | Moles with a few Pebbles | Moles dig under Shields. Hit them when they pop up. |
+| 3 | Bats with a few Pebbles | Bats fly over Shields. The Bow reaches them. |
+| 4 | All three together | Use all three crew at once. |
+| 5 | Two waves of all three, then the Stone Boss | The first boss. |
+
+The River zone leads with Newts, with Pebbles and Moles beside them.
+
+### Small enemies
+
+Speed is in tiles a second on the easiest levels.
+
+<DataTable name="caveEnemies" />
+
+- A Mole leaps along its path and dips underground between leaps. It can't be hit underground, and it leaps past Shields. In a Lantern's light it walks like any walker, so a Shield holds it and the crew can hit it.
+- A Glow Bug's shell: every hit bounces off it, and the Bow and the Sniper never aim at it, until acid melts the shell (see [Shells and acid](#shells-and-acid)).
+- A Geode hides among the crystals. The crew only aim at it in a Lantern's light. A Shield still holds it, and a bomb or acid still hits it in the dark. Away from the light it fades into the crystals.
+- A Glare Slime flashes every few seconds. Crew right beside it are dazzled and stop for a few seconds. A Mender's ring keeps them clear, and a frozen Glare Slime doesn't flash.
+- A Glitch Newt blinks a few tiles ahead every few seconds and steals 3 hearts instead of 1. A Shield stops it. See [Thieves](#thieves).
+- Ember Bats are Bats that come in big flocks.
+- A Newt is never held by a Shield. When it reaches one, the Shield falls asleep for <Fact path="cave.newt.sleepSeconds" /> seconds, and every enemy walks past it until it wakes. The Newt then turns at once and runs back out of its door, stealing nothing. With no Shield in its way, it steals from the chest and runs off like any small enemy. A Shield that just woke can't be put back to sleep for <Fact path="cave.newt.wakeGraceSeconds" /> seconds.
+- A Newt dodges <Fact path="cave.newt.dodge" /> of the crew's hits, on top of the crew's own misses: the Sword's, the Bow's, the Sniper's and a Bomber's blast alike. Each Newt in a blast dodges on its own. A dodge shows as a miss. A freeze is not a hit, so Frost still stops a Newt.
+- A split puts the two Mini Slimes on the spot, as many as the room has places for.
+- Small enemies move faster on deeper levels, as a multiple of the speeds above: 1 on Levels 1 and 2, 1.3 on Level 5, 1.45 on Level 10, 1.6 on Level 25 and 1.75 on Level 50, rising evenly between. Golems and bosses keep their own pace.
+
+### New enemies
+
+- A level's card in the level list marks an enemy you have not met yet as NEW.
+- After Play, a card in the room names the new enemy and says in one line how it behaves and what stops it. Tap it to close it and set down your crew.
+- Each enemy gets its card once.
+
+### Lean levels and their doors
+
+Most levels lean to one of their zone's kinds of small enemy, which comes in bigger numbers. The level list labels a level by its lean: Swarm (Slimes), Rush (Newts), Wing (Bats), Burrow (Moles) or Stone (golems and Glow Bugs). A zone's tough level and its boss level are Mixed.
+
+- On a lean level the lean kind comes out of one door only, two from Level <Fact path="cave.room.twoLeanDoorsFrom" /> in a room with 3 or more doors.
+- A level that sends just a few Bats sends them out of one door.
+- Every other kind comes out of every door.
+
+### Golems
+
+Golems come in three sizes: small, medium and large. Deeper levels send more and bigger golems, and they take more hits to beat.
+
+- Ice Golems (Ice Crystal zone) and Void Golems (Starfall) are golems in the zone's colours.
+- A Void Golem slowly heals unless it is burning.
+
+- Whatever the path's length, a golem reaches the chest the time below after it steps out.
+
+<DataTable name="caveGolems" />
+
+Level 1 and the level before each wall:
+
+<DataTable name="caveLevels" />
+
 ## Waves
 
-Baddies come in waves. The wave bar at the top shows the level, the wave you are on and the time to the next one.
+Enemies come in waves. The wave bar at the top shows the level, the wave you are on and the time to the next one. The tables give each level's waves.
 
-- A new wave starts 4 seconds after the last baddie of the one before has come out, whether or not its baddies are beaten.
-- While the next wave waits, its small baddies trickle in one at a time: the first after 1 second, then one every 2.5 seconds.
+- A new wave starts 6 seconds after the last enemy of the one before has come out, whether or not its enemies are beaten.
+- While the next wave waits, its small enemies trickle in one at a time: the first after 1 second, then one every 2.5 seconds.
 - Golems never trickle in. They come with their own wave.
-- Every fifth level, from Level 5 to Level 100, is a boss level. It has 3 waves, and the boss opens the last one with a few small baddies beside it. No more than 5 baddies are out at once.
-- The boss gets tougher every boss level. Level 5's boss is the gentlest.
-- A boss gives warning before it steps out: the paths turn red from its door, the room shakes harder and a low rumble ends in a thud. The paths stay red until the boss is beaten, then fade back to violet.
-- Each step the boss takes lands with a soft thud, a puff of dust and a tiny shake of the room (no shake with Reduce Motion).
-- The level is won once every wave has come and every baddie is beaten.
-- A second row in the bar shows the Crystal Heart's light, such as 7/10. Bright Heart raises the most it can hold. At 30% or less it turns red and pulses.
-- The red Exit door on the bar's left pauses a fight. In setup or after a win it leaves the Cave at once.
+- A boss gives warning before it steps out: the paths turn red from its door, the room shakes harder and a low rumble ends in a thud. The paths stay red until the boss is beaten, then fade back.
+- Each step a walking boss takes lands with a soft thud, a puff of dust and a tiny shake of the room (no shake with Reduce Motion).
+- The level is won once every wave has come and every enemy is beaten or has run off.
 
-## Upgrade cards
+## The chest
 
-The first clear of every fifth level gives an upgrade card pick. Once the boss is beaten and the ore veins are mined, you choose one of two cards, then the clear card shows.
+- The chest is the orange Trunk on every level, and the gunmetal grey Trunk on boss levels.
+- The chest has <Fact path="cave.chestHealth" /> health on every level.
+- A small enemy that reaches the chest steals <Fact path="cave.chestTheft" /> health, once, then turns and runs back out along its path. Your crew can still beat it on the way out. Once it is out of its door it is gone.
+- A golem or a boss that reaches the chest stays and takes <Fact path="cave.chestDrainPerSecond" /> health a second until it is beaten, whatever its size. The Glitch Boss is the exception: it grabs and runs (see [Thieves](#thieves)).
+- A thief beaten on its way out drops its hearts back into the chest, and they fly back in.
+- At 0 health the level is lost. A loss pays nothing and does not count as cleared. Retries are free (see [Spins and replays](#spins-and-replays)).
+
+## Boss levels and walls
+
+Every fifth level is a boss level. The boss comes in the last wave with a few small enemies of its own kind. The waves before it send the level's usual mix. Each boss is a giant of a small enemy you already know, with that enemy's one trick. Level 50 ends on the Moss Boss.
+
+<DataTable name="caveBosses" columns="Boss,Levels,Health,Seconds to the chest" />
+
+- Stone Boss: no trick, just the toughest.
+- Giant Newt: fast. A freeze stops it for a moment and does not scare it off. It never puts a Shield to sleep or dodges.
+- King Slime: beaten, it bursts into 4 Slimes, and each splits as usual.
+- Ice Boss: a giant Ice Golem. Beaten, it shatters into 2 Ice Golems that keep walking to the chest.
+- Mole Chief: leaps under Shields and can't be hit underground. In a Lantern's light it walks.
+- Pill Bug Queen: a giant Glow Bug. Every hit bounces off her shell until acid melts it. Glow Bugs come with her. She is slow.
+- Great Bat: flies over Shields, out of the Sword's and the Bomber's reach, brings Ember Bats and lands on the chest to pound it.
+- Prism King: flashes like a Glare Slime. Beaten, it bursts into 4 Glare Slimes.
+- Glitch Boss: a giant Glitch Newt, fast and with less health. It grabs 40% of the chest's hearts and runs, leaving after-images.
+- Moss Boss: the finale. Its moss grows back unless it is burning.
+
+- Until Start, the door the boss will come out of shows the boss's small picture. On a replay the boss can come out of another door, and the picture is always at the one it uses.
+- Every boss but the Glitch Boss stays at the chest and pounds it until it is beaten. The Great Bat lands on the chest, where the Sword can reach it.
+- A boss's health is its share of the level's boss hits, shown in the table below.
+- Once the boss is beaten, the small enemies still to come stay away.
+- A Sword barely moves a boss.
+- The first clear of a boss level gives a new crew kind as a bonus (see [Crew cards](#crew-cards)).
+
+<DataTable name="caveBossLevels" />
+
+Every tenth level is a wall. Walls are also boss levels, and the level list marks a wall as Hard.
+
+The level list and a level's card show flames until you beat it: 1 flame on the first level of each group of 5, one more on each level after, and 5 on the boss level that ends the group.
+
+## Shroom Crew
+
+Your crew are Shrooms set down on the floor before Start. They are the only way to fight: they hit the enemies on their own. A crew member's hit is one plain hit.
+
+- Crew are free to set down. A level takes one of each kind unlocked, up to its crew slots below.
+- Every crew member the level takes must be set down before Start.
+- A Shield stands on a path tile, never in a doorway or on a bridge. Every other kind stands on open floor beside the paths. No crew stand on rocks, crystal, liquid, the chest or each other.
+- A Mender can stand anywhere on the floor.
+- Crew can be moved or taken back until Start.
+- Crew never level up. Crew cards make a kind stronger for good (see [Crew cards](#crew-cards)).
+- Crew skins change only how a crew looks (see [Skins](../../buildings/skins/)).
+
+<DataTable name="caveCrewSlots" />
+
+<DataTable name="caveCrew" />
+
+- Sword: hits the nearest ground enemy in reach, never a flyer, and pushes it back.
+- Shield: holds walkers on its path until its shield breaks.
+- Bow: shoots an enemy in range, flyers first. It never aims at an enemy with a live shell.
+- Frost: freezes every enemy near it on each pulse. It does no damage.
+- Bomber: throws a bomb at the biggest crowd of ground enemies in range. The bomb lands where the crowd was and goes off a moment later. The blast hits every ground enemy in its spread and never a flying one.
+- Sniper: hits one enemy anywhere in the room, a golem or boss first, and of those the one nearest the chest. It never misses, and never aims at an enemy with a live shell.
+- Lantern: Moles in its light can't dig, so they walk, and a Geode in its light can be aimed at.
+- Alchemist: splashes acid on a shelled enemy. It doesn't speed up other crew.
+- Puffball: puffs spores that hit every flyer near it.
+- Mender: crew in its ring can't be dazzled, and their Shields can't be put to sleep. It doesn't heal the chest.
+- Trapper: sets snares on the path that hold walkers.
+- Torch: sets an enemy alight, and a burning enemy can't heal.
+
+Each crew type is for one job. The sections below say how its power works.
+
+### Crew powers
+
+- **Frost** freezes enemies for a moment. Golems and bosses stay frozen half as long. A frozen enemy stands still, and it can't chew a Shield, pound the chest or steal. Frost freezes flyers and Moles above ground, and a Mole underground is out of its reach. A Newt that is frozen turns back and runs out without stealing. The Giant Newt only stops. Cards add freeze time and reach.
+- **Puffball** puffs spores every few seconds. They hit every flyer near it and leave ground enemies alone. Cards widen the cloud and speed up the spores.
+- **Trapper** sets snares on the path near it, and never more than 2 out at once. A snare holds the first walker that steps on it, coming in or running off with a theft, and then goes. Golems and bosses are held half as long. Flyers and Moles that are digging pass over. Cards hold snares longer and set them sooner.
+- **Torch** sets the enemy nearest the chest alight every few seconds. A burning enemy keeps losing health for a few seconds and can't heal. Cards burn longer and reach further.
+- **Mender** has a green ring on the floor. Crew inside it are never dazzled, and their Shields are never put to sleep, so a Newt can't pass them.
+
+### Shells and acid
+
+- A Glow Bug and the Pill Bug Queen wear a shell. Every hit bounces off it, the Torch's fire too, and the Bow and the Sniper don't aim at them. A bounce shows as "bounce".
+- The Alchemist splashes acid every few seconds on the shelled enemy nearest the chest. It melts the shell for good and gives every enemy in the splash a small hit. Cards make it splash sooner.
+- Once a shell is melted, anything can hurt that enemy, and the Bow and the Sniper aim at it. Acid also hits a Geode in the dark.
+
+### Thieves
+
+- A thief is a small enemy that steals from the chest and runs back out. Your crew can still hit it on its way out, and a snare can catch it.
+- A thief beaten on its way out drops its hearts back into the chest. If it gets out, the hearts are gone.
+- The Glitch Newt steals 3 hearts. The Glitch Boss steals 40% of the chest's hearts and runs. If it gets out the level goes on, with those hearts lost.
+
+Level 1 is the Cave tutorial: it shows you how to set down a Sword, a Shield and a Bow, press Start and defend the chest. The first time you have a Lantern, and the first time a level takes a fourth crew member, a short hint says what it is for.
+
+### Misses
+
+The Sword, the Bow and the Bomber sometimes miss. The table's Hits row is the share of swings, shots or blasts that land.
+
+- A miss still uses up the swing, shot or blast. A tiny "miss" shows beside the enemy.
+- A Bomber's miss is a dud: the bomb lands and fizzles, and does nothing.
+- The Sniper never misses, though a Newt can dodge its shot. The Alchemist, Puffball and Torch always land. The Shield, Frost, Lantern, Mender and Trapper don't hit, so they never miss.
+- Accuracy cards raise the Hits share (see [Crew cards](#crew-cards)).
+
+### The Shield
+
+- A walker on the Shield's path stops at the edge of the Shield's tile and chews its health each second: any small enemy 1, and a golem by its size (see [Golems](#golems)). A boss chews hardest.
+- Flyers go straight over a Shield, and Moles leap past under it unless a Lantern lights them.
+- A Newt puts a Shield to sleep for a moment, and a sleeping Shield holds nobody (see [Small enemies](#small-enemies)). A Shield in a Mender's ring is never put to sleep.
+- A broken Shield lets walkers by and grows back with full health after <Fact path="cave.shield.regrowSeconds" /> seconds.
+- A Sword's push moves golems less than small enemies (see [Golems](#golems)).
+
+## Crew cards
+
+Every level's chest holds one crew card beside its other prizes (see [Level chests](#level-chests)). The level's card shows it in its prize list.
+
+- The card adds one rank to one upgrade of a crew kind you have unlocked. An upgrade holds up to <Fact path="cave.upgradeMaxRank" /> ranks, and an upgrade at <Fact path="cave.upgradeMaxRank" /> ranks never comes up.
+- Each upgrade is named for the stat it raises, such as Knockback, Range, Accuracy, Attack Speed or Attack Power (see the table below).
+- Once you win a level's crew card, it is marked won with a green checkmark badge on that level's chest. If every upgrade of your unlocked crew is at <Fact path="cave.upgradeMaxRank" /> ranks, or if an unwon card's upgrade reaches <Fact path="cave.upgradeMaxRank" /> ranks elsewhere, an ore lot takes its place.
+- After the win the clear card says what the card did, such as "Bow: Range, rank 2".
+- Ranks last for good and work on every level.
+
+### New crew kinds
+
+- The first time you beat a boss level (every fifth level), you also get the next crew kind still locked as a bonus, on top of the chest's prize: Frost, Bomber, Sniper, Lantern, Alchemist, Puffball, Mender, Trapper, then Torch.
+- A bonus card shows it after the chest's prize, and the clear card lists the new kind.
+- So beating Level 5 unlocks Frost, just before the Newts come on Level 6. Each zone's boss unlocks the crew type that suits the zone after it.
+- Replays give no bonus, and once every kind is unlocked there is none.
+- Crew kinds unlock only this way. The Sword, the Shield and the Bow are unlocked from the start.
+- A farm from before the crew cards keeps the kinds and ranks it had. Upgrade picks it was still owed come as upgrade cards the next time you open the Cave.
+- A farm that had the Prospector, which is gone, gets the next locked crew kind in its place. Its Silver Share ranks come back as crew cards to win.
+
+<DataTable name="caveUpgrades" />
+
+## Winning and the chest
+
+When the last enemy falls:
+
+1. Your crew jump for joy where they stand.
+2. If the level still has chest rewards left, its chest lid lifts a moment later.
+3. All <Fact path="cave.chest.prizes" /> chest rewards appear still in a row (already won rewards dimmed under a green checkmark badge) while a glowing white frame hops across the rewards left and locks onto your prize. Only skins show their rarity on their cards.
+4. The winning card stays highlighted while the rest dim, then the row goes and the clear card comes up on its own. There is nothing to accept. If an ore prize doesn't fit in Storage, the row stays: "Storage is full" fills red and shakes under the prize, and Make room opens the Storage page (see Making room).
+
+The crew keep jumping until you leave the clear card. Once all <Fact path="cave.chest.prizes" /> rewards on a level are collected, clearing it skips the chest straight to the clear card. With Reduce Motion the crew bob gently instead of jumping, and the landed row fades in directly on the winning card without hopping.
+
+- The prize is stored with the farm at the win, so leaving before the selector lands never loses it.
+- A skin prize is yours at once.
+- An ore prize goes into [Storage](../../storage-and-selling/) when you leave the clear card by Next Level or Play again, or leave the Cave.
+
+### Making room
+
+The Storage page opens from Make room while an ore prize doesn't fit in Storage.
+
+- A red card at the top reads "Make room for 6 Copper Ore", with a slot for each ore. It counts down as the ore goes in and turns green with "All 6 stored".
+- Under it are how full Storage is and every stored item, sorted by value or count. Each item has Sell 1 and Sell All with what they pay, or Trash 1 and Trash All for things that can't be sold, as in Storage.
+- Each time you make room, a waiting ore flies from its slot into its row, one at a time.
+- OK closes the page and goes on to the clear card. Ore that still doesn't fit keeps waiting: the clear card says how many wait, with Make Room, and Play again and Next Level open the page first.
+
+## Level chests
+
+Every level has its own persistent chest of <Fact path="cave.chest.prizes" /> rewards: <Fact path="cave.chest.orePrizes" /> lots of ore, <Fact path="cave.chest.skinPrizes" /> Shroom Crew skins and 1 crew upgrade card.
+
+- The two ore lots are of two different rarities, each by the ore chances below.
+- The two skins are of two different rarities, and climb with the level: Rare and Epic up to Level <Fact path="cave.chest.skinsRareEpicTo" />, Rare and Legendary up to Level <Fact path="cave.chest.skinsRareLegendaryTo" />, then Epic and Legendary.
+- The chest never holds a skin you own. If you own every skin of a rarity, it holds one of another rarity instead, and with none left, ore. If you later buy or win an unwon skin from a level's chest elsewhere, another unowned skin (or ore) takes its place.
+- Each reward you win leaves that level's chest for good. On every clear while rewards remain, the selector hops across only the rewards still left on that level.
+- A spin picks a rarity or the crew card first, then a remaining reward of that kind. The crew card has its own chance, <Fact path="cave.chest.crewCardSpinChance" /> with every rarity left. The chances below are for a full chest; once a rarity or the crew card is won, the others share its chance.
+
+<DataTable name="caveChest" />
+
+### Spins and replays
+
+- Tap a level in the level list to open its card: its <Fact path="cave.chest.prizes" /> chest rewards (listed from least to most rare, the crew card counting as Common, with won rewards dimmed under a green checkmark badge), the level's enemies (and its boss), and Play (or Replay on beaten levels, with the gold cost below the violet button when paid, or Free).
+- Every try on a new level is free, and your first clear opens its chest for one reward. A loss uses nothing up, so you can retry until you win.
+- A beaten level with rewards still left can be played again for gold, paid when you tap Play again on the win screen or Replay on the level's card: <Fact path="cave.chest.replayPriceFirst" as="money" /> on Level 1 and more each level after, easing off toward <Fact path="cave.chest.replayPriceCap" as="money" />, which it never passes (see the level tables above). Play again and a beaten level's card show the price below the button, and Start is then free.
+- A paid play waits on its level until a win uses it, even if you leave the Cave or pick another level first. Choosing that level again costs nothing more. If the Cave opens on a beaten level with no play paid, Start shows the price and pays it.
+- If you lose a paid play, the retry of that level is free until you win.
+- Once all <Fact path="cave.chest.prizes" /> rewards on a level are collected, that level is free to play for stars, and clearing it skips the chest straight to the clear card.
 
 ## New levels
 
-New levels open five at a time. Levels 1 to 5 are open from the start. When you clear the fifth level of a batch, the next five open at the farm's next midnight.
+New levels come in groups of 5: Levels 1 to 5, 6 to 10, and so on. Each group ends on a boss level.
 
-- Trying to play the next level before then, with Next Level or the level list, shows when they open, with a countdown.
-- Unlock now buys all five levels early for gold. I'll wait goes back to the farm.
-- Replays and Levels 1 and 2 never wait.
+- Within a group, each level opens as soon as you clear the one before it.
+- After you clear a group's last level for the first time, the next group opens 1 hour later, in real time. The hour counts down while the game is closed too.
+- Replays and losses don't start or reset the hour.
+- Until then the level's card says how long is left, such as "Unlocks in 42m", and its Play is greyed. The clear card's Next Level is greyed, with "Opens in 42m" under it, and turns green by itself once the hour is up.
+- The wait can't be skipped or bought. Play again replays a beaten level for its remaining chest rewards meanwhile. Exit on the bar at the top leaves the Cave.
+- Level <Fact path="cave.levels" /> is the deepest level.
 
-## Tools against baddies
+## Stars
 
-Your whole farm toolbar works in the Cave, plus a Sword that is there only in the Cave.
+A win is rated from 1 to 5 stars in half steps (5 is a diamond) out of 100 points, and the level keeps its best rating. Replays are rated too. Stars pay nothing.
 
-- Every item hits every baddie for normal damage, the Sword and the Bucket included.
-- The Pickaxe, Axe and Scythe each hit their own baddies <Fact path="cave.strongMultiplier" /> times as hard.
-- No item hits any baddie for less than normal damage.
-- Your crew's hits are the same whatever you hold.
+- Up to 55 points are for the chest's health kept. Full marks need 70% of the health kept on Level 1, and a little more on each deeper level.
+- Up to 45 points are for speed: how soon the last enemy is beaten once the last one has come out. Deeper levels ask for a quicker finish.
 
-<DataTable name="caveTools" />
-
-## Mining the ore
-
-A level's first clear pays ore, which stands in the room as ore veins. The veins hold one or two ore each, spread round the room and kept clear of the paths, the doors and the Heart. Deeper levels have more veins. Crew can't be placed on a vein.
-
-1. Beat the last baddie. The veins stay standing, and the bar turns to "Mine the ore" with a block for each vein.
-2. Your Shroom Crew jump for joy, then take out Pickaxes and split up across the veins, walking round the Heart to them.
-3. Each crew member swings at its vein once a second. The swings so far show above the vein.
-4. When a vein breaks, its crew walk to the nearest vein still standing and help there.
-5. The last swing on a vein breaks it and puts its ore straight into [Storage](../../storage-and-selling/).
-6. The level is cleared once every vein is mined. The bar turns green, the crew walk straight out of the cave, and the clear card lists the rewards: each ore the level paid and how many, the skin crate's skin or gold on a boss level, and on Levels 5, 10, 15 and so on the swipe card you picked.
-
-You can help with the Pickaxe as you mine a rock on the farm: tap a vein, or drag the tool button across it. Each pass adds one swing, and the swings so far show above your finger.
-
-- Your swings and the crew's count together on each vein. A vein keeps its count when you move to another.
-- A vein takes as many swings as that rock does for your Pickaxe level (see [Mining](../../gathering/mining/)).
-- Any other item says to use the Pickaxe.
-- A vein breaks only if Storage has room for all its ore. Otherwise the crew keep swinging, but it stays until you make room.
-- The first clear of a boss level gives a free skin crate. A replay gives none.
-  - Once the boss falls and your crew jump for joy, the crate drops into the room and opens. A reel of skin cards spins and stops on the one you get.
-  - Each crate is Common 50%, Rare 30%, Epic 15% or Legendary 5%.
-  - After 4 crates in a row without Epic or better, the 5th is Epic (75%) or Legendary (25%) for sure. Any Epic or Legendary starts the count again.
-  - The crate only gives skins you don't own yet, from every Shroom Crew and building skin sold, the Trunk's included. Gold Leaf is never in it. If a tier has nothing left for you, the crate moves up a tier.
-  - Once you own every skin it could give, the crate gives that tier's lowest skin price in gold instead.
-  - Tap the ? on the reel to see the odds and how close the next sure Epic is. Skip goes straight to the reveal.
-  - The skin is yours at once. It plays the same reveal and sound as buying a skin, then the crew mine the ore.
-- If some ore is still waiting for room in Storage, the Rewards list says how much.
-- Ore left unmined when you leave the Cave goes into Storage if it fits.
-- A replay pays nothing and has no veins.
+| Points | Stars |
+| --- | --- |
+| 92 or more | 5 |
+| 80 | 4.5 |
+| 70 | 4 |
+| 60 | 3.5 |
+| 50 | 3 |
+| 40 | 2.5 |
+| 30 | 2 |
+| 20 | 1.5 |
+| Less | 1 |

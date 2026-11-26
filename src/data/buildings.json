@@ -420,7 +420,7 @@
       "Peach Preserves",
       "Lemon Preserves",
       "Copper Bar",
-      "Silver Bar",
+      "Iron Bar",
       "Gold Bar",
       "Banana Preserves",
       "Turnip Soup",
@@ -567,8 +567,8 @@
     "purpose" : "Spins wool and cotton into cloth",
     "recipes" : [
       "Wool Cloth",
-      "Fine Cloth",
-      "Cloth"
+      "Cloth",
+      "Fine Cloth"
     ],
     "stones" : 11,
     "styles" : [

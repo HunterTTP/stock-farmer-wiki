@@ -1,10 +1,16 @@
 // Formatting shared by every generated table, so numbers read the same on every page (see README, style guide).
 
-/** Money as the game writes it: whole gold with the cents dropped: 10g, 1g, 100,000g. Zero is "Free". */
+/** Money as the game writes it in words, 100 silver to 1 gold: 12 gold 40 silver, 436 gold, 10 silver. Zero is "Free". */
 export function money(amount, { zero = 'Free' } = {}) {
   if (amount == null) return '';
-  if (amount === 0) return zero;
-  return Math.trunc(Math.round(amount * 100) / 100).toLocaleString('en-US') + 'g';
+  const cents = Math.round(amount * 100);
+  if (cents === 0) return zero;
+  const gold = Math.trunc(cents / 100);
+  const silver = Math.abs(cents % 100);
+  const parts = [];
+  if (gold !== 0 || silver === 0) parts.push(`${gold.toLocaleString('en-US')} gold`);
+  if (silver !== 0) parts.push(`${silver} silver`);
+  return parts.join(' ');
 }
 
 /** A time in whole seconds, at most two units: 10 s, 1 min 20 s, 2 h 5 min, 1 d 3 h. */

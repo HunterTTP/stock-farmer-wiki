@@ -10,6 +10,9 @@ export const data = Object.fromEntries(
 
 const level = (value) => (value == null ? '' : `${value}`);
 const yes = (value) => (value ? 'Yes' : '');
+const golemSizes = ['small', 'medium', 'large'];
+const golems = (r) => list(golemSizes.filter((size) => r[`${size}Golems`]).map((size) => `${r[`${size}Golems`]} ${size}`));
+const golemHits = (r) => list(golemSizes.filter((size) => r[`${size}GolemHits`] != null).map((size) => `${count(r[`${size}GolemHits`])} ${size}`));
 
 export const tables = {
   crops: {
@@ -211,12 +214,110 @@ export const tables = {
       ['Gathers', (r) => r.gathers],
     ],
   },
-  caveTools: {
-    rows: () => data.cave.tools,
+  caveLevels: {
+    rows: () => data.cave.levelRows.filter((r) => r.level === 1 || r.level % 10 === 9),
+    columns: [
+      ['Level', (r) => level(r.level)],
+      ['Waves', (r) => count(r.waves)],
+      ['Small enemies', (r) => count(r.smallEnemies)],
+      ['Golems', (r) => golems(r) || 'None'],
+      ['Hits to beat a golem', (r) => golemHits(r)],
+      ['Replay costs', (r) => money(r.replayPrice)],
+    ],
+  },
+  caveBossLevels: {
+    rows: () => data.cave.levelRows.filter((r) => r.boss),
+    columns: [
+      ['Level', (r) => level(r.level)],
+      ['Boss', (r) => r.bossName],
+      ['Wall', (r) => yes(r.wall)],
+      ['Small enemies', (r) => count(r.smallEnemies)],
+      ['Hits to beat the boss', (r) => count(r.bossHits)],
+      ['Replay costs', (r) => money(r.replayPrice)],
+    ],
+  },
+  caveChest: {
+    rows: () => data.cave.chest.rarities,
     icon: (r) => r.icon,
     columns: [
-      ['Tool', (r) => r.name],
-      ['Strong against', (r) => list(r.strongAgainst)],
+      ['Rarity', (r) => r.name],
+      ['Ore prize', (r) => `${r.oreMin} to ${r.oreMax} ${r.ore}`],
+      ['Crew skins', (r) => (r.skins ? count(r.skins) : '')],
+      ['Chance of each ore lot', (r) => r.poolChance],
+      ['Chance a spin picks it', (r) => r.spinChance],
+    ],
+  },
+  caveZones: {
+    rows: () => data.cave.zones,
+    columns: [
+      ['Levels', (r) => `${r.first} to ${r.last}`],
+      ['Zone', (r) => r.name],
+      ['Room', (r) => `${r.roomSize}×${r.roomSize} tiles`],
+      ['Doors', (r) => count(r.doors)],
+      ['Liquid', (r) => (r.liquid ? `${r.liquid}: ${r.layout.charAt(0).toLowerCase()}${r.layout.slice(1)}` : 'None')],
+      ['Leans to', (r) => list(r.lean)],
+      ['Boss', (r) => r.boss],
+    ],
+  },
+  caveEnemies: {
+    rows: () => data.cave.enemies,
+    columns: [
+      ['Enemy', (r) => r.name],
+      ['First comes on', (r) => (r.firstLevel ? level(r.firstLevel) : 'From a Slime')],
+      ['Speed', (r) => `${r.speed}`],
+      ['Moves', (r) => r.moves],
+      ['What to know', (r) => r.note],
+    ],
+  },
+  caveGolems: {
+    rows: () => data.cave.golems,
+    columns: [
+      ['Golem', (r) => r.size],
+      ['Seconds to the chest', (r) => `${r.secondsToChest} s`],
+      ['Chews a Shield', (r) => `${r.shieldChew} a second`],
+      ['Sword push', (r) => r.shove],
+    ],
+  },
+  caveBosses: {
+    rows: () => data.cave.bosses,
+    columns: [
+      ['Boss', (r) => r.name],
+      ['Levels', (r) => list(r.levels.map(String))],
+      ['Health', (r) => `${r.hitShare} of the level's boss hits`],
+      ['Seconds to the chest', (r) => `${r.secondsToChest} s`],
+      ['Its trick', (r) => r.trick],
+    ],
+  },
+  caveCrew: {
+    rows: () => data.cave.crew,
+    columns: [
+      ['Crew', (r) => r.name],
+      ['Unlocks', (r) => (r.unlockOrder ? `Boss card ${r.unlockOrder}` : 'From the start')],
+      ['What it does', (r) => r.purpose],
+      ['Numbers', (r) => list(r.stats, '; ')],
+    ],
+  },
+  caveCrewSlots: {
+    rows: () => data.cave.crewSlots,
+    columns: [
+      ['From level', (r) => level(r.from)],
+      ['Crew', (r) => count(r.crew)],
+    ],
+  },
+  caveCrewPace: {
+    rows: () => data.cave.crewPace,
+    columns: [
+      ['Level', (r) => level(r.level)],
+      ['Sword', (r) => `${r.swordSeconds} s`],
+      ['Bow', (r) => `${r.bowSeconds} s`],
+    ],
+  },
+  caveUpgrades: {
+    rows: () => data.cave.upgrades,
+    columns: [
+      ['Crew', (r) => r.crew],
+      ['Card', (r) => r.card],
+      ['Each rank', (r) => r.detail],
     ],
   },
   pets: {

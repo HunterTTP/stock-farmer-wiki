@@ -21,11 +21,11 @@
       "dailyLimit" : 10,
       "icon" : {
         "height" : 22,
-        "src" : "sprites/ores/silver.png",
+        "src" : "sprites/ores/iron.png",
         "width" : 26
       },
-      "id" : "ore-silver",
-      "name" : "Silver Ore",
+      "id" : "ore-iron",
+      "name" : "Iron Ore",
       "price" : 250,
       "sellsFor" : 10
     },

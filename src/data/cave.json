@@ -1,52 +1,1374 @@
 {
-  "strongMultiplier" : 2,
-  "tools" : [
+  "bosses" : [
     {
-      "icon" : {
-        "height" : 28,
-        "src" : "sprites/tools/pickaxe-1.png",
-        "width" : 28
-      },
-      "id" : "pickaxe",
-      "name" : "Pickaxe",
-      "strongAgainst" : [
-        "Rock Golem",
-        "Rock Crab",
-        "Shell Beetle",
-        "Pill Bug"
-      ]
+      "hitShare" : "100%",
+      "id" : "stone",
+      "levels" : [
+        5
+      ],
+      "name" : "Stone Boss",
+      "secondsToChest" : 22.5,
+      "trick" : "None: simply the toughest."
     },
     {
-      "icon" : {
-        "height" : 31,
-        "src" : "sprites/tools/axe-1.png",
-        "width" : 23
-      },
-      "id" : "axe",
-      "name" : "Axe",
-      "strongAgainst" : [
-        "Dust Mite",
-        "Glow Skitter",
-        "Hopping Mole",
-        "Zip Newt"
-      ]
+      "hitShare" : "80%",
+      "id" : "moleChief",
+      "levels" : [
+        25
+      ],
+      "name" : "Mole Chief",
+      "secondsToChest" : 22.5,
+      "trick" : "Leaps under Shields and can't be hit underground. In a Lantern's light it walks."
     },
     {
-      "icon" : {
-        "height" : 28,
-        "src" : "sprites/tools/scythe-1.png",
-        "width" : 32
+      "hitShare" : "50%",
+      "id" : "giantNewt",
+      "levels" : [
+        10
+      ],
+      "name" : "Giant Newt",
+      "secondsToChest" : 12.9,
+      "trick" : "Fast. Frost freezes it in place and a Shield holds it. It never puts a Shield to sleep or dodges."
+    },
+    {
+      "hitShare" : "80%",
+      "id" : "pillBugQueen",
+      "levels" : [
+        30
+      ],
+      "name" : "Pill Bug Queen",
+      "secondsToChest" : 27,
+      "trick" : "A giant Glow Bug. Every hit bounces off her shell until an Alchemist's acid melts it. Slow."
+    },
+    {
+      "hitShare" : "50%",
+      "id" : "greatBat",
+      "levels" : [
+        35
+      ],
+      "name" : "Great Bat",
+      "secondsToChest" : 18,
+      "trick" : "Flies over Shields, out of the Sword's and the Bomber's reach, and lands on the chest to pound it."
+    },
+    {
+      "hitShare" : "60%",
+      "id" : "kingSlime",
+      "levels" : [
+        15
+      ],
+      "name" : "King Slime",
+      "secondsToChest" : 22.5,
+      "trick" : "Beaten, it bursts into 4 Slimes, and each of those splits as usual."
+    },
+    {
+      "hitShare" : "100%",
+      "id" : "moss",
+      "levels" : [
+        50
+      ],
+      "name" : "Moss Boss",
+      "secondsToChest" : 22.5,
+      "trick" : "It heals itself unless it is burning, so a Torch's fire stops it. The finale."
+    },
+    {
+      "hitShare" : "100%",
+      "id" : "iceBoss",
+      "levels" : [
+        20
+      ],
+      "name" : "Ice Boss",
+      "secondsToChest" : 22.5,
+      "trick" : "A giant Ice Golem: simply tough."
+    },
+    {
+      "hitShare" : "60%",
+      "id" : "prismKing",
+      "levels" : [
+        40
+      ],
+      "name" : "Prism King",
+      "secondsToChest" : 22.5,
+      "trick" : "Beaten, it bursts into 4 Glare Slimes."
+    },
+    {
+      "hitShare" : "50%",
+      "id" : "glitchBoss",
+      "levels" : [
+        45
+      ],
+      "name" : "Glitch Boss",
+      "secondsToChest" : 12.9,
+      "trick" : "A giant Glitch Newt: fast, with less health."
+    }
+  ],
+  "chest" : {
+    "crewCardSpinChance" : "15%",
+    "orePrizes" : 2,
+    "prizes" : 5,
+    "rarities" : [
+      {
+        "icon" : {
+          "height" : 22,
+          "src" : "sprites/ores/copper.png",
+          "width" : 26
+        },
+        "id" : "common",
+        "name" : "Common",
+        "ore" : "Copper Ore",
+        "oreMax" : 9,
+        "oreMin" : 4,
+        "poolChance" : "30%",
+        "skins" : 0,
+        "spinChance" : "34%"
       },
-      "id" : "scythe",
-      "name" : "Scythe",
-      "strongAgainst" : [
-        "Jelly Slime",
-        "Mini Slime",
-        "King Slime",
-        "Cave Bat",
-        "Lantern Moth",
-        "Cave Darter"
-      ]
+      {
+        "icon" : {
+          "height" : 22,
+          "src" : "sprites/ores/iron.png",
+          "width" : 26
+        },
+        "id" : "uncommon",
+        "name" : "Uncommon",
+        "ore" : "Iron Ore",
+        "oreMax" : 6,
+        "oreMin" : 3,
+        "poolChance" : "25%",
+        "skins" : 0,
+        "spinChance" : "24%"
+      },
+      {
+        "icon" : {
+          "height" : 22,
+          "src" : "sprites/ores/gold.png",
+          "width" : 26
+        },
+        "id" : "rare",
+        "name" : "Rare",
+        "ore" : "Gold Ore",
+        "oreMax" : 4,
+        "oreMin" : 2,
+        "poolChance" : "20%",
+        "skins" : 6,
+        "spinChance" : "15%"
+      },
+      {
+        "icon" : {
+          "height" : 27,
+          "src" : "sprites/ores/ruby.png",
+          "width" : 27
+        },
+        "id" : "epic",
+        "name" : "Epic",
+        "ore" : "Rough Ruby",
+        "oreMax" : 3,
+        "oreMin" : 1,
+        "poolChance" : "15%",
+        "skins" : 5,
+        "spinChance" : "8%"
+      },
+      {
+        "icon" : {
+          "height" : 27,
+          "src" : "sprites/ores/sapphire.png",
+          "width" : 27
+        },
+        "id" : "legendary",
+        "name" : "Legendary",
+        "ore" : "Rough Sapphire",
+        "oreMax" : 2,
+        "oreMin" : 1,
+        "poolChance" : "10%",
+        "skins" : 2,
+        "spinChance" : "3%"
+      }
+    ],
+    "replayPriceCap" : 10000,
+    "replayPriceFirst" : 100,
+    "skinPrizes" : 2,
+    "skinsRareEpicTo" : 20,
+    "skinsRareLegendaryTo" : 40
+  },
+  "chestDrainPerSecond" : 1,
+  "chestHealth" : 10,
+  "chestTheft" : 1,
+  "crew" : [
+    {
+      "id" : "sword",
+      "name" : "Sword",
+      "purpose" : "Hits ground enemies beside it and knocks them back.",
+      "stats" : [
+        "Damage 2 hits",
+        "Hits every 1 s",
+        "Hits 90%",
+        "Reach 1.3 tiles",
+        "Knock back 0.6 tiles"
+      ],
+      "unlockOrder" : 0
+    },
+    {
+      "id" : "shield",
+      "name" : "Shield",
+      "purpose" : "Blocks walkers on its path until its shield breaks.",
+      "stats" : [
+        "Shield 40",
+        "Grows back in 20 s"
+      ],
+      "unlockOrder" : 0
+    },
+    {
+      "id" : "ranged",
+      "name" : "Bow",
+      "purpose" : "Shoots enemies from afar, flyers first.",
+      "stats" : [
+        "Damage 1 hit",
+        "Hits every 1 s",
+        "Hits 75%",
+        "Range 3 tiles"
+      ],
+      "unlockOrder" : 0
+    },
+    {
+      "id" : "frost",
+      "name" : "Frost",
+      "purpose" : "Freezes enemies near it for a moment.",
+      "stats" : [
+        "Freezes every 3 s",
+        "Spread 2 tiles",
+        "Freezes for 1 s"
+      ],
+      "unlockOrder" : 1
+    },
+    {
+      "id" : "sniper",
+      "name" : "Sniper",
+      "purpose" : "Hits one tough enemy anywhere, Rock Golems first.",
+      "stats" : [
+        "Damage 4 hits",
+        "Hits every 5 s",
+        "Hits 100%"
+      ],
+      "unlockOrder" : 3
+    },
+    {
+      "id" : "bomber",
+      "name" : "Bomber",
+      "purpose" : "Blasts the biggest crowd near it.",
+      "stats" : [
+        "Damage 1 hit",
+        "Hits every 4 s",
+        "Hits 80%",
+        "Range 4 tiles",
+        "Spread 1.25 tiles"
+      ],
+      "unlockOrder" : 2
+    },
+    {
+      "id" : "alchemist",
+      "name" : "Alchemist",
+      "purpose" : "Acid melts shells for good.",
+      "stats" : [
+        "Damage 0.25 hit",
+        "Hits every 4 s",
+        "Hits 100%",
+        "Range 3 tiles",
+        "Spread 1 tiles"
+      ],
+      "unlockOrder" : 5
+    },
+    {
+      "id" : "lantern",
+      "name" : "Lantern",
+      "purpose" : "Moles in its light can't dig, so they walk.",
+      "stats" : [
+        "Spread 2.5 tiles"
+      ],
+      "unlockOrder" : 4
+    },
+    {
+      "id" : "mender",
+      "name" : "Mender",
+      "purpose" : "Crew in its ring can't be dazzled.",
+      "stats" : [
+        "Spread 2 tiles"
+      ],
+      "unlockOrder" : 7
+    },
+    {
+      "id" : "spores",
+      "name" : "Puffball",
+      "purpose" : "Spores hit every flyer near it.",
+      "stats" : [
+        "Damage 1 hit",
+        "Hits every 2.5 s",
+        "Hits 100%",
+        "Spread 1.75 tiles"
+      ],
+      "unlockOrder" : 6
+    },
+    {
+      "id" : "snare",
+      "name" : "Trapper",
+      "purpose" : "Snares catch thieves coming or going.",
+      "stats" : [
+        "Snares every 5 s",
+        "Range 3 tiles",
+        "Holds for 3 s"
+      ],
+      "unlockOrder" : 8
+    },
+    {
+      "id" : "torch",
+      "name" : "Torch",
+      "purpose" : "Sets enemies alight; burning enemies can't heal.",
+      "stats" : [
+        "Damage 0.5 hit a second",
+        "Lights every 3 s",
+        "Hits 100%",
+        "Range 2.5 tiles",
+        "Burns for 4 s"
+      ],
+      "unlockOrder" : 9
+    }
+  ],
+  "crewPace" : [
+    {
+      "bowSeconds" : 1,
+      "level" : 1,
+      "swordSeconds" : 1
+    }
+  ],
+  "crewPerLevel" : 3,
+  "crewSlots" : [
+    {
+      "crew" : 3,
+      "from" : 1
+    },
+    {
+      "crew" : 4,
+      "from" : 11
+    },
+    {
+      "crew" : 5,
+      "from" : 31
+    }
+  ],
+  "enemies" : [
+    {
+      "firstLevel" : 1,
+      "id" : "mite",
+      "moves" : "Walks",
+      "name" : "Pebble",
+      "note" : "The plain walker.",
+      "speed" : 0.9
+    },
+    {
+      "firstLevel" : 2,
+      "id" : "mole",
+      "moves" : "Leaps",
+      "name" : "Mole",
+      "note" : "Moles dig under Shields. Hit them when they pop up.",
+      "speed" : 1.1
+    },
+    {
+      "firstLevel" : 3,
+      "id" : "bat",
+      "moves" : "Flies",
+      "name" : "Bat",
+      "note" : "It flies over Shields. The Bow can reach it.",
+      "speed" : 1.5
+    },
+    {
+      "firstLevel" : 6,
+      "id" : "newt",
+      "moves" : "Weaves",
+      "name" : "Newt",
+      "note" : "Fast and slippery. Puts Shields to sleep for a moment.",
+      "speed" : 1.6
+    },
+    {
+      "firstLevel" : 11,
+      "id" : "slime",
+      "moves" : "Walks",
+      "name" : "Slime",
+      "note" : "Beaten, it splits into two Mini Slimes. A Bomber blasts them all.",
+      "speed" : 0.8
+    },
+    {
+      "firstLevel" : 21,
+      "id" : "geode",
+      "moves" : "Walks",
+      "name" : "Geode",
+      "note" : "It hides among the crystals. Crew only aim at it in a Lantern's light.",
+      "speed" : 0.9
+    },
+    {
+      "firstLevel" : 26,
+      "id" : "glowBug",
+      "moves" : "Walks",
+      "name" : "Glow Bug",
+      "note" : "Every hit bounces off its shell. Acid melts it.",
+      "speed" : 0.7
+    },
+    {
+      "firstLevel" : 31,
+      "id" : "emberBat",
+      "moves" : "Flies",
+      "name" : "Ember Bat",
+      "note" : "It comes in big flocks and flies over Shields.",
+      "speed" : 1.5
+    },
+    {
+      "firstLevel" : 36,
+      "id" : "glareSlime",
+      "moves" : "Walks",
+      "name" : "Glare Slime",
+      "note" : "Its flash dazzles crew near it. A Mender keeps them clear.",
+      "speed" : 0.8
+    },
+    {
+      "firstLevel" : 41,
+      "id" : "glitchNewt",
+      "moves" : "Weaves",
+      "name" : "Glitch Newt",
+      "note" : "It blinks ahead, grabs 3 hearts and runs. Beat it to get them back.",
+      "speed" : 1.6
+    },
+    {
+      "id" : "mini",
+      "moves" : "Walks",
+      "name" : "Mini Slime",
+      "note" : "Comes from a beaten Slime.",
+      "speed" : 1
+    }
+  ],
+  "golems" : [
+    {
+      "secondsToChest" : 21.5,
+      "shieldChew" : 2,
+      "shove" : "50%",
+      "size" : "Small"
+    },
+    {
+      "secondsToChest" : 22,
+      "shieldChew" : 3,
+      "shove" : "30%",
+      "size" : "Medium"
+    },
+    {
+      "secondsToChest" : 22.5,
+      "shieldChew" : 4,
+      "shove" : "15%",
+      "size" : "Large"
+    }
+  ],
+  "levelRows" : [
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 1,
+      "mediumGolems" : 0,
+      "replayPrice" : 100,
+      "smallEnemies" : 12,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 2,
+      "mediumGolems" : 0,
+      "replayPrice" : 110,
+      "smallEnemies" : 8,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 3,
+      "mediumGolems" : 0,
+      "replayPrice" : 121,
+      "smallEnemies" : 12,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 4,
+      "mediumGolems" : 0,
+      "replayPrice" : 133,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : true,
+      "bossHits" : 15,
+      "bossName" : "Stone Boss",
+      "largeGolems" : 0,
+      "level" : 5,
+      "mediumGolems" : 0,
+      "replayPrice" : 146,
+      "smallEnemies" : 10,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 6,
+      "mediumGolems" : 0,
+      "replayPrice" : 161,
+      "smallEnemies" : 15,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 7,
+      "mediumGolems" : 0,
+      "replayPrice" : 176,
+      "smallEnemies" : 17,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 8,
+      "mediumGolems" : 0,
+      "replayPrice" : 194,
+      "smallEnemies" : 20,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 9,
+      "mediumGolems" : 0,
+      "replayPrice" : 212,
+      "smallEnemies" : 24,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : true,
+      "bossHits" : 4,
+      "bossName" : "Giant Newt",
+      "largeGolems" : 0,
+      "level" : 10,
+      "mediumGolems" : 0,
+      "replayPrice" : 233,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 11,
+      "mediumGolems" : 0,
+      "replayPrice" : 256,
+      "smallEnemies" : 31,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 12,
+      "mediumGolems" : 0,
+      "replayPrice" : 281,
+      "smallEnemies" : 31,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 13,
+      "mediumGolems" : 0,
+      "replayPrice" : 308,
+      "smallEnemies" : 31,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 14,
+      "mediumGolems" : 0,
+      "replayPrice" : 337,
+      "smallEnemies" : 32,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : true,
+      "bossHits" : 19.8,
+      "bossName" : "King Slime",
+      "largeGolems" : 0,
+      "level" : 15,
+      "mediumGolems" : 0,
+      "replayPrice" : 370,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 16,
+      "mediumGolemHits" : 26,
+      "mediumGolems" : 1,
+      "replayPrice" : 405,
+      "smallEnemies" : 29,
+      "smallGolemHits" : 13,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 17,
+      "mediumGolemHits" : 26,
+      "mediumGolems" : 1,
+      "replayPrice" : 444,
+      "smallEnemies" : 29,
+      "smallGolemHits" : 13,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 18,
+      "mediumGolemHits" : 26,
+      "mediumGolems" : 1,
+      "replayPrice" : 486,
+      "smallEnemies" : 30,
+      "smallGolemHits" : 13,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 19,
+      "mediumGolemHits" : 30,
+      "mediumGolems" : 1,
+      "replayPrice" : 532,
+      "smallEnemies" : 30,
+      "smallGolemHits" : 15,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : true,
+      "bossHits" : 34,
+      "bossName" : "Ice Boss",
+      "largeGolems" : 0,
+      "level" : 20,
+      "mediumGolems" : 0,
+      "replayPrice" : 582,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 21,
+      "mediumGolems" : 0,
+      "replayPrice" : 637,
+      "smallEnemies" : 35,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 22,
+      "mediumGolems" : 0,
+      "replayPrice" : 696,
+      "smallEnemies" : 35,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 23,
+      "mediumGolems" : 0,
+      "replayPrice" : 760,
+      "smallEnemies" : 35,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 24,
+      "mediumGolems" : 0,
+      "replayPrice" : 830,
+      "smallEnemies" : 36,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : true,
+      "bossHits" : 28.4,
+      "bossName" : "Mole Chief",
+      "largeGolems" : 0,
+      "level" : 25,
+      "mediumGolems" : 0,
+      "replayPrice" : 905,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 26,
+      "mediumGolems" : 0,
+      "replayPrice" : 987,
+      "smallEnemies" : 36,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 27,
+      "mediumGolems" : 0,
+      "replayPrice" : 1075,
+      "smallEnemies" : 36,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 4
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 28,
+      "mediumGolems" : 0,
+      "replayPrice" : 1170,
+      "smallEnemies" : 37,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 29,
+      "mediumGolems" : 0,
+      "replayPrice" : 1272,
+      "smallEnemies" : 37,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : true,
+      "bossHits" : 50.4,
+      "bossName" : "Pill Bug Queen",
+      "largeGolems" : 0,
+      "level" : 30,
+      "mediumGolems" : 0,
+      "replayPrice" : 1382,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 31,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 3,
+      "replayPrice" : 1499,
+      "smallEnemies" : 34,
+      "smallGolemHits" : 7.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 32,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 3,
+      "replayPrice" : 1624,
+      "smallEnemies" : 34,
+      "smallGolemHits" : 7.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 33,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 3,
+      "replayPrice" : 1758,
+      "smallEnemies" : 34,
+      "smallGolemHits" : 7.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 34,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 3,
+      "replayPrice" : 1901,
+      "smallEnemies" : 35,
+      "smallGolemHits" : 7.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : true,
+      "bossHits" : 32,
+      "bossName" : "Great Bat",
+      "largeGolems" : 0,
+      "level" : 35,
+      "mediumGolems" : 0,
+      "replayPrice" : 2052,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 36,
+      "mediumGolems" : 0,
+      "replayPrice" : 2212,
+      "smallEnemies" : 40,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 37,
+      "mediumGolems" : 0,
+      "replayPrice" : 2380,
+      "smallEnemies" : 40,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 38,
+      "mediumGolems" : 0,
+      "replayPrice" : 2557,
+      "smallEnemies" : 41,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 39,
+      "mediumGolems" : 0,
+      "replayPrice" : 2743,
+      "smallEnemies" : 41,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : true,
+      "bossHits" : 39,
+      "bossName" : "Prism King",
+      "largeGolems" : 0,
+      "level" : 40,
+      "mediumGolems" : 0,
+      "replayPrice" : 2936,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 41,
+      "mediumGolems" : 0,
+      "replayPrice" : 3138,
+      "smallEnemies" : 42,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 42,
+      "mediumGolems" : 0,
+      "replayPrice" : 3347,
+      "smallEnemies" : 42,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 43,
+      "mediumGolems" : 0,
+      "replayPrice" : 3562,
+      "smallEnemies" : 42,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 44,
+      "mediumGolems" : 0,
+      "replayPrice" : 3783,
+      "smallEnemies" : 42,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : true,
+      "bossHits" : 33,
+      "bossName" : "Glitch Boss",
+      "largeGolems" : 0,
+      "level" : 45,
+      "mediumGolems" : 0,
+      "replayPrice" : 4010,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 28,
+      "largeGolems" : 2,
+      "level" : 46,
+      "mediumGolemHits" : 14,
+      "mediumGolems" : 3,
+      "replayPrice" : 4241,
+      "smallEnemies" : 37,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 30,
+      "largeGolems" : 2,
+      "level" : 47,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 3,
+      "replayPrice" : 4475,
+      "smallEnemies" : 37,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 30,
+      "largeGolems" : 2,
+      "level" : 48,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 3,
+      "replayPrice" : 4712,
+      "smallEnemies" : 37,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 36,
+      "largeGolems" : 2,
+      "level" : 49,
+      "mediumGolemHits" : 18,
+      "mediumGolems" : 3,
+      "replayPrice" : 4950,
+      "smallEnemies" : 38,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : true,
+      "bossHits" : 67,
+      "bossName" : "Moss Boss",
+      "largeGolems" : 0,
+      "level" : 50,
+      "mediumGolems" : 0,
+      "replayPrice" : 5188,
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    }
+  ],
+  "levels" : 50,
+  "newt" : {
+    "dodge" : "60%",
+    "sleepSeconds" : 1.5,
+    "wakeGraceSeconds" : 2
+  },
+  "room" : {
+    "fewestJoins" : 2,
+    "largestRoom" : 15,
+    "longestBridge" : 2,
+    "threePathsFrom" : 11,
+    "twoLeanDoorsFrom" : 31,
+    "zoneLevels" : 5
+  },
+  "shield" : {
+    "health" : 40,
+    "regrowSeconds" : 20
+  },
+  "upgradeMaxRank" : 5,
+  "upgrades" : [
+    {
+      "card" : "Knockback",
+      "crew" : "Sword",
+      "detail" : "Each rank knocks enemies back a little further.",
+      "id" : "swordKnockback"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Sword",
+      "detail" : "Each rank lets the Sword hit a little further away.",
+      "id" : "swordReach"
+    },
+    {
+      "card" : "Accuracy",
+      "crew" : "Sword",
+      "detail" : "Each rank lands 2 more swings in every 100.",
+      "id" : "swordAccuracy"
+    },
+    {
+      "card" : "Shield",
+      "crew" : "Shield",
+      "detail" : "Each rank gives the Shield more health.",
+      "id" : "shieldArmour"
+    },
+    {
+      "card" : "Regrow Speed",
+      "crew" : "Shield",
+      "detail" : "Each rank grows a broken Shield back 2 seconds sooner.",
+      "id" : "shieldRegrow"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Bow",
+      "detail" : "Each rank lets the Bow shoot a little further.",
+      "id" : "bowRange"
+    },
+    {
+      "card" : "Attack Speed",
+      "crew" : "Bow",
+      "detail" : "Each rank makes the Bow shoot a little faster.",
+      "id" : "bowInterval"
+    },
+    {
+      "card" : "Accuracy",
+      "crew" : "Bow",
+      "detail" : "Each rank lands 4 more shots in every 100.",
+      "id" : "bowAccuracy"
+    },
+    {
+      "card" : "Freeze Time",
+      "crew" : "Frost",
+      "detail" : "Each rank keeps enemies frozen a little longer.",
+      "id" : "frostSlowDuration"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Frost",
+      "detail" : "Each rank lets the freeze reach a little further.",
+      "id" : "frostSlowAmount"
+    },
+    {
+      "card" : "Attack Speed",
+      "crew" : "Sniper",
+      "detail" : "Each rank takes 0.3 seconds off the time between shots.",
+      "id" : "sniperInterval"
+    },
+    {
+      "card" : "Attack Power",
+      "crew" : "Sniper",
+      "detail" : "Each rank makes each shot hit a little harder.",
+      "id" : "sniperDamage"
+    },
+    {
+      "card" : "Blast Size",
+      "crew" : "Bomber",
+      "detail" : "Each rank makes the blast a little wider.",
+      "id" : "bomberRadius"
+    },
+    {
+      "card" : "Accuracy",
+      "crew" : "Bomber",
+      "detail" : "Each rank lands 3 more blasts in every 100.",
+      "id" : "bomberAccuracy"
+    },
+    {
+      "card" : "Attack Speed",
+      "crew" : "Alchemist",
+      "detail" : "Each rank makes the Alchemist splash acid a little sooner.",
+      "id" : "alchemistMark"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Lantern",
+      "detail" : "Each rank makes the Lantern's light reach a little further.",
+      "id" : "lanternRadius"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Mender",
+      "detail" : "Each rank makes the Mender's ring a little wider.",
+      "id" : "menderReach"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Puffball",
+      "detail" : "Each rank makes the spore cloud a little wider.",
+      "id" : "sporeReach"
+    },
+    {
+      "card" : "Attack Speed",
+      "crew" : "Puffball",
+      "detail" : "Each rank makes the Puffball puff spores a little faster.",
+      "id" : "sporePace"
+    },
+    {
+      "card" : "Hold Time",
+      "crew" : "Trapper",
+      "detail" : "Each rank makes a snare hold enemies half a second longer.",
+      "id" : "snareHold"
+    },
+    {
+      "card" : "Attack Speed",
+      "crew" : "Trapper",
+      "detail" : "Each rank makes the Trapper set snares a little faster.",
+      "id" : "snarePace"
+    },
+    {
+      "card" : "Burn Time",
+      "crew" : "Torch",
+      "detail" : "Each rank keeps enemies burning a second longer.",
+      "id" : "torchBurn"
+    },
+    {
+      "card" : "Range",
+      "crew" : "Torch",
+      "detail" : "Each rank lets the Torch reach a little further.",
+      "id" : "torchReach"
+    }
+  ],
+  "zones" : [
+    {
+      "boss" : "Stone Boss",
+      "doors" : 2,
+      "first" : 1,
+      "last" : 5,
+      "layout" : "Plain floor",
+      "lean" : [
+        "Mole",
+        "Bat"
+      ],
+      "name" : "Earth",
+      "ownRun" : 2,
+      "roomSize" : 11
+    },
+    {
+      "boss" : "Giant Newt",
+      "doors" : 2,
+      "first" : 6,
+      "last" : 10,
+      "layout" : "A fall, then a river across the room",
+      "lean" : [
+        "Newt",
+        "Mole"
+      ],
+      "liquid" : "Water",
+      "name" : "River",
+      "ownRun" : 2,
+      "roomSize" : 11
+    },
+    {
+      "boss" : "King Slime",
+      "doors" : 3,
+      "first" : 11,
+      "last" : 15,
+      "layout" : "A fall, then a river down the room",
+      "lean" : [
+        "Slime",
+        "Newt"
+      ],
+      "liquid" : "Slime",
+      "name" : "Green Slime",
+      "ownRun" : 3,
+      "roomSize" : 13
+    },
+    {
+      "boss" : "Ice Boss",
+      "doors" : 3,
+      "first" : 16,
+      "last" : 20,
+      "layout" : "A fall, then a river across the room",
+      "lean" : [
+        "Ice Golem",
+        "Bat"
+      ],
+      "liquid" : "Ice",
+      "name" : "Ice Crystal",
+      "ownRun" : 3,
+      "roomSize" : 13
+    },
+    {
+      "boss" : "Mole Chief",
+      "doors" : 3,
+      "first" : 21,
+      "last" : 25,
+      "layout" : "A fall, then a river down the room",
+      "lean" : [
+        "Geode",
+        "Mole",
+        "Slime"
+      ],
+      "liquid" : "Glowing water",
+      "name" : "Amethyst",
+      "ownRun" : 3,
+      "roomSize" : 15
+    },
+    {
+      "boss" : "Pill Bug Queen",
+      "doors" : 4,
+      "first" : 26,
+      "last" : 30,
+      "layout" : "A fall, then a river that splits round the chest",
+      "lean" : [
+        "Glow Bug",
+        "Newt"
+      ],
+      "liquid" : "Sludge",
+      "name" : "Radioactive",
+      "ownRun" : 3,
+      "roomSize" : 15
+    },
+    {
+      "boss" : "Great Bat",
+      "doors" : 4,
+      "first" : 31,
+      "last" : 35,
+      "layout" : "A fall, then a river across the room",
+      "lean" : [
+        "Ember Bat",
+        "Rock Golem"
+      ],
+      "liquid" : "Lava",
+      "name" : "Lava",
+      "ownRun" : 3,
+      "roomSize" : 15
+    },
+    {
+      "boss" : "Prism King",
+      "doors" : 4,
+      "first" : 36,
+      "last" : 40,
+      "layout" : "A fall, then a river across the room",
+      "lean" : [
+        "Glare Slime",
+        "Slime",
+        "Mole"
+      ],
+      "liquid" : "Rainbow water",
+      "name" : "Prism",
+      "ownRun" : 3,
+      "roomSize" : 15
+    },
+    {
+      "boss" : "Glitch Boss",
+      "doors" : 4,
+      "first" : 41,
+      "last" : 45,
+      "layout" : "A fall, then a river across the room",
+      "lean" : [
+        "Glitch Newt",
+        "Bat",
+        "Glow Bug"
+      ],
+      "liquid" : "Data stream",
+      "name" : "Circuit",
+      "ownRun" : 3,
+      "roomSize" : 15
+    },
+    {
+      "boss" : "Moss Boss",
+      "doors" : 5,
+      "first" : 46,
+      "last" : 50,
+      "layout" : "A fall and big pools",
+      "lean" : [
+        "Void Golem",
+        "Geode",
+        "Mole"
+      ],
+      "liquid" : "Void",
+      "name" : "Starfall",
+      "ownRun" : 3,
+      "roomSize" : 15
     }
   ]
 }

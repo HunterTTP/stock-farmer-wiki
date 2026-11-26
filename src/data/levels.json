@@ -535,7 +535,7 @@
     "rarerFish" : false,
     "recipes" : [
       "Copper Bar",
-      "Silver Bar",
+      "Iron Bar",
       "Gold Bar"
     ],
     "stockQuests" : false,
@@ -928,7 +928,8 @@
     "level" : 31,
     "rarerFish" : false,
     "recipes" : [
-      "Cloth"
+      "Cloth",
+      "Fine Cloth"
     ],
     "stockQuests" : false,
     "toolUpgrades" : [

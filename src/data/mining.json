@@ -25,24 +25,24 @@
     {
       "icon" : {
         "height" : 22,
-        "src" : "sprites/ores/silver.png",
+        "src" : "sprites/ores/iron.png",
         "width" : 26
       },
-      "id" : "silver",
+      "id" : "iron",
       "madeAt" : "Stone Oven",
       "minutes" : 8,
-      "name" : "Silver Ore",
+      "name" : "Iron Ore",
       "piecesPerProduct" : 5,
       "piecesPerVein" : 10,
-      "product" : "Silver Bar",
+      "product" : "Iron Bar",
       "productIcon" : {
         "height" : 15,
-        "src" : "sprites/goods/silverBar.png",
+        "src" : "sprites/goods/ironBar.png",
         "width" : 29
       },
       "productValue" : 100,
       "value" : 10,
-      "vein" : "Silver Vein"
+      "vein" : "Iron Vein"
     },
     {
       "icon" : {
@@ -109,23 +109,6 @@
       "productValue" : 100,
       "value" : 50,
       "vein" : "Sapphire Vein"
-    },
-    {
-      "icon" : {
-        "height" : 27,
-        "src" : "sprites/ores/diamond.png",
-        "width" : 27
-      },
-      "id" : "diamond",
-      "madeAt" : "",
-      "minutes" : 0,
-      "name" : "Rough Diamond",
-      "piecesPerProduct" : 0,
-      "piecesPerVein" : 0,
-      "product" : "",
-      "productValue" : 0,
-      "value" : 1000,
-      "vein" : "Diamond Vein"
     }
   ],
   "processingLevel" : 18,
@@ -174,21 +157,21 @@
       "gives" : 5,
       "icon" : {
         "height" : 22,
-        "src" : "sprites/rocks/smallSilver.png",
+        "src" : "sprites/rocks/smallIron.png",
         "width" : 20
       },
-      "name" : "Small Silver Vein",
-      "what" : "Silver Ore"
+      "name" : "Small Iron Vein",
+      "what" : "Iron Ore"
     },
     {
       "gives" : 10,
       "icon" : {
         "height" : 25,
-        "src" : "sprites/rocks/silver.png",
+        "src" : "sprites/rocks/iron.png",
         "width" : 21
       },
-      "name" : "Silver Vein",
-      "what" : "Silver Ore"
+      "name" : "Iron Vein",
+      "what" : "Iron Ore"
     },
     {
       "gives" : 8,

@@ -12,7 +12,7 @@ Storage holds what you gather: crops, fruit, eggs, logs, stones, ore, fish and m
 
 | Source | Adds | Unlocks at level | Cost | Materials |
 | --- | --- | --- | --- | --- |
-| Backpack | <Fact path="world.backpackSlots" /> slots | From the start | | |
+| Storage itself | <Fact path="world.backpackSlots" /> slots | From the start | | |
 | Shed | <Fact path="buildings.shed.storageAdded" /> slots each | <Fact path="buildings.shed.unlockLevel" /> | <Fact path="buildings.shed.cost" as="money" /> | <Fact path="buildings.shed.logs" /> Logs, <Fact path="buildings.shed.stones" /> Stones |
 | Silo | <Fact path="buildings.silo.storageAdded" /> slots each | <Fact path="buildings.silo.unlockLevel" /> | <Fact path="buildings.silo.cost" as="money" /> | <Fact path="buildings.silo.logs" /> Logs, <Fact path="buildings.silo.stones" /> Stones |
 
@@ -20,6 +20,15 @@ Storage holds what you gather: crops, fruit, eggs, logs, stones, ore, fish and m
 - A Trunk adds 25 slots each, for <Fact path="decorations.trunk.cost" as="money" /> and 10 Logs. At most <Fact path="decorations.trunk.limit" /> can stand on a farm.
 - Barns and the Stable add no room.
 - A Shed or Silo can only be destroyed while the rest of Storage still holds everything stored.
+
+## Gold and silver
+
+Money comes in two coins. 100 silver make 1 gold.
+
+- Prices and money show both coins, such as 12 gold 40 silver. A cheap crop such as Wheat sells for silver only.
+- What you hold always matches what you can buy: if it shows as enough, it is enough.
+- The money at the top of the farm shows only gold once you pass 10,000 gold.
+- The Stock Market uses dollars. 1 gold is $1 there (see [Stock Market](../stock-market/)).
 
 ## Sell or Store
 
