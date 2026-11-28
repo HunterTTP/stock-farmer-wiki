@@ -1,4 +1,10 @@
 {
+  "contest" : {
+    "commonDoubleBackOddsDenominator" : 5,
+    "commonDoubleBackPercent" : 20,
+    "drainPercentPerSecond" : 4,
+    "maxFightMultiplier" : 2
+  },
   "fish" : [
     {
       "icon" : {
@@ -633,41 +639,72 @@
   ],
   "heaviestPricePercent" : 120,
   "lightestPricePercent" : 80,
+  "maxNameLength" : 20,
   "rarities" : [
     {
       "color" : "#FFFFFF",
+      "colorName" : "White",
+      "doubleBackPercent" : 20,
+      "fillSeconds" : 2.4,
       "fishFromLevel" : 1,
       "fishValue" : 12,
       "name" : "Common",
-      "species" : 6
+      "species" : 6,
+      "speed" : 36,
+      "speedVsCommon" : 1,
+      "xpMultiplier" : 1
     },
     {
       "color" : "#66FF80",
+      "colorName" : "Green",
+      "doubleBackPercent" : 0,
+      "fillSeconds" : 3,
       "fishFromLevel" : 1,
       "fishValue" : 36,
       "name" : "Uncommon",
-      "species" : 7
+      "species" : 7,
+      "speed" : 55,
+      "speedVsCommon" : 1.5,
+      "xpMultiplier" : 2
     },
     {
       "color" : "#3380FF",
+      "colorName" : "Blue",
+      "doubleBackPercent" : 0,
+      "fillSeconds" : 4.4,
       "fishFromLevel" : 1,
       "fishValue" : 110,
       "name" : "Rare",
-      "species" : 15
+      "species" : 15,
+      "speed" : 85,
+      "speedVsCommon" : 2.4,
+      "xpMultiplier" : 4
     },
     {
       "color" : "#BF73FF",
+      "colorName" : "Purple",
+      "doubleBackPercent" : 0,
+      "fillSeconds" : 5.8,
       "fishFromLevel" : 1,
       "fishValue" : 330,
       "name" : "Epic",
-      "species" : 8
+      "species" : 8,
+      "speed" : 108,
+      "speedVsCommon" : 3,
+      "xpMultiplier" : 7
     },
     {
       "color" : "#FF7300",
+      "colorName" : "Orange",
+      "doubleBackPercent" : 0,
+      "fillSeconds" : 7,
       "fishFromLevel" : 1,
       "fishValue" : 1000,
       "name" : "Legendary",
-      "species" : 6
+      "species" : 6,
+      "speed" : 130,
+      "speedVsCommon" : 3.6,
+      "xpMultiplier" : 10
     }
   ],
   "rarityRateLevels" : [
@@ -677,5 +714,113 @@
     20,
     25,
     30
-  ]
+  ],
+  "spawnOdds" : [
+    {
+      "common" : "69.7%",
+      "epic" : "2%",
+      "legendary" : "0.5%",
+      "levels" : "1 to 4",
+      "rare" : "6%",
+      "uncommon" : "21.9%"
+    },
+    {
+      "common" : "66%",
+      "epic" : "2.5%",
+      "legendary" : "0.5%",
+      "levels" : "5 to 9",
+      "rare" : "7%",
+      "uncommon" : "24%"
+    },
+    {
+      "common" : "58%",
+      "epic" : "4%",
+      "legendary" : "1%",
+      "levels" : "10 to 14",
+      "rare" : "11%",
+      "uncommon" : "26%"
+    },
+    {
+      "common" : "46%",
+      "epic" : "9%",
+      "legendary" : "3%",
+      "levels" : "15 to 19",
+      "rare" : "16%",
+      "uncommon" : "26%"
+    },
+    {
+      "common" : "34%",
+      "epic" : "15%",
+      "legendary" : "6%",
+      "levels" : "20 to 24",
+      "rare" : "20%",
+      "uncommon" : "25%"
+    },
+    {
+      "common" : "24%",
+      "epic" : "20%",
+      "legendary" : "12%",
+      "levels" : "25 to 29",
+      "rare" : "22%",
+      "uncommon" : "22%"
+    },
+    {
+      "common" : "15%",
+      "epic" : "25%",
+      "legendary" : "18%",
+      "levels" : "30 and up",
+      "rare" : "24%",
+      "uncommon" : "18%"
+    }
+  ],
+  "spawnRateStep" : 5,
+  "spawnRateTopLevel" : 30,
+  "spawning" : {
+    "emptyPondWaitPercent" : 25,
+    "firstFishSeconds" : 600,
+    "lifetimeSeconds" : 1440,
+    "nightRespawnSeconds" : 900,
+    "nightWaitReductionPercent" : 50,
+    "respawnSeconds" : 1800,
+    "roamRadius" : 6,
+    "sidewaysPreference" : 4
+  },
+  "weight" : {
+    "bands" : [
+      {
+        "color" : "Common (white)",
+        "heavierThan" : "Less than 50%"
+      },
+      {
+        "color" : "Uncommon (green)",
+        "heavierThan" : "50% to 75%"
+      },
+      {
+        "color" : "Rare (blue)",
+        "heavierThan" : "75% to 90%"
+      },
+      {
+        "color" : "Epic (purple)",
+        "heavierThan" : "90% to 99%"
+      },
+      {
+        "color" : "Legendary (orange)",
+        "heavierThan" : "99% or more"
+      }
+    ],
+    "heaviestSizeFactor" : 1.2,
+    "heaviestXPFactor" : 1.5,
+    "lightestPriceFactor" : 0.8,
+    "lightestSizeFactor" : 0.8,
+    "lightestXPFactor" : 0.5,
+    "priceFactorSpan" : 0.4
+  },
+  "xp" : {
+    "levelDivisor" : 300,
+    "maxLegendaryLevelPercent" : 5,
+    "maxLegendaryMultiple" : 15,
+    "maxLevelDivisor" : 700,
+    "rampPerLevel" : 30,
+    "rampStartLevel" : 15
+  }
 }

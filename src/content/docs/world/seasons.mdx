@@ -17,23 +17,29 @@ Crops, animals, prices, fish and every other rule are the same in every season. 
 
 | | Spring | Summer | Fall | Winter |
 | --- | --- | --- | --- | --- |
-| Weather | Rain 2 PM to 5 PM | Rain 2 PM to 5 PM | Rain 2 PM to 5 PM | Snow all day, heavier 2 PM to 5 PM |
+| Weather | Rain <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" /> (waters all farmland) | Rain <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" /> (waters all farmland) | Rain <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" /> (waters all farmland) | Light snow flurries all day, full snowfall <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" /> (never waters farmland) |
 | Thunder | Yes | Yes | Yes | No |
 | Butterflies | Yes | Yes | Yes | None |
 | Night crickets | Yes | Yes | Yes | None |
 | Looks | Spring grass, wildflowers, petals on the wind, all trees a lively green | The original look, little grass tufts, all trees green | Autumn foliage, leaves on the wind, fallen leaves on the grass, thickest under oaks and birches | Snow on the ground, trees, roofs, fences and rocks |
-| Music | Its own songs | Its own songs | Its own songs | Its own songs |
+| Music | Its own songs, matched to morning (5 AM to 11 AM), midday (11 AM to 7 PM) and night (7 PM to 5 AM) on the farm clock with a rolling no-repeat cooldown | The same, with Summer songs | The same, with Fall songs | The same, with Winter songs |
 
-Animals shelter at the same times in Winter as in other seasons: at night and in the 2 PM to 5 PM storm. See [Weather](../weather/).
+Animals shelter at the same times in Winter as in other seasons: at night and in the <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" /> storm. See [Weather](../weather/). Time-of-day music picking is on by default for every season; tapping shuffle by a season in Settings → Sound → Songs switches that season to sequential list order.
 
 ## When a season turns
 
 - The next season comes on the morning after the current one's last day, at <Fact path="world.seasonTurnsAtHour" /> AM on the farm's clock.
 - The farm's clock stands still while the game is closed (see [Day and Night](../day-and-night/)), so seasons only pass while you play.
 - A season that comes due while a menu, a level-up, the day summary or fishing is on screen turns once that is closed.
-- A season can also be picked by hand from the clock. It changes at once and lasts its full <Fact path="world.daysPerSeason" /> days from that day.
 - A new farm opens with its first season sweeping in over it, and the tutorial starts once the season's title has gone.
 - Each season counts as seen in [Progress](../../progress/) the first time it plays.
+
+## Switching and locking seasons
+
+- Open the Time button on the tool ring to switch to any season at any time. A season picked by hand lasts <Fact path="world.daysPerSeason" /> farm days from that day before the year moves on.
+- Turn on **Prevent seasons from changing** in the same menu to keep a farm in its current season. The setting is saved per farm.
+- Farm days keep counting while the season is locked, and you can still pick another season by hand.
+- Turning **Prevent seasons from changing** back off starts a fresh <Fact path="world.daysPerSeason" />-day cycle from that day, so days spent locked trigger no catch-up turn.
 
 ## Related pages
 

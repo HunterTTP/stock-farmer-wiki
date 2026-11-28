@@ -62,6 +62,7 @@ export const tables = {
       ['Upgrade', (r) => `Level ${r.level}`],
       ['Unlock level', (r) => level(r.unlockLevel)],
       ['Cost', (r) => money(r.cost)],
+      ['Materials', (r) => materials(r.materials)],
       ['Animals it holds', (r) => `${r.holdsBefore} → ${r.holdsAfter}`],
     ],
   },
@@ -140,6 +141,7 @@ export const tables = {
       ['From', (r) => `${r.inputCount} ${r.input}`],
       ['Takes', (r) => duration(r.seconds)],
       ['Each sells for', (r) => money(r.outputValue)],
+      ['XP', (r) => count(r.xp)],
       ['Unlock level', (r) => level(r.unlockLevel)],
     ],
   },
@@ -160,6 +162,7 @@ export const tables = {
     icon: (r) => r.icon,
     columns: [
       ['Item', (r) => r.name],
+      ['Unlock level', (r) => level(r.unlockLevel)],
       ['Price', (r) => money(r.price)],
       ['Most per day', (r) => count(r.dailyLimit)],
       ['Sells for', (r) => money(r.sellsFor)],
@@ -222,7 +225,7 @@ export const tables = {
       ['Small enemies', (r) => count(r.smallEnemies)],
       ['Golems', (r) => golems(r) || 'None'],
       ['Hits to beat a golem', (r) => golemHits(r)],
-      ['Replay costs', (r) => money(r.replayPrice)],
+      ['First-clear reward', (r) => r.reward],
     ],
   },
   caveBossLevels: {
@@ -233,18 +236,25 @@ export const tables = {
       ['Wall', (r) => yes(r.wall)],
       ['Small enemies', (r) => count(r.smallEnemies)],
       ['Hits to beat the boss', (r) => count(r.bossHits)],
-      ['Replay costs', (r) => money(r.replayPrice)],
+      ['First-clear reward', (r) => r.reward],
     ],
   },
-  caveChest: {
-    rows: () => data.cave.chest.rarities,
-    icon: (r) => r.icon,
+  caveBossRewards: {
+    rows: () => data.cave.rewards.bossRewards,
     columns: [
-      ['Rarity', (r) => r.name],
-      ['Ore prize', (r) => `${r.oreMin} to ${r.oreMax} ${r.ore}`],
-      ['Crew skins', (r) => (r.skins ? count(r.skins) : '')],
-      ['Chance of each ore lot', (r) => r.poolChance],
-      ['Chance a spin picks it', (r) => r.spinChance],
+      ['Level', (r) => level(r.level)],
+      ['Crew unlock', (r) => r.crewUnlock ?? ''],
+      ['Skin reward', (r) => r.skinReward],
+      ['Extra reward', (r) => r.extraReward ?? ''],
+    ],
+  },
+  caveGates: {
+    rows: () => data.cave.gates,
+    columns: [
+      ['After boss level', (r) => level(r.afterLevel)],
+      ['Opens level', (r) => level(r.unlocksLevel)],
+      ['Wait', (r) => duration(r.cooldownSeconds)],
+      ['Full skip price', (r) => money(r.fullSkipPrice)],
     ],
   },
   caveZones: {
@@ -292,7 +302,7 @@ export const tables = {
     rows: () => data.cave.crew,
     columns: [
       ['Crew', (r) => r.name],
-      ['Unlocks', (r) => (r.unlockOrder ? `Boss card ${r.unlockOrder}` : 'From the start')],
+      ['Unlocks', (r) => (r.unlockOrder ? `Level ${r.unlockOrder * data.cave.room.zoneLevels} boss` : 'From the start')],
       ['What it does', (r) => r.purpose],
       ['Numbers', (r) => list(r.stats, '; ')],
     ],
@@ -326,6 +336,120 @@ export const tables = {
     columns: [
       ['Pet', (r) => r.name],
       ['Kind', (r) => r.kind],
+    ],
+  },
+  'animal-produce-xp': {
+    rows: () => data.animals.produceXP,
+    icon: (r) => r.icon,
+    columns: [
+      ['Item', (r) => r.item],
+      ['From', (r) => r.from],
+      ['Collect with', (r) => r.tool],
+      ['XP', (r) => count(r.xp)],
+    ],
+  },
+  'pet-crop-rush': {
+    rows: () => data.animals.pets.cropRushTable,
+    columns: [
+      ['Time the pet has spent on crop tiles in a row', (r) => r.dwell],
+      ['Chance each second that the crop under it ripens', (r) => r.chance],
+    ],
+  },
+  'fish-rarity-details': {
+    rows: () => data.fish.rarities,
+    columns: [
+      ['Rarity', (r) => r.name],
+      ['Color', (r) => r.colorName],
+      ['XP multiplier', (r) => count(r.xpMultiplier)],
+      ['Time on the fish to catch it', (r) => `${r.fillSeconds} s`],
+    ],
+  },
+  'fish-spawn-odds': {
+    rows: () => data.fish.spawnOdds,
+    columns: [
+      ['Your level', (r) => r.levels],
+      ['Common', (r) => r.common],
+      ['Uncommon', (r) => r.uncommon],
+      ['Rare', (r) => r.rare],
+      ['Epic', (r) => r.epic],
+      ['Legendary', (r) => r.legendary],
+    ],
+  },
+  'fish-difficulty': {
+    rows: () => data.fish.rarities,
+    columns: [
+      ['Rarity', (r) => r.name],
+      ['Time on the fish to fill the bar', (r) => `${r.fillSeconds} s`],
+      ['Speed against a Common fish', (r) => `${r.speedVsCommon} times`],
+    ],
+  },
+  'fish-weight-bands': {
+    rows: () => data.fish.weight.bands,
+    columns: [
+      ['Heavier than', (r) => r.heavierThan],
+      ['Color', (r) => r.color],
+    ],
+  },
+  'fish-xp-multipliers': {
+    rows: () => data.fish.rarities,
+    columns: [
+      ['Rarity', (r) => r.name],
+      ['Multiplier', (r) => count(r.xpMultiplier)],
+    ],
+  },
+  'ore-shares': {
+    rows: () => data.mining.oreShares,
+    columns: [
+      ['Your level', (r) => r.levels],
+      ['Copper', (r) => r.copper],
+      ['Iron', (r) => r.iron],
+      ['Gold', (r) => r.gold],
+      ['Ruby', (r) => r.ruby],
+      ['Sapphire', (r) => r.sapphire],
+    ],
+  },
+  'firefly-colors': {
+    rows: () => data.world.fireflies.colors,
+    columns: [
+      ['Glow of a colored firefly', (r) => r.glow],
+      ['Chance', (r) => r.chance],
+      ['Chance a night has at least one', (r) => r.nightlyChance],
+    ],
+  },
+  'butterfly-xp': {
+    rows: () => data.world.butterflies.xpMultipliers,
+    columns: [
+      ['Wings or glow', (r) => r.glow],
+      ['Multiplier', (r) => count(r.multiplier)],
+    ],
+  },
+  'quest-targets': {
+    rows: () => data.quests.targets,
+    columns: [
+      ['Kind', (r) => r.kind],
+      ['Market Stand', (r) => r.standard],
+      ['Upgraded stand', (r) => r.upgraded],
+    ],
+  },
+  'quest-effort': {
+    rows: () => data.quests.effort,
+    columns: [
+      ['Part', (r) => r.part],
+      ['Effort', (r) => r.effort],
+    ],
+  },
+  'darkness-timeline': {
+    rows: () => data.world.dayNight.timeline,
+    columns: [
+      ['Farm time', (r) => r.time],
+      ['How dark', (r) => r.state],
+    ],
+  },
+  'rain-timeline': {
+    rows: () => data.world.weather.rainTimeline,
+    columns: [
+      ['Farm time', (r) => r.time],
+      ['Rain', (r) => r.state],
     ],
   },
   levels: {

@@ -1,16 +1,16 @@
 ---
 title: Fertilizer and Sprinklers
-description: Fertilizer, the Sprinkler and Big Sprinkler, and the Scarecrow, with their costs, reach, growth boosts and spray schedule.
+description: Fertilizer, Small, Medium and Large Sprinklers, and the Scarecrow, with their costs, reach, growth boosts and spray schedule.
 sidebar:
   order: 4
 ---
 import Fact from '../../../components/Fact.astro';
 
-Three things speed up crops: fertilizer, water from a sprinkler and a Scarecrow. How they combine is on [Growth](../growth/).
+Three tile boosts speed up crops: fertilizer, water from a sprinkler and a Scarecrow. A [Greenhouse](../../buildings/#greenhouse) also speeds up growth across the whole farm. How boosts combine is on [Growth](../growth/).
 
 ## Fertilizer
 
-Fertilizer makes the crop on its tile grow <Fact path="terrain.fertilizerSpeedUpPercent" />% faster.
+Fertilizer makes the crop on its tile grow <Fact path="terrain.fertilizerSpeedUpPercent" />% faster, matching watered soil. Combining both gives 2.25× growth speed (roughly half the grow time).
 
 | | Fertilizer |
 | --- | --- |
@@ -26,18 +26,19 @@ Fertilizer makes the crop on its tile grow <Fact path="terrain.fertilizerSpeedUp
 
 ## Sprinklers
 
-A sprinkler saturates the farmland around it, the same as farmland next to water (see [Farmland and Water](../farmland-and-water/)), so crops there grow <Fact path="terrain.waterSpeedUpPercent" />% faster.
+A sprinkler keeps the farmland around it watered every day (see [Farmland and Water](../farmland-and-water/)), so crops there grow <Fact path="terrain.waterSpeedUpPercent" />% faster.
 
-| | Sprinkler | Big Sprinkler |
-| --- | --- | --- |
-| Cost | <Fact path="decorations.sprinkler.cost" as="money" /> | <Fact path="decorations.bigSprinkler.cost" as="money" /> |
-| Materials | <Fact path="decorations.sprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.sprinkler.materials.Stones.count" /> Stones | <Fact path="decorations.bigSprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.bigSprinkler.materials.Stones.count" /> Stones |
-| Does | <Fact path="decorations.sprinkler.effect" /> | <Fact path="decorations.bigSprinkler.effect" /> |
+| | Small Sprinkler | Medium Sprinkler | Large Sprinkler |
+| --- | --- | --- | --- |
+| Cost | <Fact path="decorations.smallSprinkler.cost" as="money" /> | <Fact path="decorations.sprinkler.cost" as="money" /> | <Fact path="decorations.bigSprinkler.cost" as="money" /> |
+| Materials | <Fact path="decorations.smallSprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.smallSprinkler.materials.Stones.count" /> Stones | <Fact path="decorations.sprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.sprinkler.materials.Stones.count" /> Stones | <Fact path="decorations.bigSprinkler.materials.Copper Ore.count" /> Copper Ore, <Fact path="decorations.bigSprinkler.materials.Stones.count" /> Stones |
+| Reach | 1 tile (3×3) | 2 tiles (5×5) | 3 tiles (7×7) |
+| Does | <Fact path="decorations.smallSprinkler.effect" /> | <Fact path="decorations.sprinkler.effect" /> | <Fact path="decorations.bigSprinkler.effect" /> |
 
 - No level is needed, only gold and materials from Storage.
 - Reach is a square around the sprinkler, diagonals included.
 - A sprinkler stands on one tile of any terrain.
-- The boost lasts as long as the sprinkler stands, whether or not it is spraying. Land near several sprinklers or ponds is saturated once.
+- The boost lasts as long as the sprinkler stands, whether or not it is spraying. Farmland watered by several sprinklers, rain or the Watering Can gets the boost once.
 - A moved sprinkler waters its new land, and its old land dries out tile by tile.
 - Destroying a sprinkler returns <Fact path="terrain.refundPercent" />% of its gold and materials.
 
@@ -46,13 +47,13 @@ A sprinkler saturates the farmland around it, the same as farmland next to water
 The spray is a picture: it never changes the boost.
 
 - A sprinkler sprays as soon as it is placed, and the land in reach soaks up the water during that first spray.
-- After that every sprinkler sprays together once every <Fact path="world.sprinklerSprayEverySeconds" as="duration" /> (an hour of the farm's clock), for 12 s each time.
+- After that every sprinkler sprays together once every <Fact path="world.sprinklerSprayEverySeconds" as="duration" /> (an hour of the farm's clock), for <Fact path="world.sprinklerSprayDurationSeconds" as="duration" /> each time.
 - Sprinklers do not spray while it rains.
 - A sprinkler set to Always On sprays all the time, rain or not.
 
 ## Scarecrow
 
-A Scarecrow is a decoration that makes crops near it grow 5% faster.
+A Scarecrow is a decoration that makes crops near it grow <Fact path="terrain.scarecrowSpeedUpPercent" />% faster.
 
 | | Scarecrow |
 | --- | --- |

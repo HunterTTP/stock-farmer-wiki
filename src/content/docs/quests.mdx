@@ -22,8 +22,8 @@ It unlocks at level <Fact path="quests.marketStandLevel" />.
 
 <DataTable name="market-supplies" />
 
-- Prices are fixed. At most <Fact path="market.oreDailyLimit" /> of each ore and <Fact path="market.materialDailyLimit" /> Logs and <Fact path="market.materialDailyLimit" /> Stone can be bought a day. The limits reset each new day.
-- A purchase is limited by what is left today, your gold and the free room in Storage.
+- Prices are fixed. Each item has its own unlock level and daily limit (shown above), and limits reset each new day.
+- A purchase is limited by your level, what is left today, your gold and the free room in Storage.
 - Buying supplies never counts toward a quest.
 
 ## How quests work
@@ -38,10 +38,10 @@ It unlocks at level <Fact path="quests.marketStandLevel" />.
 
 | Kind | Asks you to | Offered |
 | --- | --- | --- |
-| Harvest | Harvest a crop you unlocked at least 3 levels ago (Wheat at first). The Tractor's harvests count. | From the start |
+| Harvest | Harvest a crop you unlocked at least <Fact path="quests.harvestCropLevelLag" /> levels ago (Wheat at first). The Tractor's harvests count. | From the start |
 | Workshop | Collect batches from a workshop | Once the workshop unlocks |
 | Feed favorites | Hand-feed favorite foods to animals from one chicken or livestock home | Once that home unlocks |
-| Collect | Collect eggs, milk, goat milk, wool or fertilizer | Eggs from level 5, others with their animal |
+| Collect | Collect eggs, milk, goat milk, wool or fertilizer | Eggs from level <Fact path="quests.eggQuestLevel" />, others with their animal |
 | Plant trees | Plant trees or fruit trees | From the start |
 | Ore | Collect an ore, or a bar or cut gem made from it | Level <Fact path="quests.oreQuestsFromLevel" /> |
 | Stock profit | Earn profit in the [Stock Market](../stock-market/) | Level <Fact path="quests.stockQuestsFromLevel" /> |
@@ -54,46 +54,32 @@ It unlocks at level <Fact path="quests.marketStandLevel" />.
 
 ## How much a quest asks
 
-| Kind | Market Stand | Upgraded stand |
-| --- | --- | --- |
-| Harvest | A random amount from the base to 1.5 times the base | 3 times as much |
-| Workshop | 1 or 2 batches | 3 to 5 batches |
-| Feed favorites | 8 to 15 | 25 to 40 |
-| Collect produce | 3 to 6 | 10 to 16 |
-| Collect ore | 3 to 5 pieces | 6 to 9 pieces |
-| Collect bars or cut gems | 1 or 2 | 2 or 3 |
-| Plant trees | 2 to 4 | 6 to 9 |
+<DataTable name="quest-targets" />
 
-- The harvest base is a fifth of your farmland limit, and at least 8. A harvest quest never asks for more than <Fact path="quests.mostCropsAsked" />.
+- The harvest base is 1/<Fact path="quests.harvestFieldDivisor" /> of your farmland limit, and at least <Fact path="quests.harvestBaseMin" />. A harvest quest never asks for more than <Fact path="quests.mostCropsAsked" />.
 - On the upgraded stand, every quest except a stock quest has a second part, drawn from a different kind.
 
 ## XP rewards
 
-> Reward = XP to leave your level × share, where share = 2% × effort, kept between 1% and 7% (8% and 20% on the upgraded stand)
+> Reward = XP to leave your level × share, scaled by effort between <Fact path="quests.smallRewardMinPercent" />% and <Fact path="quests.smallRewardMaxPercent" />% through level 9 (<Fact path="quests.largeRewardMinPercent" />% to <Fact path="quests.largeRewardMaxPercent" />% on the upgraded stand), and between 2% and 6% from level 10 on (8.5% to 16.5% on the upgraded stand).
 
 Effort adds up over the quest's parts:
 
-| Part | Effort |
-| --- | --- |
-| Harvest | Amount ÷ harvest base × (1 + the crop's grow minutes ÷ 10) |
-| Workshop | Batches × (1 + the first recipe's minutes ÷ 5) |
-| Feed favorites | Feedings ÷ 10 |
-| Collect | Eggs × 0.25, other produce × 0.375, ore pieces × 1, bars or cut gems × 4 |
-| Plant trees | Trees ÷ 4 |
-| Stock profit | 2.5 |
+<DataTable name="quest-effort" />
 
+- From level 10 on, non-crop objectives (animals, workshops, ores and stocks) are drawn twice as often as crop harvests, every upgraded quest includes at least one non-crop objective, and at most half the board is crop-only.
 - The reward is set for the level you were at when the quest appeared, and does not change if you level up before finishing it.
 - Two quests on the board never pay exactly the same XP.
 
 ### Example
 
-At level 10 (3,696 XP to leave) a Market Stand quest to collect 4 eggs has effort 1, so a share of 2%: 74 XP.
+At level 10 (3,696 XP to leave) a small Market Stand quest pays between 74 XP (2%) and 222 XP (6%) by effort, and a large quest on the upgraded stand pays between 314 XP (8.5%) and 610 XP (16.5%).
 
 ## Stock quests
 
 - A stock quest reads "Make $N profit selling stocks", with progress shown like $4 / $17. Profit from a sale counts in whole dollars, and losses take nothing back.
-- N is 0.2% of the price of the dearest building unlocked at your level (0.6% on the upgraded stand), rounded to two significant figures.
-- Its effort is 2.5, so it pays 5% of a level on the Market Stand and 8% on the upgraded one.
+- N is <Fact path="quests.stockSmallTargetPercent" />% of the price of the dearest building unlocked at your level (<Fact path="quests.stockLargeTargetPercent" />% on the upgraded stand), rounded to <Fact path="quests.stockSignificantFigures" /> significant figures.
+- Its effort is <Fact path="quests.stockEffort" />, so it pays <Fact path="quests.stockSmallRewardPercent" />% of a level on the Market Stand and <Fact path="quests.stockLargeRewardPercent" />% on the upgraded one.
 
 ## The upgraded Market Stand
 
@@ -102,9 +88,9 @@ At level 10 (3,696 XP to leave) a Market Stand quest to collect 4 eggs has effor
 | Size (tiles) | <Fact path="buildings.marketStand.width" />×<Fact path="buildings.marketStand.height" /> | <Fact path="home-upgrades.marketStand.width" />×<Fact path="home-upgrades.marketStand.height" /> |
 | Quests at once | <Fact path="home-upgrades.marketStand.questsBefore" /> | <Fact path="home-upgrades.marketStand.questsAfter" /> |
 | Parts per quest | One | Two (stock quests one) |
-| Reward share | 1% to 7% of a level | 8% to 20% of a level |
+| Reward share | <Fact path="quests.smallRewardMinPercent" />% to <Fact path="quests.smallRewardMaxPercent" />% of a level | <Fact path="quests.largeRewardMinPercent" />% to <Fact path="quests.largeRewardMaxPercent" />% of a level |
 
-- The upgrade needs <Fact path="home-upgrades.marketStand.questsNeeded" /> completed quests and costs <Fact path="home-upgrades.marketStand.cost" as="money" />. It needs no logs, stones or level.
+- The upgrade needs <Fact path="home-upgrades.marketStand.questsNeeded" /> completed quests and costs <Fact path="home-upgrades.marketStand.cost" as="money" /> plus <Fact path="home-upgrades.marketStand.materials" as="materials" />. It needs no logs, stones or level.
 - The larger stand needs free ground for its size.
 - Quests already on the board stay, with their progress.
 - Only one Market Stand can be built, in either form.

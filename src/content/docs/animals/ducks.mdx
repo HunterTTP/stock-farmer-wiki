@@ -16,21 +16,21 @@ Ducks live on water and have no building. A big enough pond gets ducklings on it
 | | Value |
 | --- | --- |
 | A pond qualifies | It has at least one tile with water on all eight sides (an interior tile) |
-| First duckling | 10 min after the pond first qualifies |
-| Next duckling | Every 30 min while the pond and the farm have room |
-| No room | It tries again 30 min later |
+| First duckling | <Fact path="animals.ducks.firstDucklingSeconds" as="duration" /> after the pond first qualifies |
+| Next duckling | Every <Fact path="animals.ducks.nextDucklingSeconds" as="duration" /> while the pond and the farm have room |
+| No room | It tries again <Fact path="animals.ducks.nextDucklingSeconds" as="duration" /> later |
 | Duckling grows up in | <Fact path="animals.livestock.duck.growSeconds" as="duration" /> (<Fact path="animals.meal.speedUpPercent" />% faster while Well Fed) |
-| Color | One of four, each equally likely |
+| Color | One of <Fact path="animals.ducks.colorCount" />, each equally likely |
 
 - A duck gives nothing. Its only use is selling.
-- Ducklings arrive while the game is closed too, caught up for at most three days.
+- Ducklings arrive while the game is closed too, caught up for at most <Fact path="animals.herdCatchUpDays" /> days.
 
 ## Room
 
 | Limit | Rule |
 | --- | --- |
-| Per pond | One duck per 20 interior tiles, rounded up |
-| Whole farm | One duck per 24 water tiles, at least 2 and at most 15 |
+| Per pond | One duck per <Fact path="world.waterHabitat.interiorTilesPerAnimal" /> interior tiles, rounded up |
+| Whole farm | One duck per <Fact path="world.waterHabitat.waterTilesPerAnimal" /> water tiles, at least <Fact path="world.waterHabitat.minOnMap" /> and at most <Fact path="world.waterHabitat.maxOnMap" /> |
 
 Fish use the same two limits, counted apart from the ducks (see [Fishing](../../gathering/fishing/#where-fish-live)).
 
@@ -39,11 +39,11 @@ Fish use the same two limits, counted apart from the ducks (see [Fishing](../../
 A new duckling picks a random tile that meets all of these:
 
 - an interior tile of its pond, with no decoration on it;
-- no other duck within 2 tiles, in any direction;
+- no other duck within <Fact path="world.waterHabitat.sameKindSpacing" /> tiles, in any direction;
 - no fish on the tile or next to it;
-- no 5×5 square around it would then hold more than two ducks.
+- no <Fact path="world.waterHabitat.windowSide" />×<Fact path="world.waterHabitat.windowSide" /> square around it would then hold more than <Fact path="world.waterHabitat.maxInWindow" /> ducks.
 
-With no such tile, it waits 30 min. Ducks already swimming are never moved or removed for crowding.
+With no such tile, it waits <Fact path="animals.ducks.nextDucklingSeconds" as="duration" />. Ducks already swimming are never moved or removed for crowding.
 
 ## Swimming
 

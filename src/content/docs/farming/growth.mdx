@@ -4,6 +4,7 @@ description: How crops grow in real time, the boosts that speed them up and how 
 sidebar:
   order: 5
 ---
+import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
 A crop starts growing when it is planted and takes its grow time from the [crops table](../crops/#all-crops), divided by the boosts on its tile.
@@ -11,22 +12,23 @@ A crop starts growing when it is planted and takes its grow time from the [crops
 ## Real time
 
 - Crops grow on the real clock, also while the game is closed. When you come back, everything that finished is ripe.
-- Seasons, weather and the time of day never change grow time.
-- [Fruit trees](../fruit-trees/) grow the same way, start again each time they are picked, and take no boosts.
+- Seasons and the time of day never change grow time. Afternoon rain in Spring, Summer and Fall waters all farmland for the day (see [Farmland and Water](../farmland-and-water/)).
+- [Fruit trees](../fruit-trees/) grow the same way, start again each time they are picked, and receive the Greenhouse boost while a Greenhouse stands on the farm.
 
 ## Boosts
 
 | Boost | Effect | Where |
 | --- | --- | --- |
-| Saturated soil | <Fact path="terrain.waterSpeedUpPercent" />% faster | Within <Fact path="terrain.waterReach" /> tile of water, or in reach of a sprinkler (see [Farmland and Water](../farmland-and-water/)) |
+| Watered soil | <Fact path="terrain.waterSpeedUpPercent" />% faster | Watered by the Watering Can, afternoon rain or a Sprinkler (see [Farmland and Water](../farmland-and-water/)) |
 | Fertilizer | <Fact path="terrain.fertilizerSpeedUpPercent" />% faster | On the tile, until its crop is harvested (see [Fertilizer and Sprinklers](../fertilizer-and-sprinklers/)) |
-| Scarecrow | 5% faster | Within 3 tiles of a Scarecrow |
+| Scarecrow | <Fact path="terrain.scarecrowSpeedUpPercent" />% faster | Within <Fact path="terrain.scarecrowReach" /> tiles of a Scarecrow |
+| Greenhouse | 15% faster | Across the whole farm (crops and fruit trees) while placed (see [Buildings](../../buildings/#greenhouse)) |
 
-> Grow time on a tile = base grow time ÷ (1.05 if saturated) ÷ (1.1 if fertilized) ÷ (1.05 near a Scarecrow)
+> Grow time on a tile = base grow time ÷ (<Fact path="terrain.waterMultiplier" /> if watered) ÷ (<Fact path="terrain.fertilizerMultiplier" /> if fertilized) ÷ (<Fact path="terrain.scarecrowMultiplier" /> near a Scarecrow) ÷ (1.15 with a Greenhouse)
 
-- All three together make a crop grow about 1.21 times as fast, so it takes about 17.5% less time.
+- Watered soil, fertilizer and a Scarecrow together make a crop grow about <Fact path="terrain.allBoostsMultiplier" /> times as fast, so it takes about <Fact path="terrain.allBoostsTimeSavedPercent" />% less time. Adding a Greenhouse stacks on top for about 2.72× speed (about 63.2% less time).
 - Each boost counts once per tile, however many sources reach it.
-- Boosts follow the farm as it is now. A sprinkler or Scarecrow placed later also speeds crops already growing, and removing one slows them again.
+- Boosts apply continuously while active. Watering a tile, placing a Sprinkler, adding a Scarecrow or building a Greenhouse speeds up crops already growing, and removing a boost returns them to normal speed without losing progress.
 
 ### Example
 
@@ -35,25 +37,21 @@ Tomato has a base grow time of <Fact path="crops.tomato.growSeconds" as="duratio
 | Boosts on the tile | Ripe after |
 | --- | --- |
 | None | 22 min 9 s |
-| Saturated soil | 21 min 6 s |
-| Fertilizer | 20 min 9 s |
-| Saturated soil and fertilizer | 19 min 11 s |
-| Saturated soil, fertilizer and Scarecrow | 18 min 16 s |
+| Watered soil | 14 min 46 s |
+| Fertilizer | 14 min 46 s |
+| Watered soil and fertilizer | 9 min 51 s |
+| Watered soil, fertilizer and Scarecrow | 9 min 23 s |
+| Watered soil, fertilizer, Scarecrow and Greenhouse | 8 min 9 s |
 
 ## Pets ripening crops
 
 A cat or dog standing on a growing crop may make it ripen at once. The longer it stays on crops, the likelier it is.
 
-| Time the pet has spent on crop tiles in a row | Chance each second that the crop under it ripens |
-| --- | --- |
-| 1 s | 0.2% |
-| 5 s | 1% |
-| 10 s | 2% |
-| 15 s or more | 3% (the most) |
+<DataTable name="pet-crop-rush" />
 
 - The time counts up while the pet walks from one crop tile to the next, and starts again from zero once it steps off farmland with a crop.
-- About 1 in 5 pets ripen a crop within their first 15 s on crops, and about half within 30 s.
-- A Well Fed pet counts each second as 1.25 s, so its chance is 25% higher, up to 3.75% a second (see [Feeding](../../animals/feeding/)).
+- About 1 in 5 pets ripen a crop within their first <Fact path="animals.pets.cropRushCapSeconds" as="duration" /> on crops, and about half within 30 s.
+- A Well Fed pet counts each second as <Fact path="animals.meal.speedMultiplier" /> s, so its chance is <Fact path="animals.meal.speedUpPercent" />% higher, up to <Fact path="animals.pets.cropRushWellFedMaxPercent" />% a second (see [Feeding](../../animals/feeding/)).
 - It works only on a growing crop, never on a fruit tree or a ripe crop, and never while the pet is inside its house at night or in heavy rain.
 - It happens only while the game is open.
 
@@ -66,8 +64,8 @@ Grown chickens and farm animals out in the open sometimes eat the crop they stan
 | Who eats | Grown hens, roosters and farm animals that are outside and not Well Fed |
 | Who never eats | Pets, ducks, chicks, babies, animals inside their home |
 | What | The whole crop on the tile it stands on, growing or ripe. Never a fruit tree. |
-| Chance | 1 in 30 (about 3.3%) for each second it stands on a crop |
-| Most often | One crop per animal every <Fact path="world.realSecondsPerFarmDay" as="duration" /> of real time |
+| Chance | 1 in <Fact path="animals.grazing.biteOddsDenominator" /> (about <Fact path="animals.grazing.biteChancePercent" />%) for each second it stands on a crop |
+| Most often | One crop per animal every <Fact path="animals.grazing.restSeconds" as="duration" /> of real time |
 
 - An animal on a crop has about a 50% chance of eating it within 20 s, and about 87% within a minute.
 - The eaten crop gives no gold or XP and counts toward no quest. The farmland stays and its fertilizer is gone.

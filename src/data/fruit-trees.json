@@ -21,7 +21,8 @@
     "ripenSeconds" : 317,
     "unlockLevel" : 4,
     "width" : 2,
-    "xp" : 8
+    "xp" : 8,
+    "xpAtMaxFade" : 1
   },
   {
     "basketIcon" : {
@@ -45,7 +46,8 @@
     "ripenSeconds" : 736,
     "unlockLevel" : 8,
     "width" : 2,
-    "xp" : 14
+    "xp" : 14,
+    "xpAtMaxFade" : 1
   },
   {
     "basketIcon" : {
@@ -69,7 +71,8 @@
     "ripenSeconds" : 1713,
     "unlockLevel" : 12,
     "width" : 2,
-    "xp" : 20
+    "xp" : 20,
+    "xpAtMaxFade" : 2
   },
   {
     "basketIcon" : {
@@ -93,7 +96,8 @@
     "ripenSeconds" : 3987,
     "unlockLevel" : 16,
     "width" : 2,
-    "xp" : 26
+    "xp" : 23,
+    "xpAtMaxFade" : 5
   },
   {
     "basketIcon" : {
@@ -117,6 +121,7 @@
     "ripenSeconds" : 9280,
     "unlockLevel" : 20,
     "width" : 2,
-    "xp" : 32
+    "xp" : 17,
+    "xpAtMaxFade" : 12
   }
 ]

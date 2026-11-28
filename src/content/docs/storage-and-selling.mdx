@@ -17,7 +17,7 @@ Storage holds what you gather: crops, fruit, eggs, logs, stones, ore, fish and m
 | Silo | <Fact path="buildings.silo.storageAdded" /> slots each | <Fact path="buildings.silo.unlockLevel" /> | <Fact path="buildings.silo.cost" as="money" /> | <Fact path="buildings.silo.logs" /> Logs, <Fact path="buildings.silo.stones" /> Stones |
 
 - Up to <Fact path="world.storageBuildingLimit" /> Sheds and <Fact path="world.storageBuildingLimit" /> Silos can stand on a farm.
-- A Trunk adds 25 slots each, for <Fact path="decorations.trunk.cost" as="money" /> and 10 Logs. At most <Fact path="decorations.trunk.limit" /> can stand on a farm.
+- A Trunk adds <Fact path="world.trunkStorageSlots" /> slots each, for <Fact path="decorations.trunk.cost" as="money" /> and <Fact path="decorations.trunk.materials.Logs.count" /> Logs. At most <Fact path="decorations.trunk.limit" /> can stand on a farm.
 - Barns and the Stable add no room.
 - A Shed or Silo can only be destroyed while the rest of Storage still holds everything stored.
 
@@ -32,7 +32,7 @@ Money comes in two coins. 100 silver make 1 gold.
 
 ## Sell or Store
 
-The Scythe and the Bucket each have a Sell or Store choice. The other implements always store.
+The Scythe and the Bucket each have a Sell or Store choice. The Axe, the Pickaxe and the Net always store.
 
 | Choice | What happens |
 | --- | --- |

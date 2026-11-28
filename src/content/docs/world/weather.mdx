@@ -4,65 +4,62 @@ description: The daily rain and Winter snow, how hard it falls through the after
 sidebar:
   order: 2
 ---
+import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-The weather follows the farm's clock and is the same every day: there are no random rain days. It changes where animals stay and whether butterflies fly, never how crops grow or what anything sells for.
+The weather follows the farm's clock and is the same every day: there are no random rain days. It changes where animals stay, whether butterflies fly and whether afternoon rain waters farmland, never what anything sells for.
 
 ![Rain falling over the farm in the afternoon, with grey clouds](../../../assets/world/rain.webp)
 
 ## Rain
 
-It rains every day from 2 PM to 5 PM on the farm's clock: 3 farm hours, or <Fact path="world.rainRealMinutes" /> real minutes.
+It rains every day in Spring, Summer and Fall from <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" /> on the farm's clock: <Fact path="world.weather.rainHours" /> farm hours, or <Fact path="world.rainRealMinutes" /> real minutes. It builds up over <Fact path="world.weather.fadeFarmMinutes" /> farm minutes and dies away over the last <Fact path="world.weather.fadeFarmMinutes" />.
 
-| Farm time | Rain |
-| --- | --- |
-| 2:00 PM to 2:20 PM | Builds up |
-| 2:10 PM | Half built up: animals go inside |
-| 2:20 PM to 4:40 PM | Full strength |
-| 4:40 PM to 5:00 PM | Dies away |
-| 5:00 PM | Stops: animals come out |
+<DataTable name="rain-timeline" />
 
 What rain changes:
 
-- Animals with a home shelter from 2:10 PM to 5 PM. Inside, hens lay nothing, nothing can be milked or shorn, pets ripen nothing and nothing eats crops.
+- Rain automatically waters all farmland for the rest of the farm day, giving crops the <Fact path="terrain.waterSpeedUpPercent" />% watered growth boost (see [Farmland and Water](../../farming/farmland-and-water/)).
+- Animals with a home shelter from <Fact path="world.weather.shelterStart" /> to <Fact path="world.weather.rainEnd" />. Inside, hens lay nothing, nothing can be milked or shorn, pets ripen nothing and nothing eats crops.
 - No new butterflies come while it rains, and set-free butterflies rest.
 - Sprinklers stop spraying. Their growth boost stays.
 - Ducks stay out on the water.
 
 ## Winter snow
 
-In Winter snow falls in place of rain, all day and night. It falls at half strength outside the rain hours and builds to a full storm from 2 PM to 5 PM.
+In Winter snow falls in place of rain, all day and night. It falls at <Fact path="world.weather.winterSnowFloorPercent" />% strength outside the rain hours and builds to a full storm from <Fact path="world.weather.rainStart" /> to <Fact path="world.weather.rainEnd" />.
 
-- For the rules, Winter's storm is the same as rain: animals shelter from 2:10 PM to 5 PM and at night. The lighter snow the rest of the day does not send them in.
+- For animal shelter, Winter's storm works like rain: animals shelter from <Fact path="world.weather.shelterStart" /> to <Fact path="world.weather.rainEnd" /> and at night. The lighter snow the rest of the day does not send them in.
+- Winter snow never waters farmland.
 - Snow brings no thunder.
 - No butterflies fly in Winter at all.
 
 ## Thunder and lightning
 
-Every rain spell in Spring, Summer and Fall rolls with thunder.
+Every rain spell in Spring, Summer and Fall rolls with thunder. A soft roll also plays <Fact path="world.thunder.heraldLeadSeconds" as="duration" /> before the rain begins.
 
 | | Value |
 | --- | --- |
-| When | While the rain is at least a quarter built up |
-| Rolls | One every 30 to 80 s, at random |
-| Spells that can flash | 1 in 10, decided as the spell begins |
-| In such a spell | 1 roll in 4 comes with a flash, 1 to 3 s before it, at least 2 min apart |
+| When | While the rain is at least <Fact path="world.thunder.minRainPercent" />% built up |
+| Rolls | One every <Fact path="world.thunder.rollMinSeconds" /> to <Fact path="world.thunder.rollMaxSeconds" /> s, at random |
+| Spells that can flash | 1 in <Fact path="world.thunder.flashSpellOddsDenominator" />, decided as the spell begins |
+| In such a spell | 1 roll in <Fact path="world.thunder.flashRollOddsDenominator" /> comes with a flash, <Fact path="world.thunder.flashLeadMinSeconds" /> to <Fact path="world.thunder.flashLeadMaxSeconds" /> s before it, at least <Fact path="world.thunder.flashSpacingSeconds" as="duration" /> apart |
 | Other spells | Thunder only |
 
-- No roll starts within 5 s of the midnight chime.
+- No roll starts within <Fact path="world.thunder.chimeClearanceSeconds" as="duration" /> of the midnight chime.
 - Thunder and lightning change nothing in the game.
 
 ## Wind
 
-- The wind blows left or right across the map, each way equally likely. Its direction is settled afresh every 5 real minutes (5 farm hours), so it may change or stay.
+- The wind blows left or right across the map, <Fact path="world.wind.directionPercent" />% each way. Its direction is settled afresh every <Fact path="world.wind.spellRealSeconds" as="duration" /> (<Fact path="world.wind.spellFarmHours" /> farm hours), so it may change or stay.
 - A gust comes every 30 s. Rain, snow, clouds, leaves and petals drift with the wind.
 - Wind changes nothing in the game.
 
 ## Clouds
 
-- Six clouds drift over the map with the wind at all times. When one fades out over the far edge, a new one fades in at the edge the wind blows from.
+- <Fact path="world.clouds.count" /> clouds drift over the map with the wind at all times. When one fades out over the far edge, a new one fades in at the edge the wind blows from.
 - In the rain they turn grey and drift faster.
-- Their shadows fade but stay: 60% as strong in rain, 75% at night and 45% on a rainy night.
+- Their shadows fade but stay: <Fact path="world.clouds.rainShadowPercent" />% as strong in rain, <Fact path="world.clouds.nightShadowPercent" />% at night and <Fact path="world.clouds.rainyNightShadowPercent" />% on a rainy night.
 - Clouds and their shadows are looks only. They never take a tap and change nothing in the game.
 
 ## Related pages

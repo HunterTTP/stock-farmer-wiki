@@ -28,7 +28,7 @@ The Chicken Coop hatches chicks. Chicks grow into chickens, and hens lay eggs on
 | A hen lays | About every <Fact path="animals.chickens.layEverySeconds" as="duration" /> on average, at random |
 | Eggs waiting per hen | At most <Fact path="animals.chickens.eggsWaitingPerHen" /> |
 | An egg sells for | <Fact path="animals.chickens.eggValue" as="money" /> |
-| XP per egg | 6 (the coop's unlock level plus one) |
+| XP per egg | <Fact path="animals.chickens.eggXP" /> (the coop's unlock level plus one) |
 | Coops allowed | <Fact path="buildings.chickenCoop.limit" /> |
 
 ## Hatching
@@ -40,15 +40,15 @@ The Chicken Coop hatches chicks. Chicks grow into chickens, and hens lay eggs on
 
 ## Hens and roosters
 
-- By default each chick grows into a hen of a random color, each of the seven equally likely: <Fact path="animals.chickens.henColors" />.
-- A coop can be set to hatch only one hen color, or one of seven rooster colors. The choice moves with the coop. Chickens already hatched keep their look.
+- By default each chick grows into a hen of a random color, each of the <Fact path="animals.chickens.henColorCount" /> equally likely: <Fact path="animals.chickens.henColors" />.
+- A coop can be set to hatch only one hen color, or one of <Fact path="animals.chickens.roosterColorCount" /> rooster colors. The choice moves with the coop. Chickens already hatched keep their look.
 - Roosters lay no eggs. Apart from that they behave like hens, and they eat crops too.
 
 ## Laying
 
-- Each second a grown hen is outside, she has a 1 in 180 chance of laying (1 in 144 while Well Fed). That makes an average of <Fact path="animals.chickens.layEverySeconds" as="duration" /> between eggs, but any wait is possible.
+- Each second a grown hen is outside, she has a 1 in <Fact path="animals.chickens.layEverySeconds" /> chance of laying (1 in <Fact path="animals.chickens.layWellFedSeconds" /> while Well Fed). That makes an average of <Fact path="animals.chickens.layEverySeconds" as="duration" /> between eggs, but any wait is possible.
 - She lays on the ground where she is walking, a little off the middle of the tile.
-- A tapped hen shows "Next egg in about" a time on her menu, 0.8 of it while Well Fed. It is an average, so there is no bar.
+- A tapped hen shows "Next egg in about" a time on her menu, <Fact path="animals.meal.timeFactor" /> of it while Well Fed. It is an average, so there is no bar.
 - A hen with an uncollected egg lays no more until it is collected.
 - Chicks, roosters and hens inside the coop at night or in heavy rain lay nothing.
 - Hens lay only while the game is open.

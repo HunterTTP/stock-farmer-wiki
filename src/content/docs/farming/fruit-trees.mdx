@@ -24,10 +24,10 @@ A fruit tree sits halfway between the crop before it and the crop after it in th
 
 | | Rule |
 | --- | --- |
-| Basket price | 1.5 times what a crop at the tree's place would sell for |
-| Ripening time | 3 times the grow time of the crop that unlocks right after it |
-| Cost | 12 baskets' worth |
-| XP per basket | 1.5 times what a crop of its level earns (unlock level plus one), rounded |
+| Basket price | <Fact path="world.cropEconomy.fruitTreeBasketMultiplier" /> times what a crop at the tree's place would sell for |
+| Ripening time | <Fact path="world.cropEconomy.fruitTreeRipenMultiplier" /> times the grow time of the crop that unlocks right after it |
+| Cost | <Fact path="world.cropEconomy.fruitTreeCostBaskets" /> baskets' worth |
+| XP per basket | <Fact path="world.cropEconomy.fruitTreeXPMultiplier" /> times what a crop of its level earns (unlock level plus one), rounded |
 
 ## Phases
 
@@ -41,7 +41,7 @@ A tree has two looks: bare while it grows, and with ripe fruit when it is ready.
 
 - A tree takes a 2×2 square: its picture covers four tiles and its trunk stands on the bottom two.
 - It stands on bare grass only, never on farmland, water, a fence or an animal, and never in front of an animal home.
-- Water, fertilizer and a Scarecrow do not speed a tree, since it stands on grass. Seasons and weather do not change it.
+- Water, fertilizer and a Scarecrow do not speed a tree, since it stands on grass. A [Greenhouse](../../buildings/#greenhouse) speeds up all fruit trees by 15% while placed. Seasons and weather do not change a tree.
 - Pets never ripen a tree and animals never eat one.
 - Only the Bucket picks fruit. On Sell the basket sells at once. On Store it goes to [Storage](../../storage-and-selling/).
 - A Bucket upgrade gives a chance of a second basket, with no extra XP (see [Tools](../../tools/)).

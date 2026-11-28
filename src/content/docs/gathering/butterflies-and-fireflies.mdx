@@ -4,63 +4,51 @@ description: When butterflies and fireflies appear, the odds of each wing color 
 sidebar:
   order: 5
 ---
+import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-Butterflies fly by day and fireflies come out at night. Both are caught with the Bucket and kept in [Storage](../../storage-and-selling/). They cannot be sold. A caught one can be set free on the farm again.
+Butterflies fly by day and fireflies come out at night. Both are caught with the Net and kept in [Storage](../../storage-and-selling/). They cannot be sold. A caught one can be set free on the farm again.
 
 ## Butterflies
 
 | | Value |
 | --- | --- |
 | When | Full daylight, no rain, every season except Winter |
-| Chance | 10% each second that one flies in from the edge of the map, while there are fewer than 10 |
-| Most on the farm | 10, counting ones you set free |
-| Shifting wings | 1% |
-| Each of Common, Uncommon, Rare, Epic, Legendary | 19.8% |
+| Chance | <Fact path="world.butterflies.spawnChancePercent" />% each second that one flies in from the edge of the map, while there are fewer than <Fact path="world.butterflies.mostOnFarm" /> |
+| Most on the farm | <Fact path="world.butterflies.mostOnFarm" />, counting ones you set free |
+| Shifting wings | <Fact path="world.butterflies.shiftingChancePercent" />% |
+| Each of Common, Uncommon, Rare, Epic, Legendary | <Fact path="world.butterflies.eachColorChancePercent" />% |
 
 - A butterfly visits a couple of crops, rocks or decorations, rests on each for a few seconds and leaves again. With nothing to visit, it crosses the farm.
 - Shifting wings slowly go round all the hues.
-- With 10 set free on the farm, no wild ones come out.
+- With <Fact path="world.butterflies.mostReleased" /> set free on the farm, no wild ones come out.
 
 ## Fireflies
 
-Each night has exactly <Fact path="world.firefliesPerNight" /> fireflies.
+Each night has exactly <Fact path="world.fireflies.perNight" /> fireflies.
 
-- The night from 9 PM to 4 AM is cut into ten equal parts, and one firefly comes out of the forest at a random moment in each part.
-- Three of the ten, picked at random, glow in a color. The rest are the usual warm orange.
+- The night from <Fact path="world.fireflies.windowStart" /> to <Fact path="world.fireflies.windowEnd" /> is cut into <Fact path="world.fireflies.perNight" /> equal parts, and one firefly comes out of the forest at a random moment in each part.
+- <Fact path="world.fireflies.coloredPerNight" /> of the <Fact path="world.fireflies.perNight" />, picked at random, glow in a color. The rest are the usual warm orange.
 - Every night is the same however often you open the farm.
 
-| Glow of a colored firefly | Chance | Chance a night has at least one |
-| --- | --- | --- |
-| Uncommon | 44.4% | 83% |
-| Rare | 27.8% | 62% |
-| Epic | 15.6% | 40% |
-| Legendary (deep orange) | 8.9% | 24% |
-| Shifting | 3.3% | 10% |
+<DataTable name="firefly-colors" />
 
 - There are no white Common fireflies.
 - A firefly whose moment passes while the game is closed is missed.
-- At most 10 fireflies are on the farm at once, counting ones you set free. One that comes out when the farm is full waits for room, and is missed if none opens before the night ends.
+- At most <Fact path="world.fireflies.mostOnFarm" /> fireflies are on the farm at once, counting ones you set free. One that comes out when the farm is full waits for room, and is missed if none opens before the night ends.
 - Fireflies fade out as day comes and are gone by morning.
 
 ## Catching
 
-- Only the Bucket catches them. A catch goes into Storage as a Butterfly of its wing color (such as "Rare Butterfly"), a "Firefly" (orange) or a colored firefly (such as "Epic Firefly").
+- Only the Net catches them. A catch goes into Storage as a Butterfly of its wing color (such as "Rare Butterfly"), a "Firefly" (orange) or a colored firefly (such as "Epic Firefly").
 - Storage must have a free slot.
 - Each wing color and each glow is one entry in [Progress](../../progress/), counted when you catch it.
 
 ## XP
 
-> XP = XP to leave your level ÷ 600 × multiplier, rounded, at least 1
+> XP = XP to leave your level ÷ <Fact path="world.butterflies.xpLevelDivisor" /> × multiplier, rounded, at least 1
 
-| Wings or glow | Multiplier |
-| --- | --- |
-| Common butterfly, orange firefly | 1 |
-| Uncommon | 2 |
-| Rare | 4 |
-| Epic | 7 |
-| Legendary | 10 |
-| Shifting | 15 |
+<DataTable name="butterfly-xp" />
 
 - XP is earned only for a wild one. Catching one you set free earns nothing and is not counted in Progress.
 - No XP is earned at the top level.
@@ -68,8 +56,8 @@ Each night has exactly <Fact path="world.firefliesPerNight" /> fireflies.
 
 ## Setting them free
 
-- A butterfly or firefly set free from Storage flutters within 1 tile of where you let it go, diagonals included, until you catch it again.
-- At most 10 butterflies and 10 fireflies can be set free at once.
+- A butterfly or firefly set free from Storage flutters within <Fact path="world.butterflies.roamTiles" /> tile of where you let it go, diagonals included, until you catch it again.
+- At most <Fact path="world.butterflies.mostReleased" /> butterflies and <Fact path="world.fireflies.mostReleased" /> fireflies can be set free at once.
 - Fireflies can only be set free at night. Set-free fireflies fade out by day and come back the next night.
 - A set-free butterfly rests nearby while it is dark, raining or snowing, and flutters again when it is fine.
 - Releasing one from Storage instead throws it away for nothing.

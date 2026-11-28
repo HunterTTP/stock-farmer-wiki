@@ -40,14 +40,14 @@ The [House](../buildings/house/) opens it. The House unlocks at level <Fact path
 - A sale's profit or loss is the sale price minus what you paid for each, times the shares sold. The sale screen and its message show it.
 - Each different stock takes one slot, however many shares of it you own. Selling every share frees its slot.
 - Stocks stay with the farm if the House is destroyed (see [House](../buildings/house/)).
-- The Luxury House upgrade costs <Fact path="home-upgrades.house.cost" as="money" /> in gold and unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
+- The Luxury House upgrade costs <Fact path="home-upgrades.house.cost" as="money" /> plus <Fact path="home-upgrades.house.materials" as="materials" /> and unlocks at level <Fact path="home-upgrades.house.unlockLevel" />.
 
 ## Prices
 
 - Prices come from a real market source and can be delayed.
 - While the Stock Market is open, the prices of stocks you own update every <Fact path="world.stockRefreshMinutes" /> minutes. A search looks up its price at once.
 - Prices do not update while the market is closed, and never move with the farm's clock.
-- Between updates, the price on screen wobbles slightly above the last real price, by at most 0.05%.
+- Between updates, the price on screen wobbles slightly above the last real price, by at most <Fact path="world.stockPriceWobblePercent" />%.
 - The day's change is against the stock's previous close.
 
 ## Profit, progress and quests

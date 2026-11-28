@@ -37,7 +37,7 @@ Every meal gives the same boost for <Fact path="animals.meal.seconds" as="durati
 | Cat or dog | Is <Fact path="animals.meal.speedUpPercent" />% more likely to ripen the crop it stands on |
 | Rooster, grown duck | Nothing changes |
 
-How it works: each second of the meal counts as 1.25 seconds of waiting. A wait spent wholly Well Fed takes 0.8 of its usual time, so one meal saves at most 1 min 15 s.
+How it works: each second of the meal counts as <Fact path="animals.meal.speedMultiplier" /> seconds of waiting. A wait spent wholly Well Fed takes <Fact path="animals.meal.timeFactor" /> of its usual time, so one meal saves at most <Fact path="animals.meal.maxTimeSavedSeconds" as="duration" />.
 
 - A meal speeds an item only until it is ready. Once ready it waits to be collected, and no time is saved toward the next one.
 - A baby that grows up during its meal gets the boost only for the part of the meal before it grew up, then for its first item.

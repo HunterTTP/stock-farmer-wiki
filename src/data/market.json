@@ -3,10 +3,10 @@
   "basicColours" : 16,
   "goldLeafPrice" : 500000,
   "materialDailyLimit" : 50,
-  "oreDailyLimit" : 10,
+  "oreDailyLimit" : 3,
   "shop" : [
     {
-      "dailyLimit" : 10,
+      "dailyLimit" : 3,
       "icon" : {
         "height" : 22,
         "src" : "sprites/ores/copper.png",
@@ -15,10 +15,11 @@
       "id" : "ore-copper",
       "name" : "Copper Ore",
       "price" : 100,
-      "sellsFor" : 6
+      "sellsFor" : 6,
+      "unlockLevel" : 1
     },
     {
-      "dailyLimit" : 10,
+      "dailyLimit" : 2,
       "icon" : {
         "height" : 22,
         "src" : "sprites/ores/iron.png",
@@ -27,10 +28,11 @@
       "id" : "ore-iron",
       "name" : "Iron Ore",
       "price" : 250,
-      "sellsFor" : 10
+      "sellsFor" : 10,
+      "unlockLevel" : 12
     },
     {
-      "dailyLimit" : 10,
+      "dailyLimit" : 2,
       "icon" : {
         "height" : 22,
         "src" : "sprites/ores/gold.png",
@@ -39,10 +41,11 @@
       "id" : "ore-gold",
       "name" : "Gold Ore",
       "price" : 450,
-      "sellsFor" : 18
+      "sellsFor" : 18,
+      "unlockLevel" : 18
     },
     {
-      "dailyLimit" : 10,
+      "dailyLimit" : 1,
       "icon" : {
         "height" : 27,
         "src" : "sprites/ores/ruby.png",
@@ -51,10 +54,11 @@
       "id" : "ore-ruby",
       "name" : "Rough Ruby",
       "price" : 700,
-      "sellsFor" : 40
+      "sellsFor" : 40,
+      "unlockLevel" : 18
     },
     {
-      "dailyLimit" : 10,
+      "dailyLimit" : 1,
       "icon" : {
         "height" : 27,
         "src" : "sprites/ores/sapphire.png",
@@ -63,7 +67,8 @@
       "id" : "ore-sapphire",
       "name" : "Rough Sapphire",
       "price" : 1000,
-      "sellsFor" : 50
+      "sellsFor" : 50,
+      "unlockLevel" : 18
     },
     {
       "dailyLimit" : 50,
@@ -75,7 +80,8 @@
       "id" : "log",
       "name" : "Log",
       "price" : 100,
-      "sellsFor" : 0
+      "sellsFor" : 0,
+      "unlockLevel" : 1
     },
     {
       "dailyLimit" : 50,
@@ -87,7 +93,8 @@
       "id" : "stone",
       "name" : "Stone",
       "price" : 100,
-      "sellsFor" : 0
+      "sellsFor" : 0,
+      "unlockLevel" : 1
     }
   ],
   "skinPrices" : [
@@ -350,6 +357,19 @@
       },
       "legendary" : 1400000,
       "rare" : 350000
+    },
+    {
+      "basic" : 0,
+      "building" : "greenhouse",
+      "buildingName" : "Greenhouse",
+      "epic" : 0,
+      "icon" : {
+        "height" : 127,
+        "src" : "sprites/buildings/greenhouse.png",
+        "width" : 96
+      },
+      "legendary" : 0,
+      "rare" : 0
     },
     {
       "basic" : 55000,

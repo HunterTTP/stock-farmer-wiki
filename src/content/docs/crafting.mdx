@@ -22,9 +22,9 @@ import Fact from '../../components/Fact.astro';
 
 Flour, Bread, Planks, Cloth, Bricks and Cheese have set prices. Every other good is an artisan good, and its price comes from what goes into it:
 
-> Artisan good price = sale price of one ingredient × number that go in × 1.5, rounded to whole silver
+> Artisan good price = sale price of one ingredient × number that go in × <Fact path="mining.artisanStandardMultiplier" />, rounded to whole silver
 
-- A bar or a polished gem uses 2 in place of 1.5, since ore is scarce.
+- A bar or a polished gem uses <Fact path="mining.artisanOreMultiplier" /> in place of <Fact path="mining.artisanStandardMultiplier" />, since ore is scarce.
 - Recipes that make two items (Bread, Bricks, Cloth from Cotton) have set prices.
 - A workshop recipe earns no XP. Its profit is the gap between the good's price and its ingredients'.
 

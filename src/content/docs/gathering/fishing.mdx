@@ -17,8 +17,8 @@ A body of water holds fish if it has interior tiles: water tiles with water on a
 
 | Limit | Rule |
 | --- | --- |
-| Fish places per body of water | One per 20 interior tiles, rounded up |
-| Fish on the whole farm | One per 24 water tiles, at least 2 and at most 15 |
+| Fish places per body of water | One per <Fact path="world.waterHabitat.interiorTilesPerAnimal" /> interior tiles, rounded up |
+| Fish on the whole farm | One per <Fact path="world.waterHabitat.waterTilesPerAnimal" /> water tiles, at least <Fact path="world.waterHabitat.minOnMap" /> and at most <Fact path="world.waterHabitat.maxOnMap" /> |
 
 - Each fish place holds at most one fish and has its own timer.
 - Fish you let go yourself do not count toward either limit.
@@ -28,39 +28,33 @@ A body of water holds fish if it has interior tiles: water tiles with water on a
 
 | Event | Next fish in that place after |
 | --- | --- |
-| A fish place is made (new water, or water joined) | 10 min |
-| A fish is caught, given up, released or swims away | 30 min |
+| A fish place is made (new water, or water joined) | <Fact path="fish.spawning.firstFishSeconds" as="duration" /> |
+| A fish is caught, given up, released or swims away | <Fact path="fish.spawning.respawnSeconds" as="duration" /> |
 
-- Darkness shortens the wait, by up to half at full night: a 30 min wait that falls wholly in the night takes 15 min. See [Day and Night](../../world/day-and-night/) for the night hours.
+- Darkness shortens the wait, by <Fact path="fish.spawning.nightWaitReductionPercent" />% at full night: a <Fact path="fish.spawning.respawnSeconds" as="duration" /> wait that falls wholly in the night takes <Fact path="fish.spawning.nightRespawnSeconds" as="duration" />. See [Day and Night](../../world/day-and-night/) for the night hours.
+- A body of water with no wild fish left refills its first fish in <Fact path="fish.spawning.emptyPondWaitPercent" />% of the usual wait.
 - The timers run on the real clock, so fish also arrive while the game is closed.
-- A new fish appears on a random interior tile of its body of water with no fish swimming there, no other fish within 2 tiles, no duck on or next to the tile, and no 5×5 square left holding more than two fish.
+- A new fish appears on a random interior tile of its body of water with no fish swimming there, no other fish within <Fact path="world.waterHabitat.sameKindSpacing" /> tiles, no duck on or next to the tile, and no <Fact path="world.waterHabitat.windowSide" />×<Fact path="world.waterHabitat.windowSide" /> square left holding more than <Fact path="world.waterHabitat.maxInWindow" /> fish.
 - The tutorial's fishing step puts a Common fish of middling weight in the nearest empty fish place if no Common fish is swimming anywhere.
 
 ## Swimming away
 
-- A wild fish that nobody catches swims away one farm day (<Fact path="world.realSecondsPerFarmDay" as="duration" /> of play) after it appeared. The farm's clock stands still while the game is closed, so fish never swim away while you are away.
+- A wild fish that nobody catches swims away one farm day (<Fact path="fish.spawning.lifetimeSeconds" as="duration" /> of play) after it appeared. The farm's clock stands still while the game is closed, so fish never swim away while you are away.
 - A fish on your line never swims away during the fight.
 - A fish you named or let go never swims away.
-- A fish stays within 6 tiles of where it appeared. It swims left or right 4 times as often as up or down.
+- A fish stays within <Fact path="fish.spawning.roamRadius" /> tiles of where it appeared. It swims left or right <Fact path="fish.spawning.sidewaysPreference" /> times as often as up or down.
 
 ## Which fish appear
 
-A new fish first gets a rarity, then one kind of that rarity, each kind equally likely. Only unlocked rarities can be drawn.
+A new fish first gets a rarity, then one kind of that rarity, each kind equally likely. Every rarity can bite from level 1, with rarer ones likelier at higher levels.
 
 <DataTable name="rarities" columns="Rarity,Bites from level,Kinds of fish" />
 
 The chance of each rarity at your level:
 
-| Your level | Common | Uncommon | Rare | Epic | Legendary |
-| --- | --- | --- | --- | --- | --- |
-| 1 to 9 | 100% | | | | |
-| 10 to 14 | 61.1% | 27.4% | 11.6% | | |
-| 15 to 19 | 47.4% | 26.8% | 16.5% | 9.3% | |
-| 20 to 24 | 34% | 25% | 20% | 15% | 6% |
-| 25 to 29 | 24% | 22% | 22% | 20% | 12% |
-| 30 and up | 15% | 18% | 24% | 25% | 18% |
+<DataTable name="fish-spawn-odds" />
 
-The odds change only at those levels and stay put from level 30. A fish keeps the rarity it was drawn with, so fish already swimming do not change when you level up.
+The odds shift every <Fact path="fish.spawnRateStep" /> levels and stay put from level <Fact path="fish.spawnRateTopLevel" />. A fish keeps the rarity it was drawn with, so fish already swimming do not change when you level up.
 
 ## Weight
 
@@ -73,58 +67,40 @@ Where a weight falls in its kind's range (0% for the lightest, 100% for the heav
 | | Lightest | Middling | Heaviest |
 | --- | --- | --- | --- |
 | Price | <Fact path="fish.lightestPricePercent" />% of the rarity's price | 100% | <Fact path="fish.heaviestPricePercent" />% |
-| XP | 0.5 times | 1 times | 1.5 times |
-| Size drawn | 0.8 times | 1 times | 1.2 times |
+| XP | <Fact path="fish.weight.lightestXPFactor" /> times | 1 times | <Fact path="fish.weight.heaviestXPFactor" /> times |
+| Size drawn | <Fact path="fish.weight.lightestSizeFactor" /> times | 1 times | <Fact path="fish.weight.heaviestSizeFactor" /> times |
 
-> Price = rarity's price × (0.8 + 0.4 × place in range), rounded to the nearest whole gold
+> Price = rarity's price × (<Fact path="fish.weight.lightestPriceFactor" /> + <Fact path="fish.weight.priceFactorSpan" /> × place in range), rounded to the nearest whole gold
 
-The rarity prices are on [Fish](../fish/#rarities). For example, a Rare fish (middling price 110 gold) at the very top of its range sells for 132 gold, and at the bottom for 88 gold.
+The rarity prices are on [Fish](../fish/#rarities). For example, a Rare fish (middling price <Fact path="fish.rarities.Rare.fishValue" as="money" />) at the very top of its range sells for 132 gold, and at the bottom for 88 gold.
 
 The catch card says what share of that kind weighs less, colored by how rare that is:
 
-| Heavier than | Color |
-| --- | --- |
-| Less than 50% | Common (white) |
-| 50% to 75% | Uncommon (green) |
-| 75% to 90% | Rare (blue) |
-| 90% to 99% | Epic (purple) |
-| 99% or more | Legendary (orange) |
+<DataTable name="fish-weight-bands" />
 
 ## Catching a fish
 
 Drag the rod's ring over the fish to fill the catch bar. When the bar is full, the fish is caught.
 
-| Rarity | Time on the fish to fill the bar | Speed against a Common fish |
-| --- | --- | --- |
-| Common | 2.4 s | 1 times |
-| Uncommon | 3 s | 1.5 times |
-| Rare | 4.4 s | 2.4 times |
-| Epic | 5.8 s | 3 times |
-| Legendary | 7 s | 3.6 times |
+<DataTable name="fish-difficulty" />
 
-- Rarer fish also turn more often and more sharply. Common fish turn least, and one turn in five doubles back.
-- The fuller the bar, the harder the fish fights: up to twice as fast and with sharper turns when the bar is nearly full.
-- Off the fish, the bar drains by 4% of its length a second. The fish is not lost.
+- Rarer fish also turn more often and more sharply. Common fish turn least, and <Fact path="fish.contest.commonDoubleBackPercent" />% of turns (1 in <Fact path="fish.contest.commonDoubleBackOddsDenominator" />) double back.
+- The fuller the bar, the harder the fish fights: up to <Fact path="fish.contest.maxFightMultiplier" /> times as fast and with sharper turns when the bar is nearly full.
+- Off the fish, the bar drains by <Fact path="fish.contest.drainPercentPerSecond" />% of its length a second. The fish is not lost.
 - A better Fishing Rod widens the catch circle, the distance the ring can be from the fish and still fill the bar.
-- Giving up mid-fight sends the fish away for good, and its place waits 30 min.
+- Giving up mid-fight sends the fish away for good, and its place waits <Fact path="fish.spawning.respawnSeconds" as="duration" />.
 - Storage does not need room to start. With Storage full, a catch can still be sold.
 
 <DataTable name="tool-upgrades" where="tool" is="Fishing Rod" />
 
 ## XP for fish
 
-> Fish XP = XP to leave your level ÷ 300 × rarity multiplier × weight factor (0.5 to 1.5), rounded, at least 1
+> Fish XP = XP to leave your level ÷ <Fact path="fish.xp.levelDivisor" /> × rarity multiplier × weight factor (<Fact path="fish.weight.lightestXPFactor" /> to <Fact path="fish.weight.heaviestXPFactor" />), rounded, at least 1
 
-| Rarity | Multiplier |
-| --- | --- |
-| Common | 1 |
-| Uncommon | 2 |
-| Rare | 4 |
-| Epic | 7 |
-| Legendary | 10 |
+<DataTable name="fish-xp-multipliers" />
 
-- An average Common fish is worth 1/300 of a level at every level. At level 10, which takes 3,696 XP to leave, that is about 12 XP.
-- A Legendary fish at the top of its weight range is worth 15 times an average Common one: 5% of a level.
+- An average Common fish is worth 1/<Fact path="fish.xp.levelDivisor" /> of a level at every level. At level 10, which takes 3,696 XP to leave, that is about 12 XP.
+- A Legendary fish at the top of its weight range is worth <Fact path="fish.xp.maxLegendaryMultiple" /> times an average Common one: <Fact path="fish.xp.maxLegendaryLevelPercent" />% of a level.
 - No XP is earned at the top level.
 - A fish you let go earns nothing when caught again.
 
@@ -135,12 +111,12 @@ Every caught fish is kept as its own fish.
 | Part | Rule |
 | --- | --- |
 | Number | The first time it is landed it gets the next number of its kind, such as "King Salmon #5". It keeps that number for good. |
-| Name | Up to 20 characters. A named fish never swims away. |
+| Name | Up to <Fact path="fish.maxNameLength" /> characters. A named fish never swims away. |
 | Weight | Fixed for that fish. It sets its price and size. |
 
 - The first catch of a kind counts it in [Progress](../../progress/), keeping the heaviest weight caught.
 - A stored fish sells for its own price at any time (see [Storage and Selling](../../storage-and-selling/#fish)).
-- Releasing a wild fish from the pond sends it away for good, for no gold or XP, and its place waits 30 min.
+- Releasing a wild fish from the pond sends it away for good, for no gold or XP, and its place waits <Fact path="fish.spawning.respawnSeconds" as="duration" />.
 
 ## Letting a fish go
 

@@ -32,7 +32,7 @@ Homes, their size and their upgrades are on [Animal Homes](../buildings/animal-h
 ## Time
 
 - Animals never go hungry. They give their items at the same pace whether or not they have eaten. A meal only gives a short boost (see [Feeding](feeding/)).
-- Babies grow up, homes have babies and grown animals make their items on the real clock, also while the game is closed. Time away is caught up for at most three days.
+- Babies grow up, homes have babies and grown animals make their items on the real clock, also while the game is closed. Time away is caught up for at most <Fact path="animals.herdCatchUpDays" /> days.
 - Hens lay eggs, pets ripen crops and animals eat crops only while the game is open.
 
 ## Animal menu
@@ -57,7 +57,7 @@ Tapping an animal opens its menu. A baby or grown animal that makes something ha
 
 ## Night and rain
 
-- Animals with a home go in once it is half dark (from 8:30 PM) or once the rain is half built up (10 farm minutes after it starts at 2 PM). They come out when the night or the rain is over.
+- Animals with a home go in once it is <Fact path="world.dayNight.shelterDarknessPercent" />% dark (from <Fact path="world.dayNight.eveningHalfDark" />) or once the rain is half built up (<Fact path="world.weather.shelterDelayFarmMinutes" /> farm minutes after it starts at <Fact path="world.weather.rainStart" />). They come out when the night or the rain is over.
 - They walk back to the tile in front of their home, then disappear inside.
 - An animal indoors cannot be tapped and does nothing for the farm: hens lay no eggs, nothing can be milked or shorn, pets ripen nothing and nothing eats crops.
 - Ducks have no home and stay out.
@@ -65,11 +65,11 @@ Tapping an animal opens its menu. A baby or grown animal that makes something ha
 
 ## Pests
 
-Grown chickens and farm animals out on the land sometimes eat the crop they stand on, at most once every <Fact path="world.realSecondsPerFarmDay" as="duration" /> each. The odds are on [Growth](../farming/growth/#animals-eating-crops).
+Grown chickens and farm animals out on the land sometimes eat the crop they stand on, at most once every <Fact path="animals.grazing.restSeconds" as="duration" /> each. The odds are on [Growth](../farming/growth/#animals-eating-crops).
 
 ## Names
 
-- Any animal or fish can be given a name of up to 20 characters. A blank name gives back its kind's plain name.
+- Any animal or fish can be given a name of up to <Fact path="animals.maxNameLength" /> characters. A blank name gives back its kind's plain name.
 - A name changes nothing about how the animal behaves.
 
 ## Releasing and selling

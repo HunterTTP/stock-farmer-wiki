@@ -11,10 +11,12 @@
       "width" : 14
     },
     "eggValue" : 5,
+    "eggXP" : 10,
     "eggsWaitingPerHen" : 1,
     "growSeconds" : 600,
     "grownSalePrice" : 50,
     "hatchSeconds" : 300,
+    "henColorCount" : 7,
     "henColors" : [
       "Brown Hen",
       "Dark Brown Hen",
@@ -30,8 +32,37 @@
       "width" : 12
     },
     "layEverySeconds" : 180,
+    "layWellFedSeconds" : 144,
+    "roosterColorCount" : 7,
+    "roosterColors" : [
+      "Brown Rooster",
+      "Dark Brown Rooster",
+      "Black and Brown Rooster",
+      "Golden Rooster",
+      "Gray Rooster",
+      "White Rooster",
+      "Yellow Rooster"
+    ],
     "unlockLevel" : 5
   },
+  "ducks" : {
+    "colorCount" : 4,
+    "colors" : [
+      "Brown Duck",
+      "Mallard",
+      "Red Eyed Duck",
+      "White Duck"
+    ],
+    "firstDucklingSeconds" : 600,
+    "nextDucklingSeconds" : 1800
+  },
+  "grazing" : {
+    "biteChancePercent" : 3.3,
+    "biteOddsDenominator" : 30,
+    "restSeconds" : 1440
+  },
+  "herdCatchUpDays" : 3,
+  "herdCatchUpSeconds" : 259200,
   "livestock" : [
     {
       "babyIcon" : {
@@ -57,6 +88,7 @@
         "width" : 11
       },
       "givesValue" : 5,
+      "givesXP" : 13,
       "growSeconds" : 480,
       "home" : "Rabbit Hutch",
       "icon" : {
@@ -123,6 +155,7 @@
         "width" : 24
       },
       "givesValue" : 30,
+      "givesXP" : 19,
       "growSeconds" : 900,
       "home" : "Sheep Barn",
       "icon" : {
@@ -157,6 +190,7 @@
         "width" : 12
       },
       "givesValue" : 18,
+      "givesXP" : 16,
       "growSeconds" : 900,
       "home" : "Goat Barn",
       "icon" : {
@@ -192,6 +226,7 @@
         "width" : 11
       },
       "givesValue" : 5,
+      "givesXP" : 19,
       "growSeconds" : 1200,
       "home" : "Pig Barn",
       "icon" : {
@@ -226,6 +261,7 @@
         "width" : 11
       },
       "givesValue" : 5,
+      "givesXP" : 26,
       "growSeconds" : 1500,
       "home" : "Stable",
       "icon" : {
@@ -261,6 +297,7 @@
         "width" : 12
       },
       "givesValue" : 60,
+      "givesXP" : 19,
       "growSeconds" : 1800,
       "home" : "Luxury Barn",
       "icon" : {
@@ -274,11 +311,15 @@
       "unlockLevel" : 19
     }
   ],
+  "maxNameLength" : 20,
   "meal" : {
     "farmFavorite" : "Wheat",
+    "maxTimeSavedSeconds" : 75,
     "petFavorite" : "Salmon",
     "seconds" : 300,
-    "speedUpPercent" : 25
+    "speedMultiplier" : 1.25,
+    "speedUpPercent" : 25,
+    "timeFactor" : 0.8
   },
   "pets" : {
     "cats" : [
@@ -292,11 +333,34 @@
       "Tuxedo Cat",
       "Tortoiseshell Cat"
     ],
+    "cropRushCapSeconds" : 15,
+    "cropRushGrowthPercent" : 0.2,
+    "cropRushMaxPercent" : 3,
+    "cropRushTable" : [
+      {
+        "chance" : "0.2%",
+        "dwell" : "1 s"
+      },
+      {
+        "chance" : "1%",
+        "dwell" : "5 s"
+      },
+      {
+        "chance" : "2%",
+        "dwell" : "10 s"
+      },
+      {
+        "chance" : "3% (the most)",
+        "dwell" : "15 s or more"
+      }
+    ],
+    "cropRushWellFedMaxPercent" : 3.75,
     "dogBreeds" : [
       "Labrador",
       "German Shepherd",
       "Basenji"
     ],
+    "dogColorsPerBreed" : 3,
     "dogs" : [
       "Brown Labrador",
       "White Labrador",
@@ -491,5 +555,98 @@
       }
     ],
     "pets" : 18
-  }
+  },
+  "produceXP" : [
+    {
+      "from" : "Hen",
+      "icon" : {
+        "height" : 16,
+        "src" : "sprites/goods/egg.png",
+        "width" : 14
+      },
+      "id" : "egg",
+      "item" : "Egg",
+      "livestockOnly" : false,
+      "tool" : "Bucket",
+      "xp" : 10
+    },
+    {
+      "from" : "Rabbit",
+      "icon" : {
+        "height" : 8,
+        "src" : "sprites/goods/fertilizer.png",
+        "width" : 11
+      },
+      "id" : "fertilizer-rabbit",
+      "item" : "Fertilizer",
+      "livestockOnly" : true,
+      "tool" : "Bucket",
+      "xp" : 13
+    },
+    {
+      "from" : "Sheep",
+      "icon" : {
+        "height" : 23,
+        "src" : "sprites/goods/wool.png",
+        "width" : 24
+      },
+      "id" : "wool",
+      "item" : "Wool",
+      "livestockOnly" : true,
+      "tool" : "Scythe",
+      "xp" : 19
+    },
+    {
+      "from" : "Goat",
+      "icon" : {
+        "height" : 16,
+        "src" : "sprites/goods/milk.png",
+        "width" : 12
+      },
+      "id" : "goatMilk",
+      "item" : "Goat Milk",
+      "livestockOnly" : true,
+      "tool" : "Bucket",
+      "xp" : 16
+    },
+    {
+      "from" : "Pig",
+      "icon" : {
+        "height" : 8,
+        "src" : "sprites/goods/fertilizer.png",
+        "width" : 11
+      },
+      "id" : "fertilizer-pig",
+      "item" : "Fertilizer",
+      "livestockOnly" : true,
+      "tool" : "Bucket",
+      "xp" : 19
+    },
+    {
+      "from" : "Donkey",
+      "icon" : {
+        "height" : 8,
+        "src" : "sprites/goods/fertilizer.png",
+        "width" : 11
+      },
+      "id" : "fertilizer-donkey",
+      "item" : "Fertilizer",
+      "livestockOnly" : true,
+      "tool" : "Bucket",
+      "xp" : 26
+    },
+    {
+      "from" : "Cow",
+      "icon" : {
+        "height" : 16,
+        "src" : "sprites/goods/milk.png",
+        "width" : 12
+      },
+      "id" : "milk",
+      "item" : "Milk",
+      "livestockOnly" : true,
+      "tool" : "Bucket",
+      "xp" : 19
+    }
+  ]
 }

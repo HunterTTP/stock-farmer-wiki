@@ -5,7 +5,7 @@ import { fact, formats } from '../lib/tables.js';
 
 interface Props {
   path: string;
-  as?: 'money' | 'duration' | 'count' | 'list';
+  as?: 'money' | 'duration' | 'count' | 'list' | 'materials';
 }
 const { path, as } = Astro.props;
 const value = fact(path);

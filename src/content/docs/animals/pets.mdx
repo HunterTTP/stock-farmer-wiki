@@ -23,12 +23,12 @@ Pets are cats and dogs. Each lives in its own Pet House. They give nothing to co
 
 <DataTable name="pets" />
 
-Dog breeds are <Fact path="animals.pets.dogBreeds" />, each in three colors.
+Dog breeds are <Fact path="animals.pets.dogBreeds" />, each in <Fact path="animals.pets.dogColorsPerBreed" /> colors.
 
 ## What pets do
 
 - Pets wander on grass and farmland with no limit on how far from their house they go.
-- A pet on a growing crop may ripen it. The chance rises the longer it stays on crops, from 0.2% a second up to 3% a second after 15 s. See [Growth](../../farming/growth/#pets-ripening-crops) for the full odds.
+- A pet on a growing crop may ripen it. The chance rises the longer it stays on crops, from <Fact path="animals.pets.cropRushGrowthPercent" />% a second up to <Fact path="animals.pets.cropRushMaxPercent" />% a second after <Fact path="animals.pets.cropRushCapSeconds" as="duration" />. See [Growth](../../farming/growth/#pets-ripening-crops) for the full odds.
 - A Well Fed pet is <Fact path="animals.meal.speedUpPercent" />% more likely to ripen a crop. Its favorite food is <Fact path="animals.meal.petFavorite" />. See [Feeding](../feeding/).
 - Pets never ripen fruit trees and never eat crops.
 - Pets go inside at night and in heavy rain like other animals, and ripen nothing while inside.

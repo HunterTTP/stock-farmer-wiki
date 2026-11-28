@@ -1,6 +1,7 @@
 [
   {
     "building" : "Grain Machine",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 25,
       "src" : "sprites/goods/flour.png",
@@ -18,10 +19,12 @@
     "outputCount" : 1,
     "outputValue" : 8,
     "seconds" : 180,
-    "unlockLevel" : 9
+    "unlockLevel" : 9,
+    "xp" : 24
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 2,
     "icon" : {
       "height" : 17,
       "src" : "sprites/goods/bread.png",
@@ -39,10 +42,12 @@
     "outputCount" : 2,
     "outputValue" : 20,
     "seconds" : 300,
-    "unlockLevel" : 14
+    "unlockLevel" : 14,
+    "xp" : 50
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/applePreserves.png",
@@ -60,10 +65,12 @@
     "outputCount" : 1,
     "outputValue" : 4.68,
     "seconds" : 240,
-    "unlockLevel" : 14
+    "unlockLevel" : 14,
+    "xp" : 32
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/orangePreserves.png",
@@ -81,10 +88,12 @@
     "outputCount" : 1,
     "outputValue" : 12.51,
     "seconds" : 240,
-    "unlockLevel" : 14
+    "unlockLevel" : 14,
+    "xp" : 32
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/peachPreserves.png",
@@ -102,10 +111,12 @@
     "outputCount" : 1,
     "outputValue" : 33.75,
     "seconds" : 240,
-    "unlockLevel" : 14
+    "unlockLevel" : 14,
+    "xp" : 32
   },
   {
     "building" : "Woodwork Bench",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 19,
       "src" : "sprites/goods/planks.png",
@@ -123,10 +134,12 @@
     "outputCount" : 1,
     "outputValue" : 15,
     "seconds" : 240,
-    "unlockLevel" : 16
+    "unlockLevel" : 16,
+    "xp" : 32
   },
   {
     "building" : "Woodwork Bench",
+    "craftDepth" : 2,
     "icon" : {
       "height" : 10,
       "src" : "sprites/goods/furniture.png",
@@ -144,10 +157,12 @@
     "outputCount" : 1,
     "outputValue" : 67.5,
     "seconds" : 600,
-    "unlockLevel" : 16
+    "unlockLevel" : 16,
+    "xp" : 100
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/lemonPreserves.png",
@@ -165,10 +180,12 @@
     "outputCount" : 1,
     "outputValue" : 89.91,
     "seconds" : 240,
-    "unlockLevel" : 16
+    "unlockLevel" : 16,
+    "xp" : 32
   },
   {
     "building" : "Tailor Table",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 19,
       "src" : "sprites/goods/woolCloth.png",
@@ -186,10 +203,12 @@
     "outputCount" : 1,
     "outputValue" : 135,
     "seconds" : 480,
-    "unlockLevel" : 18
+    "unlockLevel" : 18,
+    "xp" : 64
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 15,
       "src" : "sprites/goods/copperBar.png",
@@ -207,10 +226,12 @@
     "outputCount" : 1,
     "outputValue" : 60,
     "seconds" : 360,
-    "unlockLevel" : 18
+    "unlockLevel" : 18,
+    "xp" : 48
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 15,
       "src" : "sprites/goods/ironBar.png",
@@ -228,10 +249,12 @@
     "outputCount" : 1,
     "outputValue" : 100,
     "seconds" : 480,
-    "unlockLevel" : 18
+    "unlockLevel" : 18,
+    "xp" : 64
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 15,
       "src" : "sprites/goods/goldBar.png",
@@ -249,10 +272,12 @@
     "outputCount" : 1,
     "outputValue" : 144,
     "seconds" : 600,
-    "unlockLevel" : 18
+    "unlockLevel" : 18,
+    "xp" : 80
   },
   {
     "building" : "DIY Crafting Table",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 19,
       "src" : "sprites/goods/bricks.png",
@@ -270,10 +295,12 @@
     "outputCount" : 2,
     "outputValue" : 25,
     "seconds" : 360,
-    "unlockLevel" : 19
+    "unlockLevel" : 19,
+    "xp" : 48
   },
   {
     "building" : "DIY Crafting Table",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 23,
       "src" : "sprites/goods/polishedRuby.png",
@@ -291,10 +318,12 @@
     "outputCount" : 1,
     "outputValue" : 80,
     "seconds" : 300,
-    "unlockLevel" : 19
+    "unlockLevel" : 19,
+    "xp" : 40
   },
   {
     "building" : "DIY Crafting Table",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 23,
       "src" : "sprites/goods/polishedSapphire.png",
@@ -312,10 +341,12 @@
     "outputCount" : 1,
     "outputValue" : 100,
     "seconds" : 300,
-    "unlockLevel" : 19
+    "unlockLevel" : 19,
+    "xp" : 40
   },
   {
     "building" : "Dairy",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 12,
       "src" : "sprites/goods/cheese.png",
@@ -333,10 +364,12 @@
     "outputCount" : 1,
     "outputValue" : 270,
     "seconds" : 600,
-    "unlockLevel" : 20
+    "unlockLevel" : 20,
+    "xp" : 80
   },
   {
     "building" : "Dairy",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 12,
       "src" : "sprites/goods/goatCheese.png",
@@ -354,10 +387,12 @@
     "outputCount" : 1,
     "outputValue" : 135,
     "seconds" : 480,
-    "unlockLevel" : 20
+    "unlockLevel" : 20,
+    "xp" : 64
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/bananaPreserves.png",
@@ -375,10 +410,12 @@
     "outputCount" : 1,
     "outputValue" : 225.45,
     "seconds" : 240,
-    "unlockLevel" : 20
+    "unlockLevel" : 20,
+    "xp" : 32
   },
   {
     "building" : "Cheese Cellar",
+    "craftDepth" : 2,
     "icon" : {
       "height" : 12,
       "src" : "sprites/goods/agedCheese.png",
@@ -396,10 +433,12 @@
     "outputCount" : 1,
     "outputValue" : 810,
     "seconds" : 1200,
-    "unlockLevel" : 21
+    "unlockLevel" : 21,
+    "xp" : 200
   },
   {
     "building" : "DIY Crafting Table",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/radishPickles.png",
@@ -417,10 +456,12 @@
     "outputCount" : 1,
     "outputValue" : 1800.48,
     "seconds" : 180,
-    "unlockLevel" : 25
+    "unlockLevel" : 25,
+    "xp" : 24
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 25,
       "src" : "sprites/goods/turnipSoup.png",
@@ -438,10 +479,12 @@
     "outputCount" : 1,
     "outputValue" : 1845.6,
     "seconds" : 180,
-    "unlockLevel" : 26
+    "unlockLevel" : 26,
+    "xp" : 24
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 18,
       "src" : "sprites/goods/pumpkinPie.png",
@@ -459,10 +502,12 @@
     "outputCount" : 1,
     "outputValue" : 969.48,
     "seconds" : 300,
-    "unlockLevel" : 28
+    "unlockLevel" : 28,
+    "xp" : 40
   },
   {
     "building" : "Grain Machine",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 28,
       "src" : "sprites/goods/watermelonJuice.png",
@@ -480,10 +525,12 @@
     "outputCount" : 1,
     "outputValue" : 993.72,
     "seconds" : 240,
-    "unlockLevel" : 29
+    "unlockLevel" : 29,
+    "xp" : 32
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/pineapplePreserves.png",
@@ -501,10 +548,12 @@
     "outputCount" : 1,
     "outputValue" : 1018.56,
     "seconds" : 420,
-    "unlockLevel" : 30
+    "unlockLevel" : 30,
+    "xp" : 56
   },
   {
     "building" : "Tailor Table",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 19,
       "src" : "sprites/goods/cloth.png",
@@ -522,10 +571,12 @@
     "outputCount" : 2,
     "outputValue" : 392,
     "seconds" : 720,
-    "unlockLevel" : 31
+    "unlockLevel" : 31,
+    "xp" : 96
   },
   {
     "building" : "Tailor Table",
+    "craftDepth" : 2,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/fineCloth.png",
@@ -543,10 +594,12 @@
     "outputCount" : 1,
     "outputValue" : 1176,
     "seconds" : 600,
-    "unlockLevel" : 31
+    "unlockLevel" : 31,
+    "xp" : 100
   },
   {
     "building" : "Grain Machine",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 28,
       "src" : "sprites/goods/grapeJuice.png",
@@ -564,10 +617,12 @@
     "outputCount" : 1,
     "outputValue" : 802.53,
     "seconds" : 240,
-    "unlockLevel" : 32
+    "unlockLevel" : 32,
+    "xp" : 32
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 24,
       "src" : "sprites/goods/pricklyPearPreserves.png",
@@ -585,10 +640,12 @@
     "outputCount" : 1,
     "outputValue" : 1096.8,
     "seconds" : 420,
-    "unlockLevel" : 33
+    "unlockLevel" : 33,
+    "xp" : 56
   },
   {
     "building" : "Stone Oven",
+    "craftDepth" : 1,
     "icon" : {
       "height" : 25,
       "src" : "sprites/goods/roastedCoffee.png",
@@ -606,6 +663,7 @@
     "outputCount" : 1,
     "outputValue" : 1124.28,
     "seconds" : 360,
-    "unlockLevel" : 34
+    "unlockLevel" : 34,
+    "xp" : 48
   }
 ]

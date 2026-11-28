@@ -7,7 +7,7 @@ sidebar:
 import DataTable from '../../../components/DataTable.astro';
 import Fact from '../../../components/Fact.astro';
 
-The Pickaxe, one of the [Harvest implements](../../tools/), breaks rocks into stones and mines ore veins for ore. Stones and ore go into [Storage](../../storage-and-selling/). Any Pickaxe breaks any rock and mines any vein. Ore is also a prize in the [Cave](../../world/cave/)'s daily chest.
+The Pickaxe, one of the [Harvest implements](../../tools/), breaks rocks into stones and mines ore veins for ore. Stones and ore go into [Storage](../../storage-and-selling/). Any Pickaxe breaks any rock and mines any vein. Ore is also sold in the [Market Stand](../../quests/#supplies) and earned as first-clear rewards in the [Cave](../../world/cave/).
 
 ![Rocks and ore veins standing on the grass](../../../assets/gathering/rocks-and-veins.webp)
 
@@ -17,7 +17,7 @@ Every rock and vein stands on one tile and blocks buildings, fences, trees and a
 
 <DataTable name="rocks" />
 
-- Stones sell for nothing and are used for building (see [Buildings](../../buildings/)). Ore sells, and is made into bars and cut gems.
+- Stones sell for nothing and are used for building (see [Buildings](../../buildings/)). Ore sells, is used for building and upgrades (Copper and Iron Ore), and is made into bars and cut gems.
 - A Small Iron Vein gives half an Iron Vein's ore, rounded up. Half of all new Iron Veins are small.
 - Rocks you place with the Decorate tool give nothing when broken and never grow.
 
@@ -42,19 +42,13 @@ One pass is one stroke across a rock or vein. Lift your finger, or leave the til
 
 ### Odds of each ore
 
-New veins come with the [midnight wave](../../world/wild-growth/). Each one's ore is drawn by these shares, which shift toward the rarer ores as you near the level where they can be processed:
+New veins come with the [midnight wave](../../world/wild-growth/). Each one's ore is drawn by these shares, which shift toward the rarer ores as you near the level where each ore becomes useful:
 
-| Your level | Copper | Iron | Gold | Ruby | Sapphire |
-| --- | --- | --- | --- | --- | --- |
-| 1 | 91% | 3.8% | 2.7% | 1.5% | 1.1% |
-| 6 | 76% | 10% | 7.2% | 3.9% | 2.7% |
-| 12 | 58.5% | 17.5% | 12.6% | 6.7% | 4.7% |
-| 18 | 41% | 25% | 18% | 9.5% | 6.7% |
-| 19 and up | 40% | 25% | 18% | 10% | 7% |
+<DataTable name="ore-shares" />
 
-> Share of a rarer ore = its full share × (0.15 + 0.85 × progress), where progress runs evenly from 0 at level 1 to 1 at the level it can be processed. Copper takes the rest.
+> Share of a rarer ore = its full share × (<Fact path="mining.rareOreFloor" /> + <Fact path="mining.rareOreGain" /> × progress), where progress runs evenly from 0 at level 1 to 1 at the level it first becomes useful (level 12 for Iron, level <Fact path="mining.processingLevel" /> for Gold, and level <Fact path="buildings.diyTable.unlockLevel" /> for Rough Ruby and Rough Sapphire). Copper takes the rest.
 
-These are the base shares. The night then favors an ore the farm has few veins of, and Copper when Storage is short of a vein's worth of Copper Ore (see [Wild Growth](../../world/wild-growth/#what-the-farm-is-short-of)).
+These are the base shares. The night then favors an ore the farm has few veins of, and any ore Storage is short of for upcoming buildings (at least a vein's worth of Copper Ore; see [Wild Growth](../../world/wild-growth/#what-the-farm-is-short-of)).
 
 ### Bars and cut gems
 
@@ -62,22 +56,22 @@ Bars are smelted in a Stone Oven from level <Fact path="mining.processingLevel" 
 
 <DataTable name="ores" columns="Ore,Made into,Where,Recipe,Sells for" />
 
-A bar or cut gem sells for twice the ore that goes into it.
+A bar or cut gem sells for <Fact path="mining.artisanOreMultiplier" /> times the ore that goes into it.
 
 ## A new farm's rocks and veins
 
 | | Value |
 | --- | --- |
 | Rocks scattered | <Fact path="mining.rocksOnANewMap.min" /> to <Fact path="mining.rocksOnANewMap.max" />, thinly over the whole map, away from the starting farmland |
-| Rock sizes | Small 50%, Medium 35%, Big 15% |
+| Rock sizes | Small <Fact path="mining.newMap.smallRockPercent" />%, Medium <Fact path="mining.newMap.mediumRockPercent" />%, Big <Fact path="mining.newMap.bigRockPercent" />% |
 | Veins | <Fact path="mining.veinsOnANewMap.min" /> to <Fact path="mining.veinsOnANewMap.max" />, made from some of those rocks |
-| Sure veins | 7 Copper, 1 Ruby and 2 Sapphire, at random spots |
+| Sure veins | <Fact path="mining.newMap.sureVeinsSummary" />, at random spots |
 | Other veins | Copper or Iron, half and half |
-| Stones | At least 340 in the plain rocks: rocks grow a size at random until there are |
+| Stones | At least <Fact path="mining.newMap.minStones" /> in the plain rocks: rocks grow a size at random until there are |
 
-Between them, a new farm's rocks and veins hold enough stones, copper and gems to build every building and decoration once, with a fifth to spare. Gold only comes later, with the midnight wave.
+Between them, a new farm's rocks hold enough stones to build every building and decoration once, with a fifth to spare, and its sure veins cover early Copper builds and the first Iron building. Gold only comes later, with the midnight wave, Market Stand supplies or Cave rewards.
 
 ## Overnight
 
-- Each night every wild Small or Medium rock and every Small Iron Vein has a 1 in 5 chance to grow one size. Other veins stay as they are.
-- New rocks and veins appear up to the farm's limits: 40 wild plain rocks and 12 wild veins. See [Wild Growth](../../world/wild-growth/).
+- Each night every wild Small or Medium rock and every Small Iron Vein has a 1 in <Fact path="world.wildGrowth.growthOddsDenominator" /> chance to grow one size. Other veins stay as they are.
+- New rocks and veins appear up to the farm's limits: <Fact path="world.wildGrowth.rockCap" /> wild plain rocks and <Fact path="world.wildGrowth.veinCap" /> wild veins. See [Wild Growth](../../world/wild-growth/).

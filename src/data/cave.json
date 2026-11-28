@@ -4,7 +4,7 @@
       "hitShare" : "100%",
       "id" : "stone",
       "levels" : [
-        5
+        10
       ],
       "name" : "Stone Boss",
       "secondsToChest" : 22.5,
@@ -14,8 +14,8 @@
       "hitShare" : "80%",
       "id" : "moleChief",
       "levels" : [
-        10,
-        25
+        20,
+        50
       ],
       "name" : "Mole Chief",
       "secondsToChest" : 22.5,
@@ -25,7 +25,7 @@
       "hitShare" : "80%",
       "id" : "pillBugQueen",
       "levels" : [
-        30
+        60
       ],
       "name" : "Pill Bug Queen",
       "secondsToChest" : 27,
@@ -35,7 +35,7 @@
       "hitShare" : "50%",
       "id" : "greatBat",
       "levels" : [
-        35
+        70
       ],
       "name" : "Great Bat",
       "secondsToChest" : 18,
@@ -45,7 +45,7 @@
       "hitShare" : "60%",
       "id" : "kingSlime",
       "levels" : [
-        15
+        30
       ],
       "name" : "King Slime",
       "secondsToChest" : 22.5,
@@ -55,7 +55,7 @@
       "hitShare" : "100%",
       "id" : "moss",
       "levels" : [
-        50
+        100
       ],
       "name" : "Moss Boss",
       "secondsToChest" : 22.5,
@@ -65,120 +65,33 @@
       "hitShare" : "100%",
       "id" : "iceBoss",
       "levels" : [
-        20
+        40
       ],
       "name" : "Ice Boss",
       "secondsToChest" : 22.5,
-      "trick" : "A giant Ice Golem: simply tough."
+      "trick" : "A giant Ice Golem. Beaten, it shatters into 2 Ice Golems that keep walking to the chest."
     },
     {
       "hitShare" : "60%",
       "id" : "prismKing",
       "levels" : [
-        40
+        80
       ],
       "name" : "Prism King",
       "secondsToChest" : 22.5,
-      "trick" : "Beaten, it bursts into 4 Glare Slimes."
+      "trick" : "Flashes like a Glare Slime. Beaten, it bursts into 4 Glare Slimes."
     },
     {
       "hitShare" : "50%",
       "id" : "glitchBoss",
       "levels" : [
-        45
+        90
       ],
       "name" : "Glitch Boss",
       "secondsToChest" : 12.9,
-      "trick" : "A giant Glitch Newt: fast, with less health."
+      "trick" : "A giant Glitch Newt: fast, with less health. It grabs 40% of the chest's hearts and runs, leaving after-images."
     }
   ],
-  "chest" : {
-    "crewCardSpinChance" : "15%",
-    "orePrizes" : 2,
-    "prizes" : 5,
-    "rarities" : [
-      {
-        "icon" : {
-          "height" : 22,
-          "src" : "sprites/ores/copper.png",
-          "width" : 26
-        },
-        "id" : "common",
-        "name" : "Common",
-        "ore" : "Copper Ore",
-        "oreMax" : 9,
-        "oreMin" : 4,
-        "poolChance" : "30%",
-        "skins" : 0,
-        "spinChance" : "34%"
-      },
-      {
-        "icon" : {
-          "height" : 22,
-          "src" : "sprites/ores/iron.png",
-          "width" : 26
-        },
-        "id" : "uncommon",
-        "name" : "Uncommon",
-        "ore" : "Iron Ore",
-        "oreMax" : 6,
-        "oreMin" : 3,
-        "poolChance" : "25%",
-        "skins" : 0,
-        "spinChance" : "24%"
-      },
-      {
-        "icon" : {
-          "height" : 22,
-          "src" : "sprites/ores/gold.png",
-          "width" : 26
-        },
-        "id" : "rare",
-        "name" : "Rare",
-        "ore" : "Gold Ore",
-        "oreMax" : 4,
-        "oreMin" : 2,
-        "poolChance" : "20%",
-        "skins" : 6,
-        "spinChance" : "15%"
-      },
-      {
-        "icon" : {
-          "height" : 27,
-          "src" : "sprites/ores/ruby.png",
-          "width" : 27
-        },
-        "id" : "epic",
-        "name" : "Epic",
-        "ore" : "Rough Ruby",
-        "oreMax" : 3,
-        "oreMin" : 1,
-        "poolChance" : "15%",
-        "skins" : 5,
-        "spinChance" : "8%"
-      },
-      {
-        "icon" : {
-          "height" : 27,
-          "src" : "sprites/ores/sapphire.png",
-          "width" : 27
-        },
-        "id" : "legendary",
-        "name" : "Legendary",
-        "ore" : "Rough Sapphire",
-        "oreMax" : 2,
-        "oreMin" : 1,
-        "poolChance" : "10%",
-        "skins" : 2,
-        "spinChance" : "3%"
-      }
-    ],
-    "replayPriceCap" : 10000,
-    "replayPriceFirst" : 100,
-    "skinPrizes" : 2,
-    "skinsRareEpicTo" : 20,
-    "skinsRareLegendaryTo" : 40
-  },
   "chestDrainPerSecond" : 1,
   "chestHealth" : 10,
   "chestTheft" : 1,
@@ -212,7 +125,7 @@
       "purpose" : "Shoots enemies from afar, flyers first.",
       "stats" : [
         "Damage 1 hit",
-        "Hits every 1 s",
+        "Hits every 1.33 s",
         "Hits 75%",
         "Range 3 tiles"
       ],
@@ -323,7 +236,7 @@
   ],
   "crewPace" : [
     {
-      "bowSeconds" : 1,
+      "bowSeconds" : 1.33,
       "level" : 1,
       "swordSeconds" : 1
     }
@@ -341,6 +254,10 @@
     {
       "crew" : 5,
       "from" : 31
+    },
+    {
+      "crew" : 6,
+      "from" : 61
     }
   ],
   "enemies" : [
@@ -369,7 +286,7 @@
       "speed" : 1.5
     },
     {
-      "firstLevel" : 11,
+      "firstLevel" : 21,
       "id" : "slime",
       "moves" : "Walks",
       "name" : "Slime",
@@ -377,7 +294,7 @@
       "speed" : 0.8
     },
     {
-      "firstLevel" : 21,
+      "firstLevel" : 41,
       "id" : "geode",
       "moves" : "Walks",
       "name" : "Geode",
@@ -385,7 +302,7 @@
       "speed" : 0.9
     },
     {
-      "firstLevel" : 26,
+      "firstLevel" : 51,
       "id" : "glowBug",
       "moves" : "Walks",
       "name" : "Glow Bug",
@@ -393,7 +310,7 @@
       "speed" : 0.7
     },
     {
-      "firstLevel" : 31,
+      "firstLevel" : 61,
       "id" : "emberBat",
       "moves" : "Flies",
       "name" : "Ember Bat",
@@ -401,7 +318,7 @@
       "speed" : 1.5
     },
     {
-      "firstLevel" : 36,
+      "firstLevel" : 71,
       "id" : "glareSlime",
       "moves" : "Walks",
       "name" : "Glare Slime",
@@ -409,11 +326,11 @@
       "speed" : 0.8
     },
     {
-      "firstLevel" : 41,
+      "firstLevel" : 81,
       "id" : "glitchNewt",
       "moves" : "Walks",
       "name" : "Glitch Newt",
-      "note" : "It blinks ahead, grabs 3 hearts and runs. Beat it to get them back.",
+      "note" : "It blinks ahead, steals 3 hearts and runs. A Shield stops it.",
       "speed" : 1.6
     },
     {
@@ -424,6 +341,73 @@
       "speed" : 1
     }
   ],
+  "gates" : [
+    {
+      "afterLevel" : 10,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 1500,
+      "gate" : 1,
+      "unlocksLevel" : 11
+    },
+    {
+      "afterLevel" : 20,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 4200,
+      "gate" : 2,
+      "unlocksLevel" : 21
+    },
+    {
+      "afterLevel" : 30,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 9600,
+      "gate" : 3,
+      "unlocksLevel" : 31
+    },
+    {
+      "afterLevel" : 40,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 21000,
+      "gate" : 4,
+      "unlocksLevel" : 41
+    },
+    {
+      "afterLevel" : 50,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 42000,
+      "gate" : 5,
+      "unlocksLevel" : 51
+    },
+    {
+      "afterLevel" : 60,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 66000,
+      "gate" : 6,
+      "unlocksLevel" : 61
+    },
+    {
+      "afterLevel" : 70,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 81000,
+      "gate" : 7,
+      "unlocksLevel" : 71
+    },
+    {
+      "afterLevel" : 80,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 90000,
+      "gate" : 8,
+      "unlocksLevel" : 81
+    },
+    {
+      "afterLevel" : 90,
+      "cooldownSeconds" : 3600,
+      "fullSkipPrice" : 96000,
+      "gate" : 9,
+      "unlocksLevel" : 91
+    }
+  ],
+  "glitchBossHeartGrabPercent" : 40,
+  "glitchNewtTheft" : 3,
   "golems" : [
     {
       "secondsToChest" : 21.5,
@@ -444,13 +428,14 @@
       "size" : "Large"
     }
   ],
+  "iceBossShatterCount" : 2,
   "levelRows" : [
     {
       "boss" : false,
       "largeGolems" : 0,
       "level" : 1,
       "mediumGolems" : 0,
-      "replayPrice" : 100,
+      "reward" : "5 Copper Ore",
       "smallEnemies" : 12,
       "smallGolems" : 0,
       "wall" : false,
@@ -461,7 +446,7 @@
       "largeGolems" : 0,
       "level" : 2,
       "mediumGolems" : 0,
-      "replayPrice" : 110,
+      "reward" : "3 Iron Ore",
       "smallEnemies" : 8,
       "smallGolems" : 0,
       "wall" : false,
@@ -472,7 +457,7 @@
       "largeGolems" : 0,
       "level" : 3,
       "mediumGolems" : 0,
-      "replayPrice" : 121,
+      "reward" : "2 Gold Ore",
       "smallEnemies" : 12,
       "smallGolems" : 0,
       "wall" : false,
@@ -483,32 +468,30 @@
       "largeGolems" : 0,
       "level" : 4,
       "mediumGolems" : 0,
-      "replayPrice" : 133,
+      "reward" : "Crew Upgrade",
       "smallEnemies" : 14,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
     {
-      "boss" : true,
-      "bossHits" : 15,
-      "bossName" : "Stone Boss",
+      "boss" : false,
       "largeGolems" : 0,
       "level" : 5,
       "mediumGolems" : 0,
-      "replayPrice" : 146,
-      "smallEnemies" : 10,
+      "reward" : "4 Copper Ore",
+      "smallEnemies" : 15,
       "smallGolems" : 0,
       "wall" : false,
-      "waves" : 3
+      "waves" : 4
     },
     {
       "boss" : false,
       "largeGolems" : 0,
       "level" : 6,
       "mediumGolems" : 0,
-      "replayPrice" : 161,
-      "smallEnemies" : 15,
+      "reward" : "1 Rough Ruby",
+      "smallEnemies" : 16,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -518,7 +501,7 @@
       "largeGolems" : 0,
       "level" : 7,
       "mediumGolems" : 0,
-      "replayPrice" : 176,
+      "reward" : "3 Gold Ore",
       "smallEnemies" : 17,
       "smallGolems" : 0,
       "wall" : false,
@@ -529,8 +512,8 @@
       "largeGolems" : 0,
       "level" : 8,
       "mediumGolems" : 0,
-      "replayPrice" : 194,
-      "smallEnemies" : 20,
+      "reward" : "1 Rough Sapphire",
+      "smallEnemies" : 19,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -540,32 +523,33 @@
       "largeGolems" : 0,
       "level" : 9,
       "mediumGolems" : 0,
-      "replayPrice" : 212,
-      "smallEnemies" : 24,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 22,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
     {
       "boss" : true,
-      "bossHits" : 6.4,
-      "bossName" : "Mole Chief",
+      "bossHits" : 30,
+      "bossName" : "Stone Boss",
       "largeGolems" : 0,
       "level" : 10,
       "mediumGolems" : 0,
-      "replayPrice" : 233,
-      "smallEnemies" : 14,
+      "reward" : "Frost + Random Skin",
+      "smallEnemies" : 10,
       "smallGolems" : 0,
       "wall" : true,
       "waves" : 3
     },
     {
       "boss" : false,
+      "gateSkipPrice" : 1500,
       "largeGolems" : 0,
       "level" : 11,
       "mediumGolems" : 0,
-      "replayPrice" : 256,
-      "smallEnemies" : 31,
+      "reward" : "5 Copper Ore",
+      "smallEnemies" : 23,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -575,8 +559,8 @@
       "largeGolems" : 0,
       "level" : 12,
       "mediumGolems" : 0,
-      "replayPrice" : 281,
-      "smallEnemies" : 31,
+      "reward" : "4 Iron Ore",
+      "smallEnemies" : 24,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -586,8 +570,8 @@
       "largeGolems" : 0,
       "level" : 13,
       "mediumGolems" : 0,
-      "replayPrice" : 308,
-      "smallEnemies" : 31,
+      "reward" : "3 Gold Ore",
+      "smallEnemies" : 25,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -597,35 +581,31 @@
       "largeGolems" : 0,
       "level" : 14,
       "mediumGolems" : 0,
-      "replayPrice" : 337,
-      "smallEnemies" : 32,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 26,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
     {
-      "boss" : true,
-      "bossHits" : 19.8,
-      "bossName" : "King Slime",
+      "boss" : false,
       "largeGolems" : 0,
       "level" : 15,
       "mediumGolems" : 0,
-      "replayPrice" : 370,
-      "smallEnemies" : 14,
+      "reward" : "4 Copper Ore",
+      "smallEnemies" : 27,
       "smallGolems" : 0,
       "wall" : false,
-      "waves" : 3
+      "waves" : 4
     },
     {
       "boss" : false,
       "largeGolems" : 0,
       "level" : 16,
-      "mediumGolemHits" : 26,
-      "mediumGolems" : 1,
-      "replayPrice" : 405,
-      "smallEnemies" : 29,
-      "smallGolemHits" : 13,
-      "smallGolems" : 2,
+      "mediumGolems" : 0,
+      "reward" : "1 Rough Ruby",
+      "smallEnemies" : 28,
+      "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
@@ -633,12 +613,10 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 17,
-      "mediumGolemHits" : 26,
-      "mediumGolems" : 1,
-      "replayPrice" : 444,
+      "mediumGolems" : 0,
+      "reward" : "4 Gold Ore",
       "smallEnemies" : 29,
-      "smallGolemHits" : 13,
-      "smallGolems" : 2,
+      "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
@@ -646,12 +624,10 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 18,
-      "mediumGolemHits" : 26,
-      "mediumGolems" : 1,
-      "replayPrice" : 486,
+      "mediumGolems" : 0,
+      "reward" : "1 Rough Sapphire",
       "smallEnemies" : 30,
-      "smallGolemHits" : 13,
-      "smallGolems" : 2,
+      "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
@@ -659,23 +635,21 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 19,
-      "mediumGolemHits" : 30,
-      "mediumGolems" : 1,
-      "replayPrice" : 532,
-      "smallEnemies" : 30,
-      "smallGolemHits" : 15,
-      "smallGolems" : 2,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 31,
+      "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
     {
       "boss" : true,
-      "bossHits" : 34,
-      "bossName" : "Ice Boss",
+      "bossHits" : 19.2,
+      "bossName" : "Mole Chief",
       "largeGolems" : 0,
       "level" : 20,
       "mediumGolems" : 0,
-      "replayPrice" : 582,
+      "reward" : "Bomber + Random Skin",
       "smallEnemies" : 14,
       "smallGolems" : 0,
       "wall" : true,
@@ -683,11 +657,12 @@
     },
     {
       "boss" : false,
+      "gateSkipPrice" : 4200,
       "largeGolems" : 0,
       "level" : 21,
       "mediumGolems" : 0,
-      "replayPrice" : 637,
-      "smallEnemies" : 35,
+      "reward" : "6 Copper Ore",
+      "smallEnemies" : 31,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -697,8 +672,8 @@
       "largeGolems" : 0,
       "level" : 22,
       "mediumGolems" : 0,
-      "replayPrice" : 696,
-      "smallEnemies" : 35,
+      "reward" : "4 Iron Ore",
+      "smallEnemies" : 31,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -708,8 +683,8 @@
       "largeGolems" : 0,
       "level" : 23,
       "mediumGolems" : 0,
-      "replayPrice" : 760,
-      "smallEnemies" : 35,
+      "reward" : "4 Gold Ore",
+      "smallEnemies" : 32,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -719,32 +694,30 @@
       "largeGolems" : 0,
       "level" : 24,
       "mediumGolems" : 0,
-      "replayPrice" : 830,
-      "smallEnemies" : 36,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 32,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
     },
     {
-      "boss" : true,
-      "bossHits" : 28.4,
-      "bossName" : "Mole Chief",
+      "boss" : false,
       "largeGolems" : 0,
       "level" : 25,
       "mediumGolems" : 0,
-      "replayPrice" : 905,
-      "smallEnemies" : 14,
+      "reward" : "5 Copper Ore",
+      "smallEnemies" : 33,
       "smallGolems" : 0,
       "wall" : false,
-      "waves" : 3
+      "waves" : 4
     },
     {
       "boss" : false,
       "largeGolems" : 0,
       "level" : 26,
       "mediumGolems" : 0,
-      "replayPrice" : 987,
-      "smallEnemies" : 36,
+      "reward" : "2 Rough Ruby",
+      "smallEnemies" : 33,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -754,8 +727,8 @@
       "largeGolems" : 0,
       "level" : 27,
       "mediumGolems" : 0,
-      "replayPrice" : 1075,
-      "smallEnemies" : 36,
+      "reward" : "5 Gold Ore",
+      "smallEnemies" : 34,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 4
@@ -765,8 +738,8 @@
       "largeGolems" : 0,
       "level" : 28,
       "mediumGolems" : 0,
-      "replayPrice" : 1170,
-      "smallEnemies" : 37,
+      "reward" : "2 Rough Sapphire",
+      "smallEnemies" : 34,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
@@ -776,20 +749,20 @@
       "largeGolems" : 0,
       "level" : 29,
       "mediumGolems" : 0,
-      "replayPrice" : 1272,
-      "smallEnemies" : 37,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 35,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
     },
     {
       "boss" : true,
-      "bossHits" : 50.4,
-      "bossName" : "Pill Bug Queen",
+      "bossHits" : 21.6,
+      "bossName" : "King Slime",
       "largeGolems" : 0,
       "level" : 30,
       "mediumGolems" : 0,
-      "replayPrice" : 1382,
+      "reward" : "Sniper + Random Skin",
       "smallEnemies" : 14,
       "smallGolems" : 0,
       "wall" : true,
@@ -797,13 +770,14 @@
     },
     {
       "boss" : false,
+      "gateSkipPrice" : 9600,
       "largeGolems" : 0,
       "level" : 31,
-      "mediumGolemHits" : 15,
-      "mediumGolems" : 3,
-      "replayPrice" : 1499,
-      "smallEnemies" : 34,
-      "smallGolemHits" : 7.5,
+      "mediumGolemHits" : 24,
+      "mediumGolems" : 1,
+      "reward" : "6 Copper Ore",
+      "smallEnemies" : 32,
+      "smallGolemHits" : 12,
       "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
@@ -812,11 +786,11 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 32,
-      "mediumGolemHits" : 15,
-      "mediumGolems" : 3,
-      "replayPrice" : 1624,
-      "smallEnemies" : 34,
-      "smallGolemHits" : 7.5,
+      "mediumGolemHits" : 24,
+      "mediumGolems" : 1,
+      "reward" : "5 Iron Ore",
+      "smallEnemies" : 33,
+      "smallGolemHits" : 12,
       "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
@@ -825,11 +799,11 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 33,
-      "mediumGolemHits" : 15,
-      "mediumGolems" : 3,
-      "replayPrice" : 1758,
-      "smallEnemies" : 34,
-      "smallGolemHits" : 7.5,
+      "mediumGolemHits" : 26,
+      "mediumGolems" : 1,
+      "reward" : "5 Gold Ore",
+      "smallEnemies" : 33,
+      "smallGolemHits" : 13,
       "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
@@ -838,36 +812,38 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 34,
-      "mediumGolemHits" : 15,
-      "mediumGolems" : 3,
-      "replayPrice" : 1901,
-      "smallEnemies" : 35,
-      "smallGolemHits" : 7.5,
+      "mediumGolemHits" : 26,
+      "mediumGolems" : 1,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 34,
+      "smallGolemHits" : 13,
       "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
     },
     {
-      "boss" : true,
-      "bossHits" : 32,
-      "bossName" : "Great Bat",
+      "boss" : false,
       "largeGolems" : 0,
       "level" : 35,
-      "mediumGolems" : 0,
-      "replayPrice" : 2052,
-      "smallEnemies" : 14,
-      "smallGolems" : 0,
+      "mediumGolemHits" : 26,
+      "mediumGolems" : 2,
+      "reward" : "5 Copper Ore",
+      "smallEnemies" : 34,
+      "smallGolemHits" : 13,
+      "smallGolems" : 1,
       "wall" : false,
-      "waves" : 3
+      "waves" : 5
     },
     {
       "boss" : false,
       "largeGolems" : 0,
       "level" : 36,
-      "mediumGolems" : 0,
-      "replayPrice" : 2212,
-      "smallEnemies" : 40,
-      "smallGolems" : 0,
+      "mediumGolemHits" : 28,
+      "mediumGolems" : 2,
+      "reward" : "2 Rough Ruby",
+      "smallEnemies" : 34,
+      "smallGolemHits" : 14,
+      "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
     },
@@ -875,10 +851,12 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 37,
-      "mediumGolems" : 0,
-      "replayPrice" : 2380,
-      "smallEnemies" : 40,
-      "smallGolems" : 0,
+      "mediumGolemHits" : 28,
+      "mediumGolems" : 2,
+      "reward" : "6 Gold Ore",
+      "smallEnemies" : 35,
+      "smallGolemHits" : 14,
+      "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
     },
@@ -886,10 +864,12 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 38,
-      "mediumGolems" : 0,
-      "replayPrice" : 2557,
-      "smallEnemies" : 41,
-      "smallGolems" : 0,
+      "mediumGolemHits" : 30,
+      "mediumGolems" : 2,
+      "reward" : "2 Rough Sapphire",
+      "smallEnemies" : 35,
+      "smallGolemHits" : 15,
+      "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
     },
@@ -897,21 +877,23 @@
       "boss" : false,
       "largeGolems" : 0,
       "level" : 39,
-      "mediumGolems" : 0,
-      "replayPrice" : 2743,
-      "smallEnemies" : 41,
-      "smallGolems" : 0,
+      "mediumGolemHits" : 30,
+      "mediumGolems" : 2,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 36,
+      "smallGolemHits" : 15,
+      "smallGolems" : 2,
       "wall" : false,
       "waves" : 5
     },
     {
       "boss" : true,
-      "bossHits" : 39,
-      "bossName" : "Prism King",
+      "bossHits" : 42,
+      "bossName" : "Ice Boss",
       "largeGolems" : 0,
       "level" : 40,
       "mediumGolems" : 0,
-      "replayPrice" : 2936,
+      "reward" : "Lantern + Random Skin",
       "smallEnemies" : 14,
       "smallGolems" : 0,
       "wall" : true,
@@ -919,11 +901,12 @@
     },
     {
       "boss" : false,
+      "gateSkipPrice" : 21000,
       "largeGolems" : 0,
       "level" : 41,
       "mediumGolems" : 0,
-      "replayPrice" : 3138,
-      "smallEnemies" : 42,
+      "reward" : "7 Copper Ore",
+      "smallEnemies" : 40,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
@@ -933,8 +916,8 @@
       "largeGolems" : 0,
       "level" : 42,
       "mediumGolems" : 0,
-      "replayPrice" : 3347,
-      "smallEnemies" : 42,
+      "reward" : "5 Iron Ore",
+      "smallEnemies" : 40,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
@@ -944,8 +927,8 @@
       "largeGolems" : 0,
       "level" : 43,
       "mediumGolems" : 0,
-      "replayPrice" : 3562,
-      "smallEnemies" : 42,
+      "reward" : "6 Gold Ore",
+      "smallEnemies" : 40,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
@@ -955,104 +938,767 @@
       "largeGolems" : 0,
       "level" : 44,
       "mediumGolems" : 0,
-      "replayPrice" : 3783,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 41,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 45,
+      "mediumGolems" : 0,
+      "reward" : "6 Copper Ore",
+      "smallEnemies" : 41,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 46,
+      "mediumGolems" : 0,
+      "reward" : "3 Rough Ruby",
       "smallEnemies" : 42,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
     },
     {
-      "boss" : true,
-      "bossHits" : 33,
-      "bossName" : "Glitch Boss",
+      "boss" : false,
       "largeGolems" : 0,
-      "level" : 45,
+      "level" : 47,
       "mediumGolems" : 0,
-      "replayPrice" : 4010,
-      "smallEnemies" : 14,
+      "reward" : "7 Gold Ore",
+      "smallEnemies" : 42,
       "smallGolems" : 0,
       "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 48,
+      "mediumGolems" : 0,
+      "reward" : "3 Rough Sapphire",
+      "smallEnemies" : 43,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 49,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 44,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 5
+    },
+    {
+      "boss" : true,
+      "bossHits" : 38.4,
+      "bossName" : "Mole Chief",
+      "largeGolems" : 0,
+      "level" : 50,
+      "mediumGolems" : 0,
+      "reward" : "Alchemist + Random Skin",
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
       "waves" : 3
     },
     {
       "boss" : false,
-      "largeGolemHits" : 28,
-      "largeGolems" : 2,
-      "level" : 46,
-      "mediumGolemHits" : 14,
-      "mediumGolems" : 3,
-      "replayPrice" : 4241,
-      "smallEnemies" : 37,
+      "gateSkipPrice" : 42000,
+      "largeGolems" : 0,
+      "level" : 51,
+      "mediumGolems" : 0,
+      "reward" : "7 Copper Ore",
+      "smallEnemies" : 44,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
     },
     {
       "boss" : false,
-      "largeGolemHits" : 30,
-      "largeGolems" : 2,
-      "level" : 47,
-      "mediumGolemHits" : 15,
-      "mediumGolems" : 3,
-      "replayPrice" : 4475,
-      "smallEnemies" : 37,
+      "largeGolems" : 0,
+      "level" : 52,
+      "mediumGolems" : 0,
+      "reward" : "6 Iron Ore",
+      "smallEnemies" : 45,
       "smallGolems" : 0,
       "wall" : false,
       "waves" : 5
     },
     {
       "boss" : false,
-      "largeGolemHits" : 30,
-      "largeGolems" : 2,
-      "level" : 48,
-      "mediumGolemHits" : 15,
-      "mediumGolems" : 3,
-      "replayPrice" : 4712,
-      "smallEnemies" : 37,
+      "largeGolems" : 0,
+      "level" : 53,
+      "mediumGolems" : 0,
+      "reward" : "7 Gold Ore",
+      "smallEnemies" : 46,
       "smallGolems" : 0,
       "wall" : false,
-      "waves" : 5
+      "waves" : 6
     },
     {
       "boss" : false,
-      "largeGolemHits" : 36,
-      "largeGolems" : 2,
-      "level" : 49,
-      "mediumGolemHits" : 18,
-      "mediumGolems" : 3,
-      "replayPrice" : 4950,
-      "smallEnemies" : 38,
+      "largeGolems" : 0,
+      "level" : 54,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 47,
       "smallGolems" : 0,
       "wall" : false,
-      "waves" : 5
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 55,
+      "mediumGolems" : 0,
+      "reward" : "6 Copper Ore",
+      "smallEnemies" : 48,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 56,
+      "mediumGolems" : 0,
+      "reward" : "3 Rough Ruby",
+      "smallEnemies" : 49,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 57,
+      "mediumGolems" : 0,
+      "reward" : "8 Gold Ore",
+      "smallEnemies" : 49,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 58,
+      "mediumGolems" : 0,
+      "reward" : "3 Rough Sapphire",
+      "smallEnemies" : 50,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 59,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 51,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
     },
     {
       "boss" : true,
-      "bossHits" : 67,
+      "bossHits" : 43.2,
+      "bossName" : "Pill Bug Queen",
+      "largeGolems" : 0,
+      "level" : 60,
+      "mediumGolems" : 0,
+      "reward" : "Puffball + Random Skin",
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "gateSkipPrice" : 66000,
+      "largeGolems" : 0,
+      "level" : 61,
+      "mediumGolemHits" : 20,
+      "mediumGolems" : 3,
+      "reward" : "8 Copper Ore",
+      "smallEnemies" : 45,
+      "smallGolemHits" : 10,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 62,
+      "mediumGolemHits" : 21,
+      "mediumGolems" : 3,
+      "reward" : "6 Iron Ore",
+      "smallEnemies" : 45,
+      "smallGolemHits" : 10.5,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 63,
+      "mediumGolemHits" : 22,
+      "mediumGolems" : 3,
+      "reward" : "8 Gold Ore",
+      "smallEnemies" : 46,
+      "smallGolemHits" : 11,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 64,
+      "mediumGolemHits" : 23,
+      "mediumGolems" : 4,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 46,
+      "smallGolemHits" : 11.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 48,
+      "largeGolems" : 1,
+      "level" : 65,
+      "mediumGolemHits" : 24,
+      "mediumGolems" : 3,
+      "reward" : "7 Copper Ore",
+      "smallEnemies" : 47,
+      "smallGolemHits" : 12,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 50,
+      "largeGolems" : 1,
+      "level" : 66,
+      "mediumGolemHits" : 25,
+      "mediumGolems" : 3,
+      "reward" : "4 Rough Ruby",
+      "smallEnemies" : 48,
+      "smallGolemHits" : 12.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 44,
+      "largeGolems" : 1,
+      "level" : 67,
+      "mediumGolemHits" : 22,
+      "mediumGolems" : 3,
+      "reward" : "9 Gold Ore",
+      "smallEnemies" : 49,
+      "smallGolemHits" : 11,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 44,
+      "largeGolems" : 2,
+      "level" : 68,
+      "mediumGolemHits" : 22,
+      "mediumGolems" : 2,
+      "reward" : "4 Rough Sapphire",
+      "smallEnemies" : 50,
+      "smallGolemHits" : 11,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 46,
+      "largeGolems" : 2,
+      "level" : 69,
+      "mediumGolemHits" : 23,
+      "mediumGolems" : 3,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 51,
+      "smallGolemHits" : 11.5,
+      "smallGolems" : 1,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : true,
+      "bossHits" : 30,
+      "bossName" : "Great Bat",
+      "largeGolems" : 0,
+      "level" : 70,
+      "mediumGolems" : 0,
+      "reward" : "Mender + Random Skin",
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "gateSkipPrice" : 81000,
+      "largeGolems" : 0,
+      "level" : 71,
+      "mediumGolems" : 0,
+      "reward" : "8 Copper Ore",
+      "smallEnemies" : 57,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 72,
+      "mediumGolems" : 0,
+      "reward" : "7 Iron Ore",
+      "smallEnemies" : 57,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 73,
+      "mediumGolems" : 0,
+      "reward" : "9 Gold Ore",
+      "smallEnemies" : 58,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 74,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 59,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 75,
+      "mediumGolems" : 0,
+      "reward" : "7 Copper Ore",
+      "smallEnemies" : 60,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 76,
+      "mediumGolems" : 0,
+      "reward" : "4 Rough Ruby",
+      "smallEnemies" : 61,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 77,
+      "mediumGolems" : 0,
+      "reward" : "10 Gold Ore",
+      "smallEnemies" : 61,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 6
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 78,
+      "mediumGolems" : 0,
+      "reward" : "4 Rough Sapphire",
+      "smallEnemies" : 61,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 79,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 62,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : true,
+      "bossHits" : 39.6,
+      "bossName" : "Prism King",
+      "largeGolems" : 0,
+      "level" : 80,
+      "mediumGolems" : 0,
+      "reward" : "Trapper + Random Skin",
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "gateSkipPrice" : 90000,
+      "largeGolems" : 0,
+      "level" : 81,
+      "mediumGolems" : 0,
+      "reward" : "9 Copper Ore",
+      "smallEnemies" : 63,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 82,
+      "mediumGolems" : 0,
+      "reward" : "7 Iron Ore",
+      "smallEnemies" : 64,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 83,
+      "mediumGolems" : 0,
+      "reward" : "10 Gold Ore",
+      "smallEnemies" : 65,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 84,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 65,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 85,
+      "mediumGolems" : 0,
+      "reward" : "8 Copper Ore",
+      "smallEnemies" : 66,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 86,
+      "mediumGolems" : 0,
+      "reward" : "5 Rough Ruby",
+      "smallEnemies" : 67,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 87,
+      "mediumGolems" : 0,
+      "reward" : "12 Gold Ore",
+      "smallEnemies" : 67,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 88,
+      "mediumGolems" : 0,
+      "reward" : "5 Rough Sapphire",
+      "smallEnemies" : 68,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 89,
+      "mediumGolems" : 0,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 68,
+      "smallGolems" : 0,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : true,
+      "bossHits" : 36,
+      "bossName" : "Glitch Boss",
+      "largeGolems" : 0,
+      "level" : 90,
+      "mediumGolems" : 0,
+      "reward" : "Torch + Random Skin",
+      "smallEnemies" : 14,
+      "smallGolems" : 0,
+      "wall" : true,
+      "waves" : 3
+    },
+    {
+      "boss" : false,
+      "gateSkipPrice" : 96000,
+      "largeGolems" : 0,
+      "level" : 91,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 1,
+      "reward" : "9 Copper Ore",
+      "smallEnemies" : 63,
+      "smallGolemHits" : 7.5,
+      "smallGolems" : 4,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 92,
+      "mediumGolemHits" : 15,
+      "mediumGolems" : 2,
+      "reward" : "9 Iron Ore",
+      "smallEnemies" : 63,
+      "smallGolemHits" : 7.5,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 93,
+      "mediumGolemHits" : 16,
+      "mediumGolems" : 2,
+      "reward" : "12 Gold Ore",
+      "smallEnemies" : 64,
+      "smallGolemHits" : 8,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 94,
+      "mediumGolemHits" : 16,
+      "mediumGolems" : 3,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 64,
+      "smallGolemHits" : 8,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolems" : 0,
+      "level" : 95,
+      "mediumGolemHits" : 16,
+      "mediumGolems" : 3,
+      "reward" : "8 Copper Ore",
+      "smallEnemies" : 64,
+      "smallGolemHits" : 8,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 32,
+      "largeGolems" : 1,
+      "level" : 96,
+      "mediumGolemHits" : 16,
+      "mediumGolems" : 2,
+      "reward" : "6 Rough Ruby",
+      "smallEnemies" : 65,
+      "smallGolemHits" : 8,
+      "smallGolems" : 3,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 34,
+      "largeGolems" : 1,
+      "level" : 97,
+      "mediumGolemHits" : 17,
+      "mediumGolems" : 3,
+      "reward" : "14 Gold Ore",
+      "smallEnemies" : 65,
+      "smallGolemHits" : 8.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 34,
+      "largeGolems" : 1,
+      "level" : 98,
+      "mediumGolemHits" : 17,
+      "mediumGolems" : 3,
+      "reward" : "6 Rough Sapphire",
+      "smallEnemies" : 66,
+      "smallGolemHits" : 8.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : false,
+      "largeGolemHits" : 34,
+      "largeGolems" : 1,
+      "level" : 99,
+      "mediumGolemHits" : 17,
+      "mediumGolems" : 3,
+      "reward" : "Crew Upgrade",
+      "smallEnemies" : 66,
+      "smallGolemHits" : 8.5,
+      "smallGolems" : 2,
+      "wall" : false,
+      "waves" : 7
+    },
+    {
+      "boss" : true,
+      "bossHits" : 78,
       "bossName" : "Moss Boss",
       "largeGolems" : 0,
-      "level" : 50,
+      "level" : 100,
       "mediumGolems" : 0,
-      "replayPrice" : 5188,
+      "reward" : "1 Rough Diamond + Random Skin",
       "smallEnemies" : 14,
       "smallGolems" : 0,
       "wall" : true,
       "waves" : 3
     }
   ],
-  "levels" : 50,
+  "levels" : 100,
+  "rewards" : {
+    "bossRewards" : [
+      {
+        "crewUnlock" : "Frost",
+        "level" : 10,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Bomber",
+        "level" : 20,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Sniper",
+        "level" : 30,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Lantern",
+        "level" : 40,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Alchemist",
+        "level" : 50,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Puffball",
+        "level" : 60,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Mender",
+        "level" : 70,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Trapper",
+        "level" : 80,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "crewUnlock" : "Torch",
+        "level" : 90,
+        "skinReward" : "Random Skin"
+      },
+      {
+        "extraReward" : "1 Rough Diamond",
+        "level" : 100,
+        "skinReward" : "Random Skin"
+      }
+    ],
+    "copperOre" : 130,
+    "goldOre" : 144,
+    "ironOre" : 56,
+    "roughDiamond" : 1,
+    "roughRuby" : 31,
+    "roughSapphire" : 31,
+    "totalRewards" : 110,
+    "upgradeCards" : 20
+  },
   "room" : {
     "fewestJoins" : 2,
     "largestRoom" : 15,
     "longestBridge" : 2,
     "threePathsFrom" : 11,
     "twoLeanDoorsFrom" : 31,
-    "zoneLevels" : 5
+    "zoneLevels" : 10
   },
   "shield" : {
     "health" : 40,
     "regrowSeconds" : 20
   },
+  "slimeBossBurstCount" : 4,
   "upgradeMaxRank" : 5,
   "upgrades" : [
     {
@@ -1199,7 +1845,7 @@
       "boss" : "Stone Boss",
       "doors" : 2,
       "first" : 1,
-      "last" : 5,
+      "last" : 10,
       "layout" : "Plain floor",
       "lean" : [
         "Mole",
@@ -1211,53 +1857,53 @@
     },
     {
       "boss" : "Mole Chief",
-      "doors" : 2,
-      "first" : 6,
-      "last" : 10,
+      "doors" : 3,
+      "first" : 11,
+      "last" : 20,
       "layout" : "A fall, then a river across the room",
       "lean" : [
         "Mole"
       ],
       "liquid" : "Water",
-      "name" : "River",
-      "ownRun" : 2,
-      "roomSize" : 11
+      "name" : "Water",
+      "ownRun" : 3,
+      "roomSize" : 13
     },
     {
       "boss" : "King Slime",
       "doors" : 3,
-      "first" : 11,
-      "last" : 15,
+      "first" : 21,
+      "last" : 30,
       "layout" : "A fall, then a river down the room",
       "lean" : [
         "Slime",
         "Mole"
       ],
       "liquid" : "Slime",
-      "name" : "Green Slime",
+      "name" : "Slime",
       "ownRun" : 3,
-      "roomSize" : 13
+      "roomSize" : 15
     },
     {
       "boss" : "Ice Boss",
-      "doors" : 3,
-      "first" : 16,
-      "last" : 20,
+      "doors" : 4,
+      "first" : 31,
+      "last" : 40,
       "layout" : "A fall, then a river across the room",
       "lean" : [
         "Ice Golem",
         "Bat"
       ],
       "liquid" : "Ice",
-      "name" : "Ice Crystal",
+      "name" : "Ice",
       "ownRun" : 3,
-      "roomSize" : 13
+      "roomSize" : 15
     },
     {
       "boss" : "Mole Chief",
-      "doors" : 3,
-      "first" : 21,
-      "last" : 25,
+      "doors" : 4,
+      "first" : 41,
+      "last" : 50,
       "layout" : "A fall, then a river down the room",
       "lean" : [
         "Geode",
@@ -1271,9 +1917,9 @@
     },
     {
       "boss" : "Pill Bug Queen",
-      "doors" : 4,
-      "first" : 26,
-      "last" : 30,
+      "doors" : 5,
+      "first" : 51,
+      "last" : 60,
       "layout" : "A fall, then a river that splits round the chest",
       "lean" : [
         "Glow Bug",
@@ -1286,9 +1932,9 @@
     },
     {
       "boss" : "Great Bat",
-      "doors" : 4,
-      "first" : 31,
-      "last" : 35,
+      "doors" : 6,
+      "first" : 61,
+      "last" : 70,
       "layout" : "A fall, then a river across the room",
       "lean" : [
         "Ember Bat",
@@ -1296,14 +1942,14 @@
       ],
       "liquid" : "Lava",
       "name" : "Lava",
-      "ownRun" : 3,
+      "ownRun" : 2,
       "roomSize" : 15
     },
     {
       "boss" : "Prism King",
-      "doors" : 4,
-      "first" : 36,
-      "last" : 40,
+      "doors" : 6,
+      "first" : 71,
+      "last" : 80,
       "layout" : "A fall, then a river across the room",
       "lean" : [
         "Glare Slime",
@@ -1312,14 +1958,14 @@
       ],
       "liquid" : "Rainbow water",
       "name" : "Prism",
-      "ownRun" : 3,
+      "ownRun" : 2,
       "roomSize" : 15
     },
     {
       "boss" : "Glitch Boss",
-      "doors" : 4,
-      "first" : 41,
-      "last" : 45,
+      "doors" : 7,
+      "first" : 81,
+      "last" : 90,
       "layout" : "A fall, then a river across the room",
       "lean" : [
         "Glitch Newt",
@@ -1328,14 +1974,14 @@
       ],
       "liquid" : "Data stream",
       "name" : "Circuit",
-      "ownRun" : 3,
+      "ownRun" : 2,
       "roomSize" : 15
     },
     {
       "boss" : "Moss Boss",
-      "doors" : 5,
-      "first" : 46,
-      "last" : 50,
+      "doors" : 7,
+      "first" : 91,
+      "last" : 100,
       "layout" : "A fall and big pools",
       "lean" : [
         "Void Golem",
@@ -1343,8 +1989,8 @@
         "Mole"
       ],
       "liquid" : "Void",
-      "name" : "Starfall",
-      "ownRun" : 3,
+      "name" : "Space",
+      "ownRun" : 2,
       "roomSize" : 15
     }
   ]

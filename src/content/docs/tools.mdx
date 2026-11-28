@@ -1,6 +1,6 @@
 ---
 title: Tools and Upgrades
-description: The six tools, the five Harvest implements, what each gathers, and every implement upgrade with its cost, level and effect.
+description: The six tools, the seven Harvest implements, what each does, and every implement upgrade with its cost, level and effect.
 ---
 import DataTable from '../../components/DataTable.astro';
 
@@ -11,7 +11,7 @@ You play by dragging a tool over the farm or tapping a tile with it.
 | Tool | Use it to | More |
 | --- | --- | --- |
 | Plant | Plant seeds and fruit trees | [Crops](../farming/crops/), [Fruit Trees](../farming/fruit-trees/) |
-| Harvest | Gather with one of five implements | [Below](#harvest-implements) |
+| Harvest | Gather or water crops with one of seven implements | [Below](#harvest-implements) |
 | Fertilize | Spread fertilizer and place sprinklers | [Fertilizer and Sprinklers](../farming/fertilizer-and-sprinklers/) |
 | Terrain | Lay farmland, water and paths, or clear them back to grass | [Farmland and Water](../farming/farmland-and-water/) |
 | Build | Place buildings | [Buildings](../buildings/) |
@@ -19,7 +19,7 @@ You play by dragging a tool over the farm or tapping a tile with it.
 
 ## Harvest implements
 
-The Harvest tool holds one implement at a time. Each gathers its own kind of thing and passes over the rest; using the wrong one says which to use.
+The Harvest tool holds one implement at a time. Most gather their own kind of thing and pass over the rest, while the Watering Can waters farmland and refills at any pond when below full. Using the wrong implement says which to use.
 
 <DataTable name="tools" />
 
@@ -28,18 +28,21 @@ The Harvest tool holds one implement at a time. Each gathers its own kind of thi
 | Scythe | [Crops](../farming/crops/), [Livestock](../animals/livestock/) (wool) |
 | Axe | [Trees, Logs and Stones](../gathering/trees-logs-and-stones/) |
 | Pickaxe | [Mining](../gathering/mining/) |
-| Bucket | [Fruit Trees](../farming/fruit-trees/), [Chickens and Eggs](../animals/chickens-and-eggs/), [Livestock](../animals/livestock/), [Workshops](../buildings/workshops/), [Butterflies and Fireflies](../gathering/butterflies-and-fireflies/) |
+| Bucket | [Fruit Trees](../farming/fruit-trees/), [Chickens and Eggs](../animals/chickens-and-eggs/), [Livestock](../animals/livestock/), [Workshops](../buildings/workshops/) |
+| Watering Can | [Farmland and Water](../farming/farmland-and-water/#watering-can) |
 | Fishing Rod | [Fishing](../gathering/fishing/) |
+| Net | [Butterflies and Fireflies](../gathering/butterflies-and-fireflies/) |
 
-- The Scythe and the Bucket can be set to Sell or Store (see [Storage and Selling](../storage-and-selling/#sell-or-store)). The Axe and the Pickaxe always store. The Fishing Rod asks on each catch.
+- The Scythe and the Bucket can be set to Sell or Store (see [Storage and Selling](../storage-and-selling/#sell-or-store)). The Axe, the Pickaxe and the Net always store. The Fishing Rod asks on each catch. The Watering Can waters farmland and refills at any pond when below full.
 
 ## Upgrades
 
-Each implement can be upgraded to Level 2 and then Level 3. An upgrade costs gold only and unlocks at its own player level.
+Each implement except the Net can be upgraded to Level 2 and then Level 3. The Net stays at Level 1. An upgrade costs gold only and unlocks at its own player level.
 
 <DataTable name="tool-upgrades" />
 
 - The chance of a second item from the Scythe or the Bucket is rolled for each crop, fruit basket, egg, wool, milk, goat milk or fertilizer gathered. The second item pays or stores like the first and earns no XP, is only taken if it fits in Storage, and a second crop counts toward harvest quests.
 - Workshop batches, butterflies and fireflies never give a second item, and neither does the Tractor.
 - Any Axe fells any tree and any Pickaxe breaks any rock or vein. A better one takes fewer passes and gives extra logs or stones from wild trees and plain wild rocks. Planted trees and placed rocks give none.
+- Upgrading the Watering Can raises how many tiles it holds (12, 24 and 48 tiles) and adds a 3×3 splash at Level 3.
 - The Fishing Rod's wider catch circle is described on [Fishing](../gathering/fishing/#catching-a-fish).

@@ -1,8 +1,15 @@
 {
+  "allBoostsMultiplier" : 2.36,
+  "allBoostsTimeSavedPercent" : 57.7,
   "farmlandCost" : 0,
+  "farmlandDoubleToLevel" : 19,
+  "farmlandFirstUnlockLevel" : 2,
+  "farmlandSingleFromLevel" : 20,
   "fenceCost" : 2,
   "fertilizerCost" : 10,
-  "fertilizerSpeedUpPercent" : 10,
+  "fertilizerMultiplier" : 1.5,
+  "fertilizerSpeedUpPercent" : 50,
+  "longestSoakingSeconds" : 12,
   "paths" : [
     {
       "cost" : 0,
@@ -37,6 +44,10 @@
     }
   ],
   "refundPercent" : 80,
+  "scarecrowMultiplier" : 1.05,
+  "scarecrowReach" : 3,
+  "scarecrowSpeedUpPercent" : 5,
+  "soakingPaceSeconds" : 0.5,
   "trees" : [
     {
       "colors" : [
@@ -272,6 +283,7 @@
     }
   ],
   "waterCost" : 0,
-  "waterReach" : 1,
-  "waterSpeedUpPercent" : 5
+  "waterMultiplier" : 1.5,
+  "waterReach" : 0,
+  "waterSpeedUpPercent" : 50
 }

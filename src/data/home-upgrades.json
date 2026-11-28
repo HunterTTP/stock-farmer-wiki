@@ -12,6 +12,9 @@
         "width" : 32
       },
       "level" : 2,
+      "materials" : [
+
+      ],
       "unlockLevel" : 7
     },
     {
@@ -26,6 +29,9 @@
         "width" : 64
       },
       "level" : 2,
+      "materials" : [
+
+      ],
       "unlockLevel" : 9
     },
     {
@@ -40,6 +46,12 @@
         "width" : 120
       },
       "level" : 2,
+      "materials" : [
+        {
+          "count" : 6,
+          "name" : "Copper Ore"
+        }
+      ],
       "unlockLevel" : 11
     },
     {
@@ -54,6 +66,9 @@
         "width" : 32
       },
       "level" : 3,
+      "materials" : [
+
+      ],
       "unlockLevel" : 12
     },
     {
@@ -68,6 +83,16 @@
         "width" : 120
       },
       "level" : 2,
+      "materials" : [
+        {
+          "count" : 8,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 4,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 13
     },
     {
@@ -82,6 +107,9 @@
         "width" : 64
       },
       "level" : 3,
+      "materials" : [
+
+      ],
       "unlockLevel" : 14
     },
     {
@@ -96,6 +124,16 @@
         "width" : 120
       },
       "level" : 2,
+      "materials" : [
+        {
+          "count" : 8,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 4,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 15
     },
     {
@@ -110,6 +148,16 @@
         "width" : 120
       },
       "level" : 3,
+      "materials" : [
+        {
+          "count" : 15,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 8,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 16
     },
     {
@@ -124,6 +172,16 @@
         "width" : 160
       },
       "level" : 2,
+      "materials" : [
+        {
+          "count" : 10,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 5,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 17
     },
     {
@@ -138,6 +196,16 @@
         "width" : 120
       },
       "level" : 3,
+      "materials" : [
+        {
+          "count" : 15,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 8,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 18
     },
     {
@@ -152,6 +220,16 @@
         "width" : 120
       },
       "level" : 3,
+      "materials" : [
+        {
+          "count" : 18,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 10,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 20
     },
     {
@@ -166,6 +244,16 @@
         "width" : 240
       },
       "level" : 2,
+      "materials" : [
+        {
+          "count" : 24,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 13,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 21
     },
     {
@@ -180,6 +268,16 @@
         "width" : 160
       },
       "level" : 3,
+      "materials" : [
+        {
+          "count" : 18,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 10,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 22
     },
     {
@@ -194,12 +292,32 @@
         "width" : 240
       },
       "level" : 3,
+      "materials" : [
+        {
+          "count" : 36,
+          "name" : "Copper Ore"
+        },
+        {
+          "count" : 20,
+          "name" : "Iron Ore"
+        }
+      ],
       "unlockLevel" : 24
     }
   ],
   "house" : {
     "cost" : 50000,
     "height" : 5,
+    "materials" : [
+      {
+        "count" : 36,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 20,
+        "name" : "Iron Ore"
+      }
+    ],
     "stockSlotsAfter" : 10,
     "stockSlotsBefore" : 5,
     "unlockLevel" : 24,
@@ -208,6 +326,12 @@
   "marketStand" : {
     "cost" : 10000,
     "height" : 2,
+    "materials" : [
+      {
+        "count" : 12,
+        "name" : "Copper Ore"
+      }
+    ],
     "questsAfter" : 6,
     "questsBefore" : 4,
     "questsNeeded" : 10,

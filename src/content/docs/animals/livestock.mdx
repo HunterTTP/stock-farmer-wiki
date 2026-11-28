@@ -39,16 +39,11 @@ Livestock are the farm animals that live in barns and similar homes: rabbits, sh
 4. The next countdown starts the moment you collect.
 
 - A meal speeds the countdown only until the item is ready. Time Well Fed with an item waiting is not saved toward the next one.
-- Births, growth and items carry on while the game is closed, caught up for at most three days.
+- Births, growth and items carry on while the game is closed, caught up for at most <Fact path="animals.herdCatchUpDays" /> days.
 
 ## Collecting
 
-| Item | From | Collect with | XP |
-| --- | --- | --- | --- |
-| Fertilizer | Rabbit, Pig, Donkey | Bucket | 9 |
-| Wool | Sheep | Scythe | 11 |
-| Goat Milk | Goat | Bucket | 13 |
-| Milk | Cow | Bucket | 20 |
+<DataTable name="animal-produce-xp" where="livestockOnly" is="true" />
 
 - Each item earns the unlock level of the home that makes it plus one, in XP (none at the top level).
 - Use the right tool on the animal. Any other tool is told which one to use.
@@ -87,6 +82,15 @@ Livestock are the farm animals that live in barns and similar homes: rabbits, sh
 ### Cow
 
 <Infobox kind="livestock" id="cow" />
+
+## Nighttime UFO visits
+
+On rare clear nights, a UFO saucer can visit a farm that has at least one grown cow without Cosmic Shimmer.
+
+- **When:** clear nights (no rain) between 9 PM and 3 AM on the farm's clock, rolled at most once per night.
+- **Odds:** 1 in 20 eligible nights (5%) with no Cosmic cows on the farm. Each Cosmic cow already owned lowers the odds further (1 in 40 with one, 1 in 60 with two, and so on).
+- **Zero loss:** the UFO beams one eligible grown cow up for the night while it stays in its herd, then returns it safely at 6 AM the next morning.
+- **Cosmic Shimmer:** a returned cow gains a permanent Cosmic Shimmer coat and yields 2× milk (2 cans per milking). A Bucket upgrade can still roll one extra Milk on top.
 
 ## Releasing
 

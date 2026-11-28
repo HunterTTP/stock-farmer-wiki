@@ -1,14 +1,172 @@
 {
   "backpackSlots" : 100,
+  "butterflies" : {
+    "eachColorChancePercent" : 19.8,
+    "mostOnFarm" : 10,
+    "mostReleased" : 10,
+    "roamTiles" : 1,
+    "shiftingChancePercent" : 1,
+    "shiftingXPMultiplier" : 15,
+    "spawnChancePercent" : 10,
+    "xpLevelDivisor" : 600,
+    "xpMultipliers" : [
+      {
+        "glow" : "Common butterfly, orange firefly",
+        "multiplier" : 1
+      },
+      {
+        "glow" : "Uncommon",
+        "multiplier" : 2
+      },
+      {
+        "glow" : "Rare",
+        "multiplier" : 4
+      },
+      {
+        "glow" : "Epic",
+        "multiplier" : 7
+      },
+      {
+        "glow" : "Legendary",
+        "multiplier" : 10
+      },
+      {
+        "glow" : "Shifting",
+        "multiplier" : 15
+      }
+    ]
+  },
+  "clouds" : {
+    "count" : 6,
+    "nightShadowPercent" : 75,
+    "rainShadowPercent" : 60,
+    "rainyNightShadowPercent" : 45,
+    "snowShadowPercent" : 60
+  },
+  "cropEconomy" : {
+    "carrotGrowSeconds" : 30,
+    "earningsStepPercent" : 5,
+    "fruitTreeBasketMultiplier" : 1.5,
+    "fruitTreeCostBaskets" : 12,
+    "fruitTreeRipenMultiplier" : 3,
+    "fruitTreeXPMultiplier" : 1.5,
+    "growTimeStep" : 1.33,
+    "lastFullGrowthCrop" : "Zucchini",
+    "lateEarningsStepPercent" : 2.5,
+    "potatoGrowSeconds" : 60,
+    "rewardPerSeedMultiplier" : 2,
+    "slowestGrowSeconds" : 7200,
+    "starterGrowSeconds" : 10,
+    "starterSellValue" : 0.1
+  },
+  "dayNight" : {
+    "auroraEnd" : "3 AM",
+    "auroraPalettes" : 5,
+    "auroraStart" : "9 PM",
+    "dawnStart" : "4:30 AM",
+    "dayStart" : "5:30 AM",
+    "duskStart" : "8 PM",
+    "eveningHalfDark" : "8:30 PM",
+    "fullDarkStart" : "9 PM",
+    "midnightWaveSeconds" : 20,
+    "morningHalfDark" : "5 AM",
+    "seasonCount" : 4,
+    "seasonRealSeconds" : 10080,
+    "shelterDarknessPercent" : 50,
+    "timeline" : [
+      {
+        "state" : "Day",
+        "time" : "Before 8 PM"
+      },
+      {
+        "state" : "Getting darker (half dark at 8:30 PM)",
+        "time" : "8 PM to 9 PM"
+      },
+      {
+        "state" : "Fully dark",
+        "time" : "9 PM to 4:30 AM"
+      },
+      {
+        "state" : "Getting lighter (half dark at 5 AM)",
+        "time" : "4:30 AM to 5:30 AM"
+      },
+      {
+        "state" : "Day",
+        "time" : "After 5:30 AM"
+      }
+    ],
+    "yearRealSeconds" : 40320
+  },
   "daysPerSeason" : 7,
+  "fireflies" : {
+    "coloredPerNight" : 3,
+    "colors" : [
+      {
+        "chance" : "44.4%",
+        "glow" : "Uncommon",
+        "nightlyChance" : "83%"
+      },
+      {
+        "chance" : "27.8%",
+        "glow" : "Rare",
+        "nightlyChance" : "62%"
+      },
+      {
+        "chance" : "15.6%",
+        "glow" : "Epic",
+        "nightlyChance" : "40%"
+      },
+      {
+        "chance" : "8.9%",
+        "glow" : "Legendary (deep orange)",
+        "nightlyChance" : "24%"
+      },
+      {
+        "chance" : "3.3%",
+        "glow" : "Shifting",
+        "nightlyChance" : "10%"
+      }
+    ],
+    "mostOnFarm" : 10,
+    "mostReleased" : 10,
+    "perNight" : 10,
+    "roamTiles" : 1,
+    "windowEnd" : "4 AM",
+    "windowStart" : "9 PM"
+  },
   "firefliesPerNight" : 10,
+  "gridLineFade" : {
+    "defaultZoom" : 3,
+    "maxZoom" : 8,
+    "minZoom" : 0,
+    "step" : 0.5
+  },
+  "harvestsPerLevel" : 3,
   "mapSize" : 50,
   "maxLevel" : 34,
+  "newFarm" : {
+    "caveMouthClearingTiles" : 4,
+    "forestClearance" : 3,
+    "pondClearance" : 8,
+    "pondEdgeGap" : 3,
+    "pondSpacing" : 5,
+    "startTime" : "8 AM"
+  },
   "nightEndsHour" : 5,
   "nightStartsHour" : 21,
+  "progressCharts" : {
+    "maxSamples" : 300,
+    "sampleIntervalSeconds" : 300
+  },
   "rainRealMinutes" : 3,
   "rainStartsHour" : 14,
   "realSecondsPerFarmDay" : 1440,
+  "saves" : {
+    "maxFarmNameLength" : 24,
+    "olderBackupSeconds" : 600,
+    "rotatingBackups" : 3,
+    "slots" : 10
+  },
   "seasonTurnsAtHour" : 6,
   "seasons" : [
     "Spring",
@@ -18,10 +176,111 @@
   ],
   "shedSlots" : 50,
   "siloSlots" : 150,
+  "sprinklerSprayDurationSeconds" : 12,
   "sprinklerSprayEverySeconds" : 60,
   "startingFarmland" : 4,
+  "stockPriceWobblePercent" : 0.05,
   "stockRefreshMinutes" : 5,
   "stockSlots" : 5,
   "stockSlotsUpgraded" : 10,
-  "storageBuildingLimit" : 4
+  "storageBuildingLimit" : 4,
+  "thunder" : {
+    "chimeClearanceSeconds" : 5,
+    "flashLeadMaxSeconds" : 3,
+    "flashLeadMinSeconds" : 1,
+    "flashRollOddsDenominator" : 4,
+    "flashSpacingSeconds" : 120,
+    "flashSpellOddsDenominator" : 10,
+    "heraldLeadSeconds" : 3,
+    "minRainPercent" : 25,
+    "rollMaxSeconds" : 67,
+    "rollMinSeconds" : 25
+  },
+  "timelapse" : {
+    "defaultCaptureTime" : "9 AM",
+    "maxCaptureTimes" : 3
+  },
+  "trunkStorageSlots" : 25,
+  "updateCheckSeconds" : 21600,
+  "waterHabitat" : {
+    "interiorTilesPerAnimal" : 20,
+    "maxInWindow" : 2,
+    "maxOnMap" : 15,
+    "minOnMap" : 2,
+    "otherKindSpacing" : 1,
+    "sameKindSpacing" : 2,
+    "waterTilesPerAnimal" : 24,
+    "windowSide" : 5
+  },
+  "weather" : {
+    "fadeFarmMinutes" : 20,
+    "fadeOutStart" : "4:40 PM",
+    "fullStart" : "2:20 PM",
+    "rainEnd" : "5 PM",
+    "rainHours" : 3,
+    "rainStart" : "2 PM",
+    "rainTimeline" : [
+      {
+        "state" : "Builds up",
+        "time" : "2:00 PM to 2:20 PM"
+      },
+      {
+        "state" : "Half built up: animals go inside",
+        "time" : "2:10 PM"
+      },
+      {
+        "state" : "Full strength",
+        "time" : "2:20 PM to 4:40 PM"
+      },
+      {
+        "state" : "Dies away",
+        "time" : "4:40 PM to 5:00 PM"
+      },
+      {
+        "state" : "Stops: animals come out",
+        "time" : "5:00 PM"
+      }
+    ],
+    "shelterDelayFarmMinutes" : 10,
+    "shelterStart" : "2:10 PM",
+    "winterSnowFloorPercent" : 8
+  },
+  "wildGrowth" : {
+    "buildingLookaheadLevels" : 2,
+    "copperShortageTarget" : 12,
+    "growthChancePercent" : 20,
+    "growthOddsDenominator" : 5,
+    "nightlyMaxRocks" : 4,
+    "nightlyMaxTrees" : 8,
+    "nightlyMaxVeins" : 1,
+    "nightlyRocks" : {
+      "max" : 3,
+      "min" : 2
+    },
+    "nightlyTotal" : {
+      "max" : 10,
+      "min" : 7
+    },
+    "nightlyTrees" : {
+      "max" : 6,
+      "min" : 4
+    },
+    "nightlyVeins" : {
+      "max" : 1,
+      "min" : 1
+    },
+    "rockCap" : 40,
+    "rockShare" : 2.5,
+    "scarcityFloor" : 0.1,
+    "shortageBoost" : 1,
+    "treeCap" : 390,
+    "treeShare" : 5,
+    "veinCap" : 12,
+    "veinShare" : 1
+  },
+  "wind" : {
+    "directionPercent" : 50,
+    "spellFarmHours" : 5,
+    "spellRealSeconds" : 300
+  }
 }

@@ -12,7 +12,7 @@ A new farm is a <Fact path="world.mapSize" /> by <Fact path="world.mapSize" /> t
 
 | | Starts with |
 | --- | --- |
-| Time | 8 AM on day 1, in the Starting Season you pick (Spring, Summer, Fall or Winter), Spring unless you change it |
+| Time | <Fact path="world.newFarm.startTime" /> on day 1, in the Starting Season you pick (Spring, Summer, Fall or Winter), Spring unless you change it |
 | Gold | 0 |
 | Level | 1, with 0 XP |
 | Farmland | <Fact path="world.startingFarmland" /> tiles in the middle of the map |
@@ -27,12 +27,12 @@ A new farm is a <Fact path="world.mapSize" /> by <Fact path="world.mapSize" /> t
 
 - Half of all maps have three ponds: a small, a medium and a large one, anywhere on the map.
 - The other half have two, in opposite corners: a large one and, as often as not, a medium or a second large one.
-- Ponds keep 5 tiles of grass between each other and 3 from the map's edge, and stay at least 8 tiles from the starting farmland.
+- Ponds keep <Fact path="world.newFarm.pondSpacing" /> tiles of grass between each other and <Fact path="world.newFarm.pondEdgeGap" /> from the map's edge, and stay at least <Fact path="world.newFarm.pondClearance" /> tiles from the starting farmland.
 
 ## Forest
 
-- No tree stands within 3 tiles of the starting farmland or on water.
-- No wild tree or rock stands on the four tiles in front of the cave entrance, in the map's top-right corner, and no wild tree's picture spreads over them.
+- No tree stands within <Fact path="world.newFarm.forestClearance" /> tiles of the starting farmland or on water.
+- No wild tree or rock stands on the <Fact path="world.newFarm.caveMouthClearingTiles" /> tiles in front of the cave entrance, in the map's top-right corner, and no wild tree's picture spreads over them.
 - The chance of a tree rises from nothing at the middle of the map to certain at its edge.
 
 ## World Seed

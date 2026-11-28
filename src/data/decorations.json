@@ -131,7 +131,7 @@
         "name" : "Stones"
       }
     ],
-    "name" : "Sprinkler",
+    "name" : "Medium Sprinkler",
     "width" : 1
   },
   {
@@ -153,6 +153,10 @@
       {
         "count" : 6,
         "name" : "Logs"
+      },
+      {
+        "count" : 2,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Well",
@@ -444,6 +448,31 @@
   },
   {
     "availableFromLevel" : 1,
+    "cost" : 40,
+    "effect" : "Waters farmland within 1 tile",
+    "height" : 1,
+    "icon" : {
+      "height" : 13,
+      "src" : "sprites/decorations/smallSprinkler.png",
+      "width" : 12
+    },
+    "id" : "smallSprinkler",
+    "looks" : 1,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 2,
+        "name" : "Stones"
+      }
+    ],
+    "name" : "Small Sprinkler",
+    "width" : 1
+  },
+  {
+    "availableFromLevel" : 1,
     "cost" : 500,
     "effect" : "Waters farmland within 3 tiles",
     "height" : 1,
@@ -464,7 +493,7 @@
         "name" : "Stones"
       }
     ],
-    "name" : "Big Sprinkler",
+    "name" : "Large Sprinkler",
     "width" : 1
   },
   {
@@ -721,6 +750,30 @@
   },
   {
     "availableFromLevel" : 16,
+    "cost" : 120,
+    "height" : 3,
+    "icon" : {
+      "height" : 41,
+      "src" : "sprites/decorations/decorativeChest.png",
+      "width" : 31
+    },
+    "id" : "decorativeChest",
+    "looks" : 3,
+    "materials" : [
+      {
+        "count" : 1,
+        "name" : "Furniture"
+      },
+      {
+        "count" : 2,
+        "name" : "Iron Ore"
+      }
+    ],
+    "name" : "Decorative Chest",
+    "width" : 2
+  },
+  {
+    "availableFromLevel" : 16,
     "cost" : 80,
     "height" : 2,
     "icon" : {
@@ -745,6 +798,30 @@
   },
   {
     "availableFromLevel" : 16,
+    "cost" : 180,
+    "height" : 3,
+    "icon" : {
+      "height" : 8,
+      "src" : "sprites/decorations/craftingSupplies.png",
+      "width" : 9
+    },
+    "id" : "craftingSupplies",
+    "looks" : 9,
+    "materials" : [
+      {
+        "count" : 2,
+        "name" : "Furniture"
+      },
+      {
+        "count" : 3,
+        "name" : "Iron Ore"
+      }
+    ],
+    "name" : "Crafting Supplies",
+    "width" : 3
+  },
+  {
+    "availableFromLevel" : 16,
     "cost" : 240,
     "height" : 3,
     "icon" : {
@@ -762,6 +839,10 @@
       {
         "count" : 10,
         "name" : "Logs"
+      },
+      {
+        "count" : 1,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Woodworking Supplies",
@@ -837,30 +918,6 @@
   },
   {
     "availableFromLevel" : 19,
-    "cost" : 120,
-    "height" : 3,
-    "icon" : {
-      "height" : 41,
-      "src" : "sprites/decorations/decorativeChest.png",
-      "width" : 31
-    },
-    "id" : "decorativeChest",
-    "looks" : 3,
-    "materials" : [
-      {
-        "count" : 1,
-        "name" : "Furniture"
-      },
-      {
-        "count" : 1,
-        "name" : "Polished Ruby"
-      }
-    ],
-    "name" : "Decorative Chest",
-    "width" : 2
-  },
-  {
-    "availableFromLevel" : 19,
     "cost" : 80,
     "height" : 2,
     "icon" : {
@@ -878,34 +935,14 @@
       {
         "count" : 2,
         "name" : "Bricks"
+      },
+      {
+        "count" : 1,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Stone Well",
     "width" : 2
-  },
-  {
-    "availableFromLevel" : 19,
-    "cost" : 180,
-    "height" : 3,
-    "icon" : {
-      "height" : 8,
-      "src" : "sprites/decorations/craftingSupplies.png",
-      "width" : 9
-    },
-    "id" : "craftingSupplies",
-    "looks" : 9,
-    "materials" : [
-      {
-        "count" : 2,
-        "name" : "Furniture"
-      },
-      {
-        "count" : 1,
-        "name" : "Polished Sapphire"
-      }
-    ],
-    "name" : "Crafting Supplies",
-    "width" : 3
   },
   {
     "availableFromLevel" : 20,

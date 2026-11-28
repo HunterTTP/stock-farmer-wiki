@@ -114,7 +114,8 @@
     ],
     "stockQuests" : false,
     "toolUpgrades" : [
-      "Scythe level 2"
+      "Scythe level 2",
+      "Watering Can level 2"
     ],
     "xpToNext" : 330,
     "xpToReach" : 252
@@ -205,7 +206,8 @@
     ],
     "stockQuests" : false,
     "toolUpgrades" : [
-      "Axe level 3"
+      "Axe level 3",
+      "Watering Can level 3"
     ],
     "xpToNext" : 1392,
     "xpToReach" : 2082
@@ -638,7 +640,7 @@
   },
   {
     "buildings" : [
-
+      "Greenhouse"
     ],
     "crops" : [
       "Strawberry"

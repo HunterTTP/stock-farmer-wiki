@@ -1,6 +1,6 @@
 ---
 title: Farmland and Water
-description: What farmland, water and grass cost, how many farmland tiles each level allows, and how water near crops speeds them up.
+description: What farmland, water and grass cost, how many farmland tiles each level allows, and how watering crops speeds them up.
 sidebar:
   order: 3
 ---
@@ -13,7 +13,7 @@ Crops grow only on farmland. Farmland, water and grass are laid with the Terrain
 | Terrain | Cost | What it does |
 | --- | --- | --- |
 | Farmland | <Fact path="terrain.farmlandCost" as="money" /> | Soil for crops. Limited by level. |
-| Water | <Fact path="terrain.waterCost" as="money" /> | Unlimited. Deep, Medium and Shallow are looks only. Big enough water holds fish and ducks. |
+| Water | <Fact path="terrain.waterCost" as="money" /> | Unlimited. Deep, Medium and Shallow are looks only. Refills the Watering Can. Big enough water holds fish and ducks. |
 | Grass | Free | Clears farmland, water and paths back to grass. |
 
 - Any terrain replaces another at once. Farmland over water removes the water, and water over farmland removes the farmland.
@@ -23,6 +23,7 @@ Crops grow only on farmland. Farmland, water and grass are laid with the Terrain
 - Water cannot go on the tile in front of an animal home.
 - Laying water in a new look changes every water tile already there.
 - Water holds fish and ducks when it has a tile with water on all eight sides (see [Fishing](../../gathering/fishing/#where-fish-live) and [Ducks](../../animals/ducks/)).
+- Ponds refill the Watering Can when it is below full, and do not water nearby farmland on their own.
 
 ## Farmland limit
 
@@ -30,24 +31,37 @@ The number of farmland tiles you can have at once rises with your level. You sta
 
 | Level reached | Tiles added |
 | --- | --- |
-| 2 to 19 | Twice the level (level 8 adds 16) |
-| 20 to <Fact path="world.maxLevel" /> | The level (level 25 adds 25) |
+| <Fact path="terrain.farmlandFirstUnlockLevel" /> to <Fact path="terrain.farmlandDoubleToLevel" /> | Twice the level (level 8 adds 16) |
+| <Fact path="terrain.farmlandSingleFromLevel" /> to <Fact path="world.maxLevel" /> | The level (level 25 adds 25) |
 
 The total for every level is in the [level table](../../levels/#level-table). At the limit, more farmland is refused. Erasing farmland or covering it with water frees room.
 
-## Water and growth
+## Watering and growth
 
-Farmland near water is saturated, and saturated soil grows crops <Fact path="terrain.waterSpeedUpPercent" />% faster.
+Watered soil grows crops <Fact path="terrain.waterSpeedUpPercent" />% faster (<Fact path="terrain.waterMultiplier" />× speed), while dry crops keep growing at normal speed.
 
-- A water tile saturates the farmland within <Fact path="terrain.waterReach" /> tile of it, diagonals included.
-- A [Sprinkler](../fertilizer-and-sprinklers/) saturates the farmland in its reach, whether or not it is spraying.
-- Land near several sources is saturated once. The boost does not add up.
-- The boost multiplies with fertilizer and a Scarecrow (see [Growth](../growth/)).
+- Hand-watered and rain-watered farmland stays watered for 1 farm day (until the next farm midnight).
+- Afternoon rain in Spring, Summer and Fall automatically waters all farmland for the day (see [Weather](../../world/weather/)). Winter snow never waters farmland.
+- A [Sprinkler](../fertilizer-and-sprinklers/) keeps the farmland in its reach watered every day, whether or not it is spraying.
+- Farmland watered by several sources gets the boost once. The boost does not add up.
+- The boost multiplies with fertilizer, a Scarecrow and a Greenhouse (see [Growth](../growth/)).
 
-### Soaking
+## Watering Can
 
-- Farmland soaks up water one tile at a time, in a random order, about half a second apart.
-- It starts when water, a sprinkler or farmland is laid, moved or removed.
-- A large area soaks a little faster, so it is always done within 12 s.
-- Land that loses its last water source dries out the same way, tile by tile, and keeps the boost until its tile has dried.
-- Only a tile that has soaked up water gets the boost.
+The Watering Can is one of the Harvest implements (see [Tools and Upgrades](../../tools/)). Tap or drag it over empty farmland or growing crops to water them, and tap or drag over any pond to refill it when it is below full.
+
+| Level | Unlock | Cost | Capacity | Area |
+| --- | --- | --- | --- | --- |
+| Level 1 | Start | Free | 12 tiles | 1×1 |
+| Level 2 | Level 4 | 200 gold | 24 tiles | 1×1 |
+| Level 3 | Level 7 | 900 gold | 48 tiles | 3×3 splash |
+
+- Watering an already-watered tile uses no water from the can.
+- Tapping or dragging the Watering Can on a pond refills it only when it is below full.
+- In the farm tutorial, a short Watering phase follows planting Carrots to introduce the Watering Can.
+
+### Sprinkler soaking
+
+- Farmland around a newly placed or moved Sprinkler soaks up water one tile at a time, in a random order, about <Fact path="terrain.soakingPaceSeconds" /> s apart.
+- A large area soaks a little faster, so it finishes within <Fact path="terrain.longestSoakingSeconds" as="duration" />.
+- Farmland that loses its last Sprinkler dries out the same way, tile by tile, and keeps the boost until its tile dries.

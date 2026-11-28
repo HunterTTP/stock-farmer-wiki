@@ -24,16 +24,18 @@ Decorations are objects that stand on the farm. Most are for show, and a few hav
 | Decoration | Effect |
 | --- | --- |
 | Scarecrow | <Fact path="decorations.scarecrow.effect" /> |
-| Sprinkler | <Fact path="decorations.sprinkler.effect" /> |
-| Big Sprinkler | <Fact path="decorations.bigSprinkler.effect" /> |
+| Small Sprinkler | <Fact path="decorations.smallSprinkler.effect" /> |
+| Medium Sprinkler | <Fact path="decorations.sprinkler.effect" /> |
+| Large Sprinkler | <Fact path="decorations.bigSprinkler.effect" /> |
 
 Every other decoration, the Lantern and the Christmas Tree included, changes only how the farm looks. See [Growth](../farming/growth/) for how the boosts combine.
 
 ## Rules
 
-- A decoration stands on bare grass. It cannot go on water, farmland, a crop, a fence, a building, a tree, an egg or an animal, or in front of an animal home.
-- Its tiles block animals.
-- The Trunk is built from the Build list, listed after the Pet House. It costs <Fact path="decorations.trunk.cost" as="money" /> and 10 Logs, and at most <Fact path="decorations.trunk.limit" /> can stand on a farm. Each adds 25 slots of Storage and has 35 skins (see [Skins](../buildings/skins/)).
+- Most decorations stand on bare grass. They cannot go on water, farmland, a crop, a fence, a building, a tree, an egg or an animal, or in front of an animal home.
+- Sprinklers stand on any free terrain tile (see [Fertilizer and Sprinklers](../farming/fertilizer-and-sprinklers/)).
+- A decoration's tiles block animals.
+- The Trunk is built from the Build list, listed after the Pet House. It costs <Fact path="decorations.trunk.cost" as="money" /> and <Fact path="decorations.trunk.materials.Logs.count" /> Logs, and at most <Fact path="decorations.trunk.limit" /> can stand on a farm. Each adds <Fact path="world.trunkStorageSlots" /> slots of Storage and has 35 skins (see [Skins](../buildings/skins/)).
 - A Rock is set down as a real rock. The Pickaxe breaks it for no stones, and it never grows (see [Mining](../gathering/mining/)).
 - The Christmas Tree stands on one tile at every size.
 - A Lantern keeps its light settings when it is taken down into Storage and set out again.

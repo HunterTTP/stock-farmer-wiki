@@ -118,7 +118,7 @@
     ]
   },
   {
-    "gathers" : "Fruit, eggs, milk, goat milk, fertilizer, butterflies and fireflies",
+    "gathers" : "Fruit, eggs, milk, goat milk, fertilizer and workshop goods",
     "icon" : {
       "height" : 27,
       "src" : "sprites/tools/bucket-1.png",
@@ -152,6 +152,45 @@
         },
         "level" : 3,
         "unlockLevel" : 9
+      }
+    ]
+  },
+  {
+    "gathers" : "Waters farmland and crops for a day (50% faster growth); refills at any pond",
+    "icon" : {
+      "height" : 26,
+      "src" : "sprites/tools/wateringBucket-1.png",
+      "width" : 29
+    },
+    "id" : "wateringBucket",
+    "name" : "Watering Can",
+    "upgrades" : [
+      {
+        "cost" : 200,
+        "effects" : [
+          "Holds 24 tiles of water"
+        ],
+        "icon" : {
+          "height" : 26,
+          "src" : "sprites/tools/wateringBucket-2.png",
+          "width" : 29
+        },
+        "level" : 2,
+        "unlockLevel" : 4
+      },
+      {
+        "cost" : 900,
+        "effects" : [
+          "Holds 48 tiles of water",
+          "Waters a 3×3 area per tap"
+        ],
+        "icon" : {
+          "height" : 26,
+          "src" : "sprites/tools/wateringBucket-3.png",
+          "width" : 29
+        },
+        "level" : 3,
+        "unlockLevel" : 7
       }
     ]
   },
@@ -191,6 +230,19 @@
         "level" : 3,
         "unlockLevel" : 8
       }
+    ]
+  },
+  {
+    "gathers" : "Butterflies and fireflies",
+    "icon" : {
+      "height" : 30,
+      "src" : "sprites/tools/net-1.png",
+      "width" : 26
+    },
+    "id" : "net",
+    "name" : "Net",
+    "upgrades" : [
+
     ]
   }
 ]

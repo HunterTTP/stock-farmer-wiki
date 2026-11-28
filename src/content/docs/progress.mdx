@@ -2,6 +2,7 @@
 title: Progress
 description: What the farm's records count, and what collects each entry in the nine collections.
 ---
+import Fact from '../../components/Fact.astro';
 
 Progress keeps the farm's records and a collection for everything there is to find. Perfection is the share of every tracked entry you have collected.
 
@@ -16,7 +17,7 @@ Progress keeps the farm's records and a collection for everything there is to fi
 | Crops harvested | Every crop and fruit basket taken, by hand or by the Tractor |
 | Quests completed | Every Market Stand quest finished |
 
-The best day of earnings and of stock profit are kept too. Charts follow time played, with a point for each 5 minutes of play in which the number moved, and at most 300 points.
+The best day of earnings and of stock profit are kept too. Charts follow time played, with a point for each <Fact path="world.progressCharts.sampleIntervalSeconds" as="duration" /> of play in which the number moved, and at most <Fact path="world.progressCharts.maxSamples" /> points.
 
 ## Collections
 
@@ -36,6 +37,13 @@ The best day of earnings and of stock profit are kept too. Charts follow time pl
 - A fish, butterfly or firefly you let go and catch again does not count.
 - A season counts as seen the first time it plays on the farm.
 - Tapping an entry says how to collect it. For anything that turns up by chance or on a clock (fish, chicks, baby animals, rocks, ore veins, wild trees, butterflies, fireflies, weather and seasons), it also says how often, worked out for your level and the farm as it is.
+
+## Perfection
+
+Perfection tracks the share of every collection entry and all <Fact path="cave.levels" /> playable Cave levels you have completed.
+
+- Reaching 100% Perfection triggers a one-time twilight celebration over the farm with fireworks, a right-facing parade of farm animals, pets, Shroom Crew and Cave enemies, and scrolling lifetime stats across five chapters.
+- You can skip the celebration at any time and replay it from the Perfection card in Progress.
 
 ## Related pages
 

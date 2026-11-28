@@ -1,10 +1,96 @@
 {
+  "cropDrawWeight" : 1,
+  "effort" : [
+    {
+      "effort" : "Amount ÷ harvest base × (1 + the crop's grow minutes ÷ 10)",
+      "part" : "Harvest"
+    },
+    {
+      "effort" : "Batches × (1 + the first recipe's minutes ÷ 5)",
+      "part" : "Workshop"
+    },
+    {
+      "effort" : "Feedings ÷ 10",
+      "part" : "Feed favorites"
+    },
+    {
+      "effort" : "Eggs × 0.25, other produce × 0.375, ore pieces × 1, bars or cut gems × 4",
+      "part" : "Collect"
+    },
+    {
+      "effort" : "Trees ÷ 4",
+      "part" : "Plant trees"
+    },
+    {
+      "effort" : "2.5",
+      "part" : "Stock profit"
+    }
+  ],
+  "eggQuestLevel" : 5,
+  "harvestBaseMin" : 8,
+  "harvestCropLevelLag" : 3,
+  "harvestFieldDivisor" : 5,
+  "harvestLargeMultiplier" : 3,
+  "largeRewardMaxPercent" : 20,
+  "largeRewardMinPercent" : 8,
+  "lateFromLevel" : 10,
+  "lateLargeRewardMaxPercent" : 16.5,
+  "lateLargeRewardMinPercent" : 8.5,
+  "lateSmallRewardMaxPercent" : 6,
+  "lateSmallRewardMinPercent" : 2,
   "marketStandLevel" : 7,
   "marketStandQuests" : 4,
   "mostCropsAsked" : 100,
+  "nonCropDrawWeight" : 2,
   "oreQuestsFromLevel" : 18,
   "questsToUpgrade" : 10,
+  "rewardSharePerEffortPercent" : 2,
+  "smallRewardMaxPercent" : 7,
+  "smallRewardMinPercent" : 1,
+  "stockEffort" : 2.5,
+  "stockLargeRewardPercent" : 8,
+  "stockLargeTargetPercent" : 0.6,
   "stockQuestsFromLevel" : 10,
+  "stockSignificantFigures" : 2,
+  "stockSmallRewardPercent" : 5,
+  "stockSmallTargetPercent" : 0.2,
+  "targets" : [
+    {
+      "kind" : "Harvest",
+      "standard" : "A random amount from the base to 1.5 times the base",
+      "upgraded" : "3 times as much"
+    },
+    {
+      "kind" : "Workshop",
+      "standard" : "1 or 2 batches",
+      "upgraded" : "3 to 5 batches"
+    },
+    {
+      "kind" : "Feed favorites",
+      "standard" : "8 to 15",
+      "upgraded" : "25 to 40"
+    },
+    {
+      "kind" : "Collect produce",
+      "standard" : "3 to 6",
+      "upgraded" : "10 to 16"
+    },
+    {
+      "kind" : "Collect ore",
+      "standard" : "3 to 5 pieces",
+      "upgraded" : "6 to 9 pieces"
+    },
+    {
+      "kind" : "Collect bars or cut gems",
+      "standard" : "1 or 2",
+      "upgraded" : "2 or 3"
+    },
+    {
+      "kind" : "Plant trees",
+      "standard" : "2 to 4",
+      "upgraded" : "6 to 9"
+    }
+  ],
   "upgradeCost" : 10000,
   "upgradedQuests" : 6
 }

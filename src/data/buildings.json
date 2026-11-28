@@ -164,6 +164,10 @@
       {
         "count" : 6,
         "name" : "Stones"
+      },
+      {
+        "count" : 12,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Rabbit Hutch",
@@ -197,6 +201,10 @@
       {
         "count" : 6,
         "name" : "Stones"
+      },
+      {
+        "count" : 12,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Grain Machine",
@@ -235,6 +243,10 @@
       {
         "count" : 7,
         "name" : "Stones"
+      },
+      {
+        "count" : 18,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Sheep Barn",
@@ -268,6 +280,10 @@
       {
         "count" : 8,
         "name" : "Stones"
+      },
+      {
+        "count" : 18,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "House",
@@ -302,6 +318,10 @@
       {
         "count" : 7,
         "name" : "Stones"
+      },
+      {
+        "count" : 4,
+        "name" : "Copper Ore"
       }
     ],
     "name" : "Silo",
@@ -340,6 +360,14 @@
       {
         "count" : 8,
         "name" : "Stones"
+      },
+      {
+        "count" : 24,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 12,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Goat Barn",
@@ -373,6 +401,14 @@
       {
         "count" : 8,
         "name" : "Stones"
+      },
+      {
+        "count" : 16,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 7,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Tractor",
@@ -409,6 +445,14 @@
       {
         "count" : 9,
         "name" : "Stones"
+      },
+      {
+        "count" : 16,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 7,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Stone Oven",
@@ -458,6 +502,14 @@
       {
         "count" : 9,
         "name" : "Stones"
+      },
+      {
+        "count" : 24,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 12,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Pig Barn",
@@ -494,6 +546,14 @@
       {
         "count" : 9,
         "name" : "Stones"
+      },
+      {
+        "count" : 24,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 12,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Stable",
@@ -527,6 +587,14 @@
       {
         "count" : 10,
         "name" : "Stones"
+      },
+      {
+        "count" : 20,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 9,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Woodwork Bench",
@@ -561,6 +629,14 @@
       {
         "count" : 11,
         "name" : "Stones"
+      },
+      {
+        "count" : 20,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 9,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Tailor Table",
@@ -596,6 +672,14 @@
       {
         "count" : 12,
         "name" : "Stones"
+      },
+      {
+        "count" : 20,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 9,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "DIY Crafting Table",
@@ -635,6 +719,14 @@
       {
         "count" : 12,
         "name" : "Stones"
+      },
+      {
+        "count" : 60,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 30,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Luxury Barn",
@@ -668,6 +760,14 @@
       {
         "count" : 13,
         "name" : "Stones"
+      },
+      {
+        "count" : 24,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 12,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Dairy",
@@ -702,6 +802,14 @@
       {
         "count" : 14,
         "name" : "Stones"
+      },
+      {
+        "count" : 24,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 12,
+        "name" : "Iron Ore"
       }
     ],
     "name" : "Cheese Cellar",
@@ -715,5 +823,46 @@
     ],
     "unlockLevel" : 21,
     "width" : 2
+  },
+  {
+    "cost" : 30000,
+    "height" : 4,
+    "icon" : {
+      "height" : 127,
+      "src" : "sprites/buildings/greenhouse.png",
+      "width" : 96
+    },
+    "id" : "greenhouse",
+    "limit" : 1,
+    "logs" : 84,
+    "materials" : [
+      {
+        "count" : 84,
+        "name" : "Logs"
+      },
+      {
+        "count" : 4,
+        "name" : "Stones"
+      },
+      {
+        "count" : 24,
+        "name" : "Copper Ore"
+      },
+      {
+        "count" : 12,
+        "name" : "Iron Ore"
+      }
+    ],
+    "name" : "Greenhouse",
+    "purpose" : "Speeds up crop growth across the whole farm",
+    "recipes" : [
+
+    ],
+    "stones" : 4,
+    "styles" : [
+
+    ],
+    "unlockLevel" : 22,
+    "width" : 3
   }
 ]

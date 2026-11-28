@@ -8,51 +8,49 @@ import Fact from '../../components/Fact.astro';
 Your level decides what you can plant, build and craft, and how much farmland you can have. XP raises your level.
 
 - You start at level 1 with 0 XP.
-- Selling crops, fish and goods earns gold. Harvesting, taking produce from animals and finishing quests earn XP.
-- The top level is <Fact path="world.maxLevel" />, where Coffee unlocks. No more XP is earned there, and quests, fish and butterflies pay none.
+- Selling crops, fish and goods earns gold. Harvesting crops, collecting animal produce, collecting finished workshop batches, fishing, catching butterflies and fireflies, and finishing quests earn XP.
+- The top level is <Fact path="world.maxLevel" />, where Coffee unlocks. No more XP is earned there, and quests, workshops, animals, fish and butterflies pay none.
 - XP is never lost. Several levels can be gained at once.
 
 ## What earns XP
 
 | Action | XP |
 | --- | --- |
-| Harvest a crop tile with the Scythe | The crop's XP (see [Crops](../farming/crops/)) |
-| Pick a fruit basket with the Bucket | The tree's XP (see [Fruit Trees](../farming/fruit-trees/)) |
-| Collect what an animal made | See below |
-| Land a fish | Depends on rarity and weight |
-| Catch a butterfly or a wild firefly with the Bucket | Depends on color |
+| Harvest a crop tile with the Scythe | The crop's XP at your level (always at least 1 XP; see [Crops](../farming/crops/)) |
+| Pick a fruit basket with the Bucket | The tree's XP at your level (see [Fruit Trees](../farming/fruit-trees/)) |
+| Collect what an animal made | Static XP by animal kind (see below) |
+| Collect a finished workshop batch | 8 XP per minute of craft time (1.25× for two-step recipes) |
+| Land a fish | Depends on rarity, weight and level |
+| Catch a butterfly or a wild firefly with the Net | Depends on color |
 | Complete a Market Stand quest | A share of the level's XP |
 
 ### Crops and fruit
 
-- A crop earns its unlock level plus one: Wheat 1, Carrot 3, Potato 4, and one more for each crop after that, whatever its grow time.
-- A fruit tree basket earns one and a half times what a crop of its level would, rounded.
-- The XP column of the crop and fruit tree tables lists each amount.
+- Through level 9, a crop earns its unlock level plus one (Wheat 1, Carrot 3, Potato 4, up to Broccoli 10), and a fruit tree basket earns one and a half times its level's crop XP, rounded.
+- From level 10 to level 22, crop XP gradually tapers down by grow time (always staying at least 1 XP) so animals, Market Stand quests and workshops become the fastest way to level up while crops stay essential for gold, quest targets and workshop ingredients.
 - A second crop from a tool upgrade earns no XP.
 - The [Tractor](../buildings/tractor/) earns the XP when its load is stored or sold.
 
 ### Animal produce
 
-Each item earns the unlock level of the building that makes it, plus one.
+Each animal pays a fixed XP per item collected (3.2 XP per minute of its base interval), so upgrading homes and tending animals pays steady XP at every level. Hand-feeding earns no direct XP, while Well Fed speeds production by 25%.
 
-| Item | XP |
-| --- | --- |
-| Egg | 6 |
-| Fertilizer | 9 |
-| Wool | 11 |
-| Goat Milk | 13 |
-| Milk | 20 |
+<DataTable name="animal-produce-xp" columns="Item,From,XP" />
 
 A second item from a tool upgrade earns no XP. See [Animals](../animals/).
 
+### Workshop recipes
+
+Collecting a finished workshop batch pays 8 XP per minute of craft time, multiplied by 1.25 for two-step recipes made from another crafted good (such as Bread, Furniture, Fine Cloth and Aged Cheese). Starting a batch pays no XP until it is collected.
+
 ### Fish, butterflies and fireflies
 
-These earn a share of the XP needed to leave your level, so they are worth the same at every level.
+These earn a share of the XP needed to leave your level.
 
 | Catch | XP |
 | --- | --- |
-| Fish | XP to leave the level ÷ 300 × rarity multiplier (1, 2, 4, 7, 10) × weight factor (0.5 to 1.5) |
-| Butterfly or wild firefly | XP to leave the level ÷ 600 × color multiplier (1, 2, 4, 7, 10, or 15 for Shifting) |
+| Fish | XP to leave the level ÷ divisor (<Fact path="fish.xp.levelDivisor" /> through level 15, climbing by 30 per level to 700 at level 29+) × rarity multiplier (1, 2, 4, 7, 10) × weight factor (<Fact path="fish.weight.lightestXPFactor" /> to <Fact path="fish.weight.heaviestXPFactor" />) |
+| Butterfly or wild firefly | XP to leave the level ÷ <Fact path="world.butterflies.xpLevelDivisor" /> × color multiplier (1, 2, 4, 7, 10, or <Fact path="world.butterflies.shiftingXPMultiplier" /> for Shifting) |
 
 - Each catch earns at least 1 XP. One you let go or set free earns nothing when caught again.
 - At level 10, which takes 3,696 XP to leave, an average Common fish earns about 12 XP.
@@ -60,13 +58,14 @@ These earn a share of the XP needed to leave your level, so they are worth the s
 
 ### Quests
 
-- A quest pays 1% to 7% of the XP needed to leave your level (8% to 20% on the upgraded stand), by how much work it asks. See [Quests](../quests/#xp-rewards).
+- Through level 9, a quest pays <Fact path="quests.smallRewardMinPercent" />% to <Fact path="quests.smallRewardMaxPercent" />% of the XP needed to leave your level (<Fact path="quests.largeRewardMinPercent" />% to <Fact path="quests.largeRewardMaxPercent" />% on the upgraded stand).
+- From level 10 on, quests scale to 2% to 6% on the Market Stand and 8.5% to 16.5% on the upgraded stand, favoring animal, workshop, ore and stock objectives. See [Quests](../quests/#xp-rewards).
 
 ## How level XP is worked out
 
-The XP needed to leave a level is three harvests of a full field of the newest crop:
+The XP needed to leave a level is <Fact path="world.harvestsPerLevel" /> harvests of a full field of the newest crop:
 
-> XP to leave a level = 3 × farmland tiles at that level × XP of the crop that unlocks at that level
+> XP to leave a level = <Fact path="world.harvestsPerLevel" /> × farmland tiles at that level × XP of the crop that unlocks at that level
 
 - Level 1: 4 tiles × 3 harvests × 1 XP (Wheat) = 12 XP.
 - Level 2: 8 tiles × 3 × 3 XP (Carrot) = 72 XP.
@@ -82,11 +81,11 @@ Total XP is what you need to be at that level. Farmland is the most tiles you ca
 ## Farmland per level
 
 - You start with <Fact path="world.startingFarmland" /> farmland tiles.
-- Levels 2 to 19 each add twice their number in tiles.
-- Level 20 and above each add as many tiles as their number.
+- Levels <Fact path="terrain.farmlandFirstUnlockLevel" /> to <Fact path="terrain.farmlandDoubleToLevel" /> each add twice their number in tiles.
+- Level <Fact path="terrain.farmlandSingleFromLevel" /> and above each add as many tiles as their number.
 - See [Farmland and Water](../farming/farmland-and-water/).
 
 ## Leveling up
 
 - A level-up unlocks everything listed for the new level in the level table at once.
-- Farmland, crops, fruit trees, buildings, recipes, tool and home upgrades, new rarities of fish, the levels where rarer fish bite more often, and stock quests all unlock by level. Decorations never do: they need only gold and materials.
+- Farmland, crops, fruit trees, buildings, recipes, tool and home upgrades, the levels where rarer fish bite more often, and stock quests all unlock by level. Decorations never do: they need only gold and materials.

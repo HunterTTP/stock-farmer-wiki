@@ -10,7 +10,7 @@ Wild trees, rocks and ore veins grow and appear only during the midnight wave (s
 
 ## Growing
 
-Each wild tree, rock and vein that can grow has a 1 in 5 chance each night to grow one size.
+Each wild tree, rock and vein that can grow has a 1 in <Fact path="world.wildGrowth.growthOddsDenominator" /> (<Fact path="world.wildGrowth.growthChancePercent" />%) chance each night to grow one size.
 
 | Thing | Grows into |
 | --- | --- |
@@ -19,22 +19,22 @@ Each wild tree, rock and vein that can grow has a 1 in 5 chance each night to gr
 | Small Iron Vein | Iron Vein |
 | Huge tree, Big rock, every other vein | Nothing |
 
-- A tree grows only if the bigger tree's picture has bare grass to spread over and stays off the four tiles in front of the cave entrance. It keeps its trunk on the same tile.
+- A tree grows only if the bigger tree's picture has bare grass to spread over and stays off the <Fact path="world.newFarm.caveMouthClearingTiles" /> tiles in front of the cave entrance. It keeps its trunk on the same tile.
 - A rock stands on one tile at every size, so it always has room.
 - Trees you planted and rocks you placed never grow.
 
 ## New things
 
-Each night has 7 to 10 draws (4 to 6 for trees, 2 or 3 for rocks and 1 for a vein, added together). Each draw picks a tree, a plain rock or a vein of one ore at once, by the weights below.
+Each night has <Fact path="world.wildGrowth.nightlyTotal.min" /> to <Fact path="world.wildGrowth.nightlyTotal.max" /> draws (<Fact path="world.wildGrowth.nightlyTrees.min" /> to <Fact path="world.wildGrowth.nightlyTrees.max" /> for trees, <Fact path="world.wildGrowth.nightlyRocks.min" /> or <Fact path="world.wildGrowth.nightlyRocks.max" /> for rocks and <Fact path="world.wildGrowth.nightlyVeins.min" /> for a vein, added together). Each draw picks a tree, a plain rock or a vein of one ore at once, by the weights below.
 
 | Limit | Trees | Plain rocks | Ore veins |
 | --- | --- | --- | --- |
-| Most new in one night | 8 | 4 | 2 |
-| Most wild on the map | 390 | 40 | 12 |
+| Most new in one night | <Fact path="world.wildGrowth.nightlyMaxTrees" /> | <Fact path="world.wildGrowth.nightlyMaxRocks" /> | <Fact path="world.wildGrowth.nightlyMaxVeins" /> |
+| Most wild on the map | <Fact path="world.wildGrowth.treeCap" /> | <Fact path="world.wildGrowth.rockCap" /> | <Fact path="world.wildGrowth.veinCap" /> |
 
 - A draw of a kind that has reached its limit for the night or the map leaves nothing, so a plentiful kind comes less often without handing its draws to the others.
-- A new thing appears on a random empty tile of bare grass, away from the starting farmland, from the front of animal homes and from the four tiles in front of the cave entrance, in the map's top-right corner.
-- A new tree is a Pine or an Oak of a random size and color. A new rock is Small 50%, Medium 35% or Big 15% of the time. Half of new Iron Veins are small.
+- A new thing appears on a random empty tile of bare grass, away from the starting farmland, from the front of animal homes and from the <Fact path="world.newFarm.caveMouthClearingTiles" /> tiles in front of the cave entrance, in the map's top-right corner.
+- A new tree is a Pine or an Oak of a random size and color. A new rock is Small <Fact path="mining.newMap.smallRockPercent" />%, Medium <Fact path="mining.newMap.mediumRockPercent" />% or Big <Fact path="mining.newMap.bigRockPercent" />% of the time. Half of new Iron Veins are small.
 - Things you planted or placed never count toward a limit.
 
 ## What the farm is short of
@@ -45,13 +45,13 @@ Each draw's weight is worked out from the map, your Storage and your level:
 
 | Part | Trees | Plain rocks | A vein of one ore |
 | --- | --- | --- | --- |
-| Usual share | 5 | 2.5 | 1 × the ore's share at your level (see [Mining](../../gathering/mining/#odds-of-each-ore)) |
-| Scarcity | 1 − wild trees ÷ 390 | 1 − wild plain rocks ÷ 40 | 1 − veins of that ore ÷ (12 × its share) |
-| Shortage | Share of the logs you lack for the building that needs the most logs, among those unlocked up to 2 levels above yours | The same for stones | Copper only: share of 12 Copper Ore you lack |
+| Usual share | <Fact path="world.wildGrowth.treeShare" /> | <Fact path="world.wildGrowth.rockShare" /> | <Fact path="world.wildGrowth.veinShare" /> × the ore's share at your level (see [Mining](../../gathering/mining/#odds-of-each-ore)) |
+| Scarcity | 1 − wild trees ÷ <Fact path="world.wildGrowth.treeCap" /> | 1 − wild plain rocks ÷ <Fact path="world.wildGrowth.rockCap" /> | 1 − veins of that ore ÷ (<Fact path="world.wildGrowth.veinCap" /> × its share) |
+| Shortage | Share of the logs you lack for the building that needs the most logs, among those unlocked up to <Fact path="world.wildGrowth.buildingLookaheadLevels" /> levels above yours | The same for stones | Share of the ore you lack for the building that needs the most of it (among those unlocked up to <Fact path="world.wildGrowth.buildingLookaheadLevels" /> levels above yours), with at least <Fact path="world.wildGrowth.copperShortageTarget" /> for Copper Ore |
 
-- Scarcity never drops below 0.1, so a kind the map has plenty of still comes now and then until its limit.
-- Shortage runs from 0 with enough in Storage to 1 with none, so a kind you are short of comes up to twice as often.
-- When everything is equally scarce and nothing is short, a night leaves about 5 trees, 2.5 rocks and 1 vein.
+- Scarcity never drops below <Fact path="world.wildGrowth.scarcityFloor" />, so a kind the map has plenty of still comes now and then until its limit.
+- Shortage runs from 0 with enough in Storage to <Fact path="world.wildGrowth.shortageBoost" /> with none, so a kind you are short of comes up to twice as often.
+- When everything is equally scarce and nothing is short, a night leaves about <Fact path="world.wildGrowth.treeShare" /> trees, <Fact path="world.wildGrowth.rockShare" /> rocks and <Fact path="world.wildGrowth.veinShare" /> vein.
 
 ### Example
 
